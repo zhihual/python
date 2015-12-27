@@ -1,31 +1,30 @@
 # -*- coding: UTF-8 -*-
-print("你好，世界")
-a=11
-b=22
-c=30
-f=a*b+c
-print("f =",f)
+names = ['Mike', 'Bob', 'Tracy']
+days=[2001,2002,2003]
+day= 2001
+for name in names:
+    print(name, day, 'start')
+    for day in days:
+        print(name,day)
+    print(name, day,'end')
+    
 
-word = 'word'
-sentence = "这是一个句子"
-paragraph = """这是一个段落 第二行"""
+print("program exit")
 
-# this is the first comment for python
-print(word, sentence, paragraph)
 
-import sys;
-x='foo';
-sys.stdout.write(x+'\n')
+L = ['Bart', 'Lisa', 'Adam']
 
-if a == 10 :
-    print("a=10")
-elif b == 20 :
-    print("b=20")
-else :
-    print("no match");
+for name in L:
+    print('hello, %s!' % name)
 
-counter = 100 # integter
-miles = 1000.0 # flot
-name = "John" # string
+d ={'a':1, 'b':5, 'c':7}
 
-print(counter, miles,  name)
+print(d['c'])
+
+s = set([3, 2, 1])
+
+print(s)
+
+
+
+print(s[0][1])

@@ -1,0 +1,22 @@
+Stockcode = input("please enter stock:")
+Stockcode = int(Stockcode)
+squre = Stockcode*Stockcode
+
+name = input('please enter your name:')
+
+// dynamic change string name
+s1=72
+s2=85
+print("Name:%s Rasie:%.1f%%"%("Xiaoming", (s2-s1)/s1))
+
+classmate = ['Mike', 'Bob', 'Tracy'] // List
+
+classmates = ('Michael', 'Bob', 'Tracy') //tuple, initalzied at initalize
+
+if ()
+   下面的语句可以一直执行。4个空格相当于空格
+   
+ names = ['Michael', 'Bob', 'Tracy']
+for name in names:
+    print(name)
+  
