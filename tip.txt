@@ -20,3 +20,24 @@ if ()
 for name in names:
     print(name)
   
+ days=[2001,2002,2003]
+for name in names:
+    for day in days:
+        print(name,day)
+    print(name, day,'end')
+    
+
+print("program exit")
+
+Mike 2001
+Mike 2002
+Mike 2003
+Mike 2003 end
+Bob 2001
+Bob 2002
+Bob 2003
+Bob 2003 end
+Tracy 2001
+Tracy 2002
+Tracy 2003
+Tracy 2003 end
