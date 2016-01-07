@@ -25,7 +25,7 @@ for name in names:
     for day in days:
         print(name,day)
     print(name, day,'end')
-    
+
 
 print("program exit")
 
@@ -41,3 +41,17 @@ Tracy 2001
 Tracy 2002
 Tracy 2003
 Tracy 2003 end
+
+where to look up function reference
+https://docs.python.org/3/library/functions.html#abs 
+
+def my_abs(x):
+    if not isinstance(x, (int, float)):  -- this in in parameter type checking
+        raise TypeError('bad operand type')
+    if x >= 0:
+        return x
+    else:
+        return -x
+from abstest import my_abs
+
+import function my_abs from file abstest.py
