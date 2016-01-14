@@ -52,6 +52,30 @@ def my_abs(x):
         return x
     else:
         return -x
-from abstest import my_abs
+"from abstest import my_abs"
+    --import function my_abs from file abstest.py
 
-import function my_abs from file abstest.py
+In python, 0.1*0.1= 0.010000000000000002, that's because the float accurate issue. we can round it if accurnt not needed.
+
+slice, eg l[100] have 100 elements,  l[0:3] can take first 3,  l[-1:], is take last to head, 0 and -1,
+l[::5] is pick up one each 5 elements
+l[:] can duplicate whole list
+
+tuple also can use slice
+
+for (i=0; i<list.length; i++) {
+    n = list[i];
+}
+
+[x * x for x in range(1, 11)]
+[x * x for x in range(1, 11) if x % 2 == 0]
+
+example of generator
+
+>>> L = [x * x for x in range(10)]
+>>> L
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>> g = (x * x for x in range(10))
+>>> g
+<generator object <genexpr> at 0x1022ef630>  
+	
