@@ -78,4 +78,35 @@ example of generator
 >>> g = (x * x for x in range(10))
 >>> g
 <generator object <genexpr> at 0x1022ef630>  
-	
+
+1/17
+
+How to find installed libs in python?
+
+: help ('modules')
+
+It can show the moules loaded up.
+
+How to get modules/object function and members?
+
+: Dir()
+
+How to rezie one JPG file?
+
+from PIL import Image
+
+im=Image.open()
+im.thumbnail((w//2, h//2))
+im.save('small.jpg','jpeg')
+
+How to blur?
+from PIL import Image, ImageFilter
+im2 = im.filter(ImageFilter.BLUR)
+
+How to make Phyton script can accept chinese character?
+
+# -*- coding:utf-8 -*-
+
+How to make web radom check string?
+
+look radom_pic.py 
