@@ -286,9 +286,18 @@ if __name__ == '__main__':
 So, the main function use global variable,  def function is use local variable, if want to use global, need key words
 
 
+Is there any strong Distrubute system based on python?
+http://my.oschina.net/u/2306127/blog/417360
 
+What's is JSON?
 
+The eay to serial/save Obj in OOB language.
+Ref URL: http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143192607210600a668b5112e4a979dd20e4661cc9c97000
 
+How Tushare to read HTML?
+Use pandas. read_html
+
+http://pandas.pydata.org/pandas-docs/stable/api.html#html
 
 
 

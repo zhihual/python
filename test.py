@@ -1,30 +1,8 @@
 # -*- coding: UTF-8 -*-
-names = ['Mike', 'Bob', 'Tracy']
-days=[2001,2002,2003]
-day= 2001
-for name in names:
-    print(name, day, 'start')
-    for day in days:
-        print(name,day)
-    print(name, day,'end')
-    
+#!/usr/bin/env python3
 
-print("program exit")
-
-
-L = ['Bart', 'Lisa', 'Adam']
-
-for name in L:
-    print('hello, %s!' % name)
-
-d ={'a':1, 'b':5, 'c':7}
-
-print(d['c'])
-
-s = set([3, 2, 1])
-
-print(s)
-
-
-
-print(s[0][1])
+import pandas
+link = 'http://aws.amazon.com/ec2/pricing/' 
+data = pandas.read_html(link)
+print type(data)
+print data[0]
