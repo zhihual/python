@@ -78,4 +78,59 @@ example of generator
 >>> g = (x * x for x in range(10))
 >>> g
 <generator object <genexpr> at 0x1022ef630>  
+
+import os
+dir(os) 
+upper two command can show os api supported
+
+>>> f = open('dump.txt', 'wb')
+>>> pickle.dump(d, f)
+>>> f.close()
+
+>>> f = open('dump.txt', 'rb')
+>>> d = pickle.load(f)
+>>> f.close()
+>>> d
+{'age': 20, 'score': 88, 'name': 'Bob'}
+
+upper is save and reload Class Instant on Python
+
+fork, father and child process.   getppid() from child process can get fathrer process id.
+
+from multiprocessing import Process  -- this can create multi process on windows
+
+Queue and Pipes can be used for process communication
+
+
+threading (1st choice), _thread, are two libs for multi-thread
+lock is used for multi-thread sync
+
+python has GIL lock, every 100 code lines run, and free GIL lock. So, thread in one core.
+GIL is per Process, so, we can use Process to replace Thread
+
+It looks distrubute mulit machine not difficult in python, since python have many support libs.
+
+re is zheng ze biao dai shi lib in phyton.
+
+python has GUI lib
+
+TK, wxWidgets  Qt, GTK  Tkinter is default, and built-in lib
+
+Socket is TCP/IP lib
+
+Email  smtplib and email libs.  email in charge for write email
+smtplib is send
+
+poplib is used for receive
+
+Message
++- MIMEBase
+   +- MIMEMultipart
+   +- MIMENonMultipart
+      +- MIMEMessage
+      +- MIMEText
+      +- MIMEImage
+
+
+
 	
