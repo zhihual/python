@@ -1,3 +1,4 @@
+
 Stockcode = input("please enter stock:")
 Stockcode = int(Stockcode)
 squre = Stockcode*Stockcode
@@ -134,3 +135,117 @@ Message
 
 
 	
+
+Stockcode = input("please enter stock:")
+Stockcode = int(Stockcode)
+squre = Stockcode*Stockcode
+
+name = input('please enter your name:')
+
+// dynamic change string name
+s1=72
+s2=85
+print("Name:%s Rasie:%.1f%%"%("Xiaoming", (s2-s1)/s1))
+
+classmate = ['Mike', 'Bob', 'Tracy'] // List
+
+classmates = ('Michael', 'Bob', 'Tracy') //tuple, initalzied at initalize
+
+if ()
+   下面的语句可以一直执行。4个空格相当于空格
+   
+ names = ['Michael', 'Bob', 'Tracy']
+for name in names:
+    print(name)
+  
+ days=[2001,2002,2003]
+for name in names:
+    for day in days:
+        print(name,day)
+    print(name, day,'end')
+
+
+print("program exit")
+
+Mike 2001
+Mike 2002
+Mike 2003
+Mike 2003 end
+Bob 2001
+Bob 2002
+Bob 2003
+Bob 2003 end
+Tracy 2001
+Tracy 2002
+Tracy 2003
+Tracy 2003 end
+
+where to look up function reference
+https://docs.python.org/3/library/functions.html#abs 
+
+def my_abs(x):
+    if not isinstance(x, (int, float)):  -- this in in parameter type checking
+        raise TypeError('bad operand type')
+    if x >= 0:
+        return x
+    else:
+        return -x
+"from abstest import my_abs"
+    --import function my_abs from file abstest.py
+
+In python, 0.1*0.1= 0.010000000000000002, that's because the float accurate issue. we can round it if accurnt not needed.
+
+slice, eg l[100] have 100 elements,  l[0:3] can take first 3,  l[-1:], is take last to head, 0 and -1,
+l[::5] is pick up one each 5 elements
+l[:] can duplicate whole list
+
+tuple also can use slice
+
+for (i=0; i<list.length; i++) {
+    n = list[i];
+}
+
+[x * x for x in range(1, 11)]
+[x * x for x in range(1, 11) if x % 2 == 0]
+
+example of generator
+
+>>> L = [x * x for x in range(10)]
+>>> L
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>> g = (x * x for x in range(10))
+>>> g
+<generator object <genexpr> at 0x1022ef630>  
+
+1/17
+
+How to find installed libs in python?
+
+: help ('modules')
+
+It can show the moules loaded up.
+
+How to get modules/object function and members?
+
+: Dir()
+
+How to rezie one JPG file?
+
+from PIL import Image
+
+im=Image.open()
+im.thumbnail((w//2, h//2))
+im.save('small.jpg','jpeg')
+
+How to blur?
+from PIL import Image, ImageFilter
+im2 = im.filter(ImageFilter.BLUR)
+
+How to make Phyton script can accept chinese character?
+
+# -*- coding:utf-8 -*-
+
+How to make web radom check string?
+
+look radom_pic.py 
+
