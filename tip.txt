@@ -249,3 +249,46 @@ How to make web radom check string?
 
 look radom_pic.py 
 
+Does Python able to compile as binary?
+
+py2exe is one tool to make exe distrbute
+code sample as below:
+
+# mysetup.py
+from distutils.core import setup
+import py2exe
+setup(console=["helloworld.py"])
+python mysetup.py py2exe
+http://www.cnblogs.com/jans2002/archive/2006/09/30/519393.html
+
+How to make .py run in linux as .sh file?
+
+add #!/usr/bin/env python3
+
+How to differ global variable?
+Method 1, define global
+[python] view plaincopyprint?
+#global.py  
+GLOBAL_1 = 1  
+GLOBAL_2 = 2  
+GLOBAL_3 = 'Hello World'
+
+Method 2, use key words
+CONSTANT = 0  
+def modifyGlobal():  
+    global CONSTANT  
+    print(CONSTANT)  
+    CONSTANT += 1  
+if __name__ == '__main__':  
+    modifyGlobal()  
+    print(CONSTANT)
+
+So, the main function use global variable,  def function is use local variable, if want to use global, need key words
+
+
+
+
+
+
+
+
