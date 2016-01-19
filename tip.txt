@@ -299,5 +299,57 @@ Use pandas. read_html
 
 http://pandas.pydata.org/pandas-docs/stable/api.html#html
 
+How to get National data source?
+
+http://data.stats.gov.cn/  
+
+How to search World wide deposit rate?
+
+How to translate Korean or Japen to chinese?
+Baidu website translation
+
+How to let source insight support Python?
+
+Download Python.CLF  http://www.sourceinsight.com/public/languages/Python.CLF
+
+www.cnblogs.com/xuxm2007/archive/2010/09/02/1815695.html
+
+How to let source insighe show chinese correct?
+Failed. Stop trying
+
+How to check python import lib function guide?
+help(module.function)
+help(module)
+dir()
+
+How to copy from putty command window?
+select in command line and press enter
+
+Read tushare source code, 
+1. know how one small function works.
+2. can use console to debug line by line
+3. need deep understand html struction, so that, know how. 
+The next plan is trying to understand the html struct basic ideas.
+
+#13; is html translation words, detial can refer to 
+http://www.w3chtml.com/html/character.html
+http://tool.oschina.net/commons?type=2
+
+1. Ok, know how to get the table from html source..  Look the table as key words
+<table?<thread><tr><td> will contain the table
+
+html.xpath('//div[@class=\"fn_rp_list\"]/table') --> read all div with class name="fn_rp_list", get belower "table"
+the return is element
+
+also learn how the regular expression show up
+
+(.*?) this is match as much as it can
+
+Tushare profile_data read complete..
+basiscly, it read 163 website, parse html find table, and juse pandas to make self table, then output
+
+
+
+
 
 
