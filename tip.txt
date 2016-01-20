@@ -304,6 +304,9 @@ How to get National data source?
 http://data.stats.gov.cn/  
 
 How to search World wide deposit rate?
+www.deposits.org
+add one feature to tushare, to get rate
+
 
 How to translate Korean or Japen to chinese?
 Baidu website translation
@@ -347,6 +350,36 @@ also learn how the regular expression show up
 
 Tushare profile_data read complete..
 basiscly, it read 163 website, parse html find table, and juse pandas to make self table, then output
+
+Check Deposit Rate and US exchange rate relationship.  In theory, should Rate down, exchange up, Rate up, exchange down
+
+Deposite Rate: M 
+2007.12 4.14% ~ 2010.10 2.5%
+2010.10 2.5%~ 2011.7 3.5%
+2011.7 3.5%~2015.8 1.75%
+
+US exchange rate: if we look at from 2010, the theory is right. 
+
+2007 7 2008 6.8  2010 6.6 2012 6.3 2014 6.1 2015 6.2  2016 6.5
+
+check Korean as Example, draw depoist rate and exchange rate graphic
+
+1-20
+Read tushare file Reference.py xsg_data, more learn on how to parser from html data
+
+How to modify tushare?
+
+1. change source code
+2. run python setup.py install. it will copy your change into some where under $PATH, then you can run new finished code
+
+How to distubue one moudle like tushare?
+
+1. single file, just copy to $python_dir/lib
+2. multifile make setup.py, run python setup.py install
+3. egg file.  download ez_setup.py, run python ez_setup, and easy_install *.egg
+
+http://blog.csdn.net/ponder008/article/details/6592719/
+
 
 
 
