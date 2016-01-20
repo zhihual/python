@@ -380,6 +380,23 @@ How to distubue one moudle like tushare?
 
 http://blog.csdn.net/ponder008/article/details/6592719/
 
+How to setup Linux python development enviorment?
+
+Eclipse, looks too big for me.
+Try komodoide and Sublime (this is not good) 
+
+How to run moudle or each function test?
+
+Use test python script can do this. All the test cases is executed random sequence
+
+How to debug python?
+
+1. Print
+2. log
+3. pdb and IDE support debug
+
+http://www.jetbrains.com/pycharm/  which is highlight by Python guide
+
 
 
 
