@@ -409,8 +409,15 @@ Need to understand http protocal, especially http header
 Ref url:  http://www.cnblogs.com/yuzhongwusan/archive/2011/10/20/2218954.html
 
 One interesting tool, read/get all employee name id photo.
+1. web is https, so, need log in with http type   http://www.cnblogs.com/txw1958/archive/2011/12/21/2295698.html
 
 
+
+What's the difference of ctrl+z and ctrl-c
+
+ctrl+z just put to suspend, use fg/bg can put task in front or background run
+
+ctrl+c break, can't restore
 
 
 

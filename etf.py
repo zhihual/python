@@ -7,7 +7,7 @@ import tushare as ts
 
 #ts.shibor_data()
 
-df = ts.get_realtime_quotes(['510300','159915','000725','150200','131810','204001','510050'])
+df = ts.get_realtime_quotes(['sh','sz','cyb','510300','159915','000725','150200','131810','204001','510050'])
 
 mydf = df['code']
 df = df.drop(['name','open', 'pre_close', 'bid', 'ask', 'amount','a2_p', 'a3_v','a3_p', 'a4_v', 'a5_v', 'a5_p','date', 'code',
