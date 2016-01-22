@@ -397,6 +397,21 @@ How to debug python?
 
 http://www.jetbrains.com/pycharm/  which is highlight by Python guide
 
+china nuclear electrict power number?
+
+How to dump class object in python?
+
+print xxx.__dict__
+
+How to understand urllib works? 
+
+Need to understand http protocal, especially http header
+Ref url:  http://www.cnblogs.com/yuzhongwusan/archive/2011/10/20/2218954.html
+
+One interesting tool, read/get all employee name id photo.
+
+
+
 
 
 
