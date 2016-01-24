@@ -419,7 +419,9 @@ ctrl+c break, can't restore
 
 Task: get jisilu Exhange Bound data down
 
+How to understand .js and html basic laungage?
 
+When fetch web, should be reference netmoniter URL
 
 
 
