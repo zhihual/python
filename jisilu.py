@@ -61,10 +61,49 @@ def jisilu_newbond():
 	myreq.add_header("User-Agent", 'Mozilla/5.0 (Windows NT 6.1; rv:37.0) Gecko/20100101 Firefox/37.0')
 	lines = urlopen(myreq, timeout = 10).read()
 	js = json.loads(lines.decode('utf-8'))
+	newbond_list=js['rows']
+	i=0
+	for i in range(len(newbond_list)):
+		mydicts=newbond_list[i]
+		subdict=mydicts['cell']
+		rate = subdict['coupon']
+		rate = rate[:-1] 
+		if float(rate) > 4.0:
+			print(subdict['bond_id'], subdict['bond_nm'], subdict['apply_dt'], subdict['apply_id'], subdict['coupon'],subdict['bond_rating_cd'], subdict['guarantor'])
 
-			
-jisilu_xsgbond()
-jisilu_stockdiv()
+def jisilu_newstock():
+	myreq = Request('http://www.jisilu.cn/jisiludata/newstock.php?Query:qtype=apply&___t=1453623108306&rp=22&page=1&pageSize=50')
+	myreq.add_header("Accept-Language", "en-US,en;q=0.5")
+	myreq.add_header("Connection", "keep-alive")
+	myreq.add_header('Referer', "http://www.jisilu.cn/")
+	myreq.add_header("User-Agent", 'Mozilla/5.0 (Windows NT 6.1; rv:37.0) Gecko/20100101 Firefox/37.0')
+	lines = urlopen(myreq, timeout = 10).read()
+	js = json.loads(lines.decode('utf-8'))
+	newstock_list=js['rows']
+	i=0
+	for i in range(len(newstock_list)):
+		mydicts=newstock_list[i]
+		subdict=mydicts['cell']
+		print(subdict['stock_nm'], subdict['stock_cd'], subdict['apply_dt'], subdict['apply_cd'], subdict['jsl_issue_price'])
 
-
+def jisilu_etf():
+	myreq = Request('http://www.jisilu.cn/jisiludata/etf.php?Query:___t=1453624119049')
+	myreq.add_header("Accept-Language", "en-US,en;q=0.5")
+	myreq.add_header("Connection", "keep-alive")	
+	myreq.add_header('Referer', "http://www.jisilu.cn/")
+	myreq.add_header("User-Agent", 'Mozilla/5.0 (Windows NT 6.1; rv:37.0) Gecko/20100101 Firefox/37.0')
+	lines = urlopen(myreq, timeout = 10).read()
+	js = json.loads(lines.decode('utf-8'))
+	etf_list=js['rows']
+	i=0
+	for i in range(len(etf_list)):
+		mydicts=etf_list[i]
+		subdict=mydicts['cell']
+		print(subdict['fund_id'], subdict['fund_nm'], subdict['price'],  subdict['increase_rt'],subdict['volume'], subdict['discount_rt'])
+		
+#jisilu_xsgbond()
+#jisilu_stockdiv()
+#jisilu_newbond()
+#jisilu_newstock()
+#jisilu_etf()
 	
