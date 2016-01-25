@@ -1,18 +1,18 @@
+#!/usr/bin/env python3
 # -*- coding:utf-8 -*- 
-#Created on 2015/3/14
-#@author: Jimmy Liu
 
 import json
 #import re
-#try:
-from urllib.request import urlopen, Request
-#except ImportError:
-#    from urllib2 import urlopen, Request
+try:
+	from urllib.request import urlopen, Request
+except ImportError:
+    from urllib2 import urlopen, Request
 
 
 #ts.get_loan_rate()
 def jisilu_xsgbond():
-	myreq = Request('http://www.jisilu.cn/data/cbnew/cb_list/, Query:___t=1453526981335')
+	#myreq = Request('http://www.jisilu.cn/data/cbnew/cb_list/, Query:___t=1453526981335')
+	myreq = Request('http://www.jisilu.cn/data/cbnew/cb_list/?___t=1453714142180')
 	myreq.add_header("Accept-Language", "en-US,en;q=0.5")
 	myreq.add_header("Connection", "keep-alive")
 	myreq.add_header('Referer', "http://www.jisilu.cn/")
@@ -33,7 +33,8 @@ def jisilu_xsgbond():
 		#df = pd.DataFrame.from_dict(subdict,orient='index')
 
 def jisilu_stockdiv():
-	myreq = Request('http://www.jisilu.cn/data/stock/dividend_rate_list/, Query:___t=1453601688259')
+	#myreq = Request('http://www.jisilu.cn/data/stock/dividend_rate_list/, Query:___t=1453601688259')
+	myreq = Request('http://www.jisilu.cn/data/stock/dividend_rate_list/?___t=1453714401268')
 	myreq.add_header("Accept-Language", "en-US,en;q=0.5")
 	myreq.add_header("Connection", "keep-alive")
 	myreq.add_header('Referer', "http://www.jisilu.cn/")
@@ -104,6 +105,6 @@ def jisilu_etf():
 #jisilu_xsgbond()
 #jisilu_stockdiv()
 #jisilu_newbond()
-#jisilu_newstock()
+jisilu_newstock()
 #jisilu_etf()
 	

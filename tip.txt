@@ -430,5 +430,13 @@ it looks needs to buy unicom data card
 
 Current is Andrios 4.4 ~.  Andrios 5.0 is aviable now.
 
+1/25 
+Jisilu moudle has http bad 400 in C platform.
+
+Thingking about WCDMA data plan or not
+
+Thingking about HTTPs module
+
+Jisilu problem solved. URL link is not correct
 
 
