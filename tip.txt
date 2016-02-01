@@ -439,4 +439,44 @@ Thingking about HTTPs module
 
 Jisilu problem solved. URL link is not correct
 
+1/28 
+
+Read AJAX,PHY,JavaScript,SQL,CSS, basic idea about web development. 
+
+Now, start the beginning analysis of jisilu as learning 
+
+Learn Baidu API for data analysis
+http://tieba.baidu.com/p/2209206383
+
+How to debug javascript?
+
+http://han.guokai.blog.163.com/blog/static/136718271201321402514114/
+also download one copy locally
+
+JQuery..
+
+Some understanding:
+1.Javascript will be loaded when html doc is parsing
+2.Some Javascript is execuet immediately
+3.Javescirpt libary like JQuery may provide some framework to web developer to define
+
+2/1
+
+MS add 802.11ad phy native support
+Looking for deck desktop , get basic idea
+Get t-put la email, we should already do this.
+Review LED spec, how to config is clear. who will detect state? ask fei check la side
+
+p2p service/ipdoc/11ad , 1st day to review WDI spec. 
+Finish scan/discover/connect
+
+in usb selective suspend, as driver, it needs to request bus for usb idle
+
+usb bus https://msdn.microsoft.com/en-us/library/windows/hardware/ff538089(v=vs.85).aspx
+communication API
+
+NDIS API
+https://msdn.microsoft.com/en-us/library/windows/hardware/hh451431(v=vs.85).aspx
+
+
 
