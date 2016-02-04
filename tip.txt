@@ -478,5 +478,34 @@ communication API
 NDIS API
 https://msdn.microsoft.com/en-us/library/windows/hardware/hh451431(v=vs.85).aspx
 
+usb device works,excpet need maually start service
+
+MSFT sample code to get locaction
+
+https://code.msdn.microsoft.com/windowsapps/Geolocation-2483de66  
+
+2/3
+
+Read WiFI alliance
+Update link-in
+Consider planning
+
+WFA 
+2018 certification on Halow, 900M low power, low speed wifi 
+
+http://www.wired.com/tag/halow/
+http://www.wi-fi.org/news-events/media-coverage
+
+IEEE802.11ah == Halow  vs LoRa vs BT
+
+WFA Certification program:
+
+1. n/ac/direct/wpa2/eap/11w/passpoint/wps/miracast/voe/vop/wifi-aware
+2. tdls/wmm/wmm-admission/wmm_powersave
+3. RF coexistence
+
+Read hotspot2.0 spec
+
+http://whatis.techtarget.com/definition/Access-Network-Query-Protocol-ANQP
 
 
