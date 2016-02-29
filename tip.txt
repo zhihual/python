@@ -508,4 +508,52 @@ Read hotspot2.0 spec
 
 http://whatis.techtarget.com/definition/Access-Network-Query-Protocol-ANQP
 
+Plan:
+
+Chu2 zao
+Chu3 hangzhou
+Chu4 hangzhou
+Chu5 chifan train
+
+1200 *12 * 0.15 = 2160 fapiao medical fee. need pay
+
+doing QLiving work
+1. file form and email
+2. HR hold meeting
+3 Create
+
+This websit has guide on wpa and hostapd. Thansk Atheors
+
+https://wiki.gentoo.org/wiki/Wpa_supplicant  passpoint
+
+wpa_supplicant\src\ap\hs20.c   generate eid and send wnm notification action frame
+
+
+hs20_supplicant.h .c in wpa root , looks hs2.0 entry
+
+compile marco CONFIG_HS20
+
+wpa_supplicant_cleanup  --> to clean up hs2.0
+wpa_supplicant_set_suites -> set security type
+wpas_ext_capab_byte ->exten cap bit,  bit 46, WNM-Notification
+wpas_start_assoc_cb -> add hs2.0 in IE buffer
+
+Wpa_ie.c
+wpa_gen_wpa_ie  -- > generate hs2.0 security IE
+
+Wpa_common.c
+wpa_eapol_key_mic -> key mehtod, caculation real value
+
+wpa_cli.c
+
+wpa_cli_complete_set 
+
+CONFIG_MESH  发现mesh
+
+2/29 
+
+found R001 can't read
+
+
+
 
