@@ -432,6 +432,7 @@ Current is Andrios 4.4 ~.  Andrios 5.0 is aviable now.
 
 1/25 
 
+
 rishiqing -- one team project software
 https://www.rishiqing.com/
 
@@ -442,6 +443,135 @@ S-1 IPO   F-1 Foregin IPO  10-K year report 10-Q season report, 8-K important ev
 
 update link-in
 looking into spreadtrum..
+
+
+Jisilu moudle has http bad 400 in C platform.
+
+Thingking about WCDMA data plan or not
+
+Thingking about HTTPs module
+
+Jisilu problem solved. URL link is not correct
+
+1/28 
+
+Read AJAX,PHY,JavaScript,SQL,CSS, basic idea about web development. 
+
+Now, start the beginning analysis of jisilu as learning 
+
+Learn Baidu API for data analysis
+http://tieba.baidu.com/p/2209206383
+
+How to debug javascript?
+
+http://han.guokai.blog.163.com/blog/static/136718271201321402514114/
+also download one copy locally
+
+JQuery..
+
+Some understanding:
+1.Javascript will be loaded when html doc is parsing
+2.Some Javascript is execuet immediately
+3.Javescirpt libary like JQuery may provide some framework to web developer to define
+
+2/1
+
+MS add 802.11ad phy native support
+Looking for deck desktop , get basic idea
+Get t-put la email, we should already do this.
+Review LED spec, how to config is clear. who will detect state? ask fei check la side
+
+p2p service/ipdoc/11ad , 1st day to review WDI spec. 
+Finish scan/discover/connect
+
+in usb selective suspend, as driver, it needs to request bus for usb idle
+
+usb bus https://msdn.microsoft.com/en-us/library/windows/hardware/ff538089(v=vs.85).aspx
+communication API
+
+NDIS API
+https://msdn.microsoft.com/en-us/library/windows/hardware/hh451431(v=vs.85).aspx
+
+usb device works,excpet need maually start service
+
+MSFT sample code to get locaction
+
+https://code.msdn.microsoft.com/windowsapps/Geolocation-2483de66  
+
+2/3
+
+Read WiFI alliance
+Update link-in
+Consider planning
+
+WFA 
+2018 certification on Halow, 900M low power, low speed wifi 
+
+http://www.wired.com/tag/halow/
+http://www.wi-fi.org/news-events/media-coverage
+
+IEEE802.11ah == Halow  vs LoRa vs BT
+
+WFA Certification program:
+
+1. n/ac/direct/wpa2/eap/11w/passpoint/wps/miracast/voe/vop/wifi-aware
+2. tdls/wmm/wmm-admission/wmm_powersave
+3. RF coexistence
+
+Read hotspot2.0 spec
+
+http://whatis.techtarget.com/definition/Access-Network-Query-Protocol-ANQP
+
+Plan:
+
+Chu2 zao
+Chu3 hangzhou
+Chu4 hangzhou
+Chu5 chifan train
+
+1200 *12 * 0.15 = 2160 fapiao medical fee. need pay
+
+doing QLiving work
+1. file form and email
+2. HR hold meeting
+3 Create
+
+This websit has guide on wpa and hostapd. Thansk Atheors
+
+https://wiki.gentoo.org/wiki/Wpa_supplicant  passpoint
+
+wpa_supplicant\src\ap\hs20.c   generate eid and send wnm notification action frame
+
+
+hs20_supplicant.h .c in wpa root , looks hs2.0 entry
+
+compile marco CONFIG_HS20
+
+wpa_supplicant_cleanup  --> to clean up hs2.0
+wpa_supplicant_set_suites -> set security type
+wpas_ext_capab_byte ->exten cap bit,  bit 46, WNM-Notification
+wpas_start_assoc_cb -> add hs2.0 in IE buffer
+
+Wpa_ie.c
+wpa_gen_wpa_ie  -- > generate hs2.0 security IE
+
+Wpa_common.c
+wpa_eapol_key_mic -> key mehtod, caculation real value
+
+wpa_cli.c
+
+wpa_cli_complete_set 
+
+CONFIG_MESH  发现mesh
+
+2/29 
+
+found R001 can't read
+
+find tushare tushare\tushare\stock\Trading.py
+
+ return 'sh%s'%code if code[:1] in ['5', '6', '9'] else 'sz%s'%code bug, shuold and '2' 
+  
 
 
 
