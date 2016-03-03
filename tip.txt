@@ -554,6 +554,9 @@ CONFIG_MESH  发现mesh
 
 found R001 can't read
 
+find tushare tushare\tushare\stock\Trading.py
 
+ return 'sh%s'%code if code[:1] in ['5', '6', '9'] else 'sz%s'%code bug, shuold and '2' 
+  
 
 
