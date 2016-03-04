@@ -584,3 +584,8 @@ http://pandas.pydata.org/pandas-docs/stable/dsintro.html
 global val in pathon, can declare in function
 
 have successfully make one timer to auto execute
+
+make email notify and window message box pop up working
+
+1. Mointer, send ems, weixin, email
+2. stragy 

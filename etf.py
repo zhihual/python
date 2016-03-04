@@ -8,7 +8,7 @@ import time
 import smtplib  
 from email.mime.text import MIMEText  
 
-mailto_list=["7275337@qq.com"] 
+mailto_list=["7275337@qq.com","dikehua@sina.com"] 
 mail_host="smtp.sina.com"  #设置服务器 smtp.sina.com
 mail_user="dikehua"    #用户名
 mail_pass="7275337"   #口令 
@@ -33,8 +33,9 @@ def send_mail(to_list,sub,content):  #to_list：收件人；sub：主题；conte
         return False  
 
 
-
-
+pre_huabo_ret_cur_year = 0	
+pre_yinhua_ret_cur_year = 0
+pre_gc001_cur = 0
 def myanalysis():
 	#Query Quote --start
 	print('******************************************************************')
@@ -153,29 +154,46 @@ def myanalysis():
 	runtime=runtime+1
 	
 	sendemail=0
+	huaboinfo= '511990 Call:%.3f Rate:%.3f Abs:%.2f' % (huabo_cur, huabo_ret_cur_year,  huabo_ret_cur_abs)
+	yinhuainfo='511880 Call:%.3f Rate:%.3f Abs:%.2f' % (yinhua_cur, yinhua_ret_cur_year,  yinhua_ret_cur_abs)
+	gc001info='204001 Call:%.3f Rate:%.3f Abs:%.2f' %(gc001_cur, gc001_cur,gc001_cur_return)
+	
+	global pre_huabo_ret_cur_year
+	global pre_yinhua_ret_cur_year
+	global pre_gc001_cur
 	if(huabo_ret_cur_year>4.0):
-		stockinfo = 'huabo'
-		sendemail=1
+		if(pre_huabo_ret_cur_year != huabo_ret_cur_year):
+			stockinfo = huaboinfo
+			sendemail=1
+			pre_huabo_ret_cur_year = huabo_ret_cur_year
 	elif(yinhua_ret_cur_year>4.0):
-		stockinfo = 'yinua'
-		sendemail=1
+		if(pre_yinhua_ret_cur_year != yinhua_ret_cur_year):
+			stockinfo = yinhuainfo
+			sendemail=1
+			pre_yinhua_ret_cur_year = yinhua_ret_cur_year
 	elif(gc001_cur>4.0):
-		stockinfo='gc001'
-		sendemail=1
-	
+		if(pre_gc001_cur!=gc001_cur):
+			stockinfo=gc001info
+			sendemail=1
+			pre_gc001_cur=gc001_cur
+#notify include, timestamp, each number. 		
+	if(sendemail == 1):
+		sendtitle = '%s' % stockinfo 
+		sendcontext = '(%s) (%s) (%s)'%(huaboinfo,yinhuainfo,gc001info)
+		
 	if(sendemail==1):
-		print('send mail')
-		send_mail(mailto_list,"buytime",stockinfo)
+		print('send mail', )
+		send_mail(mailto_list,sendtitle,sendcontext)
 	print('****************************************************************',runtime)
-	
 	canstart = 1
 	
 #end analysis function
 	
 timer_interval = 1
 canstart = 1
-
 runtime = 0;
+
+
 
 def delayrun():
 	print('running')
@@ -192,3 +210,4 @@ while True:
 		canstart = 0
 		
 	#print('main running')
+#myanalysis()
