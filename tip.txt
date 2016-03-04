@@ -581,3 +581,6 @@ http://pda.readthedocs.org/en/latest/chp5.html#series
 
 http://pandas.pydata.org/pandas-docs/stable/dsintro.html
 
+global val in pathon, can declare in function
+
+have successfully make one timer to auto execute
