@@ -118,13 +118,19 @@ def myanalysis():
 	print('CashRet',CashRet,'CashRate',CashRate,'%')
 	print('StandardCash', standardcash, 'standard',standard,'%')
 	#print('high_standardcash', high_standardcash, 'high_stand',high_stand,'%')
-	print('******************************************************************')
 	global canstart
+	global runtime
+	runtime=runtime+1
+	print('****************************************************************',runtime)
+	
 	canstart = 1
+	
 #end analysis function
 	
 timer_interval = 1
 canstart = 1
+
+runtime = 0;
 
 def delayrun():
 	print('running')
