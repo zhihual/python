@@ -23,13 +23,13 @@ Total_Invest = GC001_Invest
 #order
 standard = 2.7
 high_stand=5.0
-gc001_sell=1.8
+gc001_sell=1.685
 
 yinhua_buy=100.555
 yinhua_sell=100.563
 
-huabo_buy=99.99
-huabo_sell=100.014
+huabo_buy=100.013
+huabo_sell=100.021
 
 #Query GC001
 df = ts.get_realtime_quotes(['204001'])
@@ -99,7 +99,8 @@ print('huabo_ret_cur_abs', huabo_ret_cur_abs, 'huabo_ret_cur_year:',huabo_ret_cu
 
 
 #Caculate Today's cash return rate
-CashRet = gc001_sell_return+yinhua_ret_order_abs
+#CashRet = gc001_sell_return+yinhua_ret_order_abs
+CashRet = gc001_sell_return+huabo_ret_order_abs
 
 CashRate = CashRet*365/Total_Invest*100
 CashRate = round(CashRate,2)
