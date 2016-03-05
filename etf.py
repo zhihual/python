@@ -161,16 +161,17 @@ def myanalysis():
 	global pre_huabo_ret_cur_year
 	global pre_yinhua_ret_cur_year
 	global pre_gc001_cur
+#only report on highest 	
 	if(huabo_ret_cur_year>4.0):
-		if(pre_huabo_ret_cur_year != huabo_ret_cur_year):
+		if(pre_huabo_ret_cur_year < huabo_ret_cur_year):
 			stockinfo = huaboinfo
 			sendemail=1
 			pre_huabo_ret_cur_year = huabo_ret_cur_year
 	elif(yinhua_ret_cur_year>4.0):
-		if(pre_yinhua_ret_cur_year != yinhua_ret_cur_year):
+		if(pre_yinhua_ret_cur_year < yinhua_ret_cur_year):
 			stockinfo = yinhuainfo
 			sendemail=1
-			pre_yinhua_ret_cur_year = yinhua_ret_cur_year
+			pre_yinhua_ret_cur_year < yinhua_ret_cur_year
 	elif(gc001_cur>4.0):
 		if(pre_gc001_cur!=gc001_cur):
 			stockinfo=gc001info
