@@ -9,8 +9,11 @@ import smtplib
 from email.mime.text import MIMEText 
 import datetime
 
+from tkinter import *
+import tkinter.messagebox as messagebox
 
-quotelist = ['sh','sz','cyb','510050','510300','159915','204001','131810','511880','511990','000725','150200','000656','002739']
+
+quotelist = ['510050','510300','159915','204001','131810','511880','511990','000725','150200','000656','002739']
 
 log_last_fluction=[]
 
@@ -41,6 +44,8 @@ quote_freq = 10
 bSendEmail = 1
 bGlobalNotify = 1
 bEachItemNotify=0
+
+mailoption=2  #1 email #2 message box
 
 bIsCheckHighFluction=1
 bIsCheckLowFluction=1
@@ -168,7 +173,11 @@ def myanalysis():
 	
 	if((bIsNeedSendEmail ==1) and(bGlobalNotify==1)):
 		print('send mail')
-		send_mail(mailto_list,sendtitle,sendcontext)
+		if(mailoption == 1):
+			send_mail(mailto_list,sendtitle,sendcontext)
+		elif(mailoption==2):
+		    messagebox.showinfo(sendtitle, sendcontext)
+		
 		bIsNeedSendEmail = 0	
     
 	global runtime
@@ -188,7 +197,7 @@ for j in range(listsize):
 	log_last_fluction.append(0)
 while True:
 	t = Timer(quote_freq,myanalysis)
-	time.sleep(100)
+	time.sleep(10)
 	#print('canstart', canstart)
 	if(canstart==1):
 		t.start()
