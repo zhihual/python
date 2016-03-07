@@ -20,8 +20,8 @@ def send_mail(to_list,sub,content):  #to_list：收件人；sub：主题；conte
     msg['From'] = me  
     msg['To'] = ";".join(to_list)  
     try:  
-        s = smtplib.SMTP()  
-		#s.set_debuglevel(1)
+        s = smtplib.SMTP()
+        s.set_debuglevel(1)
         s.connect(mail_host,587)  #连接smtp服务器
         s.login(mail_user,mail_pass)  #登陆服务器
         s.sendmail(me, to_list, msg.as_string())  #发送邮件

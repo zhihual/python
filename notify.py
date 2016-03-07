@@ -6,7 +6,8 @@ import tushare as ts
 from threading import Timer
 import time
 import smtplib  
-from email.mime.text import MIMEText  
+from email.mime.text import MIMEText 
+import datetime
 
 
 quotelist = ['sh','sz','cyb','510050','510300','159915','204001','131810','511880','511990','000725','150200','000656','002739']
@@ -17,16 +18,16 @@ log_last_fluction=[]
 def_fluction_rate = 0.03
 
                          
-share_gc001_ammount = 130*10000
+share_gc001_ammount = 0
 share_gc001_order_price = 1.685
 
 share_r001_ammount = 0
 share_r001_order_price = 1.685
 
-share_511880_ammount = 130*10000
+share_511880_ammount = 0
 share_511880_buy_price = 100.013
 
-share_511990_ammount = 130*10000
+share_511990_ammount = 0
 share_511990_buy_price = 100.013
 
 
@@ -38,10 +39,13 @@ quote_freq = 10
 
 
 bSendEmail = 1
+bGlobalNotify = 1
+bEachItemNotify=0
 
 bIsCheckHighFluction=1
-
 bIsCheckLowFluction=1
+
+
 
 
 mailto_list=["7275337@qq.com","dikehua@sina.com"] 
@@ -71,7 +75,7 @@ def send_mail(to_list,sub,content):  #to_list£ºÊÕ¼þÈË£»sub£ºÖ÷Ìâ£»content£ºÓÊ¼þÄ
 
 def myanalysis():
 	#Query Quote --start
-	print('******************************************************************')
+	#print('******************************************************************')
 	df = ts.get_realtime_quotes(quotelist)
 	mydf = df['code']
 	df = df.drop(['open', 'bid', 'ask', 'amount','a2_p', 'a3_v','a3_p', 'a4_v', 'a5_v', 'a5_p','date', 'code',
@@ -80,7 +84,7 @@ def myanalysis():
 	
 	df.insert(0,'code', mydf[:])
 	mydispy = df.drop(['name'],axis=1)
-	print(mydispy)
+	#print(mydispy)
 	#Query Quote --end
 	size = len(quotelist)
 	
@@ -100,6 +104,11 @@ def myanalysis():
 		cur_price=float(cur_price)
 		addon_context='addon: '
 		direction = '+'
+
+		# Get a datetime object
+		now = datetime.datetime.now()
+		timestamp ='%d:%d:%d' % (now.hour,now.minute, now.second)
+		
 		if((bIsCheckHighFluction==1)and(cur_price>preclose_price)):
 			fluct_rate = (cur_price-preclose_price)/preclose_price
 			fluct_rate = round(fluct_rate,4)
@@ -114,13 +123,13 @@ def myanalysis():
 			delta = (share_gc001_ammount*share_gc001_order_price/100/360)-(share_gc001_ammount*0.001/100)
 			delta = round(delta, 2)
 			addon_context = '%.2f %d sell price %.2f' % (delta, share_gc001_ammount, share_gc001_order_price)
-			def_fluction_rate = 0.04
+			def_fluction_rate = 0.03
 			fluct_rate = cur_price
 		elif((this.code=='131810')and(share_r001_ammount>0)): #R001
 			delta = (share_r001_ammount*hare_r001_order_price/100/360)-(share_r001_ammount*0.001/100)
 			delta = round(delta, 2)
 			addon_context = '%.2f %d' % (delta, share_r001_ammount)
-			def_fluction_rate = 0.04
+			def_fluction_rate = 0.03
 			fluct_rate = cur_price
 		elif((this.code =='511880')and(share_511880_ammount>0)): #Òø»ªÈÕÀû
 			abs = share_511880_ammount*(share_511880_buy_price-cur_price)
@@ -151,10 +160,13 @@ def myanalysis():
 					bAddMsgInfo = 1
 					bIsNeedSendEmail=1
 		if(bAddMsgInfo==1):
-			sendtitle = '%s code %s %s  Rate %s%.2f' % (direction, this.code,this['name'], direction,fluct_rate*100) 
-			sendcontext = sendcontext+'code %s %s Rate %s%.2f (Now)%.2f Close%.2f %s'%(this.code,this['name'], direction,fluct_rate*100, cur_price, preclose_price, addon_context)
+			sendtitle = '%s code %s %s  Rate %s%.2f' % (timestamp, this.code,this['name'], direction,fluct_rate*100) 
+			singlecontext = '(code %s %s Rate %s%.2f (Now)%.2f Close%.2f %s)'%(this.code,this['name'], direction,fluct_rate*100, cur_price, preclose_price, addon_context)
+			sendcontext = sendcontext+ singlecontext
+			if(bEachItemNotify==1):
+				send_mail(mailto_list,sendtitle,singlecontext)
 	
-	if(bIsNeedSendEmail ==1):
+	if((bIsNeedSendEmail ==1) and(bGlobalNotify==1)):
 		print('send mail')
 		send_mail(mailto_list,sendtitle,sendcontext)
 		bIsNeedSendEmail = 0	
@@ -174,11 +186,11 @@ j=0
 listsize = len(quotelist)
 for j in range(listsize):
 	log_last_fluction.append(0)
-#while True:
-#	t = Timer(quote_freq,myanalysis)
-#	time.sleep(20)
+while True:
+	t = Timer(quote_freq,myanalysis)
+	time.sleep(60)
 	#print('canstart', canstart)
-#	if(canstart==1):
-#		t.start()
-#		canstart = 0
-myanalysis()
+	if(canstart==1):
+		t.start()
+		canstart = 0
+#myanalysis()

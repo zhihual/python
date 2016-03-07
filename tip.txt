@@ -589,3 +589,7 @@ make email notify and window message box pop up working
 
 1. Mointer, send ems, weixin, email
 2. stragy 
+
+
+3/7 
+mkisofs command to make iso file?
