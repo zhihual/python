@@ -17,38 +17,13 @@ quotelist = ['510050','510300','159915','204001','131810','511880','511990','000
 
 log_last_fluction=[]
 
-
-def_fluction_rate = 0.03
-
-                         
-share_gc001_ammount = 0
-share_gc001_order_price = 1.685
-
-share_r001_ammount = 0
-share_r001_order_price = 1.685
-
-share_511880_ammount = 0
-share_511880_buy_price = 100.013
-
-share_511990_ammount = 0
-share_511990_buy_price = 100.013
-
-
-share_150200_ammount = 0
-share_150200_buy_price = 0.972
-
-
-quote_freq = 10
-
-
+quote_freq =10
 bSendEmail = 1
 bGlobalNotify = 1
 bEachItemNotify=0
+mailoption=1  #1 email #2 message box
 
-mailoption=2  #1 email #2 message box
-
-bIsCheckHighFluction=1
-bIsCheckLowFluction=1
+def_fluction_rate = 3.0
 
 
 
@@ -80,10 +55,10 @@ def send_mail(to_list,sub,content):  #to_list£ºÊÕ¼þÈË£»sub£ºÖ÷Ìâ£»content£ºÓÊ¼þÄ
 
 def myanalysis():
 	#Query Quote --start
-	#print('******************************************************************')
+	print('******************************************************************')
 	df = ts.get_realtime_quotes(quotelist)
 	mydf = df['code']
-	df = df.drop(['open', 'bid', 'ask', 'amount','a2_p', 'a3_v','a3_p', 'a4_v', 'a5_v', 'a5_p','date', 'code',
+	df = df.drop(['bid', 'ask', 'amount','a2_p', 'a3_v','a3_p', 'a4_v', 'a5_v', 'a5_p','date', 'code',
                'b1_v', 'b2_p', 'b2_v', 'b2_p', 'b3_v', 'b4_v', 'b4_p','b5_v', 'b5_p', 'a1_v', 'a2_v', 'a4_p', 'b1_p', 'b3_p', 'a1_p','volume'], axis=1)
     
 	
@@ -103,8 +78,8 @@ def myanalysis():
 		bAddMsgInfo = 0
 		this = df.loc[i]
 		#print(this)
-		preclose_price = float(this.pre_close)
-		preclose_price = round(preclose_price,2)
+		open_price = float(this.pre_close) #### notice change to preclose
+		open_price = round(open_price,2)
 		cur_price = this.price
 		cur_price=float(cur_price)
 		addon_context='addon: '
@@ -114,71 +89,67 @@ def myanalysis():
 		now = datetime.datetime.now()
 		timestamp ='%d:%d:%d' % (now.hour,now.minute, now.second)
 		
-		if((bIsCheckHighFluction==1)and(cur_price>preclose_price)):
-			fluct_rate = (cur_price-preclose_price)/preclose_price
-			fluct_rate = round(fluct_rate,4)
-			direction = '+'
-		if((bIsCheckLowFluction==1)and(preclose_price>cur_price)):
-			fluct_rate = (preclose_price-cur_price)/preclose_price
-			fluct_rate = round(fluct_rate,4)
-			direction = '-'
+		if (this.code == '204001' or this.code =='131810'):
+			fluct_rate = cur_price
+			def_fluction_rate = 3
+		elif((this.code == '511880') or (this.code == '511990')):
+			def_fluction_rate = 0.005
+			if(cur_price>=open_price):
+				fluct_rate = cur_price-open_price
+				fluct_rate = round(fluct_rate,3)
+				direction = '+'
+			if(open_price>cur_price):
+				fluct_rate = open_price - cur_price
+				fluct_rate = round(fluct_rate,3)
+				direction = '-'
+		else:
+			def_fluction_rate = 3
+			if(open_price == 0):
+				fluct_rate=0
+				direction='*'
+			elif(cur_price>=open_price):
+				fluct_rate = (cur_price-open_price)/open_price
+				fluct_rate = round(fluct_rate,3)
+				fluct_rate = fluct_rate*100
+				fluct_rate = round(fluct_rate,3)
+				direction = '+'
+			elif(open_price>cur_price):
+				fluct_rate = (open_price-cur_price)/open_price
+				fluct_rate = round(fluct_rate,3)
+				fluct_rate = fluct_rate*100
+				fluct_rate = round(fluct_rate,3)
+				direction = '-'
 	    
-		# checkÊÇ·ñÐèÒª¼ÆËãÊµÊ±³É±¾
-		if((this.code =='204001')and(share_gc001_ammount>0)): #GC001
-			delta = (share_gc001_ammount*share_gc001_order_price/100/360)-(share_gc001_ammount*0.001/100)
-			delta = round(delta, 2)
-			addon_context = '%.2f %d sell price %.2f' % (delta, share_gc001_ammount, share_gc001_order_price)
-			def_fluction_rate = 0.03
-			fluct_rate = cur_price
-		elif((this.code=='131810')and(share_r001_ammount>0)): #R001
-			delta = (share_r001_ammount*hare_r001_order_price/100/360)-(share_r001_ammount*0.001/100)
-			delta = round(delta, 2)
-			addon_context = '%.2f %d' % (delta, share_r001_ammount)
-			def_fluction_rate = 0.03
-			fluct_rate = cur_price
-		elif((this.code =='511880')and(share_511880_ammount>0)): #Òø»ªÈÕÀû
-			abs = share_511880_ammount*(share_511880_buy_price-cur_price)
-			rate = abs*356/share_511880_ammount
-			abs = round(abs,2)
-			rate = round(rate, 2)
-			addon_context = '%.2f %d %.2f' % (rate*100, share_511880_ammount, abs )
-			def_fluction_rate = 0.025
-			fluct_rate = rate
-		elif((this.code =='511990')and(share_511990_ammount>0)): #»ª±¦ÌíÒæ
-			abs = share_511990_ammount*(share_511990_buy_price-cur_price)
-			rate = abs*356/share_511990_ammount
-			abs = round(abs,2)
-			rate = round(rate, 2)
-			addon_context = '%.2f %d %.2f' % (rate*100, share_511990_ammount, abs )
-			def_fluction_rate = 0.025
-			fluct_rate = rate
-		elif((this.code =='150200')and(share_150200_ammount>0)): #·Ö¼¶A
-			abs = share_150200_ammount*(share_150200_buy_price-cur_price)
-			abs = round(abs,2)
-			addon_context = '%d %.2f' % (share_150200_ammount, abs )
-		
-			
 		if(bSendEmail==1):
+			#print(log_last_fluction[i], fluct_rate, def_fluction_rate)
 			if(log_last_fluction[i]<fluct_rate):
 				log_last_fluction[i] = fluct_rate
 				if(fluct_rate>def_fluction_rate):
+					#print('add',log_last_fluction[i], fluct_rate, def_fluction_rate)
 					bAddMsgInfo = 1
 					bIsNeedSendEmail=1
+							
+		print('(code %s %s Rate %s%.3f (Now)%.3f (Preclose)%.3f)'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price))	
 		if(bAddMsgInfo==1):
-			sendtitle = '%s code %s %s  Rate %s%.2f' % (timestamp, this.code,this['name'], direction,fluct_rate*100) 
-			singlecontext = '(code %s %s Rate %s%.2f (Now)%.2f Close%.2f %s)'%(this.code,this['name'], direction,fluct_rate*100, cur_price, preclose_price, addon_context)
+			sendtitle = '%s code %s %s  Rate %s%.3f' % (timestamp, this.code,this['name'], direction,fluct_rate) 
+			singlecontext = '(code %s %s Rate %s%.3f (Now)%.3f (Preclose)%.3f)'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price)
 			sendcontext = sendcontext+ singlecontext
 			if(bEachItemNotify==1):
+				print('send')
 				send_mail(mailto_list,sendtitle,singlecontext)
 	
 	if((bIsNeedSendEmail ==1) and(bGlobalNotify==1)):
 		print('send mail')
 		if(mailoption == 1):
+			#print(sendcontext)
 			send_mail(mailto_list,sendtitle,sendcontext)
 		elif(mailoption==2):
 		    messagebox.showinfo(sendtitle, sendcontext)
 		
-		bIsNeedSendEmail = 0	
+	bIsNeedSendEmail = 0
+	sendtitle = 0
+	sendcontext = 0
+		
     
 	global runtime
 	runtime = runtime+1
