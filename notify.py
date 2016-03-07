@@ -25,6 +25,7 @@ mailoption=1  #1 email #2 message box
 
 def_fluction_rate = 3.0
 
+bNeedReset=0
 
 
 
@@ -68,6 +69,25 @@ def myanalysis():
 	#Query Quote --end
 	size = len(quotelist)
 	
+	# Get a datetime object
+	now = datetime.datetime.now()
+	timestamp ='%d:%d:%d' % (now.hour,now.minute, now.second)
+		
+	#method to restart to send notify email
+	global bNeedReset
+	if((now.hour == 9) and (now.minute>25) and (now.minute<27)):
+	#if((now.hour == 18) and (now.minute>18) and (now.minute<20)):
+		if (bNeedReset==0):
+			print('set flag')
+			bNeedReset=1
+	else:
+		if(bNeedReset==1):
+			k=0
+			ksize = len(quotelist)
+			for k in range(ksize):
+				log_last_fluction[k]=0
+			bNeedReset=0
+			print('clar flag')
 		
 	i = 0
 	bIsNeedSendEmail = 0
@@ -85,10 +105,7 @@ def myanalysis():
 		addon_context='addon: '
 		direction = '+'
 
-		# Get a datetime object
-		now = datetime.datetime.now()
-		timestamp ='%d:%d:%d' % (now.hour,now.minute, now.second)
-		
+	
 		if (this.code == '204001' or this.code =='131810'):
 			fluct_rate = cur_price
 			def_fluction_rate = 3
