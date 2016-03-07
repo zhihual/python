@@ -173,7 +173,7 @@ def myanalysis():
     
 	global runtime
 	runtime = runtime+1
-	print('****************************************************************',runtime)
+	print('********************************************************',runtime,timestamp)
 	global canstart
 	canstart = 1
 
@@ -188,7 +188,7 @@ for j in range(listsize):
 	log_last_fluction.append(0)
 while True:
 	t = Timer(quote_freq,myanalysis)
-	time.sleep(60)
+	time.sleep(100)
 	#print('canstart', canstart)
 	if(canstart==1):
 		t.start()
