@@ -70,7 +70,7 @@ def getdebuginfo():
 	f=0
 	fsize = len(quotelist)
 	for f in range(fsize):
-		logdump = logdump+'%s %s '%(quotelist[f],log_last_fluction[f])
+		logdump = logdump+'%s:%s '%(quotelist[f],log_last_fluction[f])
 	return logdump
 
 def myanalysis():
