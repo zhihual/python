@@ -29,6 +29,18 @@ bNeedReset=0
 
 
 
+
+# log start time
+
+
+def getcurtime():
+	mtime = datetime.datetime.now()
+	timestr ='%d:%d:%d:%d' % (mtime.day, mtime.hour, mtime.minute, mtime.second)
+	return timestr
+
+#debug information
+startime=getcurtime
+
 mailto_list=["7275337@qq.com","dikehua@sina.com"] 
 mail_host="smtp.sina.com"  #ÉèÖÃ·þÎñÆ÷ smtp.sina.com
 mail_user="dikehua"    #ÓÃ»§Ãû
@@ -53,6 +65,13 @@ def send_mail(to_list,sub,content):  #to_list£ºÊÕ¼þÈË£»sub£ºÖ÷Ìâ£»content£ºÓÊ¼þÄ
         print(str(e))
         return False  
 
+def getdebuginfo():
+	logdump='Log dump:'
+	f=0
+	fsize = len(quotelist)
+	for f in range(fsize):
+		logdump = logdump+'%s %s '%(quotelist[f],log_last_fluction[f])
+	return logdump
 
 def myanalysis():
 	#Query Quote --start
@@ -75,10 +94,11 @@ def myanalysis():
 		
 	#method to restart to send notify email
 	global bNeedReset
-	if((now.hour == 9) and (now.minute>25) and (now.minute<27)):
-	#if((now.hour == 18) and (now.minute>18) and (now.minute<20)):
+	if((now.hour == 9) and (now.minute>29) and (now.minute<31)):
+	#if((now.hour == 11) and (now.minute>9) and (now.minute<11)):
 		if (bNeedReset==0):
 			print('set flag')
+			send_mail(mailto_list,'set_flag %s'% getcurtime(),getdebuginfo())
 			bNeedReset=1
 	else:
 		if(bNeedReset==1):
@@ -88,6 +108,8 @@ def myanalysis():
 				log_last_fluction[k]=0
 			bNeedReset=0
 			print('clar flag')
+			send_mail(mailto_list,'clear flag %s'%getcurtime(),getdebuginfo())
+			
 		
 	i = 0
 	bIsNeedSendEmail = 0
@@ -99,9 +121,10 @@ def myanalysis():
 		this = df.loc[i]
 		#print(this)
 		open_price = float(this.pre_close) #### notice change to preclose
-		open_price = round(open_price,2)
+		open_price = round(open_price,3)
 		cur_price = this.price
 		cur_price=float(cur_price)
+		cur_price= round(cur_price,3)
 		addon_context='addon: '
 		direction = '+'
 
@@ -121,7 +144,7 @@ def myanalysis():
 				direction = '-'
 		else:
 			def_fluction_rate = 3
-			if(open_price == 0):
+			if(cur_price == 0):
 				fluct_rate=0
 				direction='*'
 			elif(cur_price>=open_price):
@@ -148,8 +171,8 @@ def myanalysis():
 							
 		print('(code %s %s Rate %s%.3f (Now)%.3f (Preclose)%.3f)'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price))	
 		if(bAddMsgInfo==1):
-			sendtitle = '%s code %s %s  Rate %s%.3f' % (timestamp, this.code,this['name'], direction,fluct_rate) 
-			singlecontext = '(code %s %s Rate %s%.3f (Now)%.3f (Preclose)%.3f)'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price)
+			sendtitle = '%s %s %s%.3f' % (timestamp, this.code, direction,fluct_rate) 
+			singlecontext = '(code %s %s Rate %s%.3f (Now)%.3f (Preclose)%.3f log%.3f)'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price, log_last_fluction[i])
 			sendcontext = sendcontext+ singlecontext
 			if(bEachItemNotify==1):
 				print('send')
@@ -159,6 +182,7 @@ def myanalysis():
 		print('send mail')
 		if(mailoption == 1):
 			#print(sendcontext)
+			sendcontext= sendcontext+getdebuginfo()
 			send_mail(mailto_list,sendtitle,sendcontext)
 		elif(mailoption==2):
 		    messagebox.showinfo(sendtitle, sendcontext)
