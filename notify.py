@@ -66,11 +66,11 @@ def send_mail(to_list,sub,content):  #to_list£ºÊÕ¼þÈË£»sub£ºÖ÷Ìâ£»content£ºÓÊ¼þÄ
         return False  
 
 def getdebuginfo():
-	logdump='Log dump:'
+	logdump='Log dump:<br>'
 	f=0
 	fsize = len(quotelist)
 	for f in range(fsize):
-		logdump = logdump+'%s:%s '%(quotelist[f],log_last_fluction[f])
+		logdump = logdump+'%s:%s <br>'%(quotelist[f],log_last_fluction[f])
 	return logdump
 
 def myanalysis():
@@ -98,7 +98,7 @@ def myanalysis():
 	#if((now.hour == 11) and (now.minute>9) and (now.minute<11)):
 		if (bNeedReset==0):
 			print('set flag')
-			send_mail(mailto_list,'set_flag %s'% getcurtime(),getdebuginfo())
+			send_mail(mailto_list,'set_flag %s<br>'% getcurtime(),getdebuginfo())
 			bNeedReset=1
 	else:
 		if(bNeedReset==1):
@@ -108,7 +108,7 @@ def myanalysis():
 				log_last_fluction[k]=0
 			bNeedReset=0
 			print('clar flag')
-			send_mail(mailto_list,'clear flag %s'%getcurtime(),getdebuginfo())
+			send_mail(mailto_list,'clear flag %s<br>'%getcurtime(),getdebuginfo())
 			
 		
 	i = 0
@@ -169,10 +169,10 @@ def myanalysis():
 					bAddMsgInfo = 1
 					bIsNeedSendEmail=1
 							
-		print('(code %s %s Rate %s%.3f (Now)%.3f (Preclose)%.3f)'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price))	
+		print('%s %s %s%.3f Now%.3f Preclose%.3f'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price))	
 		if(bAddMsgInfo==1):
 			sendtitle = '%s %s %s%.3f' % (timestamp, this.code, direction,fluct_rate) 
-			singlecontext = '(code %s %s Rate %s%.3f (Now)%.3f (Preclose)%.3f log%.3f)'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price, log_last_fluction[i])
+			singlecontext = '%s %s %s%.3f Now %.3f Preclose%.3f log%.3f <br>'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price, log_last_fluction[i])
 			sendcontext = sendcontext+ singlecontext
 			if(bEachItemNotify==1):
 				print('send')

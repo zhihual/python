@@ -7,7 +7,7 @@
 
 import smtplib  
 from email.mime.text import MIMEText  
-mailto_list=["7275337@qq.com"] 
+mailto_list=["dikehua@sina.com"] 
 mail_host="smtp.sina.com"  #设置服务器 smtp.sina.com
 mail_user="dikehua"    #用户名
 mail_pass="7275337"   #口令 
@@ -31,7 +31,7 @@ def send_mail(to_list,sub,content):  #to_list：收件人；sub：主题；conte
         print(str(e))
         return False  
 if __name__ == '__main__':  
-    if send_mail(mailto_list,"hellow world","stock info"):  
+    if send_mail(mailto_list,"hellow world","hello <br> nextline"):  
         print('发送成功')  
     else:  
         print('发送失败')  
