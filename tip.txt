@@ -593,3 +593,11 @@ make email notify and window message box pop up working
 
 3/7 
 mkisofs command to make iso file?
+
+3/9
+aritical about LPM
+
+http://www.xuebuyuan.com/1671935.html
+http://blogs.msdn.com/b/usbcoreblog/archive/2013/11/15/usb-2-0-lpm.aspx
+
+
