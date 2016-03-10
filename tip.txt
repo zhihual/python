@@ -609,11 +609,92 @@ obj3 = Series(sdata)
 bj4.name = 'population'
 obj.index = ['Bob', 'Steve', 'Jeff', 'Ryan']
 
+
+   
+3/10 
+
+Series = value and index, value and index are all arrray
+Series([value], index=[])
+can get item by index
+Series can do array math operation on each values
+
+Series can also pick up from dict, and more, can pick up values from indexs.
+
+In [20]: sdata = {'Ohio': 35000, 'Texas': 71000, 'Oregon': 16000, 'Utah': 5000}
+In [21]: obj3 = Series(sdata)
+In [22]: obj3
+Out[22]:
+Ohio 35000
+Oregon 16000
+Texas 71000
+Utah 5000113
+
+
+In [23]: states = [‘California’, ‘Ohio’, ‘Oregon’, ‘Texas’] 
+In [24]: obj4 = Series(sdata, index=states) 
+In [25]: obj4 
+Out[25]: 
+California NaN --> not a number
+Ohio 35000
+Oregon 
+16000
+Texas 71000
+
+pd function isnull() or notnull()
+
+Series has name and it's index also has name
+In [32]: obj4.name = 'population'
+In [33]: obj4.index.name = 'state'
+
+frame['index']
+frame.ix[] --for row
+frame.loc[] -- also for row
+
 data = {'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada'],
         'year': [2000, 2001, 2002, 2001, 2002],
         'pop': [1.5, 1.7, 3.6, 2.4, 2.9]}
 frame = DataFrame(data)
+frame2 = DataFrame(data, columns=['year', 'state', 'pop', 'debt'], index=['one', 'two', 'three', 'four', 'five'])
 
-frame2 = DataFrame(data, columns=['year', 'state', 'pop', 'debt'],
-   ....: index=['one', 'two', 'three', 'four', 'five'])
-   
+
+In [57]: pop = {'Nevada': {2001: 2.4, 2002: 2.9},
+   ....: 'Ohio': {2000: 1.5, 2001: 1.7, 2002: 3.6}}
+In [58]: frame3 = DataFrame(pop)
+In [59]: frame3
+Out[59]:
+     Nevada Ohio
+2000    NaN  1.5
+2001    2.4  1.7
+2002    2.9  3.6
+
+ffill and bfill
+
+In [84]: obj3 = Series(['blue', 'purple', 'yellow'], index=[0, 2, 4])
+In [85]: obj3.reindex(range(6), method='ffill')
+
+#reindex is for change index order
+
+#remove try to one row
+
+drop row
+In [94]: obj = Series(np.arange(5.), index=['a', 'b', 'c', 'd', 'e'])
+In [95]: new_obj = obj.drop('c')
+In [96]: new_obj
+Out[96]:
+a   0
+b   1
+d   3
+e   4
+In [97]: obj.drop(['d', 'c'])
+Out[97]:
+a   0
+b   1
+e   4
+sdrop coloum
+data.drop('two', axis=1) 
+
+frame.get_value(row,coloum)
+frame.set_value(row, coloum, set_value)
+
+http://www.cnphp6.com/archives/65844 python apply for graphic
+

@@ -9,6 +9,19 @@ except ImportError:
     from urllib2 import urlopen, Request
 
 
+def RemoveHTML(str):
+	match1='">'
+	match2='span>'
+	loc_match1=str.find(match1)
+	if(loc_match1 < 0):
+		return str
+	loc_match1+=2
+	loc_match2=str.find(match2)
+	loc_match2-=2
+	
+	
+	return str[loc_match1:loc_match2]+'*'
+	
 #ts.get_loan_rate()
 def jisilu_xsgbond():
 	#myreq = Request('http://www.jisilu.cn/data/cbnew/cb_list/, Query:___t=1453526981335')
@@ -85,7 +98,12 @@ def jisilu_newstock():
 	for i in range(len(newstock_list)):
 		mydicts=newstock_list[i]
 		subdict=mydicts['cell']
-		print(subdict['stock_nm'], subdict['stock_cd'], subdict['apply_dt'], subdict['apply_cd'], subdict['jsl_issue_price'])
+		#print('1',subdict['apply_dt'], subdict['apply_cd'])
+		my_apply_dt = RemoveHTML(subdict['apply_dt'])
+		my_apply_cd = RemoveHTML(subdict['apply_cd'])
+		#print('2', my_apply_dt, my_apply_cd)
+		print(subdict['stock_nm'], subdict['stock_cd'], my_apply_dt, my_apply_cd, subdict['jsl_issue_price'])
+		#print(subdict['apply_dt'])
 
 def jisilu_etf():
 	myreq = Request('http://www.jisilu.cn/jisiludata/etf.php?Query:___t=1453624119049')
