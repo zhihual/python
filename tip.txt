@@ -698,3 +698,6 @@ frame.set_value(row, coloum, set_value)
 
 http://www.cnphp6.com/archives/65844 python apply for graphic
 
+
+http://unix.stackexchange.com/questions/107939/how-to-restart-the-python-script-automatically-if-it-is-killed-or-dies  // crash handling
+*/5 * * * * pgrep -f testing.py || nohup python /home/you/scripts/testing.py > test.out

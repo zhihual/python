@@ -34,7 +34,15 @@ def delayrun():
 	global canstart
 	global counter 
 	counter=counter+1
+	print(counter)
+	if(counter==3):
+		x=0;
+		try:
+			j=100/x
+		except:
+			print('let it go')
 	canstart = 1
+
 	#print('change canstart', canstart)
 	
 

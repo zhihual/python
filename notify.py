@@ -75,133 +75,143 @@ def getdebuginfo():
 
 def myanalysis():
 	#Query Quote --start
+	skip = 0
 	print('******************************************************************')
-	df = ts.get_realtime_quotes(quotelist)
-	mydf = df['code']
-	df = df.drop(['bid', 'ask', 'amount','a2_p', 'a3_v','a3_p', 'a4_v', 'a5_v', 'a5_p','date', 'code',
+	try:
+		df = ts.get_realtime_quotes(quotelist)
+	except:
+		skip = 1
+		print('let it go')
+		send_mail(mailto_list,'let it go %s<br>'% getcurtime(),getdebuginfo())
+	
+	if(skip == 1):
+		print('let it go')
+	else:
+		mydf = df['code']
+		df = df.drop(['bid', 'ask', 'amount','a2_p', 'a3_v','a3_p', 'a4_v', 'a5_v', 'a5_p','date', 'code',
                'b1_v', 'b2_p', 'b2_v', 'b2_p', 'b3_v', 'b4_v', 'b4_p','b5_v', 'b5_p', 'a1_v', 'a2_v', 'a4_p', 'b1_p', 'b3_p', 'a1_p','volume'], axis=1)
     
 	
-	df.insert(0,'code', mydf[:])
-	mydispy = df.drop(['name'],axis=1)
-	#print(mydispy)
-	#Query Quote --end
-	size = len(quotelist)
+		df.insert(0,'code', mydf[:])
+		mydispy = df.drop(['name'],axis=1)
+		#print(mydispy)
+		#Query Quote --end
+		size = len(quotelist)
 	
-	# Get a datetime object
-	now = datetime.datetime.now()
-	timestamp ='%d:%d:%d' % (now.hour,now.minute, now.second)
+		# Get a datetime object
+		now = datetime.datetime.now()
+		timestamp ='%d:%d:%d' % (now.hour,now.minute, now.second)
 		
-	#method to restart to send notify email
-	global bNeedReset
-	if((now.hour == 9) and (now.minute>29) and (now.minute<31)):
-	#if((now.hour == 11) and (now.minute>9) and (now.minute<11)):
-		if (bNeedReset==0):
-			print('set flag')
-			send_mail(mailto_list,'set_flag %s<br>'% getcurtime(),getdebuginfo())
-			bNeedReset=1
-	else:
-		if(bNeedReset==1):
-			k=0
-			ksize = len(quotelist)
-			for k in range(ksize):
-				log_last_fluction[k]=0
-			bNeedReset=0
-			print('clar flag')
-			send_mail(mailto_list,'clear flag %s<br>'%getcurtime(),getdebuginfo())
+		#method to restart to send notify email
+		global bNeedReset
+		if((now.hour == 9) and (now.minute>29) and (now.minute<31)):
+		#if((now.hour == 11) and (now.minute>9) and (now.minute<11)):
+			if (bNeedReset==0):
+				print('set flag')
+				send_mail(mailto_list,'set_flag %s<br>'% getcurtime(),getdebuginfo())
+				bNeedReset=1
+		else:
+			if(bNeedReset==1):
+				k=0
+				ksize = len(quotelist)
+				for k in range(ksize):
+					log_last_fluction[k]=0
+				bNeedReset=0
+				print('clar flag')
+				send_mail(mailto_list,'clear flag %s<br>'%getcurtime(),getdebuginfo())
 			
 		
-	i = 0
-	bIsNeedSendEmail = 0
-	sendtitle = ''
-	sendcontext = ''
-	for i in range(size): # 循环计算
-		global def_fluction_rate
-		bAddMsgInfo = 0
-		this = df.loc[i]
-		#print(this)
-		open_price = float(this.pre_close) #### notice change to preclose
-		open_price = round(open_price,3)
-		cur_price = this.price
-		cur_price=float(cur_price)
-		cur_price= round(cur_price,3)
-		addon_context='addon: '
-		direction = '+'
+		i = 0
+		bIsNeedSendEmail = 0
+		sendtitle = ''
+		sendcontext = ''
+		for i in range(size): # 循环计算
+			global def_fluction_rate
+			bAddMsgInfo = 0
+			this = df.loc[i]
+			#print(this)
+			
+			open_price = float(this.pre_close) #### notice change to preclose
+			open_price = round(open_price,3)
+			cur_price = this.price
+			cur_price=float(cur_price)
+			cur_price= round(cur_price,3)
+			addon_context='addon: '
+			direction = '+'
 
 	
-		if (this.code == '204001' or this.code =='131810'):
-			fluct_rate = cur_price
-			def_fluction_rate = 3
-		elif((this.code == '511880') or (this.code == '511990')):
-			def_fluction_rate = 0.005
-			if(cur_price>=open_price):
-				fluct_rate = cur_price-open_price
-				fluct_rate = round(fluct_rate,3)
-				direction = '+'
-			if(open_price>cur_price):
-				fluct_rate = open_price - cur_price
-				fluct_rate = round(fluct_rate,3)
-				direction = '-'
-		else:
-			def_fluction_rate = 3
-			if(cur_price == 0):
-				fluct_rate=0
-				direction='*'
-			elif(cur_price>=open_price):
-				fluct_rate = (cur_price-open_price)/open_price
-				fluct_rate = round(fluct_rate,3)
-				fluct_rate = fluct_rate*100
-				fluct_rate = round(fluct_rate,3)
-				direction = '+'
-			elif(open_price>cur_price):
-				fluct_rate = (open_price-cur_price)/open_price
-				fluct_rate = round(fluct_rate,3)
-				fluct_rate = fluct_rate*100
-				fluct_rate = round(fluct_rate,3)
-				direction = '-'
+			if (this.code == '204001' or this.code =='131810'):
+				fluct_rate = cur_price
+				def_fluction_rate = 3
+			elif((this.code == '511880') or (this.code == '511990')):
+				def_fluction_rate = 0.005
+				if(cur_price>=open_price):
+					fluct_rate = cur_price-open_price
+					fluct_rate = round(fluct_rate,3)
+					direction = '+'
+				if(open_price>cur_price):
+					fluct_rate = open_price - cur_price
+					fluct_rate = round(fluct_rate,3)
+					direction = '-'
+			else:
+				def_fluction_rate = 3
+				if(cur_price == 0):
+					fluct_rate=0
+					direction='*'
+				elif(cur_price>=open_price):
+					fluct_rate = (cur_price-open_price)/open_price
+					fluct_rate = round(fluct_rate,3)
+					fluct_rate = fluct_rate*100
+					fluct_rate = round(fluct_rate,3)
+					direction = '+'
+				elif(open_price>cur_price):
+					fluct_rate = (open_price-cur_price)/open_price
+					fluct_rate = round(fluct_rate,3)
+					fluct_rate = fluct_rate*100
+					fluct_rate = round(fluct_rate,3)
+					direction = '-'
 	    
-		if(bSendEmail==1):
-			#print(log_last_fluction[i], fluct_rate, def_fluction_rate)
-			if(log_last_fluction[i]<fluct_rate):
-				log_last_fluction[i] = fluct_rate
-				if(fluct_rate>def_fluction_rate):
-					#print('add',log_last_fluction[i], fluct_rate, def_fluction_rate)
-					bAddMsgInfo = 1
-					bIsNeedSendEmail=1
+			if(bSendEmail==1):
+				#print(log_last_fluction[i], fluct_rate, def_fluction_rate)
+				if(log_last_fluction[i]<fluct_rate):
+					log_last_fluction[i] = fluct_rate
+					if(fluct_rate>def_fluction_rate):
+						#print('add',log_last_fluction[i], fluct_rate, def_fluction_rate)
+						bAddMsgInfo = 1
+						bIsNeedSendEmail=1
 							
-		print('%s %s %s%.3f Now%.3f Preclose%.3f'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price))	
-		if(bAddMsgInfo==1):
-			sendtitle = '%s %s %s%.3f' % (timestamp, this.code, direction,fluct_rate) 
-			singlecontext = '%s %s %s%.3f Now %.3f Preclose%.3f log%.3f <br>'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price, log_last_fluction[i])
-			sendcontext = sendcontext+ singlecontext
-			if(bEachItemNotify==1):
-				print('send')
-				send_mail(mailto_list,sendtitle,singlecontext)
+				print('%s %s %s%.3f Now%.3f Preclose%.3f'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price))	
+			if(bAddMsgInfo==1):
+				sendtitle = '%s %s %s%.3f' % (timestamp, this.code, direction,fluct_rate) 
+				singlecontext = '%s %s %s%.3f Now %.3f Preclose%.3f log%.3f <br>'%(this.code,this['name'], direction,fluct_rate, cur_price, open_price, log_last_fluction[i])
+				sendcontext = sendcontext+ singlecontext
+				if(bEachItemNotify==1):
+					print('send')
+					send_mail(mailto_list,sendtitle,singlecontext)
 	
-	if((bIsNeedSendEmail ==1) and(bGlobalNotify==1)):
-		print('send mail')
-		if(mailoption == 1):
-			#print(sendcontext)
-			sendcontext= sendcontext+getdebuginfo()
-			send_mail(mailto_list,sendtitle,sendcontext)
-		elif(mailoption==2):
-		    messagebox.showinfo(sendtitle, sendcontext)
+		if((bIsNeedSendEmail ==1) and(bGlobalNotify==1)):
+			print('send mail')
+			if(mailoption == 1):
+				#print(sendcontext)
+				sendcontext= sendcontext+getdebuginfo()
+				send_mail(mailto_list,sendtitle,sendcontext)
+			elif(mailoption==2):
+				messagebox.showinfo(sendtitle, sendcontext)
 		
-	bIsNeedSendEmail = 0
-	sendtitle = 0
-	sendcontext = 0
+		bIsNeedSendEmail = 0
+		sendtitle = 0
+		sendcontext = 0
 		
     
-	global runtime
-	runtime = runtime+1
-	print('********************************************************',runtime,timestamp)
-	global canstart
-	canstart = 1
+		global runtime
+		runtime = runtime+1
+		print('********************************************************',runtime,timestamp)
+		global canstart
+		canstart = 1
 
 	
 canstart = 1
 runtime = 0
-
 
 j=0
 listsize = len(quotelist)
