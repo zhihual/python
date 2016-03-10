@@ -102,7 +102,7 @@ def jisilu_newstock():
 		my_apply_dt = RemoveHTML(subdict['apply_dt'])
 		my_apply_cd = RemoveHTML(subdict['apply_cd'])
 		#print('2', my_apply_dt, my_apply_cd)
-		print(subdict['stock_nm'], subdict['stock_cd'], my_apply_dt, my_apply_cd, subdict['jsl_issue_price'])
+		print(subdict['stock_cd'], my_apply_dt, my_apply_cd, subdict['stock_nm'],)
 		#print(subdict['apply_dt'])
 
 def jisilu_etf():
