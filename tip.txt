@@ -701,3 +701,79 @@ http://www.cnphp6.com/archives/65844 python apply for graphic
 
 http://unix.stackexchange.com/questions/107939/how-to-restart-the-python-script-automatically-if-it-is-killed-or-dies  // crash handling
 */5 * * * * pgrep -f testing.py || nohup python /home/you/scripts/testing.py > test.out
+
+3/11
+
+519880 3/11 buy 40 sell 85 single account 300w
+http://www.99fund.com/main/index.shtml
+
+What's CDO?
+
+(CDO )Collateralized Debt Obligation 
+
+CLO(Collateralised Loan Obligation)和CBO(Collateralised Bond Obligation)。All called CDO。
+
+ABS（Asset-backed Securities）
+
+119249 jindongyou01  400w start point
+119250 jingdongyou02
+
+huatai trade
+
+http://htamc.htsc.com.cn/jhlc/product_2.jsp?productCode=948008
+
+shenjiaosuo, zonghejiaoyi pingtai
+http://www.szse.cn/main/ints/dzjy/
+
+http://xueqiu.com/3559889031/23937592
+
+what the account can do...
+
+How to auto search web and save into one whole doc...?
+
+http://www.ichangtou.com/ can have a look.
+
+http://penfei84.blog.163.com/blog/static/11859714201087103811764/
+way to setup xvncserver to gnome desktop
+#!/bin/sh 
+# Uncomment the following two lines for normal desktop: 
+# unset SESSION_MANAGER 
+# exec /etc/X11/xinit/xinitrc 
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup 
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources 
+xsetroot -solid grey 
+vncconfig -iconic & 
+xterm -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" & 
+gnome-session & 
+kde
+#!/bin/s
+
+
+http://blog.csdn.net/buyicn/article/details/44245489 //WPS button
+
+How to build WPS
+
+http://blog.csdn.net/highball/article/details/8312659 // build wps
+
+
+Error:
+genl.h
+libnl-dev & libpopt-dev
+after sudo, fixed.
+
+new case -l ssl -l crypto
+after comment ssl lib, solve -lssl
+
+but fail -lcrypto
+change wpa passre code can fix the build issue 
+
+Then, buidl successful. happy :)
+
+1) try to connect hydra use -Dwext succssl, -Dnlink not ok
+
+2) PBC connection  use examples wpa-dbus-new-wps.py make wps success
+
+https://technet.microsoft.com/en-us/library/cc771355(v=ws.10).aspx  windows error code
+
+
+

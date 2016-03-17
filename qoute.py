@@ -14,7 +14,7 @@ import datetime
 
 
 
-quotelist = ['510300','159915','204001','131810','511880','511990','000725','150200','000656']
+quotelist = ['510300','159915','204001','131810','511880','511990','511800','511810','000725','150200','000656']
 
 log_last_fluction=[]
 
@@ -81,7 +81,7 @@ def myanalysis():
 		if (this.code == '204001' or this.code =='131810'):
 			fluct_rate = cur_price
 			def_fluction_rate = 3
-		elif((this.code == '511880') or (this.code == '511990')):
+		elif((this.code == '511880') or (this.code == '511990') or (this.code == '511800') or (this.code == '511810')):
 			def_fluction_rate = 0.005
 			if(cur_price>=open_price):
 				fluct_rate = cur_price-open_price
