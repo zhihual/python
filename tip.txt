@@ -775,5 +775,34 @@ Then, buidl successful. happy :)
 
 https://technet.microsoft.com/en-us/library/cc771355(v=ws.10).aspx  windows error code
 
+python dbus guide
+https://dbus.freedesktop.org/doc/dbus-python/doc/tutorial.html
+
+systemd guide
+http://www.cnblogs.com/jasonliu/archive/2012/12/18/2822965.html
+
+pbc, looks calling into wpas_start_pbc.. with different direction
+
+
+Q=@
+E=echo
+
+Remove Q=@ can make make output more informations
+
+MSFT Wireless API
+
+https://msdn.microsoft.com/en-us/library/windows/desktop/aa371704(v=vs.85).aspx
+
+// checkinf windows inf language
+http://msdn.microsoft.com/en-us/library/ff543461(v=VS.85).aspx 
+
+https://msdn.microsoft.com/en-us/library/windows/hardware/dn941087(v=vs.85).aspx 
+
+The wpa_cli, 
+
+default is useing unix socket to communicate with wpa_supplicate.
+and, the key function is _wpa_ctrl_command. It will send command down, and print the result. 
+this macro CTRL_IFACE_SOCKET is enabled. there also some unsolicited message back from wpa_supplicant
+
 
 
