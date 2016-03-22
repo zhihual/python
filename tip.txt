@@ -804,5 +804,6 @@ default is useing unix socket to communicate with wpa_supplicate.
 and, the key function is _wpa_ctrl_command. It will send command down, and print the result. 
 this macro CTRL_IFACE_SOCKET is enabled. there also some unsolicited message back from wpa_supplicant
 
-
+start_edit(); what's this function means for wpa_cli
+use select() as delay method, and get current time and register time to fire timer.
 
