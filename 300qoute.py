@@ -18,7 +18,9 @@ import datetime
 #,'159926'
 #'159934','518800',
 #'159920','513100','513500','159941','513030',
-quotelist = ['510300','510330','159919','510050','159915','159902','510900','511010','511210','511220','518880','159937','511990','511810','511800','511880']
+#'511210','511220',
+#'159937',
+quotelist = ['510300','510330','159919','510050','159915','159902','510500','510900','511010','518880','511990','511810','511800','511880','150200','000725']
 
 log_last_fluction=[]
 
@@ -118,7 +120,7 @@ def myanalysis():
 			log_last_fluction[i] = fluct_rate
 
 							
-		print('%s %s%-6.3f Now %-7.3f Preclose %-7.3f %s%-8.3f vol %10.3f(W) amount %12.3f(W) %-20s'%(this.code, direction,fluct_rate, cur_price, open_price,direction,log_last_fluction[i],round(float(this['volume'])/10000,3),round(float(this['amount'])/10000,3),this['name']))	
+		print('%s %s%-6.3f Now %-7.3f Preclose %-7.3f %s%-8.3f vol %10.3f(W) amount %11.3f(W) %-20s'%(this.code, direction,fluct_rate, cur_price, open_price,direction,log_last_fluction[i],round(float(this['volume'])/10000,3),round(float(this['amount'])/10000,3),this['name']))	
 	
 
 
