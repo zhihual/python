@@ -891,3 +891,8 @@ Skills:  grep wpa_supplicant /var/log/syslog > outputfile
 
 3/24 successfully get wpasupplciant wps_pbc log.
 
+PF_INET kernel control
+
+PF_NETLINK  kernel event
+
+PF_PACKET send 802.1x packet
