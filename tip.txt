@@ -807,3 +807,87 @@ this macro CTRL_IFACE_SOCKET is enabled. there also some unsolicited message bac
 start_edit(); what's this function means for wpa_cli
 use select() as delay method, and get current time and register time to fire timer.
 
+This is linux OS API manule doc
+
+linux.die.net/man/2/select 
+
+3/22
+Now understand how eloop running... it's basically on timer. fire one and when armed, re-set a new one.
+
+wpa_printf, this is function to control print
+
+Ctrl_iface.c wpa_supplicant_ctrl_iface_process
+
+wpa_supplicant_run is the main run thread... reading now.  funny, it's also one eloop...hehe
+
+
+two useful command in linux
+ps -ef
+pstree
+
+start-stop-daemon in /etc/wpasupplicant/function.sh 
+
+find place to show, why wpa supplicante service run auto
+Should be enough to remove the file
+/usr/share/dbus-1/system-services/fi.epitest.hostap.WPASupplicant.service
+Move it somewhere so you can restore it, rather than immediately delete it. ;-)
+
+main:
+-> wpa_supplicant_init :  // after this fucntion call, eloop init, timer registered, global and priv create and hooked, driver interface also hooked.
+  --> eap method hooked
+  --> wpas_global_ctrl_iface_open_sock, this function hook up the message receive and message handler. Really key functions
+  --> wpas_notify_supplicant_initialized, init DBUS here  
+  -->const struct wpa_driver_ops *const wpa_drivers[], driver's interface defination here
+  --> WiFi CONFIG_WIFI_DISPLA also be here
+  --> Register timer loop here,  eloop_register_timeout(WPA_SUPPLICANT_CLEANUP_INTERVAL, 0, wpas_periodic, global, NULL);
+->fst_global_init  CONFIG_FST=y, Enable Fast Session Transfer (FST) 
+->wpa_supplicant_add_iface //loop to add one wpa_supplicant_interface 
+  --> wpa_supplicant_init_iface // add local interface
+      --> wpa_config_read // read configuration file from disk
+	  -->wpas_init_driver // select one driver ops function array, start to really hook with below driver
+	  -->wpa_supplicant_init_wpa  // wpa in wpa_s interface, is state machine here...
+	    ---> wpa_sm_init
+	  -->wpa_drv_get_hw_feature_data // call driver api
+	  -->wpa_drv_get_capa //call driver api 
+	  -->wpa_supplicant_driver_init // update mac. 
+	     ----> wpa_supplicant_update_mac_addr, // look here, l2_packet_int, hook wpa_supplicant_rx_eapol -->turn to  eloop_register_read_sock(l2->fd, l2_packet_receive, l2, NULL);
+	  -->wpas_wps_init // wps moudle init
+	  -->wpa_supplicant_init_eapol // init eapol state machie
+	  -->wpa_supplicant_ctrl_iface_init  // wpas_ctrl_iface_open_sock  eloop_register_read_sock(priv->sock, wpa_supplicant_ctrl_iface_receive, wpa_s, priv);
+	  -->gas_query_init
+      -->wpas_p2p_init
+	  -->wpa_bss_init
+	  -->wpas_set_wowlan_triggers
+	  -->pcsc_reader_init //SIM Card
+	  -->wpas_init_ext_pw 
+	  -->wpas_rrm_reset // RRM
+      --> wpa_supplicant_set_state(wpa_s, WPA_DISCONNECTED); // implict to triger one scan.
+      --> wpas_p2p_add_p2pdev_interface // add p2p 
+wpa_supplicant_run //run... now.
+wpa_supplicant_deinit // let's quite
+...
+
+/sbin/wpa_supplicant -B -P /run/sendsigs.omit.d/wpasupplicant.pid -u -s -O /var/run/wpa_supplicant
+
+
+http://blog.csdn.net/wh_19910525/article/details/7392147  // WPA guide
+
+how to make wpa_supplicant and wpa_cli run
+
+1. stop network manager
+service network-manager stop:
+
+
+ps -ef | grep wpa to make sure no wpa runing, kill pid is ok
+
+2. wpa_supplicant -B -Dwext -C/home/zliu/wpa_run
+3. wpa_cli -p /home/zliu/wpa_run
+
+Skills:  grep wpa_supplicant /var/log/syslog > outputfile
+         till -f /var/log/syslog
+		 
+		 
+/etc/wpasupplicant/function.sh  here some wpa supplicant script
+
+3/24 successfully get wpasupplciant wps_pbc log.
+
