@@ -14,7 +14,7 @@ import datetime
 
 
 
-quotelist = ['sh','399006','510300','159915','204001','131810','511880','511800','000725','150200','000656','161033','161227','160806','161706','160512']
+quotelist = ['510300','159915','204001','131810','511880','511800','000725','150200','000656','161033','161227','160806','161706','160512']
 
 log_last_fluction=[]
 
@@ -50,8 +50,11 @@ def myanalysis():
 	df = ts.get_realtime_quotes(quotelist)
 	mydf = df['code']
 	df = df.drop(['bid', 'ask', 'amount','a2_p', 'a3_v','a3_p', 'a4_v', 'a5_v', 'a5_p','date', 'code',
-               'b1_v', 'b2_p', 'b2_v', 'b2_p', 'b3_v', 'b4_v', 'b4_p','b5_v', 'b5_p', 'a1_v', 'a2_v', 'a4_p', 'b1_p', 'b3_p', 'a1_p','volume'], axis=1)
+               'b2_p', 'b2_v', 'b2_p', 'b3_v', 'b4_v', 'b4_p','b5_v', 'b5_p', 'a2_v', 'a4_p', 'b3_p', 'volume'], axis=1)
     
+	
+	#df = df.drop(['bid', 'ask', 'amount','a2_p', 'a3_v','a3_p', 'a4_v', 'a5_v', 'a5_p','date', 'code',
+    #           'b1_v', 'b2_p', 'b2_v', 'b2_p', 'b3_v', 'b4_v', 'b4_p','b5_v', 'b5_p', 'a1_v', 'a2_v', 'a4_p', 'b1_p', 'b3_p', 'a1_p','volume'], axis=1)
 	
 	df.insert(0,'code', mydf[:])
 	mydispy = df.drop(['name'],axis=1)
@@ -68,7 +71,7 @@ def myanalysis():
 		global def_fluction_rate
 		bAddMsgInfo = 0
 		this = df.loc[i]
-		#print(this)
+		#print(i)
 		open_price = float(this.pre_close) #### notice change to preclose
 		open_price = round(open_price,3)
 		cur_price = this.price
@@ -77,6 +80,16 @@ def myanalysis():
 		addon_context='addon: '
 		direction = '+'
 
+		a1_p = float(this.a1_p)
+		b1_p = float(this.b1_p)
+		a1_p = round(a1_p,3)
+		b1_p = round(b1_p,3)
+		
+		b1_v = float(this.b1_v)
+		a1_v = float(this.a1_v)
+		a1_vs_b1 = a1_v*100/b1_v
+		a1_vs_b1 = int(a1_vs_b1)
+		
 	
 		if (this.code == '204001' or this.code =='131810'):
 			fluct_rate = cur_price
@@ -114,7 +127,8 @@ def myanalysis():
 			log_last_fluction[i] = fluct_rate
 
 							
-		print('%s %s%-6.3f Now %-8.3f Preclose %-8.3f %s'%(this.code, direction,fluct_rate, cur_price, open_price,log_last_fluction[i]))	
+		#print('%s %s%-6.3f Now %-8.3f Preclose %-8.3f %s'%(this.code, direction,fluct_rate, cur_price, open_price, log_last_fluction[i]))
+		print('%s %s%-6.3f Now %-7.3f Preclose %-7.3f a1_p %-7.3f b1_p %-7.3f a:b %-5.0f'%(this.code, direction,fluct_rate, cur_price, open_price, a1_p, b1_p,a1_vs_b1))	
 	
 
 
