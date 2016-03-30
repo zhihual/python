@@ -14,7 +14,7 @@ import datetime
 
 
 
-quotelist = ['510300','159915','204001','131810','511880','511990','511800','511810','000725','150200','000656']
+quotelist = ['sh','399006','510300','159915','204001','131810','511880','511800','000725','150200','000656','161033','161227','160806','161706','160512']
 
 log_last_fluction=[]
 
@@ -114,7 +114,7 @@ def myanalysis():
 			log_last_fluction[i] = fluct_rate
 
 							
-		print('%s %s%-6.3f Now %-7.3f Preclose %-7.3f %s'%(this.code, direction,fluct_rate, cur_price, open_price,log_last_fluction[i]))	
+		print('%s %s%-6.3f Now %-8.3f Preclose %-8.3f %s'%(this.code, direction,fluct_rate, cur_price, open_price,log_last_fluction[i]))	
 	
 
 
