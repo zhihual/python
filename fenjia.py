@@ -8,6 +8,9 @@ try:
 except ImportError:
     from urllib2 import urlopen, Request
 
+cons_redeem = -1.0
+cons_sell = 3.5	
+	
 #myreq = Request('http://www.jisilu.cn/data/sfnew/funda_list/?___t=1459333211443') #pure a
 myreq = Request('http://www.jisilu.cn/data/sfnew/arbitrage_vip_list/?___t=1459335497584')
 myreq.add_header("Accept-Language", "zn-CN,zh;q=0.8")
@@ -15,17 +18,52 @@ myreq.add_header("Connection", "keep-alive")
 myreq.add_header('Referer', "http://www.jisilu.cn/sfnew")
 myreq.add_header("User-Agent", 'Mozilla/5.0 (Windows NT 6.1; rv:37.0) Gecko/20100101 Firefox/37.0')
 #Key step to sovle problem
-myreq.add_header("Cookie", 'kbz__user_login=1ubd08_P1ebax9aX28vhxtvtwpGcoenW3Ozj5tTav9CjlKjFpNynzK-e3Zncx6zew9XHqbHboK7Q3MSnk9eukaeCr6bq0t3K1I2pk6yxlZGcoc62x9aXxNHwyt_kwp-WoqmVkdDV5cbl2OaYr8SBqqempJnDxrmslZyYouDR4N7Mztu34Nallqavj6OXlKHAsc25w46WzdzjxpCo2dzg2KKMusro0ODdkKSXoqmjm62lp5Cul5PLwtbC5uKknqyjpZWs; kbz_newcookie=1; kbzw_r_uname=dikehua; kbzw__user_login=7Obd08_P1ebax9aX28vhxt_s1JmcndHV7Ojg6N7bwNOMqq_XqMSixKqr26Df0rDI2MbdrKvemKXF2dumm92ip5mXnKTs3Ny_zYynq66irY2yj8ui1dSexdDqyuDl1piumqeCnrjg5dfn2OOBws2Vn6edsoLNsM6tp6GBsdHk5drA3s7Cy-qQrKqqppSmgZzEvb3GuKOC4sri3JO_xtPM46KVrOHe5s_bkKutoaiPopWtqaOhr4zKw9zC6eCirZSnj6ev; kbzw__Session=u11l96t1m1acgv8np5jlbec0p4; Hm_lvt_164fe01b1433a19b507595a43bf58262=1459141116,1459219997,1459230467,1459233839; Hm_lpvt_164fe01b1433a19b507595a43bf58262=1459335780')
+myreq.add_header("Cookie", 'kbz_newcookie=1; kbzw__Session=gnkpou7i4khs29i9nq017045p5; kbzw_r_uname=dikehua; kbzw__user_login=7Obd08_P1ebax9aX28vhxt_s1JmcndHV7Ojg6N7bwNOMqq_XqMSixKqr26Df0rDI2MbdrKvemKXF2dumm92ip5mXnKTs3Ny_zYynq66irY2yj8ui1dSexdDqyuDl1piumqeCnrjg5dfn2OOBws2Vmqmap52WuMbOqayKkKLk6eHO0NHZrd_Vpqymr4-jl5ShwLHNucOOls3g4tiYqNXE3-ieibzU6dHjxqarqqaRnpOpq6uXsZyXtdfH2Oncp5ajmKKsq4m82-nHpZKlq6qmkqaUoq2lmZm9yKTo0O7q2OqQqY-np6yasKGllqaR; Hm_lvt_164fe01b1433a19b507595a43bf58262=1459176482,1459179432,1459259572,1459347600; Hm_lpvt_164fe01b1433a19b507595a43bf58262=1459347671')
 #key step
-lines = urlopen(myreq, timeout = 100).read()
+lines = urlopen(myreq, timeout = 10).read()
 js = json.loads(lines.decode('utf-8'))
 lof_list=js['rows']
 i=0
 for i in range(len(lof_list)):
 	mydicts=lof_list[i]
 	subdict=mydicts['cell']
-	print( subdict['fundA_id'],subdict['fundA_nm'],subdict['fundB_id'], subdict['fundB_nm'],subdict['base_fund_id'], subdict['base_fund_nm'], subdict['index_nm'],subdict['apply_sell']) 
+	apply_sell = float(subdict['apply_sell'])
+	apply_sell = round(apply_sell, 2)
+	buy_redeem = float(subdict['buy_redeem'])
+	buy_redeem = round(buy_redeem, 2)
 	
+	sell1A = float(subdict['sell1A'])
+	sell1B = float(subdict['sell1B'])
+	
+	buy1A = float(subdict['buy1A'])
+	buy1B = float(subdict['buy1B'])
+	
+	
+	base_nav = float(subdict['base_nav'])
+	base_est_val = float(subdict['base_est_val'])
+	
+	
+	redeem_price = (sell1A+sell1B)/2
+	redeem_price = round(redeem_price,3)
+	self_count = (base_nav - redeem_price)*100/redeem_price
+	self_count = round(self_count,3)
+	
+	est_count = (base_est_val-redeem_price)*100/redeem_price
+	est_count = round(est_count,3)
+	
+	sell_price = (buy1A+buy1B)/2
+	sell_price = round(sell_price,3)
+	
+	
+	if((buy_redeem < cons_redeem)):
+		#print("apply_sell = %f" % apply_sell)
+		print( subdict['fundA_id'],subdict['fundB_id'], subdict['base_fund_id'], subdict['base_fund_nm'], subdict['buy_redeem'],'%', subdict['fundA_volume'], subdict['fundB_volume']) 
+		print(subdict['base_nav'],subdict['sell1A'], subdict['sell1B'], redeem_price,self_count,'%', '(',subdict['base_est_val'], est_count,'%',')')
+	if(apply_sell>cons_sell):
+		print( subdict['fundA_id'],subdict['fundB_id'], subdict['base_fund_id'], subdict['base_fund_nm'], subdict['apply_sell'],'%', subdict['fundA_volume'], subdict['fundB_volume']) 
+		print(subdict['base_nav'],subdict['buy1A'], subdict['buy1B'],sell_price)
+	
+
 
 
 
