@@ -896,3 +896,42 @@ PF_INET kernel control
 PF_NETLINK  kernel event
 
 PF_PACKET send 802.1x packet
+
+wpa_driver_wext_event_wireless //handle kernel event
+//Message can see in this handler
+assoc/disassoc
+KEY Error event
+Customer Event
+Scan complete
+AssocReq_IE
+AssocResp_IE
+Pmkidcand//?? what's this for??
+
+
+wpa_driver_wext_event_link // handle link event
+only link add/remove message
+
+3/31
+Looked into wpas_wps_start_pbc, keep moving
+
+wpas_wps_start_pbc
+  - wpas_clear_wps //clear previous wps setting
+  -wpas_wps_add_network // return ssid, if null, then fail. ssid actually is config setting
+	-wpas_notify_network_added // create somthing like interface in dbus
+	-wpa_config_set_network_defaults // default ssid
+	-wpa_config_set // set key_mgmt, eap, identity, registry
+  -wpa_config_set// set phase1 pbc..
+  - eloop_register_timeout(WPS_PBC_WALK_TIME, 0, wpas_wps_timeout, wpa_s, NULL); // register pbc timeout period
+  - wpas_wps_reassoc // start reassoc
+     - wpas_wps_temp_disable // send disable notify
+	 - wpa_supplicant_cancel_sched_scan // stop regular scan
+	 - wpa_supplicant_req_scan // start wps scan... should jump to wpa_supplicant_scan
+	 
+wpa_supplicant_scan
+     - wpa_supplicant_trigger_scan // tigger scan
+         - wpas_trigger_scan_cb //somehow here
+            - wpa_supplicant_notify_scanning
+			-wpa_drv_scan // call driver for scan
+
+
+
