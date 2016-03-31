@@ -45,11 +45,17 @@ for i in range(len(lof_list)):
 	
 	redeem_price = (sell1A+sell1B)/2
 	redeem_price = round(redeem_price,3)
-	self_count = (base_nav - redeem_price)*100/redeem_price
-	self_count = round(self_count,3)
 	
-	est_count = (base_est_val-redeem_price)*100/redeem_price
-	est_count = round(est_count,3)
+	self_count = 0
+	if(redeem_price >0):
+		self_count = (base_nav - redeem_price)*100/redeem_price
+		self_count = round(self_count,3)
+	
+	est_count = 0
+	
+	if(redeem_price>0):
+		est_count = (base_est_val-redeem_price)*100/redeem_price
+		est_count = round(est_count,3)
 	
 	sell_price = (buy1A+buy1B)/2
 	sell_price = round(sell_price,3)
