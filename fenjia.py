@@ -18,7 +18,7 @@ myreq.add_header("Connection", "keep-alive")
 myreq.add_header('Referer', "http://www.jisilu.cn/sfnew")
 myreq.add_header("User-Agent", 'Mozilla/5.0 (Windows NT 6.1; rv:37.0) Gecko/20100101 Firefox/37.0')
 #Key step to sovle problem
-myreq.add_header("Cookie", 'kbz_newcookie=1; kbzw__Session=gnkpou7i4khs29i9nq017045p5; kbzw_r_uname=dikehua; kbzw__user_login=7Obd08_P1ebax9aX28vhxt_s1JmcndHV7Ojg6N7bwNOMqq_XqMSixKqr26Df0rDI2MbdrKvemKXF2dumm92ip5mXnKTs3Ny_zYynq66irY2yj8ui1dSexdDqyuDl1piumqeCnrjg5dfn2OOBws2Vmqmap52WuMbOqayKkKLk6eHO0NHZrd_Vpqymr4-jl5ShwLHNucOOls3g4tiYqNXE3-ieibzU6dHjxqarqqaRnpOpq6uXsZyXtdfH2Oncp5ajmKKsq4m82-nHpZKlq6qmkqaUoq2lmZm9yKTo0O7q2OqQqY-np6yasKGllqaR; Hm_lvt_164fe01b1433a19b507595a43bf58262=1459176482,1459179432,1459259572,1459347600; Hm_lpvt_164fe01b1433a19b507595a43bf58262=1459347671')
+myreq.add_header("Cookie", 'kbz__user_login=1ubd08_P1ebax9aX28vhxtvtwpGcoenW3Ozj5tTav9CjlKjFpNynzK-e3Zncx6zew9XHqbHboK7Q3MSnk9eukaeCr6bq0t3K1I2pk6yxlZGcoc62x9aXxNHwyt_kwp-WoqmVkdDV5cbl2OaYr8SBqqempJnDxrmslZyYouDR4N7Mztu34Nallqavj6OXlKHAsc25w46WzdzjxpCo2dzg2KKMusro0ODdkKSXoqmjm62lp5Cul5PLwtbC5uKknqyjpZWs; kbz_newcookie=1; kbzw_r_uname=dikehua; kbzw__user_login=7Obd08_P1ebax9aX28vhxt_s1JmcndHV7Ojg6N7bwNOMqq_XqMSixKqr26Df0rDI2MbdrKvemKXF2dumm92ip5mXnKTs3Ny_zYynq66irY2yj8ui1dSexdDqyuDl1piumqeCnrjg5dfn2OOBws2Vn6edsoLNsM6tp6GBsdHk5drA3s7Cy-qQrKqqppSmgZzEvb3GuKOC4sri3JO_xtPM46KVrOHe5s_bkKutoaiPopWtqaOhr4zKw9zC6eCirZSnj6ev; kbzw__Session=u11l96t1m1acgv8np5jlbec0p4; Hm_lvt_164fe01b1433a19b507595a43bf58262=1459141116,1459219997,1459230467,1459233839; Hm_lpvt_164fe01b1433a19b507595a43bf58262=1459391748')
 #key step
 lines = urlopen(myreq, timeout = 10).read()
 js = json.loads(lines.decode('utf-8'))
@@ -54,7 +54,7 @@ for i in range(len(lof_list)):
 	sell_price = (buy1A+buy1B)/2
 	sell_price = round(sell_price,3)
 	
-	
+	#print(i)
 	if((buy_redeem < cons_redeem)):
 		#print("apply_sell = %f" % apply_sell)
 		print( subdict['fundA_id'],subdict['fundB_id'], subdict['base_fund_id'], subdict['base_fund_nm'], subdict['buy_redeem'],'%', subdict['fundA_volume'], subdict['fundB_volume']) 
@@ -63,6 +63,8 @@ for i in range(len(lof_list)):
 		print( subdict['fundA_id'],subdict['fundB_id'], subdict['base_fund_id'], subdict['base_fund_nm'], subdict['apply_sell'],'%', subdict['fundA_volume'], subdict['fundB_volume']) 
 		print(subdict['base_nav'],subdict['buy1A'], subdict['buy1B'],sell_price)
 	
+
+
 
 
 
