@@ -13,6 +13,8 @@ import tushare as ts
 con_redeem = -0.9
 #con_redeem = 10
 
+con_disc = -0.7
+
 myreq = Request('http://www.jisilu.cn/data/lof/stock_lof_list/?___t=1459332174309')
 myreq.add_header("Accept-Language", "en-US,en;q=0.5")
 myreq.add_header("Connection", "keep-alive")	
@@ -22,6 +24,7 @@ lines = urlopen(myreq, timeout = 10).read()
 js = json.loads(lines.decode('utf-8'))
 lof_list=js['rows']
 i=0
+
 for i in range(len(lof_list)):
 	mydicts=lof_list[i]
 	subdict=mydicts['cell']
@@ -40,10 +43,10 @@ for i in range(len(lof_list)):
 			real_rt=round(real_rt,3)
 		
 		
-		if (real_rt < -0.45):
-			print(subdict['fund_id'], subdict['fund_nm'], subdict['price'], '*',this.a1_p,real_rt,'%', subdict['fund_nav'], subdict['estimate_value'], subdict['discount_rt']) #subdict['apply_fee'], subdict['redeem_fee']
+		if (real_rt < con_disc):
+			print(subdict['fund_id'], subdict['fund_nm'],   subdict['fund_nav'],'*',this.a1_p,real_rt,'%',) #subdict['apply_fee'], subdict['redeem_fee'] subdict['price'],subdict['estimate_value'], , subdict['discount_rt']
 		
-print("index")
+print("index level=%.1f" % con_disc)
 myreq = Request('http://www.jisilu.cn/data/lof/index_lof_list/?___t=1459354520266')
 myreq.add_header("Accept-Language", "en-US,en;q=0.5")
 myreq.add_header("Connection", "keep-alive")	
@@ -68,8 +71,8 @@ for i in range(len(lof_list)):
 			real_rt= -(nav-a1_p)*100/a1_p
 			real_rt=round(real_rt,3)
 			
-		if(real_rt<-0.45):
-			print(subdict['fund_id'], subdict['fund_nm'], subdict['price'], '*',this.a1_p,real_rt,'%', subdict['fund_nav'], subdict['estimate_value'], subdict['discount_rt']) #subdict['apply_fee'], subdict['redeem_fee']
+		if(real_rt<con_disc):
+			print(subdict['fund_id'], subdict['fund_nm'],   subdict['fund_nav'],'*',this.a1_p,real_rt,'%',) #subdict['apply_fee'], subdict['redeem_fee'] subdict['price'],subdict['estimate_value'], , subdict['discount_rt']
 		
 
  
