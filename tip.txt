@@ -911,6 +911,12 @@ Pmkidcand//?? what's this for??
 wpa_driver_wext_event_link // handle link event
 only link add/remove message
 
+hongkou gaozhong
+http://www.hkedu.sh.cn/HKEdu.Web/Default/InfoDetail.aspx?SignIn=true&CategoryID=e4797d0d-3ecd-4d01-b515-225106b44346&InfoGuid=0c4dcff7-cc93-4a49-bb51-40a434c0fee1
+
+
+
+
 3/31
 Looked into wpas_wps_start_pbc, keep moving
 
@@ -934,4 +940,41 @@ wpa_supplicant_scan
 			-wpa_drv_scan // call driver for scan
 
 
+wpa_supplicant_associate // PS, this is the real connect api call
+wpa_set_ssids_from_scan_req // this function consolidate multiple scan request in
+wpa_supplicant_optimize_freqs // command to limit freq range
+wpa_supplicant_extra_ies // build wps ie
+  -- wpas_wps_in_use // return true(1) when ssid->key_mgmt & WPA_KEY_MGMT_WPS
+  -- wps_build_probe_req_ie // build wps ie here  extra_ie is allocate in wpabuf_resize()
+   wpas_wps_set_uuid //this is the default uuid comes from
+   
+  -- wpa_supplicant_mesh_add_scan_ie // mesh ie
+wpa_setband_scan_freqs // set band
+wpa_supplicant_build_filter_ssids // in the mean time, hold extra ie in params..  scan rand mac also here
+
+wpa_scan_clone_params // as the end, clone the scan parameters.  actaully, this is the good place to dump scan parameters
+radio_add_work // should schedule the work
+
+wpas_trigger_scan_cb -- this is the call back to continue do scan command (up to down) work
+
+   -wpas_update_random_addr_disassoc // assign random address 
+   -wpa_supplicant_notify_scanning // notify scan for dbus
+   -wpa_drv_scan // ask driver to scan
+     after scan,  it will wait scan event from driver
+	 SO BRIEFLY, to ask scan simply
+
+wpa_driver_wext_event_wireless 
+ - wpa_supplicant_event // functions in events.c
+ -wpa_supplicant_event_scan_results // 
+   -- wpa_drv_get_scan_results2 // calling driver to get results
+      -- wpa_driver_wext_giwscan , drv call
+	      -- filter_scan_res // filter at this stage...
+	  -- dump_scan_res //dump scan result
+	  --wpa_bss_update_scan_res // by bss result update
+	  --wpa_bss_update_end // end scan update
+	  
+	  // looks just do scan result update...
+
+	
+ 
 
