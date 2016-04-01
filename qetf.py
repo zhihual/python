@@ -43,7 +43,7 @@ for i in range(len(lof_list)):
 		if (real_rt < -0.45):
 			print(subdict['fund_id'], subdict['fund_nm'], subdict['price'], '*',this.a1_p,real_rt,'%', subdict['fund_nav'], subdict['estimate_value'], subdict['discount_rt']) #subdict['apply_fee'], subdict['redeem_fee']
 		
-#print("once more")
+print("index")
 myreq = Request('http://www.jisilu.cn/data/lof/index_lof_list/?___t=1459354520266')
 myreq.add_header("Accept-Language", "en-US,en;q=0.5")
 myreq.add_header("Connection", "keep-alive")	
