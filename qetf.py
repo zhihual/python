@@ -25,12 +25,11 @@ js = json.loads(lines.decode('utf-8'))
 lof_list=js['rows']
 i=0
 
+print('fund_id fund_nm fund_nav a1_p real_rt stock_ratio all_amount stock_increase_rt') 
 for i in range(len(lof_list)):
 	mydicts=lof_list[i]
 	subdict=mydicts['cell']
 	discount_rt = float(subdict['discount_rt'][:-1])
-	
-
 	
 	if(discount_rt < con_redeem):
 		df = ts.get_realtime_quotes(subdict['fund_id'])
@@ -44,9 +43,14 @@ for i in range(len(lof_list)):
 		
 		
 		if (real_rt < con_disc):
-			print(subdict['fund_id'], subdict['fund_nm'],   subdict['fund_nav'],'*',this.a1_p,real_rt,'%',) #subdict['apply_fee'], subdict['redeem_fee'] subdict['price'],subdict['estimate_value'], , subdict['discount_rt']
+			print(subdict['fund_id'], subdict['fund_nm'],   subdict['fund_nav'],'*',this.a1_p,real_rt,'%', subdict['stock_ratio'], subdict['all_amount'], subdict['stock_increase_rt']) 
+			
+			
 		
 print("index level=%.1f" % con_disc)
+
+print('fund_id fund_nm fund_nav a1_p real_rt index_id index_nm index_increase_rt') 
+
 myreq = Request('http://www.jisilu.cn/data/lof/index_lof_list/?___t=1459354520266')
 myreq.add_header("Accept-Language", "en-US,en;q=0.5")
 myreq.add_header("Connection", "keep-alive")	
@@ -72,13 +76,13 @@ for i in range(len(lof_list)):
 			real_rt=round(real_rt,3)
 			
 		if(real_rt<con_disc):
-			print(subdict['fund_id'], subdict['fund_nm'],   subdict['fund_nav'],'*',this.a1_p,real_rt,'%',) #subdict['apply_fee'], subdict['redeem_fee'] subdict['price'],subdict['estimate_value'], , subdict['discount_rt']
+			print(subdict['fund_id'], subdict['fund_nm'],   subdict['fund_nav'],'*',this.a1_p,real_rt,'%', subdict['index_id'],subdict['index_nm'],subdict['index_increase_rt']) 
+			
 		
 
  
  
- 
- #subdict['apply_fee'], subdict['redeem_fee']
+
 				
 		
 		
