@@ -16,8 +16,8 @@ index='sh000906'
 start='2016-03-10'
 end='2016-04-02'
 
-#lof = input("LOF: ")
-#index=input("Index: ")
+lof = input("LOF: ")
+index=input("Index: ")
 
 	
 def FormNavHistTable(str):
