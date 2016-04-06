@@ -975,6 +975,52 @@ wpa_driver_wext_event_wireless
 	  
 	  // looks just do scan result update...
 
-	
+4/5
+Found syslog begin to lost message. typical print is like below:	
+ "imuxsock begins to drop messages from"
  
+ # echo  "\$SystemLogRateLimitInterval 60" >> /etc/rsyslog.conf
+# echo "\$SystemLogRateLimitBurst 3000" >> /etc/rsyslog.conf
+# /etc/init.d/rsyslog restart
+Shutting down system logger:                               [  OK  ]
+Starting system logger:                                    [  OK  ]
 
+_wpa_supplicant_event_scan_results :{
+wpa_supplicant_get_scan_results -- handle scan result event from driver
+  -- scan_snr & scan_est_throughput // caculate signal strength and t-put
+  -- dump_scan_res // dump result
+  -- wpa_bss_update_scan_res
+  -- wpa_bss_update_end // update end
+     -- wpa_bss_add // add new bss each
+	 -- wpa_bss_update_end //scan done
+  -- wpas_wps_update_ap_info // dump wps ap
+  -- radio_work_done
+  -- wpas_select_network_from_last_scan //
+     -- wpa_supplicant_pick_network // pick up one network to connect
+	    -- wpa_supplicant_ssid_bss_match // check PBC..
+		--wpa_supplicant_connect // here we go connect
+		-- wpa_supplicant_associate // ended here
+		--radio_add_work(wpa_s, bss ? bss->freq : 0, "connect", 1,
+			   wpas_start_assoc_cb, cwork) < 0) // add radio work connect as the last item. execute immediately
+ }
+ 
+ 
+ wpas_start_assoc_cb:{
+ 
+ new workitem running..
+ 
+    -- wpa_drv_associate // call driver assoc with param structure
+	
+ }
+ 
+ // connect wireless event
+ wpa_driver_wext_event_wireless :{
+ 
+ -- next trigger item
+   ctx->eapol_send = wpa_supplicant_eapol_send;
+   --  wpa_supplicant_eapol_send is called to send eapol frame
+ }
+ 
+ SM_STATE(SUPP_PAE, CONNECTING) // this is the trigger point
+ 
+ 

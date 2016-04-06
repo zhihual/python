@@ -9,12 +9,20 @@ except ImportError:
     from urllib2 import urlopen, Request
 import tushare as ts
 from pandas import Series, DataFrame	
+import datetime	
 
 #define the compare parameters
 lof='160806'
 index='sh000906'
+
+
+current = datetime.datetime.now()
+
+end ='%s-%s-%s' %(current.year,current.month, current.day)
+	
+
 start='2016-03-10'
-end='2016-04-02'
+#end='2016-04-02'
 
 lof = input("LOF: ")
 index=input("Index: ")

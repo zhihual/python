@@ -10,7 +10,7 @@ except ImportError:
 
 import tushare as ts
 from pandas import Series, DataFrame	
-	
+import datetime	
 
 #con_redeem = 10
 
@@ -24,10 +24,14 @@ else:
 	con_disc=float(con_disc)
 
 con_redeem = con_disc
+
+current = datetime.datetime.now()
+
+end ='%s-%s-%s' %(current.year,current.month, current.day)
 	
 start='2016-03-10'
-end='2016-04-02'
-
+#end='2016-04-02'
+#end='2016-04-05'
 
 def FormNavHistTable(str):
 	ser_data={'nav':[],'nav_inc_rt':[]}
