@@ -1,0 +1,48 @@
+2016/4/22
+
+BRCM 4706 600M MIPS32
+
+256M RAM
+
+http://www.broadcom.com/products/Wireless-LAN/802.11-Wireless-LAN-Solutions/BCM4706
+https://www.dd-wrt.com/wiki/index.php/Asus_RT-N66U#K3.X_Builds
+http://www.asus.com/us/site/routers/DD-WRT/
+http://store.asus.com/us/item/201511AM050000015
+http://www.asus.com/us/Networking/RTAC66U/HelpDesk/
+http://ntcn.net/blog/?p=5557
+http://tomato.groov.pl/
+
+Fedor created also a new branch called tomato-RT-N in which he updated wireless driver to 5.100.138.9. Thanks to that, Linksys E4200 was eventually provided with fully operating 5GHz band. This branch was also prepared for incoming Asus RT-N66u.
+
+OpenWRT
+Model	       CPU Type	CPU Freq	LAN	Flash/RAM	Version	Notes
+AsusRT-AC66U	R2	600	1 Gbps	128/256MB	K26RT-AC
+
+Mipsel`s sources are available here: Tomato GIT repository. My branches are:
+tomato-shibby 每 K24 and K26
+tomato-shibby-RT-N 每 K26RT-N
+tomato-shibby-pl 每 spolszczona wersja tomato (polish tomato version)
+Tomato-ARM sources are available here: Bitbucket page
+
+Openlinksys.info
+http://openlinksys.info/
+http://openlinksys.info/forum/viewthread.php?thread_id=11624
+ 
+Linksysinfo.org
+http://www.linksysinfo.org/index.php?threads/tomato-raf-with-included-bittorrent-client-beta-testing.33858/
+ 
+TomatoUSB.org
+http://tomatousb.org/forum/t-364842/shibby-builds
+ 
+Wikipedia 每 Tomato firmware
+http://en.wikipedia.org/wiki/Tomato_(firmware)
+ 
+MyOpenRouter.com
+http://www.myopenrouter.com/download/list?sort=date&cat=75
+http://www.myopenrouter.com/download/list?sort=date&cat=50
+ 
+My IPK packages repository
+http://tomato.groov.pl/repo/
+ 
+Tomato GIT repository
+http://repo.or.cz/w/tomato.git
