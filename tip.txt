@@ -1031,3 +1031,11 @@ wpa_supplicant_get_scan_results -- handle scan result event from driver
  W: 8.56 cm (3.37")  H 5.4 cm (2.125")
  
  
+ Intel 8260 
+ 
+ zhihual_qca@outlook   
+ 
+ name/number
+ 
+ SMPS
+ 
