@@ -12,6 +12,8 @@ http://www.asus.com/us/Networking/RTAC66U/HelpDesk/
 http://ntcn.net/blog/?p=5557
 http://tomato.groov.pl/
 
+http://tt.onv.cc/?page_id=64
+
 Fedor created also a new branch called tomato-RT-N in which he updated wireless driver to 5.100.138.9. Thanks to that, Linksys E4200 was eventually provided with fully operating 5GHz band. This branch was also prepared for incoming Asus RT-N66u.
 
 OpenWRT
@@ -45,4 +47,33 @@ My IPK packages repository
 http://tomato.groov.pl/repo/
  
 Tomato GIT repository
-http://repo.or.cz/w/tomato.git
+git://repo.or.cz/tomato.git
+
+http://tomatousb.org/tut:how-to-build-and-rebuild-tomato-for-total-noobs
+
+http://cache.baiducontent.com/c?m=9d78d513d9851cf00babc9690d679626484381132bd7a6027ea4d30e87231b1f483ca5fd65351177ced8392244b8492bb1ab6d78351420c0ca95d7578efbc37274cc70756d0b873541935ff49a1872d620e65eeea90ee7cdaa74ccf0&p=882a9645d4d504fc57efc63f5b0d8a&newp=b4769a479d8709b319bd9b7d0d14cd231610db2151d4da113490db54d2&user=baidu&fm=sc&query=tomato+src-rt&qid=cb9ae02a00019397&p1=4
+
+
+git tag -l '*' #/
+
+git checkout tagname
+
+orgin fw 3.0.0.4.374_4561
+
+go into reboot button and power cycle, into cfe stage.
+run asus tool and upload fw. done.  easy, but cost 2 hours to study.
+
+tomato-RT-AC66U_RT-AC6x--135-AIO-64K.trx -- this is the version
+
+telnet ssh 192.168.1.1 root admin
+
+git branch -a // check remote branch info
+
+take v132 as develop branch:
+
+export path
+export PATH=/opt/STM/STLinux-2.3/devkit/sh4/bin:$PATH 
+
+cat /proc/version
+uname -a
+lsb_release
