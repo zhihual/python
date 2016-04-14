@@ -93,18 +93,41 @@ ubunto 14.04 LTS trust 64 bit
 
 
 
+Built on ?ro, 16 mar 2016 09:35:03 +0100 by Shibby, http://openlinksys.info
 
 
+4/14
+
+tomato-K26USB-1.28.99MIPSR2-20160413-AIO build success on 64 linux. but, unfortuanlly, can't boot up. on RT-AC66U
 
 
+work image is tomato-RT-AC66U_RT-AC6x--135-AIO-64K
 
 
+git fetch
+
+git checkout -b local-branchname origin/remote_branchname
+
+git clean -f
+git clean -fd
+add -n to see what will do
+
+git fetch origin master:tmp
+git diff tmp 
+git merge tmp
+
+should be 
+
+git checkout -b tomato-shibby-RT-AC origin/tomato-shibby-RT-AC
+
+git checkout -b tomato-shibby-RT-N origin/tomato-shibby-RT-N  
+
+Those two should be the right version
+
+winscp,  good windows client on develop embeded.
 
 
-
-
-
-
+can use TortoiseGit-2.1.0.0-64bit + cygwin setup graphic view of git log
 
 
 
