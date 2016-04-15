@@ -129,19 +129,31 @@ winscp,  good windows client on develop embeded.
 
 can use TortoiseGit-2.1.0.0-64bit + cygwin setup graphic view of git log
 
+4/15 
+
+It's great day, because, finially, i made one ap firmware running on target. 
+the very beginning step.
 
 
+create patch
 
+diff -Nru
 
+-- first name is source
+++ second name is target
 
+in source folder run, patch -p1 <
 
+if just file, patch -p0 <
 
+Great work.  finially know how patch works
 
+http://stackoverflow.com/questions/2450677/using-diff-and-patch-to-force-one-local-code-base-to-look-like-another
+"I believe the answer here is to execute your diff at the parent directory. Then use patch -p1 to strip this first segment. I believe this is why the strip option of patch actually defaults to 1 rather than 0. E.g. to use your example from above
+"
+Lean diff is one powerful command
 
-
-
-
-
+diff -Naur copyto copyfrom > my.diff.check 
 
 root@unknown:/tmp/home/root# wl
 Usage: wl [-a|i <adapter>] [-h] [-d|u|x] <command> [arguments]
