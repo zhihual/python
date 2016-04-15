@@ -1039,3 +1039,8 @@ wpa_supplicant_get_scan_results -- handle scan result event from driver
  
  SMPS
  
+ 2107620279
+ 
+ fullname
+ 123
+ 
