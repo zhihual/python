@@ -836,6 +836,8 @@ main:
 -> wpa_supplicant_init :  // after this fucntion call, eloop init, timer registered, global and priv create and hooked, driver interface also hooked.
   --> eap method hooked
   --> wpas_global_ctrl_iface_open_sock, this function hook up the message receive and message handler. Really key functions
+  -->random_init(params->entropy_file); 
+     --> eloop_register_read_sock(random_fd, random_read_fd, NULL, NULL); 
   --> wpas_notify_supplicant_initialized, init DBUS here  
   -->const struct wpa_driver_ops *const wpa_drivers[], driver's interface defination here
   --> WiFi CONFIG_WIFI_DISPLA also be here
@@ -852,8 +854,12 @@ main:
 	  -->wpa_supplicant_driver_init // update mac. 
 	     ----> wpa_supplicant_update_mac_addr, // look here, l2_packet_int, hook wpa_supplicant_rx_eapol -->turn to  eloop_register_read_sock(l2->fd, l2_packet_receive, l2, NULL);
 	  -->wpas_wps_init // wps moudle init
+	     --> wpas_wps_set_uuid // init UUID based on mac
 	  -->wpa_supplicant_init_eapol // init eapol state machie
+	  -->wpa_sm_set_eapol // set value
 	  -->wpa_supplicant_ctrl_iface_init  // wpas_ctrl_iface_open_sock  eloop_register_read_sock(priv->sock, wpa_supplicant_ctrl_iface_receive, wpa_s, priv);
+	     -->wpas_global_ctrl_iface_open_sock
+		    //wpa_msg_register_cb(wpa_supplicant_ctrl_iface_msg_cb);
 	  -->gas_query_init
       -->wpas_p2p_init
 	  -->wpa_bss_init
@@ -863,9 +869,77 @@ main:
 	  -->wpas_rrm_reset // RRM
       --> wpa_supplicant_set_state(wpa_s, WPA_DISCONNECTED); // implict to triger one scan.
       --> wpas_p2p_add_p2pdev_interface // add p2p 
+  -->wpa_supplicant_set_state(WPA_DISCONNECTED)
+  
+
+
+  
 wpa_supplicant_run //run... now.
 wpa_supplicant_deinit // let's quite
 ...
+
+authsrv_init(host apd) and eap_peer_sm_init may call it.
+
+wpa_supplicant_init_eapol{ // memory is bring in,  free in deinit.
+eapol_sm_init // Initialize EAPOL state machine
+    ->eap_peer_sm_init
+	  -> EAP_CLIENT_TIMEOUT_DEFAULT 60 ,  eap timeout value
+      ->tls_init // called twices, for two SSL context, but, why? match to print "ENGINE: Loading dynamic engine"
+	             // tls has many various.  look into tls_opensll.c as first entry.
+	  
+    ->sm->initialize = TRUE;
+    ->eapol_sm_step(sm); // like a trigger to run state machine once to update data.
+	  ->SM_STEP_RUN(SUPP_PAE); //sm_SUPP_PAE_Step  // function defined in eapol_supp\eapol_supp.sm.c
+	     --> SM_STATE(SUPP_PAE, DISCONNECTED) // eapol_supp_sm.c
+		    --> eapol_sm_set_port_unauthorized 
+			   -->  call cb (wpa_supplicant_port_cb) 
+			      -->wpa_drv_set_supp_port
+	  ->SM_STEP_RUN(KEY_RX); //sm_KEY_RX_Step  
+	    // just print, no other actions.
+	  ->SM_STEP_RUN(SUPP_BE); //sm_SUPP_BE_Step
+	    -.eapol_sm_abortSupp
+	->sm->initialize = FALSE;
+	->eapol_sm_step(sm);
+	  --> eap_peer_sm_step "EAP entering state DISABLED" print comes from here   //eap.c
+	->eloop_register_timeout(1, 0, eapol_port_timers_tick, NULL, sm);
+}
+
+
+static const struct eapol_callbacks eapol_cb =
+{
+	eapol_sm_get_config,
+	eapol_sm_get_bool,
+	eapol_sm_set_bool,
+	eapol_sm_get_int,
+	eapol_sm_set_int,
+	{
+	  eapol_enable_timer_tick
+	}
+	eapol_sm_get_eapReqData,
+	eapol_sm_set_config_blob,
+	eapol_sm_get_config_blob,
+	eapol_sm_notify_pending,
+	eapol_sm_eap_param_needed,
+	eapol_sm_notify_cert,
+	eapol_sm_notify_status,
+#ifdef CONFIG_EAP_PROXY
+	eapol_sm_eap_proxy_cb,
+#endif /* CONFIG_EAP_PROXY */
+	eapol_sm_set_anon_id
+};
+
+
+SM_ENTRY is to change state state status. only for debug proposal
+
+pair, state define, enter call
+SM_STATE is use to declare state function
+SM_ENTER 
+
+pair, state define, enter call
+SM_STEP is to declarey state entry 
+SM_STEP_RUN is call
+
+ 
 
 /sbin/wpa_supplicant -B -P /run/sendsigs.omit.d/wpasupplicant.pid -u -s -O /var/run/wpa_supplicant
 
@@ -880,7 +954,7 @@ service network-manager stop:
 
 ps -ef | grep wpa to make sure no wpa runing, kill pid is ok
 
-2. wpa_supplicant -B -Dwext -C/home/zliu/wpa_run
+2. wpa_supplicant -B -Dwext -C/home/zliu/wpa_run -i wlan2
 3. wpa_cli -p /home/zliu/wpa_run
 
 Skills:  grep wpa_supplicant /var/log/syslog > outputfile
@@ -1054,12 +1128,28 @@ http://www.dianping.com/shop/21213568
 
 21280
 
+4/21
 
 
+netlink_init is called at wpa_driver_wext_init, to receive event from driver
+
+netlink_receive is the root.   Netlink.c
 
 
+wpas_periodic -- repeat appear.
 
+WPA_SUPPLICANT_CLEANUP_INTERVAL // 10s periodic timer
 
+wpa_driver_wext_get_scan_results this function call will turn out to
+{
+wext_get_scan_mode
+wext_get_scan_qual
+.... Repeat
+}
+
+from wpa_driver_wext_event_assoc_ies wireless event
+
+l2_packet_receive is the entery point for mgmt frame
 
 
 
