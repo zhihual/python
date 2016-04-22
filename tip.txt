@@ -994,27 +994,47 @@ http://www.hkedu.sh.cn/HKEdu.Web/Default/InfoDetail.aspx?SignIn=true&CategoryID=
 3/31
 Looked into wpas_wps_start_pbc, keep moving
 
+wpas_m Control interface command 'WPS_PBC' -- this is log print
+
+ctrl_iface_read_completed --
+    -->wpa_supplicant_ctrl_iface_rx 
+       -->wpa_supplicant_ctrl_iface_process 
+	      --> wpa_supplicant_ctrl_iface_wps_pbc
+	   {
 wpas_wps_start_pbc
   - wpas_clear_wps //clear previous wps setting
-  -wpas_wps_add_network // return ssid, if null, then fail. ssid actually is config setting
-	-wpas_notify_network_added // create somthing like interface in dbus
-	-wpa_config_set_network_defaults // default ssid
-	-wpa_config_set // set key_mgmt, eap, identity, registry
-  -wpa_config_set// set phase1 pbc..
-  - eloop_register_timeout(WPS_PBC_WALK_TIME, 0, wpas_wps_timeout, wpa_s, NULL); // register pbc timeout period
-  - wpas_wps_reassoc // start reassoc
+     --eloop_cancel_timeout(wpas_wps_timeout, wpa_s, NULL);
+	 --eloop_cancel_timeout(wpas_wps_clear_timeout, wpa_s, NULL);
+	 --wpas_clear_wps
+  -wpas_wps_add_network // return ssid, if null, then fail. ssid actually is config setting. ssid is settle here. below is OOB caculate for priority
+    --wpa_config_add_network // allocate ssid. if not exist
+	   --wpa_config_update_prio_list // 
+	      -- wpa_config_add_prio_network // by 
+	-wpas_notify_network_added // create somthing like interface in dbus. notify in dbus
+	-wpa_config_set_network_defaults // default ssid fill up. 
+	-ssid->temporary = 1;
+	-wpa_config_set // set key_mgmt, eap, identity, registry  
+	  -wpa_config_set(ssid, "key_mgmt", "WPS", 0) < 0 ||
+	    wpa_config_set(ssid, "eap", "WSC", 0) < 0 ||
+	    wpa_config_set(ssid, "identity", registrar ? "\"" WSC_ID_REGISTRAR "\"" : "\"" WSC_ID_ENROLLEE "\"", 0) < 0)
+  -wpa_config_set(ssid, "phase1", "\"pbc=1\"", 0)
+  - eloop_register_timeout(WPS_PBC_WALK_TIME (120 sec), 0, wpas_wps_timeout, wpa_s, NULL); // register pbc timeout period
+  - wpas_wps_reassoc // start reassoc, prepare done, do work now.
      - wpas_wps_temp_disable // send disable notify
 	 - wpa_supplicant_cancel_sched_scan // stop regular scan
-	 - wpa_supplicant_req_scan // start wps scan... should jump to wpa_supplicant_scan
-	 
+	 - wpa_supplicant_req_scan // start wps scan...  jump to wpa_supplicant_scan
+}
+
+-- This is triggered by eloop
 wpa_supplicant_scan
-     - wpa_supplicant_trigger_scan // tigger scan
+     - wpa_supplicant_enabled_networks
+     - wpa_supplicant_trigger_scan // tigger scan 
+	     - radio_add_work(wpa_s, 0, "scan", 0, wpas_trigger_scan_cb, ctx)
          - wpas_trigger_scan_cb //somehow here
             - wpa_supplicant_notify_scanning
 			-wpa_drv_scan // call driver for scan
+}
 
-
-wpa_supplicant_associate // PS, this is the real connect api call
 wpa_set_ssids_from_scan_req // this function consolidate multiple scan request in
 wpa_supplicant_optimize_freqs // command to limit freq range
 wpa_supplicant_extra_ies // build wps ie
@@ -1034,8 +1054,10 @@ wpas_trigger_scan_cb -- this is the call back to continue do scan command (up to
    -wpas_update_random_addr_disassoc // assign random address 
    -wpa_supplicant_notify_scanning // notify scan for dbus
    -wpa_drv_scan // ask driver to scan
-     after scan,  it will wait scan event from driver
-	 SO BRIEFLY, to ask scan simply
+        after scan,  it will wait scan event from driver
+	    SO BRIEFLY, to ask scan simply
+   -wpa_scan_free_params
+-- here, supplicant is done, the next trigger event is driver scan complete event   
 
 wpa_driver_wext_event_wireless 
  - wpa_supplicant_event // functions in events.c
@@ -1046,8 +1068,88 @@ wpa_driver_wext_event_wireless
 	  -- dump_scan_res //dump scan result
 	  --wpa_bss_update_scan_res // by bss result update
 	  --wpa_bss_update_end // end scan update
+	  -- wpas_select_network_from_last_scan // select one network and do scan
+	     -- wpa_supplicant_pick_network  // do cherry pick
+		    -- wpa_supplicant_select_bss
+			   -- wpa_scan_res_match // here, 
+	  -- wpa_supplicant_connect or wpa_supplicant_associate
 	  
-	  // looks just do scan result update...
+	  --radio_add_work(wpa_s, bss ? bss->freq : 0, "connect", 1,  wpas_start_assoc_cb, cwork) < 0) 
+Trying to associate with 00:0c:43:44:0d:a8 (SSID='RalinkInitAP_440DA8' freq=2437 MHz) -- log print	  
+	   --wpa_supplicant_cancel_scan
+	   --wpa_sm_set_assoc_wpa_ie
+	   --wps_build_assoc_req_ie
+	   --wpa_clear_keys(wpa_s, bss ? bss->bssid : NULL);
+	   --wpa_supplicant_set_state(wpa_s, WPA_ASSOCIATING);
+	   -- wpa_drv_associate
+	   --wpa_supplicant_req_auth_timeout // set timeout time for auth, 60s
+	   --wpa_supplicant_rsn_supp_set_config // prepare eapol
+	   --wpa_supplicant_initiate_eapol // init
+	      - eapol_sm_notify_config
+		  - ieee802_1x_alloc_kay_sm
+
+// OK, here, only waiting for connect event from driver
+
+		  
+// below is the log to show associate success
+Wireless event: cmd=0x8b15 len=20
+wpa_driver_wext_event_wireless cmd=8b15
+Wireless event: new AP: 00:0c:43:44:0d:a8
+wpa_driver_wext_event_assoc_ies
+wpas_m Event ASSOC (0) received
+
+wpa_driver_wext_event_wireless
+     -- wpa_driver_wext_event_assoc_ies
+	      --wpa_supplicant_event(drv->ctx, EVENT_ASSOCINFO, &data);
+	        --wpa_supplicant_event_associnfo // only handle assoc req and resp ie. looks ie updates.
+			   -- wpa_sm_set_ft_params // set 11r ie
+	 --wpa_supplicant_event(drv->ctx, EVENT_ASSOC,NULL);
+	      -- wpa_supplicant_event_assoc(wpa_s, data);
+		     -- eloop_cancel_timeout(wpas_network_reenabled, wpa_s, NULL);
+			 -- wpa_supplicant_event_associnfo
+			 -- wpa_drv_get_bssid
+			 --wpa_supplicant_set_state(wpa_s, WPA_ASSOCIATED);
+			 --wpa_sm_notify_assoc(wpa_s->wpa, bssid);
+			 -- if (wpa_s->l2) l2_packet_notify_auth_start(wpa_s->l2);
+			 -- eapol_sm_notify_portEnabled(wpa_s->eapol, FALSE);
+		     -- eapol_sm_notify_portValid(wpa_s->eapol, FALSE);
+			 --eapol_sm_notify_portEnabled(wpa_s->eapol, TRUE);
+			   -- eapol_sm_step
+			      -- SM_STATE(SUPP_PAE, CONNECTING)
+				     -- eapol_enable_timer_tick
+					 -- eapol_sm_txStart
+					    -- sm->ctx->eapol_send(sm->ctx->eapol_send_ctx, IEEE802_1X_TYPE_EAPOL_START, (u8 *) "", 0);  // wpa_supplicant_eapol_send
+						   -- wpa_alloc_eapol // create packet
+						   --wpa_ether_send // send packet Send Ethernet frame
+						      -- if (wpa_s->l2) l2_packet_send
+							     -- sendto
+			 --wpa_supplicant_req_auth_timeout(wpa_s, 10, 0); /* Timeout for receiving the first EAPOL packet */
+		     -- wpa_supplicant_cancel_scan(wpa_s);
+			 --wpas_wps_notify_assoc(wpa_s, bssid);
+			 --wmm_ac_notify_assoc
+		  --if (data->assoc_info.authorized) wpa_supplicant_event_assoc_auth(wpa_s, data);
+		    -- wpa_sm_set_rx_replay_ctr
+			-- wpa_sm_set_ptk_kck_kek
+			
+// From now on, two events can trigger,  timeout or receive packet
+eapol_port_timers_tick -- this tick trigger two times, and the last one go into l2 packet receive
+
+l2_packet_receive // l2_packet_linux.c
+  -- l2->rx_callback(l2->rx_callback_ctx, ll.sll_addr, buf, res); // handle_read in driver_bsd.c
+     -- drv_event_eapol_rx // in driver.h
+	   -- wpa_supplicant_event(ctx, EVENT_EAPOL_RX, &event); // enter state machine
+	     -- wpa_supplicant_rx_eapol // wpa_supplicant.c  
+		       * This function is called for each received EAPOL frame. Most driver
+               * interfaces rely on more generic OS mechanism for receiving frames through
+               * l2_packet, but if such a mechanism is not available, the driver wrapper may
+               * take care of received EAPOL frames and deliver them to the core supplicant
+               * code by calling this function.
+		-- eapol_sm_rx_eapol // Process received EAPOL frames
+		   -- possible eapol_sm_step to move forward
+		-- opt wpa_drv_poll(wpa_s);
+		
+
+	  
 
 4/5
 Found syslog begin to lost message. typical print is like below:	
@@ -1151,14 +1253,64 @@ from wpa_driver_wext_event_assoc_ies wireless event
 
 l2_packet_receive is the entery point for mgmt frame
 
+4/22
+
+What's the relationship with EAP  SUPP_PAE  SUPP_BE state machine means.
 
 
+eap.c  EAP state machie
+eapol_supp_sm.c  SUPP_BE  SUPP_PAE  KEY_RX
 
+in eapol_supp_sm.c
+eapol_sm_init (SUPP_BE SUPP_PAE , KEY_RX) alloca EAP 
 
+http://www.ietf.org/rfc/rfc4137.txt way to understand EAP state machine
 
+wpa_supplicant_initiate_eapol // eapol running point
+   -- eapol_sm_notify_eap_success   
+   {
+    sm->eapSuccess = success;
+	sm->altAccept = success;
+	if (success)
+		eap_notify_success(sm->eap);
+	eapol_sm_step(sm)
+   
+   }
+   -- eapol_sm_notify_eap_fail
+   {
+    sm->eapFail = fail;
+	sm->altReject = fail;
+	eapol_sm_step(sm);
+   }
+   -- eapol_sm_notify_portControl(wpa_s->eapol, Auto);
+   {
+     sm->portControl = portControl;
+	 eapol_sm_step(sm);
+   }
+   
+// when receive assoc event
+wpa_supplicant_event_assoc
+{
+  eapol_sm_notify_portEnabled(wpa_s->eapol, FALSE);
+  {
+    if (sm->portEnabled != enabled)
+		sm->force_authorized_update = TRUE;
+	    sm->portEnabled = enabled;
+	    eapol_sm_step(sm);
+    }
+  eapol_sm_notify_portValid(wpa_s->eapol, FALSE); 
+    {
+	   sm->portValid = valid;
+	   eapol_sm_step(sm);
+	}
+  eapol_sm_notify_portEnabled(wpa_s->eapol, TRUE);
+    {
+	   
+	
+	}
 
- 
+}
 
+SM_STEP(SUPP_PAE)
 
-
-
+SM_STATE_ENTRY will mark change = 1, so we run again and again

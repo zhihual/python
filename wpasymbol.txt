@@ -1,0 +1,2324 @@
+
+./wpa_supplicant:     file format elf32-i386
+
+SYMBOL TABLE:
+08048154 l    d  .interp	00000000              .interp
+08048168 l    d  .note.ABI-tag	00000000              .note.ABI-tag
+08048188 l    d  .note.gnu.build-id	00000000              .note.gnu.build-id
+080481ac l    d  .gnu.hash	00000000              .gnu.hash
+080481f8 l    d  .dynsym	00000000              .dynsym
+08049a88 l    d  .dynstr	00000000              .dynstr
+0804b0c6 l    d  .gnu.version	00000000              .gnu.version
+0804b3d8 l    d  .gnu.version_r	00000000              .gnu.version_r
+0804b4c8 l    d  .rel.dyn	00000000              .rel.dyn
+0804b4e0 l    d  .rel.plt	00000000              .rel.plt
+0804c0d8 l    d  .init	00000000              .init
+0804c110 l    d  .plt	00000000              .plt
+0804d910 l    d  .text	00000000              .text
+080dbbdc l    d  .fini	00000000              .fini
+080dbc00 l    d  .rodata	00000000              .rodata
+08105b10 l    d  .eh_frame_hdr	00000000              .eh_frame_hdr
+08108cc4 l    d  .eh_frame	00000000              .eh_frame
+0811bef4 l    d  .ctors	00000000              .ctors
+0811befc l    d  .dtors	00000000              .dtors
+0811bf04 l    d  .jcr	00000000              .jcr
+0811bf08 l    d  .dynamic	00000000              .dynamic
+0811bff0 l    d  .got	00000000              .got
+0811bff4 l    d  .got.plt	00000000              .got.plt
+0811c600 l    d  .data	00000000              .data
+0811cce0 l    d  .bss	00000000              .bss
+00000000 l    d  .comment	00000000              .comment
+00000000 l    d  .debug_aranges	00000000              .debug_aranges
+00000000 l    d  .debug_info	00000000              .debug_info
+00000000 l    d  .debug_abbrev	00000000              .debug_abbrev
+00000000 l    d  .debug_line	00000000              .debug_line
+00000000 l    d  .debug_str	00000000              .debug_str
+00000000 l    d  .debug_loc	00000000              .debug_loc
+00000000 l    d  .debug_ranges	00000000              .debug_ranges
+00000000 l    df *ABS*	00000000              crtstuff.c
+0811bef4 l     O .ctors	00000000              __CTOR_LIST__
+0811befc l     O .dtors	00000000              __DTOR_LIST__
+0811bf04 l     O .jcr	00000000              __JCR_LIST__
+080523f0 l     F .text	00000000              __do_global_dtors_aux
+0811cce8 l     O .bss	00000001              completed.6159
+0811ccec l     O .bss	00000004              dtor_idx.6161
+08052450 l     F .text	00000000              frame_dummy
+00000000 l    df *ABS*	00000000              crtstuff.c
+0811bef8 l     O .ctors	00000000              __CTOR_END__
+0811a714 l     O .eh_frame	00000000              __FRAME_END__
+0811bf04 l     O .jcr	00000000              __JCR_END__
+080dbbb0 l     F .text	00000000              __do_global_ctors_aux
+00000000 l    df *ABS*	00000000              wpa.c
+0804d910 l     F .text	00000181              wpa_report_ie_mismatch
+080634b0 l     F .text	00000208              wpa_sm_pmksa_free_cb
+080636c0 l     F .text	00000005              wpa_sm_start_preauth
+0804da91 l     F .text	00000177              wpa_supplicant_key_neg_complete
+080636d0 l     F .text	00000075              wpa_key_mgmt_suite.isra.13
+0804dc08 l     F .text	000001dd              wpa_supplicant_install_gtk
+0804dde5 l     F .text	000000a7              wpa_supplicant_check_group_cipher.isra.18
+08063c90 l     F .text	00000046              wpa_sm_rekey_ptk
+00000000 l    df *ABS*	00000000              ctrl_iface.c
+0809b160 l     F .text	00000169              wpa_supplicant_ctrl_iface_update_network
+0809b2d0 l     F .text	00000188              wpa_supplicant_ctrl_iface_dup_network
+0809b460 l     F .text	000000eb              wpas_ctrl_radio_work_cb
+0809b550 l     F .text	00000075              wpas_ctrl_radio_work_timeout
+0804de8c l     F .text	000000c1              wpas_ctrl_vendor_elem_update
+0804df4d l     F .text	000002e6              wpa_supplicant_ie_txt
+0804e233 l     F .text	0000009e              wpa_supplicant_wps_ie_txt_buf
+0804e2d1 l     F .text	000002aa              wpa_supplicant_ctrl_iface_remove_network
+0804e57b l     F .text	0000010f              wpas_ctrl_remove_cred
+0804e68a l     F .text	000001b2              wpa_supplicant_ctrl_iface_remove_cred
+0804e83c l     F .text	00000094              wpas_ctrl_iface_send_neigbor_rep
+0809b8b0 l     F .text	0000005d              wpas_ctrl_neighbor_rep_cb
+0809b5d0 l     F .text	00000013              wpas_ctrl_eapol_response
+0809b5f0 l     F .text	0000008c              wpa_supplicant_global_iface_interfaces.isra.21
+0809b680 l     F .text	00000145              wpa_supplicant_global_iface_list.isra.28
+0809b7d0 l     F .text	000000de              freq_range_to_channel_list.isra.33
+0804e8d0 l     F .text	00000097              wpa_supplicant_ctrl_iface_wps_pbc
+0809b910 l     F .text	00000759              wpa_supplicant_ctrl_iface_status.constprop.58
+0804e967 l     F .text	000004b7              wpa_supplicant_ctrl_iface_scan_results.constprop.60
+080f3534 l     O .rodata	0000000c              CSWTCH.387
+0809c070 l     F .text	00000158              wpa_supplicant_ctrl_iface_get.isra.37.constprop.67
+0804ee1e l     F .text	00000151              wpa_supplicant_ctrl_iface_wps_check_pin.isra.41.constprop.68
+0804ef6f l     F .text	000000ec              wpa_supplicant_ctrl_iface_log_level.isra.42.constprop.69
+0804f05b l     F .text	000001b0              wpa_supplicant_vendor_cmd.constprop.71
+0804f20b l     F .text	000003ba              wpas_ctrl_radio_work.constprop.73
+0804f5c5 l     F .text	0000072b              wpas_ctrl_scan.constprop.74
+0804fcf0 l     F .text	000001fd              wpa_supplicant_signal_poll.constprop.75
+0804feed l     F .text	00000194              wpas_ctrl_iface_get_pref_freq_list.constprop.76
+08050081 l     F .text	00000ef6              wpa_supplicant_ctrl_iface_bss.constprop.77
+080f35e0 l     O .rodata	0000000c              CSWTCH.400
+08050f77 l     F .text	000002ad              wpa_supplicant_ctrl_iface_list_networks.isra.32.constprop.78
+08051224 l     F .text	000000fa              wpa_supplicant_ctrl_iface_get_cred.isra.51.constprop.81
+0805131e l     F .text	000000fa              wpa_supplicant_ctrl_iface_get_network.isra.44.constprop.83
+08051418 l     F .text	00000b11              wpa_supplicant_ctrl_iface_get_capability.constprop.61
+080f3580 l     O .rodata	00000060              ciphers
+080f3540 l     O .rodata	00000030              ciphers_group_mgmt
+0809c1d0 l     F .text	00000f16              wpa_supplicant_ctrl_iface_set
+00000000 l    df *ABS*	00000000              main.c
+080bad60 l     F .text	0000010e              usage
+080bae70 l     F .text	00000075              wpa_supplicant_fd_workaround
+0811c614 l     O .data	0000000c              fd.9179
+00000000 l    df *ABS*	00000000              config.c
+08052480 l     F .text	00000025              wpa_config_process_load_dynamic_eap
+080524b0 l     F .text	00000035              wpa_config_process_no_ctrl_interface
+080524f0 l     F .text	00000049              os_realloc_array
+08052540 l     F .text	00000135              wpa_global_config_parse_int
+08052680 l     F .text	00000135              wpa_config_parse_int
+080527c0 l     F .text	000000b2              wpa_global_config_parse_bin
+08052880 l     F .text	00000015              wpa_config_process_device_type
+080528a0 l     F .text	00000081              wpa_config_get_int
+08052930 l     F .text	0000009d              wpa_config_get_str
+080529d0 l     F .text	00000177              wpa_config_write_auth_alg
+08052b50 l     F .text	000002af              wpa_config_write_key_mgmt
+08052e00 l     F .text	00000164              wpa_config_write_proto
+08052f70 l     F .text	000000f5              wpa_global_config_parse_str
+08053070 l     F .text	00000017              alloc_strdup
+08053090 l     F .text	0000020b              wpa_config_parse_auth_alg
+080532a0 l     F .text	0000025e              wpa_config_parse_key_mgmt
+08053500 l     F .text	0000023c              wpa_config_parse_proto
+08053740 l     F .text	000000c1              wpa_config_write_eap
+08053810 l     F .text	00000072              alloc_int_str
+08053890 l     F .text	000000a4              wpa_config_write_bssid
+08053940 l     F .text	0000007c              wpa_config_write_int
+080539c0 l     F .text	00000053              wpa_config_write_string_hex
+08053a20 l     F .text	00000056              wpa_config_write_string_ascii
+08053a80 l     F .text	000001aa              wpa_config_parse_wep_key
+08053c30 l     F .text	00000028              wpa_config_parse_wep_key3
+08053c60 l     F .text	00000028              wpa_config_parse_wep_key2
+08053c90 l     F .text	00000028              wpa_config_parse_wep_key1
+08053cc0 l     F .text	00000028              wpa_config_parse_wep_key0
+08053cf0 l     F .text	00000056              wpa_config_write_string
+08053d50 l     F .text	0000001b              wpa_config_write_wep_key3
+08053d70 l     F .text	0000001b              wpa_config_write_wep_key2
+08053d90 l     F .text	0000001b              wpa_config_write_wep_key1
+08053db0 l     F .text	0000001b              wpa_config_write_wep_key0
+08053dd0 l     F .text	0000004f              wpa_config_write_str
+08053e20 l     F .text	0000023c              wpa_config_parse_password
+08054060 l     F .text	0000005c              wpa_config_write_cipher
+080540c0 l     F .text	00000009              wpa_config_write_group
+080540d0 l     F .text	00000009              wpa_config_write_pairwise
+080540e0 l     F .text	000001b2              wpa_config_parse_str
+080542a0 l     F .text	0000006d              wpa_config_process_country
+08054310 l     F .text	000000ed              wpa_config_write_freqs.isra.2
+08054400 l     F .text	0000000f              wpa_config_write_freq_list
+08054410 l     F .text	0000000f              wpa_config_write_scan_freq
+08054420 l     F .text	0000009b              wpa_config_process_os_version
+080544c0 l     F .text	000000f9              wpa_config_process_ap_vendor_elements
+080545c0 l     F .text	000000f9              wpa_config_process_wps_vendor_ext_m1
+080546c0 l     F .text	0000004f              wpa_config_process_hessid
+08054710 l     F .text	000000a0              wpa_config_process_uuid
+080547b0 l     F .text	0000008a              wpa_config_process_bgscan
+08054840 l     F .text	00000047              wpa_config_write_psk
+08054890 l     F .text	00000094              wpa_config_write_password
+08054930 l     F .text	00000072              wpa_config_parse_cipher
+080549b0 l     F .text	00000087              wpa_config_parse_group
+08054a40 l     F .text	00000087              wpa_config_parse_pairwise
+08054ad0 l     F .text	000001aa              wpa_config_parse_psk
+08054c80 l     F .text	000000dc              wpa_config_write_addr_list.isra.14
+08054d60 l     F .text	0000000f              wpa_config_write_bssid_whitelist
+08054d70 l     F .text	0000000f              wpa_config_write_bssid_blacklist
+08054d80 l     F .text	00000102              wpa_config_parse_bssid
+08054e90 l     F .text	000000ff              wpa_config_parse_int_array
+08054f90 l     F .text	0000005b              wpa_config_process_freq_list
+08054ff0 l     F .text	00000071              wpa_config_process_sae_groups
+08055070 l     F .text	0000005b              wpa_config_parse_freq_list
+080550d0 l     F .text	0000005b              wpa_config_parse_scan_freq
+08055130 l     F .text	0000024e              wpa_config_parse_addr_list.isra.15.constprop.17
+08055380 l     F .text	00000023              wpa_config_parse_bssid_blacklist
+080553b0 l     F .text	00000023              wpa_config_parse_bssid_whitelist
+080553e0 l     F .text	00000275              wpa_config_parse_eap
+080dce20 l     O .rodata	00000a60              ssid_fields
+080dd880 l     O .rodata	000007fc              global_fields
+00000000 l    df *ABS*	00000000              notify.c
+00000000 l    df *ABS*	00000000              bss.c
+080588d0 l     F .text	0000009b              wpa_bss_copy_res
+08058970 l     F .text	0000007e              wpa_bss_update_pending_connect
+080589f0 l     F .text	00000181              wpa_bss_remove
+08058b80 l     F .text	000000cf              wpa_bss_in_use
+080de55c l     O .rodata	00000015              __func__.10801
+080de571 l     O .rodata	0000000e              __func__.10814
+08059540 l     F .text	000001ec              are_ies_equal
+080de54e l     O .rodata	0000000e              __func__.10724
+080de51a l     O .rodata	00000016              __func__.10692
+080de530 l     O .rodata	0000001e              __func__.10684
+00000000 l    df *ABS*	00000000              eap_register.c
+00000000 l    df *ABS*	00000000              common.c
+0805a450 l     F .text	00000023              freq_cmp
+0805a480 l     F .text	00000037              hex2num
+0805a510 l     F .text	00000053              hwaddr_parse
+0811cd00 l     O .bss	00000081              ssid_txt.5951
+00000000 l    df *ABS*	00000000              wpa_debug.c
+0805bad0 l     F .text	000001c5              _wpa_hexdump_ascii
+0811cd90 l     O .bss	00000004              wpa_debug_syslog
+0805bd70 l     F .text	00000230              _wpa_hexdump.part.2
+080dea20 l     O .rodata	00000014              CSWTCH.53
+0811cd94 l     O .bss	00000004              wpa_msg_cb
+0811cd98 l     O .bss	00000004              wpa_msg_ifname_cb
+080dea34 l     O .rodata	00000014              __func__.5457
+0811cd9c l     O .bss	00000004              hostapd_logger_cb
+080dea48 l     O .rodata	00000018              CSWTCH.63
+00000000 l    df *ABS*	00000000              wpabuf.c
+00000000 l    df *ABS*	00000000              wmm_ac.c
+0805cf50 l     F .text	0000006c              wmm_ac_find_tsid
+0805cfc0 l     F .text	000000c7              wmm_ac_should_replace_ts
+0805d090 l     F .text	0000004a              param_in_range
+0805d0e0 l     F .text	00000127              wmm_ac_del_ts_idx
+0805d210 l     F .text	000002e2              wmm_ac_add_ts
+080df6e0 l     O .rodata	00000020              up_to_ac
+0805d500 l     F .text	00000077              wmm_ac_del_req
+0805d580 l     F .text	0000004b              wmm_ac_addts_req_timeout
+0805d5d0 l     F .text	0000021a              wmm_ac_send_delts
+080df700 l     O .rodata	00000010              CSWTCH.29
+080df710 l     O .rodata	00000010              CSWTCH.31
+00000000 l    df *ABS*	00000000              os_unix.c
+0811c608 l     O .data	00000004              clock_id.5465
+00000000 l    df *ABS*	00000000              eloop.c
+0805f5e0 l     F .text	00000078              eloop_sock_table_dispatch
+0805f660 l     F .text	00000029              eloop_remove_timeout
+0805f690 l     F .text	00000084              eloop_sock_table_destroy
+0805f720 l     F .text	00000092              eloop_handle_signal
+0811cda0 l     O .bss	00000054              eloop
+0805f7c0 l     F .text	00000023              eloop_handle_alarm
+0805f7f0 l     F .text	0000009b              eloop_sock_table_set_fds.isra.3
+080dfa38 l     O .rodata	00000019              __PRETTY_FUNCTION__.5453
+0805f890 l     F .text	00000088              eloop_process_pending_signals.part.4
+080dfa2c l     O .rodata	0000000c              CSWTCH.25
+080dfa18 l     O .rodata	00000014              __PRETTY_FUNCTION__.5499
+00000000 l    df *ABS*	00000000              config_file.c
+08060790 l     F .text	00000057              newline_terminated
+080607f0 l     F .text	00000079              write_global_bin
+08060870 l     F .text	0000005d              write_str
+080608d0 l     F .text	000001f4              wpa_config_get_line
+08060ad0 l     F .text	0000002d              write_int
+00000000 l    df *ABS*	00000000              preauth.c
+08068290 l     F .text	000000bf              rsn_preauth_eapol_send
+08068350 l     F .text	00000158              rsn_preauth_receive
+08068bf0 l     F .text	000001c5              rsn_preauth_eapol_cb
+08068b70 l     F .text	00000080              rsn_preauth_timeout
+00000000 l    df *ABS*	00000000              pmksa_cache.c
+080691a0 l     F .text	00000020              pmksa_cache_reauth
+080691c0 l     F .text	00000069              pmksa_cache_free_entry
+080692b0 l     F .text	000000f7              pmksa_cache_set_expiration
+08069400 l     F .text	00000092              pmksa_cache_expire
+00000000 l    df *ABS*	00000000              peerkey.c
+08069ec0 l     F .text	00000002              wpa_supplicant_smk_timeout
+08069ed0 l     F .text	00000067              wpa_add_kde
+08069f40 l     F .text	00000027              wpa_supplicant_peerkey_free
+08069f70 l     F .text	000000cc              wpa_supplicant_update_smk_lifetime.isra.5.part.6
+0806a040 l     F .text	000000ca              rsn_smkid.isra.7
+0806a110 l     F .text	00000217              wpa_supplicant_send_smk_error.constprop.8
+00000000 l    df *ABS*	00000000              wpa_ie.c
+00000000 l    df *ABS*	00000000              wpa_common.c
+0806d5d0 l     F .text	0000009a              rsn_selector_to_bitfield
+0806d670 l     F .text	00000047              wpa_selector_to_bitfield
+080e3fc0 l     O .rodata	00000015              __func__.6632
+080e3fd5 l     O .rodata	00000015              __func__.6657
+00000000 l    df *ABS*	00000000              eap_tls.c
+0806f0d0 l     F .text	00000002              eap_tls_deinit_for_reauth
+0806f0e0 l     F .text	00000010              eap_tls_isKeyAvailable
+0806f0f0 l     F .text	0000008f              eap_tls_get_emsk
+0806f180 l     F .text	00000060              eap_tls_get_session_id
+0806f1e0 l     F .text	0000008e              eap_tls_getKey
+0806f270 l     F .text	00000016              eap_tls_has_reauth_data
+0806f290 l     F .text	00000005              eap_tls_get_status
+0806f2a0 l     F .text	00000027              eap_tls_free_key.isra.0
+0806f2d0 l     F .text	0000004c              eap_tls_init_for_reauth
+0806f320 l     F .text	00000045              eap_tls_deinit
+0806f370 l     F .text	0000016a              eap_tls_init
+0806f4e0 l     F .text	000002b1              eap_tls_process
+00000000 l    df *ABS*	00000000              eap_peap.c
+0806f850 l     F .text	00000019              eap_peap_isKeyAvailable
+0806f870 l     F .text	00000067              eap_peap_get_session_id
+0806f8e0 l     F .text	00000029              eap_peap_deinit_for_reauth
+0806f910 l     F .text	00000037              eap_peap_has_reauth_data
+0806f950 l     F .text	000000a7              eap_peap_get_status
+0806fa00 l     F .text	0000022f              eap_peap_getKey
+0806fc30 l     F .text	00000027              eap_peap_free_key.isra.3
+0806fc60 l     F .text	0000009c              eap_peap_init_for_reauth
+0806fd00 l     F .text	00000076              eap_peap_deinit
+0806fd80 l     F .text	000002a8              eap_peap_init
+08070030 l     F .text	00001907              eap_peap_decrypt
+08071940 l     F .text	0000040f              eap_peap_process
+00000000 l    df *ABS*	00000000              eap_peap_common.c
+00000000 l    df *ABS*	00000000              eap_ttls.c
+08071fa0 l     F .text	0000001c              eap_ttls_isKeyAvailable
+08071fc0 l     F .text	00000092              eap_ttls_get_emsk
+08072060 l     F .text	00000070              eap_ttls_get_session_id
+080720d0 l     F .text	00000098              eap_ttls_getKey
+08072170 l     F .text	00000025              eap_ttls_deinit_for_reauth
+080721a0 l     F .text	00000037              eap_ttls_has_reauth_data
+080721e0 l     F .text	00000177              eap_ttls_get_status
+08072360 l     F .text	00000027              eap_ttls_free_key.isra.5
+08072390 l     F .text	00000094              eap_ttls_init_for_reauth
+08072430 l     F .text	0000008e              eap_ttls_deinit
+080724c0 l     F .text	000001e3              eap_ttls_init
+080726b0 l     F .text	000000c3              eap_ttls_encrypt_response
+08072780 l     F .text	00000042              eap_ttls_avp_hdr.constprop.17
+080727d0 l     F .text	00000069              eap_ttls_avp_add.constprop.16
+08072840 l     F .text	00000e38              eap_ttls_phase2_request
+08073680 l     F .text	00000194              eap_ttls_implicit_identity_request
+08073820 l     F .text	00000a36              eap_ttls_decrypt
+08074260 l     F .text	00000482              eap_ttls_process
+00000000 l    df *ABS*	00000000              eap_md5.c
+080747a0 l     F .text	00000006              eap_md5_init
+080747b0 l     F .text	00000002              eap_md5_deinit
+080747c0 l     F .text	00000259              eap_md5_process
+00000000 l    df *ABS*	00000000              eap_mschapv2.c
+08074a90 l     F .text	00000019              eap_mschapv2_isKeyAvailable
+08074ab0 l     F .text	000000b3              eap_mschapv2_getKey
+08074b70 l     F .text	0000003e              eap_mschapv2_deinit
+08074bb0 l     F .text	000000b8              eap_mschapv2_init
+08074c70 l     F .text	0000129c              eap_mschapv2_process
+00000000 l    df *ABS*	00000000              mschapv2.c
+00000000 l    df *ABS*	00000000              eap_gtc.c
+08076460 l     F .text	0000000d              eap_gtc_deinit
+08076470 l     F .text	00000056              eap_gtc_init
+080764d0 l     F .text	000002ff              eap_gtc_process
+00000000 l    df *ABS*	00000000              eap_otp.c
+08076840 l     F .text	00000006              eap_otp_init
+08076850 l     F .text	00000002              eap_otp_deinit
+08076860 l     F .text	000001a8              eap_otp_process
+00000000 l    df *ABS*	00000000              eap_leap.c
+08076a80 l     F .text	0000000e              eap_leap_isKeyAvailable
+08076a90 l     F .text	0000000d              eap_leap_deinit
+08076aa0 l     F .text	0000002b              eap_leap_init
+08076ad0 l     F .text	000002b9              eap_leap_getKey
+08076d90 l     F .text	00000830              eap_leap_process
+00000000 l    df *ABS*	00000000              wps_supplicant.c
+08077640 l     F .text	00000002              wpas_wps_set_sel_reg_cb
+08077650 l     F .text	00000075              wps_fix_config_methods
+080776d0 l     F .text	0000012b              wpas_wps_set_uuid
+08077800 l     F .text	0000003b              wpas_wps_assoc_with_cred_cancel
+08077840 l     F .text	0000004e              wpas_wps_assoc_with_cred
+08077890 l     F .text	0000015b              wpas_wps_pin_needed_cb
+080779f0 l     F .text	00000150              wpas_wps_new_psk_cb
+08077b40 l     F .text	00000786              wpa_supplicant_wps_event
+08079110 l     F .text	00000027              wpas_wps_clear_timeout
+08078fa0 l     F .text	00000009              wpas_wps_reenable_networks_cb
+080782d0 l     F .text	00000b04              wpa_supplicant_wps_cred
+08078de0 l     F .text	00000031              wpa_supplicant_wps_rf_band
+08078e20 l     F .text	0000005c              wpas_wps_get_ap_info.isra.5
+08078e80 l     F .text	0000005e              wpas_wps_set_vendor_ext_m1.isra.6
+08078ee0 l     F .text	000000bc              wpas_wps_reenable_networks
+08078fb0 l     F .text	0000015b              wpas_clear_wps
+08079140 l     F .text	0000007a              wpas_wps_timeout
+080791c0 l     F .text	00000204              wpas_wps_add_network.isra.11
+080793d0 l     F .text	00000139              wpas_wps_reassoc.constprop.14
+00000000 l    df *ABS*	00000000              uuid.c
+00000000 l    df *ABS*	00000000              eap_wsc.c
+0807b3b0 l     F .text	00000054              eap_wsc_deinit
+0807b410 l     F .text	0000005d              eap_wsc_state.isra.3
+080e851c l     O .rodata	00000018              CSWTCH.18
+0807b470 l     F .text	0000073b              eap_wsc_init
+0807bbb0 l     F .text	00000225              eap_wsc_build_msg
+0807bde0 l     F .text	0000059c              eap_wsc_process
+00000000 l    df *ABS*	00000000              eap_wsc_common.c
+00000000 l    df *ABS*	00000000              wps.c
+080e8860 l     O .rodata	00000010              CSWTCH.25
+00000000 l    df *ABS*	00000000              wps_common.c
+00000000 l    df *ABS*	00000000              wps_attr_parse.c
+00000000 l    df *ABS*	00000000              wps_attr_build.c
+00000000 l    df *ABS*	00000000              wps_attr_process.c
+080809f0 l     F .text	00000080              wps_process_cred_mac_addr
+08080a70 l     F .text	0000004a              wps_workaround_cred_key
+08080ac0 l     F .text	000000b1              wps_process_cred_ssid
+08080b80 l     F .text	000000aa              wps_process_cred_network_key
+00000000 l    df *ABS*	00000000              wps_dev_attr.c
+00000000 l    df *ABS*	00000000              wps_enrollee.c
+08081f50 l     F .text	0000005e              wps_process_enrollee_nonce
+00000000 l    df *ABS*	00000000              wps_registrar.c
+08084cc0 l     F .text	0000007a              wps_set_pushbutton
+08084d40 l     F .text	00000087              wps_sta_cred_cb
+08084dd0 l     F .text	000000eb              wps_registrar_add_authorized_mac
+08084ec0 l     F .text	00000169              wps_process_wsc_ack
+08085030 l     F .text	00000291              wps_process_wsc_nack
+080852d0 l     F .text	0000014e              wps_registrar_remove_pbc_session
+08085420 l     F .text	000000e9              wps_registrar_remove_authorized_mac
+08085510 l     F .text	0000005e              wps_process_registrar_nonce
+08085570 l     F .text	00000155              wps_registrar_add_pbc_session.isra.39
+080856d0 l     F .text	000000c1              wps_build_sel_reg_config_methods.part.28
+080857a0 l     F .text	0000006d              wps_build_wps_state.isra.32
+08085810 l     F .text	00000060              wps_build_ap_setup_locked.isra.33.part.34
+08085870 l     F .text	00000060              wps_build_selected_registrar.isra.35.part.36
+080858d0 l     F .text	00000095              wps_build_uuid_r
+08085970 l     F .text	000001e3              wps_build_m2d
+08085b60 l     F .text	00000272              wps_build_credential
+08085de0 l     F .text	0000008d              wps_build_sel_reg_dev_password_id
+08086250 l     F .text	000004db              wps_set_ie
+08087e10 l     F .text	00000031              wps_registrar_pbc_timeout
+08087890 l     F .text	0000003f              wps_registrar_set_selected_timeout
+08087840 l     F .text	0000004e              wps_registrar_pin_completed
+080878d0 l     F .text	00000046              wps_registrar_stop_pbc
+08087920 l     F .text	00000048              wps_registrar_pbc_completed
+08087970 l     F .text	00000491              wps_process_wsc_done
+08087e50 l     F .text	000000b5              wps_registrar_remove_pin
+08088c20 l     F .text	000000bd              wps_registrar_invalidate_wildcard_pin
+08088f80 l     F .text	000016df              wps_process_wsc_msg
+00000000 l    df *ABS*	00000000              eapol_supp_sm.c
+0808adc0 l     F .text	00000013              eapol_sm_get_config
+0808ade0 l     F .text	00000013              eapol_sm_get_eapReqData
+0808ae00 l     F .text	0000007f              eapol_sm_get_bool
+0808ae80 l     F .text	0000007f              eapol_sm_set_bool
+0808af00 l     F .text	00000017              eapol_sm_get_int
+0808af20 l     F .text	0000002b              eapol_sm_get_config_blob
+0808af50 l     F .text	0000005c              eapol_sm_notify_cert
+0808afb0 l     F .text	00000022              eapol_sm_notify_status
+0808afe0 l     F .text	00000022              eapol_sm_set_anon_id
+0808b010 l     F .text	00000070              eapol_sm_eap_param_needed
+0808b080 l     F .text	00000054              eapol_sm_txStart
+0808b0e0 l     F .text	00000054              eapol_sm_txLogoff
+0808b140 l     F .text	0000005f              eapol_sm_set_port_authorized
+0808b1a0 l     F .text	0000005f              eapol_sm_set_port_unauthorized
+0808b200 l     F .text	00000082              sm_SUPP_PAE_DISCONNECTED_Enter
+0808b290 l     F .text	0000002a              eapol_sm_set_config_blob
+0808b2c0 l     F .text	0000006d              eapol_enable_timer_tick
+0808cc80 l     F .text	00000149              eapol_port_timers_tick
+0808b330 l     F .text	00000025              eapol_sm_set_int
+0808b360 l     F .text	00000041              sm_SUPP_BE_IDLE_Enter.constprop.10
+0808b3b0 l     F .text	000000c9              sm_SUPP_PAE_CONNECTING_Enter.constprop.11
+0808b480 l     F .text	0000004e              sm_SUPP_PAE_HELD_Enter.constprop.12
+0808b4d0 l     F .text	00000037              sm_SUPP_PAE_RESTART_Enter.constprop.13
+0808b510 l     F .text	0000005a              sm_SUPP_BE_SUCCESS_Enter.constprop.14
+0808b570 l     F .text	00000037              sm_SUPP_BE_FAIL_Enter.constprop.15
+080ec800 l     O .rodata	00000020              CSWTCH.34
+080ec840 l     O .rodata	0000000c              CSWTCH.38
+080ec820 l     O .rodata	00000020              CSWTCH.36
+0808bcc0 l     F .text	000006e9              eapol_sm_processKey
+0808cdd0 l     F .text	0000000d              eapol_sm_step_timeout
+0808cde0 l     F .text	0000005a              eapol_sm_notify_pending
+080ec860 l     O .rodata	00000034              eapol_cb
+00000000 l    df *ABS*	00000000              eap.c
+0808d6d0 l     F .text	00000067              eap_deinit_prev_method
+0808d740 l     F .text	000000b1              sm_EAP_FAILURE_Enter
+0808d800 l     F .text	0000015b              eap_sm_request
+0808d960 l     F .text	00000212              sm_EAP_INITIALIZE_Enter
+0808db80 l     F .text	00000065              eap_notify_status.isra.12
+0808dbf0 l     F .text	00000199              eap_peer_sm_tls_event
+0808dd90 l     F .text	0000006d              eap_success_workaround.isra.14
+0808de00 l     F .text	00000077              eap_get_ext_password.isra.17
+0808de80 l     F .text	00000033              eap_peer_sm_allow_canned.isra.20
+0808dec0 l     F .text	000000ac              sm_EAP_SUCCESS_Enter.constprop.21
+0808df70 l     F .text	00000263              sm_EAP_METHOD_Enter.constprop.23
+080ee594 l     O .rodata	00000014              CSWTCH.49
+080ee588 l     O .rodata	0000000c              CSWTCH.51
+0808e1e0 l     F .text	00000115              sm_EAP_SEND_RESPONSE_Enter.constprop.24
+0808e300 l     F .text	00000064              sm_EAP_DISCARD_Enter.constprop.25
+080ee5c0 l     O .rodata	00000034              CSWTCH.47
+00000000 l    df *ABS*	00000000              eap_methods.c
+0811cdf4 l     O .bss	00000004              eap_methods
+00000000 l    df *ABS*	00000000              ms_funcs.c
+080909f0 l     F .text	00000121              utf8_to_ucs2.constprop.0
+080ee860 l     O .rodata	00000027              magic1.5730
+080ee8a0 l     O .rodata	00000029              magic2.5731
+080ee8c9 l     O .rodata	0000001b              magic1.5761
+080ee900 l     O .rodata	00000028              shs_pad1.5774
+080ee940 l     O .rodata	00000054              magic3.5773
+080ee9a0 l     O .rodata	00000054              magic2.5772
+080eea00 l     O .rodata	00000028              shs_pad2.5775
+00000000 l    df *ABS*	00000000              chap.c
+00000000 l    df *ABS*	00000000              eap_tls_common.c
+08091650 l     F .text	00000103              eap_tls_params_flags.isra.3
+08091760 l     F .text	000000b8              eap_tls_check_blob
+080ef1ea l     O .rodata	00000013              __func__.6359
+08091820 l     F .text	00000066              eap_tls_msg_alloc.constprop.8
+080922f0 l     F .text	00000184              eap_peer_tls_data_reassemble
+080924b0 l     F .text	00000205              eap_tls_process_output
+00000000 l    df *ABS*	00000000              tls_openssl.c
+08092e10 l     F .text	00000078              tls_show_errors
+08092e90 l     F .text	0000003f              tls_passwd_cb
+08092ed0 l     F .text	00000116              tls_set_conn_flags
+08092ff0 l     F .text	00000100              ocsp_status_cb
+0811cdfc l     O .bss	00000004              tls_global
+080930f0 l     F .text	00000069              get_x509_cert
+08093160 l     F .text	00000340              openssl_tls_prf
+080934a0 l     F .text	00000073              remove_session_cb
+0811c60c l     O .data	00000004              tls_ex_idx_session
+08093520 l     F .text	000000e8              tls_engine_get_cert.isra.10
+08093610 l     F .text	00000201              ssl_info_cb
+08093820 l     F .text	000000b9              openssl_tls_fail_event.isra.13
+080f0e60 l     O .rodata	00000020              CSWTCH.101
+080938e0 l     F .text	000000c6              domain_suffix_match
+080939b0 l     F .text	0000022f              tls_match_suffix
+08093be0 l     F .text	00000aa2              tls_verify_cb
+08094690 l     F .text	000000d1              tls_msg_cb
+08094770 l     F .text	00000262              tls_engine_load_dynamic_generic
+080949e0 l     F .text	00000632              ocsp_resp_cb
+080f0f82 l     O .rodata	0000000d              __func__.20173
+0811cdf8 l     O .bss	00000004              tls_openssl_ref_count
+080955d0 l     F .text	000002a8              tls_parse_pkcs12
+080f101f l     O .rodata	00000011              __func__.19883
+08095880 l     F .text	000000a6              tls_read_pkcs12
+080f1030 l     O .rodata	00000010              __func__.19895
+080f0e20 l     O .rodata	00000014              __func__.19532
+080f0e34 l     O .rodata	00000016              __func__.19819
+0811ce00 l     O .bss	00000004              counter.19851
+080f0ea8 l     O .rodata	00000017              __func__.20077
+080f0ebf l     O .rodata	00000017              __func__.20085
+08096160 l     F .text	000003c0              openssl_connection_handshake
+080f0e80 l     O .rodata	00000012              __func__.20041
+080f0e92 l     O .rodata	00000016              __func__.20050
+080f0ed8 l     O .rodata	0000001f              __func__.20110
+080f0ef7 l     O .rodata	0000001a              __func__.20233
+080f0fad l     O .rodata	00000017              __func__.19775
+080f0f8f l     O .rodata	0000001e              __func__.19929
+080f0f20 l     O .rodata	00000022              __func__.19920
+080f0fd4 l     O .rodata	0000001b              __func__.19859
+080f0f60 l     O .rodata	00000022              __func__.19934
+080f0fef l     O .rodata	00000015              __func__.19904
+080f1004 l     O .rodata	0000001b              __func__.19955
+080f0fc4 l     O .rodata	00000010              __func__.19763
+080f1040 l     O .rodata	00000016              __func__.20246
+080f1056 l     O .rodata	00000013              __func__.19811
+080f1069 l     O .rodata	00000017              __func__.19865
+080f1080 l     O .rodata	00000017              __func__.19966
+00000000 l    df *ABS*	00000000              crypto_openssl.c
+080983b0 l     F .text	00000110              openssl_hmac_vector
+080984c0 l     F .text	0000002d              aes_get_evp_cipher
+080984f0 l     F .text	00000136              openssl_digest_vector
+00000000 l    df *ABS*	00000000              sha256-prf.c
+00000000 l    df *ABS*	00000000              sha256-tlsprf.c
+00000000 l    df *ABS*	00000000              dh_groups.c
+080f1280 l     O .rodata	00000020              dh_groups
+080f12a0 l     O .rodata	00000001              dh_group5_generator
+080f12c0 l     O .rodata	000000c0              dh_group5_prime
+080f1380 l     O .rodata	000000c0              dh_group5_order
+00000000 l    df *ABS*	00000000              random.c
+0809a710 l     F .text	000000f5              random_mix_pool
+0811cec4 l     O .bss	00000004              input_rotate
+0811cec8 l     O .bss	00000004              pool_pos
+0811ce40 l     O .bss	00000080              pool
+080f17a0 l     O .rodata	00000020              twist.5779
+0809a810 l     F .text	0000002f              random_close_fd
+0811c610 l     O .data	00000004              random_fd
+0811ce20 l     O .bss	00000004              count.5800
+0811ce24 l     O .bss	00000004              entropy
+0811cec0 l     O .bss	00000004              total_collected
+0811cecc l     O .bss	00000014              dummy_key
+0809ab70 l     F .text	00000157              random_write_entropy
+0811cee8 l     O .bss	00000004              random_entropy_file
+0811cee4 l     O .bss	00000004              own_pool_ready
+0809acd0 l     F .text	000000dc              random_read_fd
+0811cee0 l     O .bss	00000004              dummy_key_avail
+0811ceec l     O .bss	00000004              random_entropy_file_read
+00000000 l    df *ABS*	00000000              ctrl_iface_unix.c
+080a1060 l     F .text	0000019e              wpa_supplicant_ctrl_iface_attach
+080a1200 l     F .text	000000ec              wpa_supplicant_ctrl_iface_detach
+080a12f0 l     F .text	000000f2              wpas_ctrl_sock_debug
+080a13f0 l     F .text	00000286              wpa_supplicant_global_ctrl_iface_receive
+080a1680 l     F .text	00000132              wpa_supplicant_ctrl_iface_path
+080a17c0 l     F .text	0000056e              wpas_global_ctrl_iface_open_sock
+080a1d30 l     F .text	00000682              wpas_ctrl_iface_open_sock
+080a23c0 l     F .text	00000450              wpa_supplicant_ctrl_iface_receive
+080a2c10 l     F .text	000000da              wpa_supplicant_ctrl_iface_msg_cb
+080a2810 l     F .text	000003fe              wpa_supplicant_ctrl_iface_send.part.1
+00000000 l    df *ABS*	00000000              base64.c
+080f3dc0 l     O .rodata	00000041              base64_table
+00000000 l    df *ABS*	00000000              sme.c
+080a3520 l     F .text	000000f6              sme_deauth
+080a3620 l     F .text	000002e5              sme_obss_scan_timeout
+080a3910 l     F .text	0000003b              sme_auth_timer
+080a3950 l     F .text	0000003b              sme_assoc_timer
+080a4210 l     F .text	0000095b              sme_auth_start_cb
+00000000 l    df *ABS*	00000000              ieee802_11_common.c
+080a5650 l     F .text	0000003d              country_match
+080f5660 l     O .rodata	0000000c              us_op_class_cc
+080f5680 l     O .rodata	000000b8              eu_op_class_cc
+080f5738 l     O .rodata	00000008              jp_op_class_cc
+080f5740 l     O .rodata	00000008              cn_op_class_cc
+00000000 l    df *ABS*	00000000              hw_features_common.c
+00000000 l    df *ABS*	00000000              eap_common.c
+00000000 l    df *ABS*	00000000              sha1-prf.c
+00000000 l    df *ABS*	00000000              sha1-tlsprf.c
+00000000 l    df *ABS*	00000000              driver_common.c
+080a83a0 l     F .text	0000002c              wpa_check_wowlan_trigger
+080f5e80 l     O .rodata	000000d0              CSWTCH.1
+080f5f50 l     O .rodata	00000018              CSWTCH.3
+00000000 l    df *ABS*	00000000              wpa_supplicant.c
+080a8690 l     F .text	00000013              wpa_supplicant_msg_ifname_cb
+080a86b0 l     F .text	0000007d              radio_work_free
+080a8730 l     F .text	000000e1              radio_start_next_work
+080a8820 l     F .text	0000005c              wpas_periodic
+080a8880 l     F .text	00000061              wpas_rrm_neighbor_rep_timeout_handler
+080a88f0 l     F .text	0000009e              select_driver
+080abb90 l     F .text	0000015b              wpa_supplicant_timeout
+080f87c0 l     O .rodata	00000028              CSWTCH.146
+080a9220 l     F .text	0000014c              wpa_supplicant_rx_eapol_bridge
+080a99c0 l     F .text	0000000d              wpa_supplicant_terminate
+080ae2c0 l     F .text	00000df3              wpas_start_assoc_cb
+080ac250 l     F .text	00000542              wpa_supplicant_deinit_iface
+080af3c0 l     F .text	0000005f              wpa_supplicant_reconfig
+080f87e8 l     O .rodata	00000010              CSWTCH.165
+080adbc0 l     F .text	00000076              wpa_supplicant_enable_one_network
+0811cef0 l     O .bss	00000004              interface_count.13943
+00000000 l    df *ABS*	00000000              events.c
+080b0ee0 l     F .text	00000135              wpa_supplicant_event_disassoc
+080b1020 l     F .text	00000050              wpa_supplicant_get_new_bss
+080b1070 l     F .text	00000047              wpa_supplicant_update_current_bss
+080b10c0 l     F .text	00000085              wpa_supplicant_rsn_preauth_scan_results
+080b1150 l     F .text	000004e5              wpa_supplicant_event_associnfo
+080b1640 l     F .text	0000008a              wpas_temp_disabled
+080b1750 l     F .text	00000088              wpa_supplicant_req_new_scan
+080b17e0 l     F .text	0000111f              wpa_supplicant_select_bss
+080b2ed0 l     F .text	00000538              wpas_select_network_from_last_scan
+080b3410 l     F .text	00000335              _wpa_supplicant_event_scan_results
+080b3750 l     F .text	000004ca              wpas_event_disconnect.isra.37
+080fa0e0 l     O .rodata	00000014              CSWTCH.68
+080fa0f4 l     O .rodata	00000014              CSWTCH.66
+00000000 l    df *ABS*	00000000              blacklist.c
+00000000 l    df *ABS*	00000000              wpas_glue.c
+080b5b20 l     F .text	0000000b              _wpa_supplicant_get_state
+080b5b30 l     F .text	00000026              wpa_supplicant_get_bssid
+080b5b60 l     F .text	00000045              wpa_supplicant_mlme_setprotection
+080b5bb0 l     F .text	00000027              wpa_supplicant_add_pmkid
+080b5be0 l     F .text	00000027              wpa_supplicant_remove_pmkid
+080b5c10 l     F .text	0000005b              wpa_supplicant_set_rekey_offload
+080b5c70 l     F .text	00000074              wpa_supplicant_port_cb
+080b5cf0 l     F .text	00000013              wpa_supplicant_get_config_blob
+080b5d10 l     F .text	00000005              _wpa_supplicant_cancel_auth_timeout
+080b5d20 l     F .text	00000137              wpa_get_beacon_ie
+080b5e60 l     F .text	00000048              _wpa_ether_send
+080b5eb0 l     F .text	00000005              wpa_supplicant_get_network_ctx
+080b5ec0 l     F .text	00000035              _wpa_supplicant_deauthenticate
+080b5f00 l     F .text	00000005              _wpa_supplicant_set_state
+080b5f10 l     F .text	00000147              wpa_supplicant_set_anon_id
+080b6060 l     F .text	00000005              wpa_supplicant_status_cb
+080b6070 l     F .text	00000005              wpa_supplicant_cert_cb
+080b6080 l     F .text	00000013              wpa_supplicant_aborted_cached
+080b60a0 l     F .text	00000099              wpa_supplicant_key_mgmt_set_pmk
+080b6140 l     F .text	0000005f              wpa_supplicant_set_config_blob
+080b61a0 l     F .text	000000b2              wpa_alloc_eapol.isra.10
+080b6260 l     F .text	00000044              _wpa_alloc_eapol
+080b62b0 l     F .text	0000032f              wpa_supplicant_eapol_send
+080b65e0 l     F .text	0000003f              wpa_supplicant_get_beacon_ie
+080b6620 l     F .text	00000065              wpa_supplicant_notify_eapol_done
+080b6690 l     F .text	000000f7              wpa_eapol_set_wep_key
+080b6790 l     F .text	000000df              wpa_supplicant_set_key
+080b6870 l     F .text	00000227              wpa_supplicant_eapol_cb
+080fa768 l     O .rodata	0000000c              CSWTCH.44
+080b6dc0 l     F .text	000000ba              wpa_supplicant_eap_param_needed
+00000000 l    df *ABS*	00000000              scan.c
+080b7140 l     F .text	0000004b              max_ht20_rate
+080b7190 l     F .text	0000004b              max_ht40_rate
+080b71e0 l     F .text	000000a1              wpa_setband_scan_freqs_list.isra.12
+080b7290 l     F .text	0000006d              wpa_setband_scan_freqs
+080b7300 l     F .text	0000019a              wpa_supplicant_extra_ies
+080ba3e0 l     F .text	000000b2              wpa_supplicant_scan
+080b8130 l     F .text	00000049              wpa_supplicant_delayed_sched_scan_timeout
+080b78a0 l     F .text	00000037              wpa_supplicant_sched_scan_timeout
+080b8280 l     F .text	000001a0              wpa_scan_result_compar
+080b85d0 l     F .text	00000114              wpa_scan_result_wps_compar
+080ba4a0 l     F .text	00000297              wpas_trigger_scan_cb
+080b9420 l     F .text	00000fbc              wpa_supplicant_scan.part.23
+00000000 l    df *ABS*	00000000              driver_wext.c
+080baef0 l     F .text	00000008              wext_get_radio_name
+080baf00 l     F .text	000000ef              wpa_driver_wext_status
+080baff0 l     F .text	0000001b              wpa_driver_wext_rfkill_blocked
+080fd031 l     O .rodata	0000001e              __func__.8765
+080bb1d0 l     F .text	00000023              wpa_driver_wext_send_rfkill
+080bb200 l     F .text	00000173              wpa_driver_wext_signal_poll
+080bb380 l     F .text	00000198              wpa_driver_wext_pmksa
+080fcd88 l     O .rodata	00000016              __FUNCTION__.8734
+080bb520 l     F .text	00000018              wpa_driver_wext_flush_pmkid
+080bb540 l     F .text	0000001a              wpa_driver_wext_remove_pmkid
+080bb560 l     F .text	0000001a              wpa_driver_wext_add_pmkid
+080fce3e l     O .rodata	00000015              __FUNCTION__.8407
+080bb990 l     F .text	0000019e              wpa_driver_wext_event_link
+080bbb30 l     F .text	00000097              wpa_driver_wext_event_rtm_dellink
+080bbbd0 l     F .text	00000053              wpa_driver_wext_rfkill_unblocked
+080fcebf l     O .rodata	00000018              __FUNCTION__.8624
+080fced7 l     O .rodata	0000001c              __FUNCTION__.8601
+080bc170 l     F .text	00000224              wpa_driver_wext_add_scan_entry.isra.11
+080fce94 l     O .rodata	00000018              __FUNCTION__.8415
+080fce60 l     O .rodata	00000021              __FUNCTION__.8553
+080fceac l     O .rodata	00000013              __FUNCTION__.8451
+080fce81 l     O .rodata	00000013              __FUNCTION__.8429
+080bcee0 l     F .text	000009e8              wpa_driver_wext_event_wireless
+080bda00 l     F .text	0000003f              wpa_driver_wext_set_countermeasures
+080fce00 l     O .rodata	00000024              __FUNCTION__.8630
+080bdd20 l     F .text	000001af              wpa_driver_wext_disconnect
+080fcdd4 l     O .rodata	0000001b              __FUNCTION__.8654
+080bded0 l     F .text	00000134              wpa_driver_wext_deauthenticate
+080fcda0 l     O .rodata	0000001f              __FUNCTION__.8665
+080fcdbf l     O .rodata	00000015              __FUNCTION__.8646
+080fcef3 l     O .rodata	0000001c              __FUNCTION__.8678
+080fcf20 l     O .rodata	00000040              CSWTCH.138
+080fcf60 l     O .rodata	0000001d              __FUNCTION__.8688
+080fcf80 l     O .rodata	00000020              CSWTCH.140
+080fd018 l     O .rodata	00000019              __FUNCTION__.8723
+080fcfa0 l     O .rodata	0000001a              __FUNCTION__.8707
+080fcfc0 l     O .rodata	00000025              __FUNCTION__.8636
+080fcfe5 l     O .rodata	0000001b              __FUNCTION__.8674
+080fd000 l     O .rodata	00000018              __FUNCTION__.8585
+080beb20 l     F .text	0000035f              wext_check_hostap
+080bee80 l     F .text	00000328              wpa_driver_wext_finish_drv_init
+080fce24 l     O .rodata	0000001a              __FUNCTION__.8577
+080bf580 l     F .text	00000406              wpa_driver_wext_event_rtm_newlink
+00000000 l    df *ABS*	00000000              driver_wired.c
+080bf9a0 l     F .text	0000000a              wpa_driver_wired_get_ssid
+080bf9b0 l     F .text	0000001a              wpa_driver_wired_get_bssid
+080fd708 l     O .rodata	00000006              pae_group_addr
+080bf9d0 l     F .text	0000010c              wired_send_eapol
+080bfae0 l     F .text	00000049              wired_driver_hapd_deinit
+080bfb30 l     F .text	0000007d              wpa_driver_wired_get_capa
+080bfbb0 l     F .text	00000086              handle_read
+080bfc40 l     F .text	00000121              wpa_driver_wired_get_ifflags
+080bfd70 l     F .text	0000011f              wpa_driver_wired_set_ifflags
+080bfe90 l     F .text	0000015e              handle_dhcp
+080bfff0 l     F .text	00000142              wpa_driver_wired_multi.constprop.4
+080c0140 l     F .text	000000c3              wired_multicast_membership.constprop.5
+080c0210 l     F .text	00000221              wpa_driver_wired_init
+080fd726 l     O .rodata	00000016              __func__.7428
+080c0440 l     F .text	00000152              wpa_driver_wired_deinit
+080fd70e l     O .rodata	00000018              __func__.7434
+080c05a0 l     F .text	00000532              wired_driver_hapd_init
+00000000 l    df *ABS*	00000000              driver_nl80211.c
+080c0ae0 l     F .text	00000010              ack_handler
+080c0af0 l     F .text	00000010              finish_handler
+080c0b00 l     F .text	00000012              error_handler
+080c0b20 l     F .text	00000003              no_seq_check
+080c0b30 l     F .text	00000069              wpa_cipher_to_cipher_suite
+080c0ba0 l     F .text	0000003f              sta_flags_nl80211
+080c0be0 l     F .text	00000003              i802_sta_clear_stats
+080c0bf0 l     F .text	0000000a              nl80211_get_radio_name
+080c0c20 l     F .text	00000006              wpa_driver_br_add_ip_neigh
+080c0c30 l     F .text	00000006              wpa_driver_br_delete_ip_neigh
+080c0c40 l     F .text	0000001b              wpa_driver_nl80211_rfkill_blocked
+080c0c60 l     F .text	000000e2              wpa_alg_to_cipher_suite
+080c0d50 l     F .text	00000242              nl80211_put_freq_params
+08101f20 l     O .rodata	0000000c              CSWTCH.172
+080c0fa0 l     F .text	00000038              nl80211_nlmsg_clear
+080c0fe0 l     F .text	00000174              preferred_freq_info_handler
+080c1160 l     F .text	000000e9              get_channel_width
+08101e88 l     O .rodata	00000018              CSWTCH.185
+080c1250 l     F .text	00000121              set_beacon_data
+080c1380 l     F .text	0000002f              wpa_driver_nl80211_get_bssid
+080c13b0 l     F .text	00000044              wpa_driver_nl80211_get_ssid
+080c1400 l     F .text	000000de              wpa_driver_nl80211_get_capa
+080c14e0 l     F .text	000000b3              get_key_handler
+080c15a0 l     F .text	000000c9              netdev_info_handler
+080c1670 l     F .text	00000170              nl80211_set_mac_addr
+080c17e0 l     F .text	00000894              wpa_driver_nl80211_status
+08101f00 l     O .rodata	00000020              CSWTCH.163
+080c2080 l     F .text	00000023              wpa_driver_nl80211_send_rfkill
+080c20b0 l     F .text	00000183              get_sta_handler
+0811c680 l     O .data	000000c0              stats_policy.11841
+080c2240 l     F .text	00000143              get_link_noise
+0811c860 l     O .data	0000003c              survey_policy.11052
+080c2390 l     F .text	0000024b              survey_handler
+0811c620 l     O .data	0000003c              survey_policy.12294
+080c25e0 l     F .text	00000098              cookie_handler
+080c2680 l     F .text	000000de              nl80211_wdev_handler
+080c2760 l     F .text	000000f7              nl80211_ht_vht_overrides
+080c2860 l     F .text	0000014c              vendor_reply_handler
+080c29b0 l     F .text	00000115              linux_write_system_file
+080c2ad0 l     F .text	000000f2              wpa_driver_br_set_net_param
+080c2bd0 l     F .text	000000a6              wpa_driver_br_port_set_attr
+08101f2c l     O .rodata	00000008              CSWTCH.165
+080c2c80 l     F .text	00000033              nl80211_handle_destroy
+0811cf00 l     O .bss	00000080              port_bitmap
+080c2cc0 l     F .text	000000e5              nl_create_handle
+080c2db0 l     F .text	0000001c              nl_destroy_handles
+080c2dd0 l     F .text	00000027              nl80211_destroy_eloop_handle
+080c2e00 l     F .text	0000005c              wpa_driver_nl80211_event_receive
+08101f40 l     O .rodata	00000021              __func__.11066
+080c2e60 l     F .text	0000005c              nl80211_recv_beacons
+08101fdc l     O .rodata	00000015              __func__.10836
+080c2ec0 l     F .text	000000ee              nl80211_mgmt_unsubscribe
+080c2fb0 l     F .text	0000005b              nl80211_register_eloop_read
+080c3010 l     F .text	0000000d              nl80211_mgmt_handle_register_eloop
+080c3020 l     F .text	00000059              nl80211_addr_in_use
+080c3080 l     F .text	00000077              nl80211_init_bss
+080c3100 l     F .text	000000be              wpa_driver_nl80211_set_operstate
+080c31c0 l     F .text	00000150              family_handler
+080c3310 l     F .text	00000689              nl80211_connect_common
+080c39a0 l     F .text	00000005              driver_nl80211_scan2
+080c39b0 l     F .text	0000008d              nl80211_global_deinit
+080c3a40 l     F .text	0000009b              nl80211_set_param
+080c3ae0 l     F .text	00000194              get_link_signal
+0811c740 l     O .data	000000c0              policy.11036
+0811c800 l     O .data	0000004e              rate_policy.11038
+080c3c80 l     F .text	000000df              dump_ifidx.isra.9
+080c3d60 l     F .text	00000050              del_ifidx
+080c3db0 l     F .text	000001cd              add_ifidx
+080c3f80 l     F .text	00000201              i802_check_bridge
+080c4190 l     F .text	000001a3              nl80211_set_conn_keys
+080c4340 l     F .text	0000014a              process_beacon_event
+080c4490 l     F .text	00000130              handle_eapol
+080c45c0 l     F .text	000001bf              wpa_driver_nl80211_handle_eapol_tx_status
+080c4780 l     F .text	0000004a              nl80211_alloc_mgmt_handle.isra.12
+080c47d0 l     F .text	00000178              send_and_recv.isra.14
+08101f61 l     O .rodata	0000000e              __func__.10718
+080c4950 l     F .text	000000ca              nl80211_get_country
+080c4a20 l     F .text	000000d7              nl_get_multicast_id.constprop.36
+080c4b00 l     F .text	00000362              nl80211_global_init
+080cf030 l     F .text	000008ed              wpa_driver_nl80211_event_rtm_newlink
+080cebd0 l     F .text	0000045d              wpa_driver_nl80211_event_rtm_dellink
+080c4e70 l     F .text	000000cc              nl80211_check_global
+080c50c0 l     F .text	00000084              nl80211_ifindex_msg
+080c5150 l     F .text	000000f9              i802_get_seqnum
+080c5250 l     F .text	0000017a              nl80211_disable_11b_rates
+080c53d0 l     F .text	00000053              nl80211_unmask_11b_rates
+080c5430 l     F .text	0000001a              nl80211_bss_msg.constprop.37
+080c5450 l     F .text	000000b7              nl80211_pmkid
+080c5510 l     F .text	00000036              nl80211_flush_pmkid
+080c5550 l     F .text	0000007f              nl80211_remove_pmkid
+080c55d0 l     F .text	0000007f              nl80211_add_pmkid
+080c5650 l     F .text	00000080              i802_flush
+080c56d0 l     F .text	0000019a              wpa_driver_nl80211_sta_remove
+080c5870 l     F .text	0000001a              driver_nl80211_sta_remove
+080c5890 l     F .text	000005d6              wpa_driver_nl80211_sta_add
+080c5e70 l     F .text	000000ef              i802_read_sta_data
+080c5f60 l     F .text	0000004f              i802_get_inact_sec
+080c5fb0 l     F .text	00000011              driver_nl80211_read_sta_data
+080c5fd0 l     F .text	00000275              wpa_driver_nl80211_sta_set_flags
+080c6250 l     F .text	000001e2              i802_set_tx_queue_params
+080c6440 l     F .text	0000024f              wpa_driver_nl80211_set_supp_port
+080c6690 l     F .text	000001d6              i802_set_sta_vlan
+080c6870 l     F .text	00000019              driver_nl80211_set_sta_vlan
+080c6890 l     F .text	000000ef              nl80211_signal_monitor
+080c6980 l     F .text	000000ec              nl80211_set_p2p_powersave
+080c6a70 l     F .text	00000191              nl80211_set_rekey_info
+080c6c10 l     F .text	000002b0              nl80211_switch_channel
+080c6ec0 l     F .text	0000007f              wpa_driver_nl80211_get_country
+080c6f40 l     F .text	000000c7              wpa_driver_nl80211_set_country
+080c70c0 l     F .text	0000012f              nl80211_del_ts
+080c71f0 l     F .text	00000187              nl80211_add_ts
+080c7380 l     F .text	000002df              nl80211_send_frame_cmd
+080c7660 l     F .text	000000fc              nl80211_vendor_cmd
+080c7760 l     F .text	000001ef              nl80211_set_wowlan
+080c7950 l     F .text	0000006a              nl80211_get_ifmode
+080c79c0 l     F .text	00000139              i802_set_iface_flags
+080c7b00 l     F .text	0000002d              wpa_driver_nl80211_resume
+080c7b30 l     F .text	00000047              wpa_driver_nl80211_rfkill_unblocked
+080c7b80 l     F .text	0000019c              nl80211_register_frame
+080c7d20 l     F .text	00000179              wpa_driver_nl80211_probe_req_report
+080c7ea0 l     F .text	0000000d              driver_nl80211_probe_req_report
+080c7eb0 l     F .text	000000a8              nl80211_teardown_ap
+080c7f60 l     F .text	0000001f              nl80211_register_action_frame
+080c7f80 l     F .text	0000010d              wpa_driver_nl80211_cancel_remain_on_channel
+080c8090 l     F .text	00000155              wpa_driver_nl80211_remain_on_channel
+080c81f0 l     F .text	000000d6              wpa_driver_nl80211_send_action_cancel_wait
+080c82d0 l     F .text	0000013a              nl80211_set_mode
+08102060 l     O .rodata	00000028              CSWTCH.157
+080c8430 l     F .text	000001ab              nl80211_set_prob_oper_freq
+08101ea0 l     O .rodata	0000001b              __func__.12725
+080c85e0 l     F .text	00000270              nl80211_get_pref_freq_list
+08101ebb l     O .rodata	0000001b              __func__.12712
+080c8850 l     F .text	0000017f              nl80211_set_band
+080c89d0 l     F .text	000002fb              wpa_driver_do_acs
+08101ed8 l     O .rodata	00000014              CSWTCH.168
+080c8cd0 l     F .text	00000173              nl80211_roaming
+080c8e50 l     F .text	0000014a              wpa_driver_nl80211_get_survey
+080c8fa0 l     F .text	0000005a              wpa_driver_nl80211_del_beacon
+080c9000 l     F .text	0000004b              wpa_driver_nl80211_stop_ap
+080c9050 l     F .text	00000105              nl80211_start_radar_detection
+080c9160 l     F .text	000000d7              nl80211_set_qos_map
+080c9240 l     F .text	000000d7              i802_set_frag
+080c9320 l     F .text	000000d7              i802_set_rts
+080c9400 l     F .text	0000010c              nl80211_set_channel.isra.24
+080c9510 l     F .text	0000001a              i802_set_freq
+080c9530 l     F .text	00000af8              wpa_driver_nl80211_set_ap
+080ca030 l     F .text	00000187              wpa_driver_nl80211_set_acl
+080ca1c0 l     F .text	0000010e              issue_key_mgmt_set_key.part.25
+080ca2d0 l     F .text	0000067e              wpa_driver_nl80211_set_key.isra.26
+08101ff7 l     O .rodata	0000001b              __func__.11312
+080ca950 l     F .text	0000006f              driver_nl80211_set_key
+080ca9c0 l     F .text	00000117              wpa_driver_nl80211_update_ft_ies
+080caae0 l     F .text	0000024a              wpa_driver_nl80211_try_connect
+080cadd0 l     F .text	000004f7              nl80211_setup_ap
+08101fc0 l     O .rodata	0000001c              stypes.11198
+0811c65c l     O .data	00000008              nl80211_wiphys.10852
+080cb2d0 l     F .text	00000575              wpa_driver_nl80211_set_mode_impl
+080cb940 l     F .text	000001d1              wpa_driver_nl80211_send_frame
+080cbb20 l     F .text	000002ac              wpa_driver_nl80211_send_mlme
+080cbdd0 l     F .text	00000222              nl80211_poll_client
+080cc000 l     F .text	0000018f              driver_nl80211_send_action
+080cc190 l     F .text	00000107              i802_sta_disassoc
+080cc2a0 l     F .text	0000010a              i802_sta_deauth
+080cc3b0 l     F .text	0000004d              driver_nl80211_send_mlme
+080cc400 l     F .text	00000047              nl80211_send_frame
+080cc450 l     F .text	000002d5              wpa_driver_nl80211_hapd_send_eapol
+08101ff1 l     O .rodata	00000006              rfc1042_header
+080cc840 l     F .text	000000f0              nl80211_signal_poll
+080cca60 l     F .text	00000077              wpa_driver_nl80211_disconnect
+08102042 l     O .rodata	0000001e              __func__.11360
+080ccb80 l     F .text	000002da              driver_nl80211_if_remove
+08101f6f l     O .rodata	0000001d              __func__.12076
+080cce60 l     F .text	000002cd              nl80211_create_iface_once
+080cd310 l     F .text	00000239              i802_set_wds_sta
+080cd550 l     F .text	000005f2              wpa_driver_nl80211_if_add
+08101fa0 l     O .rodata	00000020              CSWTCH.161
+080cdb60 l     F .text	00000034              wpa_driver_nl80211_deinit_p2p_cli
+080cdba0 l     F .text	00000067              wpa_driver_nl80211_deinit_ap
+080cdc10 l     F .text	00000475              wpa_driver_nl80211_deinit
+080ce090 l     F .text	00000009              i802_deinit
+080ce0a0 l     F .text	00000009              driver_nl80211_deinit
+080ce0b0 l     F .text	0000039b              wpa_driver_nl80211_finish_drv_init
+080ce450 l     F .text	000002c5              wpa_driver_nl80211_drv_init
+080ce720 l     F .text	0000034d              i802_init
+080cea70 l     F .text	00000029              wpa_driver_nl80211_init
+080ceaa0 l     F .text	00000122              nl80211_find_drv
+080cf920 l     F .text	000000d8              nl80211_leave_ibss
+080cfa00 l     F .text	0000010b              wpa_driver_nl80211_deauthenticate.isra.33
+08102020 l     O .rodata	00000022              __func__.11368
+080cfb10 l     F .text	00000013              driver_nl80211_deauthenticate
+080cfb30 l     F .text	0000089f              wpa_driver_nl80211_authenticate
+080d03d0 l     F .text	0000000d              driver_nl80211_authenticate
+080d04e0 l     F .text	000006ce              wpa_driver_nl80211_associate
+00000000 l    df *ABS*	00000000              driver_nl80211_capa.c
+080d0bb0 l     F .text	0000008a              get_nl80211_protocol_features
+080d0c40 l     F .text	00000091              protocol_feature_handler
+080d0ce0 l     F .text	000000ef              dfs_info_handler
+080d0dd0 l     F .text	00000131              features_info_handler
+080d0f10 l     F .text	00000884              nl80211_get_reg
+0811c8e0 l     O .data	0000006c              reg_policy.10402
+08102584 l     O .rodata	00000010              CSWTCH.78
+080d17a0 l     F .text	00000e7a              wiphy_info_handler
+0811c8a0 l     O .data	0000002a              iface_combination_policy.10013
+0811c8ca l     O .data	00000012              iface_limit_policy.10014
+080d2620 l     F .text	000006fe              phy_info_handler
+0811c960 l     O .data	0000006c              freq_policy.10227
+0811c9cc l     O .data	00000012              rate_policy.10246
+00000000 l    df *ABS*	00000000              driver_nl80211_event.c
+080d35a0 l     F .text	000000b7              nl80211_spurious_frame
+080d3660 l     F .text	000003fe              mlme_event_deauth_disassoc
+080d3a60 l     F .text	000001d0              mlme_event_remain_on_channel
+080d3c30 l     F .text	000003fe              mlme_event_connect
+080d4030 l     F .text	000000fe              mlme_event_unprot_disconnect.isra.1
+080d4130 l     F .text	00000dfd              mlme_event
+081048a0 l     O .rodata	000001ac              CSWTCH.29
+0811c9e0 l     O .data	00000012              wme_policy.10165
+080d4f30 l     F .text	00000244              send_scan_event.part.12
+080d5180 l     F .text	00000052              send_scan_event
+080d51e0 l     F .text	000002ee              qca_nl80211_dfs_offload_radar_event.isra.18
+0811ca00 l     O .data	00000036              cqm_policy.10362
+0811ca36 l     O .data	00000018              rekey_policy.10394
+0811ca4e l     O .data	00000018              cand_policy.10401
+08104a4c l     O .rodata	00000014              CSWTCH.31
+00000000 l    df *ABS*	00000000              driver_nl80211_monitor.c
+080d7760 l     F .text	000000cd              from_unknown_sta.isra.0.part.1
+080d7830 l     F .text	00000347              handle_monitor_read
+0811cb68 l     O .data	00000008              msock_filter
+0811ca80 l     O .data	000000e8              msock_filter_insns
+08104d68 l     O .rodata	00000015              __func__.8764
+00000000 l    df *ABS*	00000000              driver_nl80211_scan.c
+080d8220 l     F .text	00000117              nl80211_get_scan_results
+080d8340 l     F .text	0000017b              get_noise_for_scan_results
+0811cbe0 l     O .data	0000003c              survey_policy.9763
+080d84c0 l     F .text	0000039c              nl80211_scan_common
+080d88d0 l     F .text	00000088              clear_state_mismatch
+0811cb80 l     O .data	0000005a              bss_policy.9861
+00000000 l    df *ABS*	00000000              radiotap.c
+0810533c l     O .rodata	00000010              radiotap_ns
+0810534c l     O .rodata	00000015              rtap_namespace_sizes
+00000000 l    df *ABS*	00000000              netlink.c
+080d9bf0 l     F .text	0000019a              netlink_receive
+0811cf80 l     O .bss	00000004              nl_seq.5455
+08105520 l     O .rodata	0000000c              CSWTCH.10
+08105500 l     O .rodata	00000020              CSWTCH.12
+00000000 l    df *ABS*	00000000              linux_ioctl.c
+00000000 l    df *ABS*	00000000              rfkill.c
+080da930 l     F .text	00000166              rfkill_receive
+00000000 l    df *ABS*	00000000              drivers.c
+00000000 l    df *ABS*	00000000              l2_packet_linux.c
+080dad10 l     F .text	0000022e              l2_packet_receive_br
+08105ad3 l     O .rodata	00000015              __func__.5886
+080daf40 l     F .text	0000029a              l2_packet_receive
+08105aab l     O .rodata	00000012              __func__.5869
+08105a9c l     O .rodata	0000000f              __func__.5905
+08105abd l     O .rodata	00000016              __func__.5929
+08105ae8 l     O .rodata	00000016              __func__.5945
+08105b00 l     O .rodata	00000008              dhcp_sock_filter
+08105b08 l     O .rodata	00000008              ndisc_sock_filter
+0811cc20 l     O .data	00000078              dhcp_sock_filter_insns
+0811cca0 l     O .data	00000040              ndisc_sock_filter_insns
+0811bff4 l     O .got.plt	00000000              _GLOBAL_OFFSET_TABLE_
+0811bef4 l       .ctors	00000000              __init_array_end
+0811bef4 l       .ctors	00000000              __init_array_start
+0811bf08 l     O .dynamic	00000000              _DYNAMIC
+00000000       F *UND*	00000000              fileno@@GLIBC_2.0
+0805e220 g     F .text	0000064c              wmm_ac_rx_action
+0805ff10 g     F .text	000000d5              eloop_replenish_timeout
+0811c600  w      .data	00000000              data_start
+080a6ea0 g     F .text	0000006f              hw_get_channel_chan
+00000000       F *UND*	00000000              abort@@GLIBC_2.0
+00000000       F *UND*	00000000              PKCS5_PBKDF2_HMAC_SHA1@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              __errno_location@@GLIBC_2.0
+080da210 g     F .text	000000d7              linux_iface_up
+08060100 g     F .text	0000050f              eloop_run
+0806e1b0 g     F .text	0000009a              wpa_cipher_txt
+00000000       F *UND*	00000000              nla_get_u8
+0808a660 g     F .text	00000120              wps_registrar_process_msg
+08086d20 g     F .text	00000041              wps_cb_new_psk
+08099b60 g     F .text	00000070              hmac_sha256_vector
+080ab7b0 g     F .text	000000ee              radio_work_done
+080c4f40 g     F .text	00000017              convert2width
+08058500 g     F .text	00000002              wpas_notify_bss_ies_changed
+0805b240 g     F .text	0000015b              freq_range_list_parse
+080746f0 g     F .text	000000a7              eap_peer_ttls_register
+08088e60 g     F .text	0000008d              wps_registrar_invalidate_pin
+08080580 g     F .text	000000be              wps_build_key_wrap_auth
+080b5870 g     F .text	0000013a              wpa_blacklist_add
+08095c90 g     F .text	000000f5              tls_connection_set_verify
+080c4f80 g     F .text	00000018              is_sta_interface
+0805b0b0 g     F .text	0000018a              wpa_config_parse_string
+080ab5e0 g     F .text	000000d5              radio_remove_works
+08081e80 g     F .text	00000051              wps_process_rf_bands
+0806ebe0 g     F .text	00000049              wpa_pick_pairwise_cipher
+080a60c0 g     F .text	000002f4              hostapd_config_wmm_ac
+080904b0 g     F .text	0000001a              eap_invalidate_cached_session
+080bc3a0 g     F .text	00000b40              wpa_driver_wext_get_scan_results
+080a8420 g     F .text	00000017              event_to_string
+0807de90 g     F .text	000000d8              wps_generate_pin
+080909b0 g     F .text	00000039              eap_peer_unregister_methods
+080bac70 g     F .text	000000e7              wpas_mac_addr_rand_scan_set
+0807ab10 g     F .text	0000005f              wpas_wps_scan_result_text
+00000000       F *UND*	00000000              AES_set_encrypt_key@@OPENSSL_1.0.0
+08083190 g     F .text	00001b2a              wps_enrollee_process_msg
+08067fd0 g     F .text	000000ad              wpa_sm_deinit
+080b6e80 g     F .text	0000010d              wpa_supplicant_init_eapol
+00000000       F *UND*	00000000              ERR_load_ENGINE_strings@@OPENSSL_1.0.0
+08091ed0 g     F .text	0000014f              eap_peer_tls_status
+08064140 g     F .text	00000046              wpa_sm_aborted_cached
+0805cbd0 g     F .text	0000003d              wpabuf_clear_free
+08086e40 g     F .text	000007cb              wps_build_cred
+08090910 g     F .text	00000005              eap_peer_method_free
+0805f950 g     F .text	000000fc              eloop_register_sock
+080584d0 g     F .text	00000002              wpas_notify_bss_wpaie_changed
+08081370 g     F .text	000000e4              wps_build_model_number
+00000000       F *UND*	00000000              open@@GLIBC_2.0
+08099d50 g     F .text	00000028              crypto_bignum_add
+0805c3e0 g     F .text	000000fe              wpa_msg_global
+080684b0 g     F .text	00000058              pmksa_candidate_free
+00000000       F *UND*	00000000              connect@@GLIBC_2.0
+00000000       F *UND*	00000000              SSL_CTX_use_PrivateKey_file@@OPENSSL_1.0.0
+080be1c0 g     F .text	00000038              wpa_driver_wext_cipher2wext
+080d2d20 g     F .text	00000512              wpa_driver_nl80211_capa
+08095b90 g     F .text	00000025              tls_connection_established
+00000000       F *UND*	00000000              ERR_remove_thread_state@@OPENSSL_1.0.0
+0805fc90 g     F .text	0000007a              eloop_cancel_timeout
+08058280 g     F .text	00000002              wpas_notify_network_enabled_changed
+00000000       F *UND*	00000000              getpid@@GLIBC_2.0
+08068fd0 g     F .text	000000fd              rsn_preauth_scan_result
+00000000       F *UND*	00000000              CRYPTO_malloc@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              mkdir@@GLIBC_2.0
+080818c0 g     F .text	0000008a              wps_build_os_version
+08090ea0 g     F .text	00000175              generate_authenticator_response_pwhash
+080967b0 g     F .text	00000030              tls_connection_enable_workaround
+0808fff0 g     F .text	00000012              eap_get_config
+080557e0 g     F .text	0000035e              wpa_config_free_ssid
+08055f60 g     F .text	00000097              wpa_config_set_quoted
+0805a920 g     F .text	00000064              wpa_scnprintf
+00000000       F *UND*	00000000              strerror@@GLIBC_2.0
+0806f070 g     F .text	0000005c              wpa_select_ap_group_cipher
+080cdb50 g     F .text	0000000f              wpa_driver_nl80211_set_mode
+00000000       F *UND*	00000000              sk_push@@OPENSSL_1.0.0
+0808e5f0 g     F .text	0000021c              eap_sm_get_status
+00000000       F *UND*	00000000              nl_socket_add_membership
+0807dbe0 g     F .text	00000180              wps_decrypt_encr_settings
+08075f90 g     F .text	0000004c              mschapv2_remove_domain
+080cad50 g     F .text	00000077              nl80211_get_wiphy_index
+08099c40 g     F .text	00000005              crypto_bignum_init
+080582d0 g     F .text	00000015              wpas_notify_scan_results
+080da830 g     F .text	000000f5              linux_master_get
+00000000       F *UND*	00000000              SSL_CTX_load_verify_locations@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              daemon@@GLIBC_2.0
+080dbba0 g     F .text	00000002              __libc_csu_fini
+00000000       F *UND*	00000000              memcmp@@GLIBC_2.0
+0805db20 g     F .text	0000016c              wpas_wmm_ac_delts
+0805cec0 g     F .text	00000087              wpabuf_printf
+080aca30 g     F .text	000002e9              wpa_supplicant_init
+080c4fe0 g     F .text	00000046              nl80211_mark_disconnected
+080d8bc0 g     F .text	000002b0              wpa_driver_nl80211_sched_scan
+08092480 g     F .text	00000026              eap_peer_tls_reset_output
+00000000       F *UND*	00000000              CRYPTO_cleanup_all_ex_data@@OPENSSL_1.0.0
+080b7760 g     F .text	00000044              wpa_supplicant_delayed_sched_scan
+080580b0 g     F .text	0000011f              wpa_config_process_global
+00000000       F *UND*	00000000              qsort@@GLIBC_2.0
+080999a0 g     F .text	00000070              hmac_md5_vector
+00000000       F *UND*	00000000              nla_get_u16
+080b59b0 g     F .text	000000cd              wpa_blacklist_del
+00000000       F *UND*	00000000              inet_ntoa@@GLIBC_2.0
+080b0770 g     F .text	00000158              wpas_rrm_process_neighbor_rep
+080590c0 g     F .text	00000073              wpa_bss_get_bssid
+080581e0 g     F .text	00000002              wpas_notify_supplicant_deinitialized
+080bf1b0 g     F .text	000003c5              wpa_driver_wext_init
+08090270 g     F .text	00000024              eap_get_config_phase2
+080910e0 g     F .text	0000007e              nt_challenge_response
+080523c0 g     F .text	00000000              _start
+08068510 g     F .text	00000301              rsn_preauth_init
+080a9590 g     F .text	000001a9              wpa_supplicant_set_non_wpa_policy
+080579f0 g     F .text	0000003d              wpa_config_free_blob
+080cc930 g     F .text	00000127              wpa_driver_nl80211_mlme
+080998e0 g     F .text	00000012              crypto_hash_update
+00000000       F *UND*	00000000              genlmsg_attrlen
+00000000       F *UND*	00000000              EVP_aes_128_ecb@@OPENSSL_1.0.0
+080a4d90 g     F .text	00000077              sme_event_disassoc
+08091d00 g     F .text	0000007c              eap_peer_tls_derive_key
+00000000       F *UND*	00000000              SSL_alert_type_string_long@@OPENSSL_1.0.0
+080915e0 g     F .text	00000063              chap_md5
+08081690 g     F .text	000000a0              wps_build_req_dev_type
+080a6ca0 g     F .text	00000127              mb_ies_info_by_ies
+080abe20 g     F .text	00000054              radio_work_pending
+08081fb0 g     F .text	000011d2              wps_enrollee_get_msg
+080b7840 g     F .text	00000055              wpa_supplicant_cancel_sched_scan
+00000000       F *UND*	00000000              random@@GLIBC_2.0
+08081a40 g     F .text	000000ca              wps_build_vendor_ext
+08086730 g     F .text	000000c4              wps_registrar_flush
+0805f270 g     F .text	00000102              os_readfile
+080763c0 g     F .text	00000099              mschapv2_verify_auth_response
+08081190 g     F .text	000000e4              wps_build_manufacturer
+0805ed70 g     F .text	0000002e              os_get_time
+080beab0 g     F .text	0000006d              wpa_driver_wext_alternative_ifindex
+00000000       F *UND*	00000000              nla_len
+080cb850 g     F .text	000000e3              nl80211_get_assoc_freq
+080f87b4 g     O .rodata	00000004              wpa_supplicant_full_license1
+00000000       F *UND*	00000000              EVP_CIPHER_iv_length@@OPENSSL_1.0.0
+080f87b8 g     O .rodata	00000004              wpa_supplicant_license
+00000000       F *UND*	00000000              nla_put
+080b9000 g     F .text	00000023              wpas_scan_scheduled
+080ac7a0 g     F .text	00000044              wpa_supplicant_get_eap_mode
+080ad490 g     F .text	00000003              wpas_get_ssid_pmf
+080ad630 g     F .text	000002ea              wpas_connection_failed
+080a4f10 g     F .text	00000081              sme_deinit
+0805c2d0 g     F .text	00000106              wpa_msg_ctrl
+08099a10 g     F .text	0000003b              hmac_md5
+08080320 g     F .text	00000099              wps_build_registrar_nonce
+08055e50 g     F .text	0000010f              wpa_config_set
+080a2d50 g     F .text	0000017d              wpa_supplicant_ctrl_iface_deinit
+080af7f0 g     F .text	00000087              get_shared_radio_freqs
+0807a3f0 g     F .text	000001c6              wpas_wps_ssid_bss_match
+080bb0d0 g     F .text	000000bf              wpa_driver_wext_set_operstate
+080b7560 g     F .text	0000004f              wpa_supplicant_stop_sched_scan
+08061490 g     F .text	0000201e              wpa_config_write
+00000000       F *UND*	00000000              sk_pop_free@@OPENSSL_1.0.0
+08079d20 g     F .text	000000ed              wpas_wps_cancel
+080b3d30 g     F .text	00001ac2              wpa_supplicant_event
+080a4fa0 g     F .text	0000049e              sme_proc_obss_scan
+080ab440 g     F .text	00000038              wpas_update_random_addr_disassoc
+0805a300 g     F .text	000000d6              wpa_bss_get_bit_rates
+00000000       F *UND*	00000000              EVP_PKEY_free@@OPENSSL_1.0.0
+0806a330 g     F .text	000003af              peerkey_verify_eapol_key_mic
+080584c0 g     F .text	00000002              wpas_notify_bss_mode_changed
+00000000       F *UND*	00000000              __fprintf_chk@@GLIBC_2.3.4
+0805f240 g     F .text	00000002              os_program_deinit
+0807c490 g     F .text	00000327              wps_init
+08058680 g     F .text	00000002              wpas_notify_sta_authorized
+080f87a4 g     O .rodata	00000004              wpa_supplicant_full_license5
+08075f10 g     F .text	0000007f              eap_peer_mschapv2_register
+0807d0c0 g     F .text	00000411              wps_attr_text
+00000000       F *UND*	00000000              signal@@GLIBC_2.0
+00000000       F *UND*	00000000              __xstat@@GLIBC_2.0
+0805c9a0 g     F .text	000000a7              str_to_debug_level
+08090710 g     F .text	000000b0              eap_get_names
+080ba740 g     F .text	0000041d              wpas_start_pno
+00000000       F *UND*	00000000              nl_socket_set_nonblocking
+08057fa0 g     F .text	00000073              wpa_config_dump_values
+00000000  w      *UND*	00000000              __gmon_start__
+00000000  w      *UND*	00000000              _Jv_RegisterClasses
+00000000       F *UND*	00000000              SSL_set_msg_callback@@OPENSSL_1.0.0
+08099760 g     F .text	000000a4              dh5_derive_shared
+080d75b0 g     F .text	000001b0              process_bss_event
+080907c0 g     F .text	000000da              eap_get_names_as_string_array
+08063750 g     F .text	0000028e              wpa_eapol_key_send
+080d8960 g     F .text	0000025e              wpa_driver_nl80211_scan
+080dbc00 g     O .rodata	00000004              _fp_hw
+00000000       F *UND*	00000000              realloc@@GLIBC_2.0
+0805c4e0 g     F .text	00000106              wpa_msg_global_ctrl
+00000000       F *UND*	00000000              unsetenv@@GLIBC_2.0
+08096710 g     F .text	00000047              tls_get_version
+0808e370 g     F .text	00000068              eap_allowed_method
+00000000       F *UND*	00000000              __isoc99_sscanf@@GLIBC_2.7
+0805ea70 g     F .text	0000004a              wmm_ac_clear_saved_tspecs
+08092020 g     F .text	00000293              eap_peer_tls_process_init
+0805a3e0 g     F .text	00000061              eap_register_methods
+08081820 g     F .text	00000091              wps_build_device_attrs
+00000000       F *UND*	00000000              localtime@@GLIBC_2.0
+00000000       F *UND*	00000000              EVP_MD_CTX_init@@OPENSSL_1.0.0
+0806b820 g     F .text	00001059              peerkey_rx_eapol_smk
+080675b0 g     F .text	0000002a              wpa_sm_set_scard_ctx
+080a97c0 g     F .text	00000170              wpa_clear_keys
+080f87bc g     O .rodata	00000004              wpa_supplicant_version
+080b75b0 g     F .text	0000008a              wpa_supplicant_update_scan_int
+08058250 g     F .text	00000002              wpas_notify_ap_scan_changed
+00000000       F *UND*	00000000              __printf_chk@@GLIBC_2.3.4
+080c4fa0 g     F .text	00000032              get_bss_ifindex
+0806e100 g     F .text	000000ad              rsn_pmkid
+08069b40 g     F .text	00000014              pmksa_cache_clear_current
+08058560 g     F .text	00000002              wpas_notify_debug_timestamp_changed
+00000000       F *UND*	00000000              SSL_state_string_long@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              EVP_MD_CTX_md@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              getgrnam@@GLIBC_2.0
+08063ce0 g     F .text	00000295              wpa_supplicant_send_2_of_4
+08057950 g     F .text	00000058              wpa_config_remove_cred
+00000000       F *UND*	00000000              nla_put_string
+080a6fd0 g     F .text	00000164              allowed_ht40_channel_pair
+08095c10 g     F .text	0000007b              tls_global_set_verify
+00000000       F *UND*	00000000              strchr@@GLIBC_2.0
+080be240 g     F .text	0000021a              wpa_driver_wext_set_mode
+0805c060 g     F .text	00000023              wpa_hexdump_ascii_key
+00000000       F *UND*	00000000              recv@@GLIBC_2.0
+080af140 g     F .text	00000276              wpa_supplicant_reload_configuration
+00000000       F *UND*	00000000              SSL_SESSION_get_ex_data@@OPENSSL_1.0.0
+0807ca20 g     F .text	00000169              wps_is_addr_authorized
+080ab480 g     F .text	000000d0              wpas_init_ext_pw
+080dbbdc g     F .fini	00000000              _fini
+0805ed30 g     F .text	0000003a              os_sleep
+080b6f90 g     F .text	000000f3              wpa_supplicant_init_wpa
+00000000       F *UND*	00000000              calloc@@GLIBC_2.0
+080dbaa0 g     F .text	0000008e              l2_packet_set_packet_filter
+08099fa0 g     F .text	00000005              crypto_bignum_bits
+080da090 g     F .text	0000017a              linux_set_iface_flags
+08098190 g     F .text	0000004b              tls_get_library_version
+080a9740 g     F .text	00000076              free_hw_features
+00000000       F *UND*	00000000              putchar@@GLIBC_2.0
+00000000       F *UND*	00000000              AES_wrap_key@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              SSL_CTX_use_certificate_chain_file@@OPENSSL_1.0.0
+080a6f10 g     F .text	0000005d              hw_get_channel_freq
+0806d7d0 g     F .text	0000004c              wpa_cipher_valid_group
+0807e3e0 g     F .text	000000f4              uuid_gen_mac_addr
+080a7b50 g     F .text	00000078              eap_hdr_len_valid
+08081e10 g     F .text	00000069              wps_process_os_version
+08098de0 g     F .text	00000095              aes_unwrap
+00000000       F *UND*	00000000              write@@GLIBC_2.0
+00000000       F *UND*	00000000              nla_put_nested
+00000000       F *UND*	00000000              sendto@@GLIBC_2.0
+0811cd8c g     O .bss	00000004              wpa_debug_level
+00000000       F *UND*	00000000              EVP_sha256@@OPENSSL_1.0.0
+08074a20 g     F .text	0000006f              eap_peer_md5_register
+0807e4e0 g     F .text	00000182              wps_config_methods_str2bin
+080a83d0 g     F .text	0000004e              wpa_scan_results_free
+0805dc90 g     F .text	00000582              wpas_wmm_ac_addts
+08058200 g     F .text	00000002              wpas_notify_iface_removed
+080646d0 g     F .text	000000ac              wpa_sm_init
+080a6670 g     F .text	00000033              ieee80211_freq_to_chan
+08058260 g     F .text	00000002              wpas_notify_bssid_changed
+080bdb40 g     F .text	000001d3              wpa_driver_wext_set_ssid
+00000000       F *UND*	00000000              EVP_CIPHER_CTX_init@@OPENSSL_1.0.0
+0807e220 g     F .text	00000030              wps_pbc_active_event
+080a5690 g     F .text	000007fc              ieee802_11_parse_elems
+080b2900 g     F .text	0000014d              wpa_supplicant_mark_disassoc
+08091e50 g     F .text	0000007e              eap_peer_tls_build_ack
+00000000       F *UND*	00000000              nl_recvmsgs
+08098920 g     F .text	0000004c              sha1_vector
+00000000       F *UND*	00000000              SSL_CTX_check_private_key@@OPENSSL_1.0.0
+080b77b0 g     F .text	0000003d              wpa_supplicant_cancel_scan
+0805cb90 g     F .text	0000003d              wpabuf_free
+080aae70 g     F .text	00000084              wpa_supplicant_set_ap_scan
+0805a770 g     F .text	0000011f              hwaddr_mask_txt
+08057a60 g     F .text	0000020a              wpa_config_free
+00000000       F *UND*	00000000              EVP_CIPHER_CTX_set_key_length@@OPENSSL_1.0.0
+08096540 g     F .text	00000019              tls_connection_handshake
+08096030 g     F .text	00000110              tls_connection_decrypt
+00000000       F *UND*	00000000              sendmsg@@GLIBC_2.0
+08068100 g     F .text	00000079              wpa_sm_rx_eapol_peerkey
+080694a0 g     F .text	0000011c              pmksa_cache_flush
+00000000       F *UND*	00000000              fgets@@GLIBC_2.0
+00000000       F *UND*	00000000              rename@@GLIBC_2.0
+00000000       F *UND*	00000000              SSL_get_error@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              ENGINE_by_id@@OPENSSL_1.0.0
+080680a0 g     F .text	0000001a              wpa_sm_update_replay_ctr
+08067990 g     F .text	0000004d              wpa_sm_pmf_enabled
+0809a480 g     F .text	00000010              dh_groups_get
+08099500 g     F .text	0000002b              crypto_cipher_deinit
+08079a50 g     F .text	00000280              wpas_wps_start_pin
+0805f470 g     F .text	0000002f              os_memcmp_const
+00000000       F *UND*	00000000              memset@@GLIBC_2.0
+00000000       F *UND*	00000000              SSL_use_certificate@@OPENSSL_1.0.0
+0808fef0 g     F .text	0000004d              eap_get_phase2_type
+08090b20 g     F .text	00000099              challenge_hash
+08080fe0 g     F .text	000001b0              wps_process_ap_settings
+0807e1f0 g     F .text	00000030              wps_pbc_timeout_event
+080a3130 g     F .text	00000069              wpa_supplicant_global_ctrl_iface_deinit
+08099b20 g     F .text	0000003b              hmac_sha1
+00000000       F *UND*	00000000              SSL_set_accept_state@@OPENSSL_1.0.0
+080d9ee0 g     F .text	000001a3              netlink_send_oper_ifla
+080902e0 g     F .text	00000017              eap_notify_success
+08091530 g     F .text	000000ad              old_nt_password_hash_encrypted_with_new_nt_password_hash
+00000000       F *UND*	00000000              scandir@@GLIBC_2.0
+00000000       F *UND*	00000000              X509_NAME_get_index_by_NID@@OPENSSL_1.0.0
+0809d0f0 g     F .text	000000e0              wpas_ctrl_radio_work_flush
+00000000       F *UND*	00000000              d2i_PKCS12_fp@@OPENSSL_1.0.0
+08098e80 g     F .text	0000013b              aes_128_cbc_encrypt
+0807fc90 g     F .text	000000a6              wps_build_uuid_e
+08099bd0 g     F .text	0000003b              hmac_sha256
+080561a0 g     F .text	000000ce              wpa_config_get_no_key
+08091210 g     F .text	000000ea              get_asymetric_start_key
+0805c090 g     F .text	00000003              wpa_debug_reopen_file
+080aad20 g     F .text	0000014d              wpas_set_pkcs11_engine_and_module_path
+0805c030 g     F .text	00000021              wpa_hexdump_ascii
+00000000       F *UND*	00000000              BIO_s_mem@@OPENSSL_1.0.0
+080ad920 g     F .text	00000083              wpas_clear_temp_disabled
+0805c5f0 g     F .text	000000fe              wpa_msg_no_global
+08090630 g     F .text	0000002a              eap_peer_get_eap_method
+0806ab80 g     F .text	00000c96              peerkey_rx_eapol_4way
+0808acc0 g     F .text	000000f6              wps_registrar_config_ap
+0805ce10 g     F .text	000000a2              wpabuf_zeropad
+08064780 g     F .text	000001c6              wpa_sm_notify_assoc
+08058210 g     F .text	00000015              wpas_notify_state_changed
+00000000       F *UND*	00000000              __libc_start_main@@GLIBC_2.0
+0805bca0 g     F .text	0000002a              wpa_debug_open_syslog
+0808ab20 g     F .text	00000191              wps_registrar_get_info
+0807fba0 g     F .text	0000006f              wps_build_resp_type
+00000000       F *UND*	00000000              HMAC_CTX_cleanup@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              SSL_use_certificate_file@@OPENSSL_1.0.0
+08095bc0 g     F .text	0000004f              tls_connection_shutdown
+0808d0c0 g     F .text	00000064              eapol_sm_notify_portEnabled
+0805f920 g     F .text	00000027              eloop_init
+080af610 g     F .text	000001d5              get_shared_radio_freqs_data
+00000000       F *UND*	00000000              nla_get_u64
+080ccae0 g     F .text	0000009c              nl80211_remove_iface
+080b16d0 g     F .text	00000079              wpa_supplicant_stop_countermeasures
+0806c880 g     F .text	00000097              wpa_parse_wpa_ie
+00000000       F *UND*	00000000              __memcpy_chk@@GLIBC_2.3.4
+08085e70 g     F .text	0000015d              wps_device_store
+08099d80 g     F .text	00000057              crypto_bignum_mod
+080af8f0 g     F .text	00000e75              wpa_supplicant_add_iface
+08095f00 g     F .text	00000128              tls_connection_encrypt
+0805bfa0 g     F .text	00000032              wpa_hexdump
+00000000       F *UND*	00000000              if_nametoindex@@GLIBC_2.1
+08099ab0 g     F .text	00000070              hmac_sha1_vector
+0805a130 g     F .text	00000114              wpa_bss_get_vendor_ie_multi_beacon
+00000000       F *UND*	00000000              BN_rshift1@@OPENSSL_1.0.0
+08090480 g     F .text	0000000f              eap_set_external_sim
+080a66b0 g     F .text	000003a5              ieee80211_chan_to_freq
+08098180 g     F .text	00000006              tls_connection_set_session_ticket_cb
+00000000       F *UND*	00000000              strrchr@@GLIBC_2.0
+08069e90 g     F .text	0000002c              pmksa_cache_init
+080584b0 g     F .text	00000002              wpas_notify_bss_privacy_changed
+0808c3b0 g     F .text	000008ce              eapol_sm_step
+0808bc00 g     F .text	0000002a              eapol_sm_register_scard_ctx
+00000000       F *UND*	00000000              SSL_set_bio@@OPENSSL_1.0.0
+080b90c0 g     F .text	000002a0              wpa_scan_clone_params
+00000000       F *UND*	00000000              SSL_get_current_cipher@@OPENSSL_1.0.0
+0807b170 g     F .text	00000050              wpas_wps_notify_assoc
+08099e40 g     F .text	0000005f              crypto_bignum_inverse
+08055de0 g     F .text	00000064              wpa_config_set_network_defaults
+00000000       F *UND*	00000000              EVP_CipherUpdate@@OPENSSL_1.0.0
+0805b710 g     F .text	0000003d              str_clear_free
+0805f410 g     F .text	00000056              os_strlcpy
+0805c0c0 g     F .text	0000002c              wpa_debug_setup_stdout
+0805f260 g     F .text	00000005              os_unsetenv
+00000000       F *UND*	00000000              SSL_CTX_get_ex_data@@OPENSSL_1.0.0
+0808cff0 g     F .text	0000006c              eapol_sm_notify_eap_success
+00000000       F *UND*	00000000              ENGINE_ctrl_cmd_string@@OPENSSL_1.0.0
+0805f380 g     F .text	00000030              os_file_exists
+00000000       F *UND*	00000000              chmod@@GLIBC_2.0
+00000000       F *UND*	00000000              nla_put_u32
+08081280 g     F .text	000000e4              wps_build_model_name
+080a6b60 g     F .text	00000140              fc2str
+00000000       F *UND*	00000000              __assert_fail@@GLIBC_2.0
+0806ead0 g     F .text	000000a2              rsn_cipher_put_suites
+0805b540 g     F .text	000000b2              int_array_concat
+0805b3e0 g     F .text	0000012b              freq_range_list_str
+0808fe20 g     F .text	000000c5              eap_sm_notify_ctrl_attached
+00000000       F *UND*	00000000              SSL_read@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              X509_STORE_CTX_get_ex_data@@OPENSSL_1.0.0
+080639e0 g     F .text	000002a3              wpa_sm_key_request
+080b6aa0 g     F .text	00000128              wpa_supplicant_ctrl_req_from_string
+08090430 g     F .text	00000013              eap_set_config_blob
+0807aba0 g     F .text	000001eb              wpas_wps_update_config
+080aa570 g     F .text	000007af              ibss_mesh_setup_freq
+080903c0 g     F .text	00000029              eap_get_eapKeyData
+00000000       F *UND*	00000000              __vsnprintf_chk@@GLIBC_2.3.4
+080994b0 g     F .text	00000041              crypto_cipher_decrypt
+00000000       F *UND*	00000000              nlmsg_free
+0809a910 g     F .text	0000025e              random_get_bytes
+08063f80 g     F .text	000001bc              wpa_supplicant_send_4_of_4
+08099ff0 g     F .text	0000010a              crypto_bignum_legendre
+08057c70 g     F .text	0000006a              wpa_config_remove_blob
+080a8990 g     F .text	000000c6              wpa_set_wep_keys
+08090490 g     F .text	00000013              eap_notify_pending
+00000000       F *UND*	00000000              SSL_CTX_remove_session@@OPENSSL_1.0.0
+0807fdc0 g     F .text	0000007a              wps_build_config_error
+00000000       F *UND*	00000000              read@@GLIBC_2.0
+080a84b0 g     F .text	000001dd              wpa_get_wowlan_triggers
+08096140 g     F .text	0000001b              tls_connection_resumed
+00000000       F *UND*	00000000              BN_new@@OPENSSL_1.0.0
+080af0c0 g     F .text	00000078              wpa_supplicant_clear_status
+0808ff40 g     F .text	00000089              eap_get_phase2_types
+08096560 g     F .text	000001af              tls_connection_set_cipher_list
+080902a0 g     F .text	00000027              eap_get_config_fragment_size
+080d8e70 g     F .text	0000008d              wpa_driver_nl80211_stop_sched_scan
+08058360 g     F .text	00000002              wpas_notify_persistent_group_removed
+0807aad0 g     F .text	0000003f              wpas_wps_searching
+00000000       F *UND*	00000000              perror@@GLIBC_2.0
+08079980 g     F .text	000000cf              wpas_wps_start_pbc
+080a5440 g     F .text	00000206              sme_sched_obss_scan
+080a4b70 g     F .text	000000ff              sme_update_ft_ies
+080b08d0 g     F .text	000003aa              wpas_rrm_send_neighbor_rep_request
+00000000       F *UND*	00000000              SSL_CTX_use_PrivateKey@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              SSL_cache_hit@@OPENSSL_1.0.1
+080ab550 g     F .text	00000081              radio_work_check_next
+080a7bd0 g     F .text	00000133              eap_hdr_validate
+0806e960 g     F .text	00000082              wpa_cipher_to_alg
+0807ab70 g     F .text	00000003              wpas_wps_er_start
+0807b1c0 g     F .text	000000e1              uuid_str2bin
+00000000       F *UND*	00000000              usleep@@GLIBC_2.0
+0805c980 g     F .text	00000017              debug_level_str
+08098680 g     F .text	000000c5              des_encrypt
+08086800 g     F .text	00000065              wps_registrar_deinit
+080ac8d0 g     F .text	00000156              wpa_supplicant_deinit
+00000000       F *UND*	00000000              nl_socket_set_local_port
+080da570 g     F .text	000000de              linux_br_add_if
+08092af0 g     F .text	0000022d              eap_peer_select_phase2_methods
+080578e0 g     F .text	0000006a              wpa_config_add_cred
+080579b0 g     F .text	00000039              wpa_config_get_blob
+0806f7a0 g     F .text	000000a7              eap_peer_tls_register
+080a7e70 g     F .text	000001a9              sha1_prf
+08081730 g     F .text	000000e4              wps_build_dev_name
+08091890 g     F .text	00000465              eap_peer_tls_ssl_init
+00000000       F *UND*	00000000              nla_parse_nested
+00000000       F *UND*	00000000              EVP_add_digest@@OPENSSL_1.0.0
+080693b0 g     F .text	0000004e              pmksa_cache_deinit
+080989c0 g     F .text	0000008a              aes_encrypt_init
+00000000       F *UND*	00000000              DES_ecb_encrypt@@OPENSSL_1.0.0
+0806d6e0 g     F .text	000000ee              wpa_eapol_key_mic
+080592e0 g     F .text	0000008e              wpa_bss_get_vendor_ie
+080dbc04 g     O .rodata	00000004              _IO_stdin_used
+00000000       F *UND*	00000000              gettimeofday@@GLIBC_2.0
+080c0c00 g     F .text	00000016              wpa_driver_nl80211_get_macaddr
+080d7c20 g     F .text	00000492              nl80211_create_monitor_interface
+0805ba70 g     F .text	00000011              is_ctrl_char
+080804a0 g     F .text	00000064              wps_build_conn_type_flags
+08090550 g     F .text	00000075              eap_is_wps_pin_enrollee
+080db370 g     F .text	0000029a              l2_packet_init
+00000000       F *UND*	00000000              SSL_write@@OPENSSL_1.0.0
+080906c0 g     F .text	0000004b              eap_get_name
+0805fe30 g     F .text	000000d5              eloop_deplete_timeout
+00000000       F *UND*	00000000              strtol@@GLIBC_2.0
+0808b7e0 g     F .text	000001a6              eapol_sm_get_mib
+00000000       F *UND*	00000000              nl_cb_err
+08099240 g     F .text	00000225              crypto_cipher_init
+0809a840 g     F .text	000000c6              random_add_randomness
+080ab230 g     F .text	00000209              wpas_update_random_addr
+08098fc0 g     F .text	0000013b              aes_128_cbc_decrypt
+080a3e70 g     F .text	00000395              sme_event_auth
+08069180 g     F .text	00000013              rsn_preauth_in_progress
+00000000       F *UND*	00000000              PEM_read_bio_DSAparams@@OPENSSL_1.0.0
+080ac830 g     F .text	00000098              wpa_supplicant_run
+08095ab0 g     F .text	000000dd              tls_connection_deinit
+0809af70 g     F .text	00000038              random_mark_pool_ready
+08055b40 g     F .text	0000013e              wpa_config_free_cred
+00000000       F *UND*	00000000              X509_get_ext_d2i@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              free@@GLIBC_2.0
+08080430 g     F .text	00000068              wps_build_encr_type_flags
+080da730 g     F .text	000000f5              linux_br_get
+00000000       F *UND*	00000000              SSL_shutdown@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              EVP_des_ede3_cbc@@OPENSSL_1.0.0
+080680c0 g     F .text	00000031              wpa_sm_pmksa_cache_flush
+08092960 g     F .text	0000002e              eap_peer_tls_ssl_deinit
+00000000       F *UND*	00000000              SSL_get_ex_data@@OPENSSL_1.0.0
+0805cc80 g     F .text	0000005c              wpabuf_dup
+080aaf70 g     F .text	00000077              wpa_supplicant_set_bss_expiration_count
+08057ce0 g     F .text	00000036              wpa_config_set_blob
+08058520 g     F .text	00000002              wpas_notify_bss_seen
+08059040 g     F .text	00000063              wpa_bss_flush
+0809a610 g     F .text	000000f8              dh_derive_shared
+08059730 g     F .text	000009f2              wpa_bss_update_scan_res
+08058320 g     F .text	00000002              wpas_notify_wps_event_success
+0807fe40 g     F .text	0000010b              wps_build_authenticator
+080be010 g     F .text	000000db              wpa_driver_wext_deinit
+00000000       F *UND*	00000000              OCSP_response_get1_basic@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              openlog@@GLIBC_2.0
+08058690 g     F .text	0000013c              wpas_notify_certification
+080a8480 g     F .text	00000021              vht_supported
+00000000       F *UND*	00000000              X509_STORE_add_lookup@@OPENSSL_1.0.0
+08085fd0 g     F .text	000001f5              wps_registrar_pbc_overlap
+0808e510 g     F .text	0000007c              eap_sm_abort
+08081950 g     F .text	000000ba              wps_build_vendor_ext_m1
+0805f250 g     F .text	00000005              os_setenv
+00000000       F *UND*	00000000              DES_set_key@@OPENSSL_1.0.0
+0806ab40 g     F .text	00000037              peerkey_deinit
+0805aec0 g     F .text	00000048              wpa_ssid_txt
+00000000       F *UND*	00000000              OCSP_response_status_str@@OPENSSL_1.0.0
+0811c600 g       .data	00000000              __data_start
+0807fd40 g     F .text	0000007a              wps_build_dev_password_id
+0805b680 g     F .text	00000082              int_array_add_unique
+080905d0 g     F .text	00000019              eap_sm_set_ext_pw_ctx
+0807fb30 g     F .text	00000067              wps_build_req_type
+0805cce0 g     F .text	00000057              wpabuf_alloc_copy
+0807a2e0 g     F .text	00000105              wpas_wps_deinit
+0807d500 g     F .text	0000018c              wps_kdf
+0807e120 g     F .text	0000009a              wps_pwd_auth_fail_event
+080900b0 g     F .text	000000ac              eap_get_config_password2
+0805a640 g     F .text	00000052              hwaddr_compact_aton
+08092d20 g     F .text	000000e9              eap_peer_tls_phase2_nak
+00000000       F *UND*	00000000              sk_new_null@@OPENSSL_1.0.0
+0808ea00 g     F .text	00001339              eap_peer_sm_step
+080ab8a0 g     F .text	00000045              wpas_connect_work_done
+00000000       F *UND*	00000000              X509_NAME_get_entry@@OPENSSL_1.0.0
+0805fa90 g     F .text	000000a0              eloop_unregister_sock
+00000000       F *UND*	00000000              EVP_cleanup@@OPENSSL_1.0.0
+080bbc30 g     F .text	00000532              wpa_driver_wext_set_key
+00000000       F *UND*	00000000              nl_cb_set
+00000000       F *UND*	00000000              nlmsg_data
+080f87a8 g     O .rodata	00000004              wpa_supplicant_full_license4
+0805ab10 g     F .text	000000a2              wpa_snprintf_hex_uppercase
+00000000       F *UND*	00000000              EVP_rc2_ecb@@OPENSSL_1.0.0
+080db900 g     F .text	00000182              l2_packet_get_ip_addr
+080590b0 g     F .text	00000005              wpa_bss_deinit
+08079e10 g     F .text	00000204              wpas_wps_start_reg
+00000000       F *UND*	00000000              SSL_CTX_set_cert_store@@OPENSSL_1.0.0
+08090d40 g     F .text	000000c3              generate_nt_response
+080a2cf0 g     F .text	0000005c              wpa_supplicant_ctrl_iface_init
+0806ec30 g     F .text	0000003e              wpa_pick_group_cipher
+00000000       F *UND*	00000000              fflush@@GLIBC_2.0
+00000000       F *UND*	00000000              OCSP_resp_find_status@@OPENSSL_1.0.0
+0807e670 g     F .text	000000aa              wps_build_wsc_ack
+08058270 g     F .text	00000002              wpas_notify_auth_changed
+080695c0 g     F .text	00000426              pmksa_cache_add
+08090bc0 g     F .text	0000008d              nt_password_hash
+00000000       F *UND*	00000000              EVP_DecryptInit_ex@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              SSL_CTX_get_cert_store@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              SSL_CTX_callback_ctrl@@OPENSSL_1.0.0
+08055660 g     F .text	0000011b              wpa_config_add_prio_network
+00000000       F *UND*	00000000              __vfprintf_chk@@GLIBC_2.3.4
+0808b5b0 g     F .text	0000004c              eapol_sm_configure
+00000000       F *UND*	00000000              SSL_set_verify@@OPENSSL_1.0.0
+0805b7d0 g     F .text	0000003f              random_mac_addr_keep_oui
+0805af60 g     F .text	000000ea              merge_byte_arrays
+080775c0 g     F .text	0000007f              eap_peer_leap_register
+08099100 g     F .text	0000013f              crypto_mod_exp
+08060700 g     F .text	0000008e              eloop_wait_for_read_sock
+00000000       F *UND*	00000000              ioctl@@GLIBC_2.0
+08056000 g     F .text	00000121              wpa_config_get_all
+080967e0 g     F .text	00000012              tls_connection_get_failed
+08058310 g     F .text	00000002              wpas_notify_wps_event_fail
+00000000       F *UND*	00000000              ERR_free_strings@@OPENSSL_1.0.0
+08095d90 g     F .text	00000076              tls_connection_get_random
+00000000       F *UND*	00000000              socket@@GLIBC_2.0
+08058290 g     F .text	00000002              wpas_notify_network_selected
+080675e0 g     F .text	00000100              wpa_sm_set_config
+00000000       F *UND*	00000000              __ctype_b_loc@@GLIBC_2.3
+00000000       F *UND*	00000000              fseek@@GLIBC_2.0
+080da510 g     F .text	0000005d              linux_br_del
+00000000       F *UND*	00000000              SSL_CTX_set_ex_data@@OPENSSL_1.0.0
+080803c0 g     F .text	00000068              wps_build_auth_type_flags
+08055d80 g     F .text	00000060              wpa_config_remove_network
+080b81f0 g     F .text	00000086              wpa_scan_get_vendor_ie
+0808fde0 g     F .text	00000038              eap_sm_request_sim
+00000000       F *UND*	00000000              nl_handle_alloc_cb
+00000000       F *UND*	00000000              nla_data
+00000000       F *UND*	00000000              SSL_set_quiet_shutdown@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              X509_dup@@OPENSSL_1.0.0
+0804ca40       F *UND*	00000000              X509_free@@OPENSSL_1.0.0
+080b3d20 g     F .text	00000002              wnm_bss_keep_alive_deinit
+00000000       F *UND*	00000000              HMAC_CTX_init@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              EVP_DigestInit_ex@@OPENSSL_1.0.0
+080ad9b0 g     F .text	00000204              wpa_supplicant_select_network
+00000000       F *UND*	00000000              BN_cmp@@OPENSSL_1.0.0
+0805af20 g     F .text	0000003f              is_hex
+00000000       F *UND*	00000000              SSLv23_method@@OPENSSL_1.0.0
+080af510 g     F .text	00000075              wpas_request_connection
+00000000       F *UND*	00000000              nla_nest_start
+00000000       F *UND*	00000000              SSL_check_private_key@@OPENSSL_1.0.0
+080a7d10 g     F .text	000000fb              eap_msg_alloc
+0805cb60 g     F .text	0000002d              wpabuf_alloc_ext_data
+08090920 g     F .text	00000084              eap_peer_method_register
+08071df0 g     F .text	000001a6              peap_prfplus
+08059010 g     F .text	0000002b              wpa_bss_init
+080581f0 g     F .text	00000003              wpas_notify_iface_added
+080adfe0 g     F .text	000002d1              wpa_supplicant_driver_init
+0808ffe0 g     F .text	0000000f              eap_set_workaround
+00000000       F *UND*	00000000              fclose@@GLIBC_2.1
+080ace30 g     F .text	00000023              wpas_driver_bss_selection
+00000000       F *UND*	00000000              DSA_dup_DH@@OPENSSL_1.0.0
+08086d70 g     F .text	000000cf              wps_build_credential_wrap
+0807cb90 g     F .text	000000af              wps_ap_priority_compar
+0807b380 g     F .text	00000023              is_nil_uuid
+080abe80 g     F .text	00000309              wpa_supplicant_associate
+0807c930 g     F .text	00000025              wps_get_msg
+00000000       F *UND*	00000000              SSL_get_ex_data_X509_STORE_CTX_idx@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              BN_mod_inverse@@OPENSSL_1.0.0
+0808b9b0 g     F .text	000000be              eapol_sm_notify_config
+00000000       F *UND*	00000000              DSA_free@@OPENSSL_1.0.0
+080b7910 g     F .text	00000085              wpa_supplicant_start_sched_scan
+0807e1c0 g     F .text	00000030              wps_pbc_overlap_event
+0805c110 g     F .text	000001bb              wpa_msg
+00000000       F *UND*	00000000              nla_get_u32
+08099de0 g     F .text	00000057              crypto_bignum_exptmod
+00000000       F *UND*	00000000              EVP_CIPHER_key_length@@OPENSSL_1.0.0
+08095020 g     F .text	000000bd              tls_deinit
+080aa410 g     F .text	000000bd              wpas_build_ext_capab
+08098750 g     F .text	0000017f              rc4_skip
+00000000       F *UND*	00000000              EVP_EncryptFinal_ex@@OPENSSL_1.0.0
+0805a8d0 g     F .text	00000044              wpa_get_ntp_timestamp
+08059210 g     F .text	00000043              wpa_bss_get_id_range
+080ad4d0 g     F .text	00000151              wpas_auth_failed
+00000000       F *UND*	00000000              mktime@@GLIBC_2.0
+080679e0 g     F .text	000000c7              wpa_sm_set_assoc_wpa_ie_default
+08080770 g     F .text	000000cd              wps_ie_encapsulate
+080bb760 g     F .text	00000224              wpa_driver_wext_scan
+00000000       F *UND*	00000000              fdatasync@@GLIBC_2.0
+080d95a0 g     F .text	000001b7              wpa_driver_nl80211_get_scan_results
+0808bc50 g     F .text	00000015              eapol_sm_request_reauth
+0805f110 g     F .text	00000005              os_random
+00000000       F *UND*	00000000              ENGINE_init@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              SSL_set_cipher_list@@OPENSSL_1.0.0
+08058d80 g     F .text	00000042              wpa_bss_update_start
+080914d0 g     F .text	00000054              nt_password_hash_encrypted_with_block
+00000000       F *UND*	00000000              ENGINE_free@@OPENSSL_1.0.0
+0808bb60 g     F .text	0000006a              eapol_sm_get_session_id
+08071d50 g     F .text	0000009f              eap_peer_peap_register
+080584a0 g     F .text	00000002              wpas_notify_bss_signal_changed
+08055c80 g     F .text	00000038              wpa_config_foreach_network
+080adc40 g     F .text	000000d9              wpa_supplicant_enable_network
+0805c800 g     F .text	0000000a              hostapd_logger_register_cb
+00000000       F *UND*	00000000              getopt@@GLIBC_2.0
+080b79a0 g     F .text	00000789              wpa_supplicant_req_sched_scan
+080a2ed0 g     F .text	000001f0              wpa_supplicant_ctrl_iface_wait
+0805c100 g     F .text	0000000a              wpa_msg_register_ifname_cb
+080a3350 g     F .text	000001c3              base64_decode
+080b5a80 g     F .text	00000092              wpa_blacklist_clear
+00000000       F *UND*	00000000              HMAC_Final@@OPENSSL_1.0.0
+080a30c0 g     F .text	00000064              wpa_supplicant_global_ctrl_iface_init
+0808cea0 g     F .text	0000006c              eapol_sm_notify_portControl
+00000000       F *UND*	00000000              memcpy@@GLIBC_2.0
+00000000       F *UND*	00000000              genl_connect
+080a99d0 g     F .text	00000a3b              wpa_supplicant_set_suites
+00000000       F *UND*	00000000              execv@@GLIBC_2.0
+00000000       F *UND*	00000000              SSL_CTX_ctrl@@OPENSSL_1.0.0
+0806e920 g     F .text	00000036              wpa_cipher_rsc_len
+08091440 g     F .text	0000008b              new_password_encrypted_with_old_nt_password_hash
+080681d0 g     F .text	000000bb              wpa_sm_set_ptk_kck_kek
+080a3990 g     F .text	0000012c              sme_authenticate
+00000000       F *UND*	00000000              BN_mod_mul@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              BN_bn2bin@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              strtoul@@GLIBC_2.0
+00000000       F *UND*	00000000              strlen@@GLIBC_2.0
+08068080 g     F .text	00000012              wpa_sm_has_ptk
+0805fb30 g     F .text	0000001b              eloop_unregister_read_sock
+080699f0 g     F .text	00000129              pmksa_cache_get_opportunistic
+080bb010 g     F .text	000000be              wpa_driver_wext_get_capa
+080abcf0 g     F .text	0000012d              wpa_supplicant_disable_network
+00000000       F *UND*	00000000              SSL_accept@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              fopen@@GLIBC_2.1
+08087610 g     F .text	00000009              wps_registrar_update_ie
+0805c0a0 g     F .text	00000003              wpa_debug_open_file
+0805f120 g     F .text	0000010c              os_rel2abs_path
+080908d0 g     F .text	00000032              eap_peer_method_alloc
+0809a300 g     F .text	0000000a              sha256_prf
+0807a020 g     F .text	000002b9              wpas_wps_init
+080b9360 g     F .text	000000b6              wpa_supplicant_trigger_scan
+00000000       F *UND*	00000000              SSL_use_PrivateKey_ASN1@@OPENSSL_1.0.0
+0805fd10 g     F .text	000000c2              eloop_cancel_timeout_one
+0806ec70 g     F .text	000001a8              wpa_parse_cipher
+0805b050 g     F .text	00000054              dup_binstr
+0805d7f0 g     F .text	0000028c              wmm_ac_notify_assoc
+00000000       F *UND*	00000000              AES_set_decrypt_key@@OPENSSL_1.0.0
+080a93c0 g     F .text	000001cc              wpa_supplicant_initiate_eapol
+00000000       F *UND*	00000000              alarm@@GLIBC_2.0
+00000000       F *UND*	00000000              nl_socket_get_fd
+080bb190 g     F .text	00000037              wpa_driver_wext_scan_timeout
+080af590 g     F .text	0000007b              dump_freq_data
+080da2f0 g     F .text	000000ed              linux_get_ifhwaddr
+00000000       F *UND*	00000000              X509_NAME_ENTRY_get_data@@OPENSSL_1.0.0
+08067c70 g     F .text	000000df              wpa_sm_set_ap_rsn_ie
+00000000       F *UND*	00000000              SSL_CTX_set_default_passwd_cb_userdata@@OPENSSL_1.0.0
+080d03e0 g     F .text	000000fc              wpa_driver_nl80211_authenticate_retry
+08099ea0 g     F .text	00000028              crypto_bignum_sub
+0805a590 g     F .text	000000a5              hwaddr_masked_aton
+00000000       F *UND*	00000000              unlink@@GLIBC_2.0
+080a31a0 g     F .text	000001ae              base64_encode
+080a73c0 g     F .text	0000040d              check_40mhz_2g4
+08056270 g     F .text	00000072              wpa_config_update_psk
+0808a780 g     F .text	0000015d              wps_registrar_button_pushed
+080926f0 g     F .text	00000262              eap_peer_tls_process_helper
+0805cc10 g     F .text	00000064              wpabuf_put
+00000000       F *UND*	00000000              EVP_rc4@@OPENSSL_1.0.0
+080922c0 g     F .text	0000002d              eap_peer_tls_reset_input
+080a9370 g     F .text	0000004f              wpa_supplicant_cancel_auth_timeout
+08096840 g     F .text	00001355              tls_connection_set_params
+080b0c80 g     F .text	0000025d              wpas_rrm_handle_link_measurement_request
+080c5030 g     F .text	00000027              send_and_recv_msgs
+080dba90 g     F .text	00000002              l2_packet_notify_auth_start
+00000000       F *UND*	00000000              nl_send_auto_complete
+08090410 g     F .text	00000014              eap_register_scard_ctx
+08098970 g     F .text	0000004c              sha256_vector
+0807c7c0 g     F .text	00000138              wps_deinit
+08099530 g     F .text	0000015e              dh5_init
+080b8ef0 g     F .text	0000003f              wpa_supplicant_update_scan_results
+080ace60 g     F .text	00000335              wpa_supplicant_ctrl_iface_ctrl_rsp_handle
+00000000       F *UND*	00000000              ENGINE_load_private_key@@OPENSSL_1.0.0
+080584f0 g     F .text	00000002              wpas_notify_bss_wps_changed
+080a05f0 g     F .text	00000a69              wpa_supplicant_global_ctrl_iface_process
+08058820 g     F .text	00000099              wpas_notify_network_bssid_set_changed
+0808d4a0 g     F .text	0000011b              eapol_sm_init
+0808b600 g     F .text	00000023              eapol_sm_get_method_name
+00000000       F *UND*	00000000              X509_NAME_oneline@@OPENSSL_1.0.0
+0805b9b0 g     F .text	000000b2              utf8_escape
+0808e590 g     F .text	00000055              eap_peer_sm_deinit
+0808e3f0 g     F .text	00000118              eap_peer_sm_init
+0811c604 g     O .data	00000000              .hidden __dso_handle
+08058240 g     F .text	00000002              wpas_notify_network_changed
+08086950 g     F .text	000003ca              wps_registrar_probe_req_rx
+00000000       F *UND*	00000000              BIO_write@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              nl_socket_get_local_port
+00000000       F *UND*	00000000              nla_put_u64
+00000000       F *UND*	00000000              waitpid@@GLIBC_2.0
+00000000       F *UND*	00000000              SSL_CTX_set_timeout@@OPENSSL_1.0.0
+080d9de0 g     F .text	000000fd              netlink_init
+080926c0 g     F .text	0000002e              eap_peer_tls_reauth_init
+080a4d50 g     F .text	0000003f              sme_event_assoc_timed_out
+080676e0 g     F .text	00000021              wpa_sm_set_own_addr
+00000000       F *UND*	00000000              EVP_EncryptUpdate@@OPENSSL_1.0.0
+0809afb0 g     F .text	0000017c              random_init
+080581d0 g     F .text	00000003              wpas_notify_supplicant_initialized
+080da650 g     F .text	000000de              linux_br_del_if
+080ad290 g     F .text	000001fc              wpa_supplicant_get_ssid
+00000000       F *UND*	00000000              d2i_X509@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              EVP_DigestFinal@@OPENSSL_1.0.0
+0805c0b0 g     F .text	00000002              wpa_debug_close_file
+08067ab0 g     F .text	000000df              wpa_sm_set_assoc_wpa_ie
+00000000       F *UND*	00000000              SSL_CTX_free@@OPENSSL_1.0.0
+08087620 g     F .text	0000021d              wps_registrar_selected_registrar_changed
+00000000       F *UND*	00000000              SSL_CTX_set_info_callback@@OPENSSL_1.0.0
+080606e0 g     F .text	0000001e              eloop_terminated
+00000000       F *UND*	00000000              ftell@@GLIBC_2.0
+00000000       F *UND*	00000000              EVP_aes_128_cbc@@OPENSSL_1.0.0
+080591d0 g     F .text	00000034              wpa_bss_get_id
+0811bf00 g     O .dtors	00000000              .hidden __DTOR_END__
+08058020 g     F .text	0000008b              wpa_config_get_value
+0811cd88 g     O .bss	00000004              wpa_debug_show_keys
+08075fe0 g     F .text	000003d2              mschapv2_derive_response
+0806e9f0 g     F .text	00000036              wpa_cipher_valid_pairwise
+0807c3f0 g     F .text	00000096              eap_wsc_build_frag_ack
+080562f0 g     F .text	00000cf0              wpa_config_set_cred
+080dbb30 g     F .text	00000061              __libc_csu_init
+080d8f00 g     F .text	00000061              nl80211_get_ie
+0805b810 g     F .text	0000009c              cstr_token
+08096820 g     F .text	00000012              tls_connection_get_write_alerts
+080ad1a0 g     F .text	000000e6              wpas_network_disabled
+00000000       F *UND*	00000000              X509_STORE_new@@OPENSSL_1.0.0
+080b7090 g     F .text	000000ae              wpa_supplicant_rsn_supp_set_config
+00000000       F *UND*	00000000              SSL_get_version@@OPENSSL_1.0.0
+0807a940 g     F .text	00000189              wpas_wps_notify_scan_results
+00000000       F *UND*	00000000              SSL_new@@OPENSSL_1.0.0
+08099a50 g     F .text	00000055              pbkdf2_sha1
+00000000       F *UND*	00000000              SSL_CTX_set_cipher_list@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              X509_STORE_CTX_get_current_cert@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              OCSP_basic_verify@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              OCSP_cert_to_id@@OPENSSL_1.0.0
+080db1e0 g     F .text	00000018              l2_packet_get_own_addr
+00000000       F *UND*	00000000              EVP_sha1@@OPENSSL_1.0.0
+080584e0 g     F .text	00000002              wpas_notify_bss_rsnie_changed
+080da4b0 g     F .text	0000005d              linux_br_add
+08090470 g     F .text	0000000f              eap_set_force_disabled
+00000000       F *UND*	00000000              nl_handle_destroy
+00000000       F *UND*	00000000              DH_size@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              bind@@GLIBC_2.0
+08099690 g     F .text	000000cc              dh5_init_fixed
+080688c0 g     F .text	000002ab              rsn_preauth_candidate_process
+0806cd50 g     F .text	0000087a              wpa_supplicant_parse_ies
+0806d6c0 g     F .text	00000015              wpa_mic_len
+0808ffd0 g     F .text	0000000c              eap_set_fast_reauth
+0809a100 g     F .text	000001ff              sha256_prf_bits
+080db610 g     F .text	0000028b              l2_packet_init_bridge
+080b84a0 g     F .text	00000124              wpa_scan_get_vendor_ie_multi
+08058580 g     F .text	00000057              wpas_notify_suspend
+00000000       F *UND*	00000000              SSL_state@@OPENSSL_1.0.0
+08095580 g     F .text	00000043              tls_get_errors
+0807e7f0 g     F .text	000010af              wps_parse_msg
+08059370 g     F .text	00000086              wpa_bss_get_vendor_ie_beacon
+08099830 g     F .text	000000a2              crypto_hash_init
+0805af10 g     F .text	00000005              __hide_aliasing_typecast
+00000000       F *UND*	00000000              SSL_clear@@OPENSSL_1.0.0
+08067710 g     F .text	0000001e              wpa_sm_set_ifname
+08064190 g     F .text	00000540              wpa_sm_get_mib
+0807d4e0 g     F .text	00000017              wps_ei_str
+00000000       F *UND*	00000000              PKCS12_parse@@OPENSSL_1.0.0
+08058f80 g     F .text	0000008a              wpa_bss_flush_by_age
+00000000       F *UND*	00000000              ERR_clear_error@@OPENSSL_1.0.0
+08092990 g     F .text	0000007b              eap_peer_tls_decrypt
+080d9920 g     F .text	000002c4              ieee80211_radiotap_iterator_next
+0805f090 g     F .text	00000080              os_get_random
+0807dfc0 g     F .text	000000c5              wps_fail_event
+00000000       F *UND*	00000000              X509_STORE_add_cert@@OPENSSL_1.0.0
+080a8440 g     F .text	00000017              channel_width_to_string
+08099f30 g     F .text	00000057              crypto_bignum_mulmod
+08080840 g     F .text	000000a2              wps_build_mac_addr
+0805fb50 g     F .text	0000013e              eloop_register_timeout
+0807c900 g     F .text	0000002d              wps_process_msg
+00000000       F *UND*	00000000              OCSP_RESPONSE_print@@OPENSSL_1.0.0
+08096760 g     F .text	0000004f              tls_get_cipher
+080a9930 g     F .text	00000017              wpa_supplicant_state_txt
+00000000       F *UND*	00000000              ERR_peek_error@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              OCSP_BASICRESP_free@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              ERR_get_error@@OPENSSL_1.0.0
+0808bc30 g     F .text	0000001a              eapol_sm_notify_ctrl_attached
+0807ce70 g     F .text	0000020e              wps_build_probe_req_ie
+0805b600 g     F .text	0000007d              int_array_sort_unique
+00000000       F *UND*	00000000              BN_free@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              strcasecmp@@GLIBC_2.0
+080c5060 g     F .text	00000051              nl80211_cmd
+0804cf10       F *UND*	00000000              alphasort@@GLIBC_2.0
+00000000       F *UND*	00000000              clock_gettime@@GLIBC_2.2
+080f87ac g     O .rodata	00000004              wpa_supplicant_full_license3
+0807da80 g     F .text	0000015d              wps_derive_psk
+0806e250 g     F .text	000000da              wpa_key_mgmt_txt
+00000000       F *UND*	00000000              OCSP_RESPONSE_free@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              X509_verify_cert_error_string@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              SSL_CTX_use_certificate@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              SSL_SESSION_get_ex_new_index@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              sk_num@@OPENSSL_1.0.0
+080808f0 g     F .text	00000074              wps_build_rf_bands_attr
+080861d0 g     F .text	0000007b              wps_authorized_macs
+08090390 g     F .text	00000029              eap_get_eapSessionId
+00000000       F *UND*	00000000              __syslog_chk@@GLIBC_2.4
+00000000       F *UND*	00000000              BIO_ctrl_pending@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              ENGINE_cleanup@@OPENSSL_1.0.0
+080aa550 g     F .text	00000012              wpas_connect_work_free
+08058dd0 g     F .text	000001a1              wpa_bss_update_end
+00000000       F *UND*	00000000              BN_add@@OPENSSL_1.0.0
+0807df70 g     F .text	00000042              wps_pin_str_valid
+0807d690 g     F .text	000003e1              wps_derive_keys
+00000000       F *UND*	00000000              select@@GLIBC_2.0
+080d80c0 g     F .text	0000015e              nl80211_send_monitor
+080d9d90 g     F .text	00000045              netlink_deinit
+0808ba70 g     F .text	000000e6              eapol_sm_get_key
+00000000       F *UND*	00000000              nla_next
+0809d1d0 g     F .text	00003419              wpa_supplicant_ctrl_iface_process
+08069230 g     F .text	00000077              pmksa_cache_get
+08058570 g     F .text	00000002              wpas_notify_debug_show_keys_changed
+080a7e30 g     F .text	00000015              eap_get_id
+080d8860 g     F .text	00000063              wpa_driver_nl80211_scan_timeout
+0808d6a0 g     F .text	00000006              eapol_sm_get_eap_proxy_imsi
+08068820 g     F .text	00000096              rsn_preauth_deinit
+0807e340 g     F .text	0000009b              wps_dev_type_bin2str
+080904d0 g     F .text	00000075              eap_is_wps_pbc_enrollee
+00000000       F *UND*	00000000              ERR_error_string@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              close@@GLIBC_2.0
+00000000       F *UND*	00000000              fwrite@@GLIBC_2.0
+080a3ac0 g     F .text	000003ab              sme_associate
+00000000       F *UND*	00000000              SSL_set_ex_data@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              ENGINE_remove@@OPENSSL_1.0.0
+08101ca0 g     O .rodata	000001e8              wpa_driver_nl80211_ops
+0805da80 g     F .text	00000097              wmm_ac_notify_disassoc
+080a8020 g     F .text	00000377              tls_prf_sha1_md5
+00000000       F *UND*	00000000              PEM_read_bio_DHparams@@OPENSSL_1.0.0
+080be460 g     F .text	0000064e              wpa_driver_wext_associate
+080a6dd0 g     F .text	000000c7              mb_ies_by_info
+080aa4d0 g     F .text	00000071              wpas_valid_bss_ssid
+08080d40 g     F .text	000000f6              wps_process_key_wrap_auth
+00000000       F *UND*	00000000              BIO_ctrl@@OPENSSL_1.0.0
+080d7b80 g     F .text	00000097              nl80211_remove_monitor_interface
+080ad4a0 g     F .text	00000023              wpas_is_p2p_prioritized
+08091300 g     F .text	00000137              encrypt_pw_block_with_password_hash
+0806dd20 g     F .text	000003e0              wpa_parse_wpa_ie_wpa
+080ac190 g     F .text	000000b1              wpa_supplicant_remove_iface
+0805ee30 g     F .text	00000147              os_mktime
+080582b0 g     F .text	00000002              wpas_notify_scanning
+00000000       F *UND*	00000000              strstr@@GLIBC_2.0
+08096800 g     F .text	00000012              tls_connection_get_read_alerts
+0806ee20 g     F .text	0000024f              wpa_write_ciphers
+0808e3e0 g     F .text	00000002              eap_peer_erp_free_keys
+00000000       F *UND*	00000000              SSL_CTX_set_client_CA_list@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              DH_new@@OPENSSL_1.0.0
+0807ad90 g     F .text	000003d4              wpas_wps_update_ap_info
+0807fc10 g     F .text	0000007a              wps_build_config_methods
+00000000       F *UND*	00000000              setvbuf@@GLIBC_2.0
+00000000       F *UND*	00000000              EVP_aes_256_cbc@@OPENSSL_1.0.0
+08055cc0 g     F .text	00000032              wpa_config_get_network
+080981e0 g     F .text	000000e8              tls_connection_set_success_data
+08079940 g     F .text	00000038              wpas_wps_get_req_type
+080578a0 g     F .text	00000032              wpa_config_get_cred
+00000000       F *UND*	00000000              X509_LOOKUP_file@@OPENSSL_1.0.0
+08090e10 g     F .text	0000008e              generate_nt_response_pwhash
+0808fd60 g     F .text	00000018              eap_sm_request_new_password
+0807a6c0 g     F .text	00000279              wpas_wps_scan_pbc_overlap
+00000000       F *UND*	00000000              X509_LOOKUP_ctrl@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              SSL_alert_desc_string_long@@OPENSSL_1.0.0
+08091d80 g     F .text	000000c1              eap_peer_tls_derive_session_id
+080a5e90 g     F .text	00000043              ieee802_11_ie_count
+080a4c70 g     F .text	00000091              sme_event_assoc_reject
+00000000       F *UND*	00000000              RAND_bytes@@OPENSSL_1.0.0
+08059400 g     F .text	00000134              wpa_bss_get_vendor_ie_multi
+0811cce0 g       *ABS*	00000000              __bss_start
+00000000       F *UND*	00000000              BIO_free@@OPENSSL_1.0.0
+0808bc70 g     F .text	0000004c              eapol_sm_notify_lower_layer_success
+08076a10 g     F .text	0000006f              eap_peer_otp_register
+00000000       F *UND*	00000000              malloc@@GLIBC_2.0
+080587e0 g     F .text	00000033              wpas_notify_eap_status
+00000000       F *UND*	00000000              BIO_new_file@@OPENSSL_1.0.0
+080a8460 g     F .text	0000001a              ht_supported
+08098c80 g     F .text	000000b5              aes_decrypt_deinit
+0807dd60 g     F .text	00000071              wps_pin_checksum
+08087f10 g     F .text	00000d10              wps_registrar_get_msg
+00000000       F *UND*	00000000              ENGINE_ctrl_cmd@@OPENSSL_1.0.0
+080dacb0 g     F .text	00000045              rfkill_deinit
+0808b990 g     F .text	00000011              eapol_sm_notify_tx_eapol_key
+00000000       F *UND*	00000000              EVP_des_cbc@@OPENSSL_1.0.0
+08064a90 g     F .text	00002af3              wpa_sm_rx_eapol
+00000000       F *UND*	00000000              BN_CTX_new@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              __vsyslog_chk@@GLIBC_2.4
+00000000       F *UND*	00000000              d2i_PKCS12@@OPENSSL_1.0.0
+08099470 g     F .text	00000038              crypto_cipher_encrypt
+080a63c0 g     F .text	000002a8              ieee80211_freq_to_channel_ext
+0805f3f0 g     F .text	0000001b              os_zalloc
+08067590 g     F .text	00000014              wpa_sm_set_fast_reauth
+0805ca80 g     F .text	000000d8              wpabuf_resize
+08079510 g     F .text	00000423              wpas_wps_eapol_cb
+08057a30 g     F .text	0000002e              wpa_config_flush_blobs
+080be0f0 g     F .text	000000ce              wpa_driver_wext_set_freq
+00000000       F *UND*	00000000              chown@@GLIBC_2.1
+00000000       F *UND*	00000000              if_indextoname@@GLIBC_2.1
+080901e0 g     F .text	00000060              eap_clear_config_otp
+08088ef0 g     F .text	0000008d              wps_registrar_unlock_pin
+080bd8d0 g     F .text	00000122              wpa_driver_wext_set_auth_param
+080a8d50 g     F .text	000004cb              wpa_supplicant_rx_eapol
+0808cf90 g     F .text	0000005c              eapol_sm_notify_eap_fail
+00000000       F *UND*	00000000              __stack_chk_fail@@GLIBC_2.4
+0805ef80 g     F .text	00000058              os_gmtime
+0808d5c0 g     F .text	0000008d              eapol_sm_deinit
+080b3cb0 g     F .text	00000067              wpas_network_reenabled
+0805bcd0 g     F .text	00000015              wpa_debug_close_syslog
+08098b80 g     F .text	0000008a              aes_decrypt_init
+0808fda0 g     F .text	0000001a              eap_sm_request_otp
+080903f0 g     F .text	0000001c              eap_get_eapRespData
+08068180 g     F .text	00000042              wpa_sm_set_rx_replay_ctr
+0807cc70 g     F .text	0000003d              wps_is_20
+080582c0 g     F .text	00000002              wpas_notify_scan_done
+00000000       F *UND*	00000000              nl_cb_clone
+080af420 g     F .text	0000006a              disallowed_bssid
+00000000       F *UND*	00000000              EVP_aes_256_ecb@@OPENSSL_1.0.0
+0805b8f0 g     F .text	000000b5              utf8_unescape
+00000000       F *UND*	00000000              BN_div@@OPENSSL_1.0.0
+080babd0 g     F .text	00000092              wpas_mac_addr_rand_scan_clear
+00000000       F *UND*	00000000              SSL_SESSION_set_ex_data@@OPENSSL_1.0.0
+080b3c20 g     F .text	00000086              wpa_supplicant_fast_associate
+00000000       F *UND*	00000000              BN_CTX_free@@OPENSSL_1.0.0
+08090160 g     F .text	00000034              eap_get_config_new_password
+08058530 g     F .text	00000002              wpas_notify_blob_added
+0808ce40 g     F .text	0000005a              eapol_sm_notify_ctrl_response
+080bb580 g     F .text	0000010f              wpa_driver_wext_get_ssid
+00000000       F *UND*	00000000              get_rfc3526_prime_1536@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              BN_value_one@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              nla_type
+080c7010 g     F .text	000000ac              nl80211_cmd_msg
+00000000       F *UND*	00000000              SSL_use_PrivateKey_file@@OPENSSL_1.0.0
+08099ca0 g     F .text	000000a8              crypto_bignum_to_bin
+08058540 g     F .text	00000002              wpas_notify_blob_removed
+00000000       F *UND*	00000000              __memset_chk@@GLIBC_2.3.4
+080fcba0 g     O .rodata	000001e8              wpa_driver_wext_ops
+08090300 g     F .text	0000008d              eap_notify_lower_layer_success
+00000000       F *UND*	00000000              SSL_use_certificate_ASN1@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              nla_nest_end
+00000000       F *UND*	00000000              fputc@@GLIBC_2.0
+08099900 g     F .text	0000009b              crypto_hash_finish
+08096520 g     F .text	00000019              tls_connection_server_handshake
+08080e40 g     F .text	00000198              wps_process_cred
+080a9960 g     F .text	00000053              wpa_supplicant_terminate_proc
+080a7e50 g     F .text	00000015              eap_get_type
+0805ca50 g     F .text	00000024              wpabuf_alloc
+08058490 g     F .text	00000002              wpas_notify_bss_freq_changed
+08098630 g     F .text	0000004c              md4_vector
+080fd520 g     O .rodata	000001e8              wpa_driver_wired_ops
+00000000       F *UND*	00000000              rmdir@@GLIBC_2.0
+080b8180 g     F .text	00000062              wpa_scan_get_ie
+08099c80 g     F .text	0000001d              crypto_bignum_deinit
+080a8a60 g     F .text	0000024b              wpa_supplicant_set_wpa_none_key
+080bda40 g     F .text	000000fb              wpa_driver_wext_set_bssid
+0807cd90 g     F .text	000000da              wps_build_assoc_resp_ie
+080dad00 g     F .text	0000000f              rfkill_is_blocked
+0805aa60 g     F .text	000000a2              wpa_snprintf_hex
+080600d0 g     F .text	00000023              eloop_register_signal_reconfig
+0807c960 g     F .text	00000059              wps_is_selected_pbc_registrar
+0807a5c0 g     F .text	000000fc              wpas_wps_ssid_wildcard_ok
+080c4f60 g     F .text	00000018              is_ap_interface
+00000000       F *UND*	00000000              SSL_CTX_set_default_passwd_cb@@OPENSSL_1.0.0
+08092a10 g     F .text	000000d2              eap_peer_tls_encrypt
+00000000       F *UND*	00000000              SSL_CTX_use_certificate_file@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              SSL_connect@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              EVP_DecryptFinal_ex@@OPENSSL_1.0.0
+080bab60 g     F .text	00000067              wpas_stop_pno
+080a9950 g     F .text	00000002              wpa_supplicant_reinit_autoscan
+00000000       F *UND*	00000000              genl_ctrl_resolve
+080587d0 g     F .text	00000002              wpas_notify_preq
+0808fd80 g     F .text	00000018              eap_sm_request_pin
+00000000       F *UND*	00000000              OCSP_cert_status_str@@OPENSSL_1.0.0
+0805b3a0 g     F .text	0000003f              freq_range_list_includes
+00000000       F *UND*	00000000              SSL_CTX_set_session_id_context@@OPENSSL_1.0.0
+080c8410 g     F .text	00000019              nl80211_drv_msg
+00000000       F *UND*	00000000              sleep@@GLIBC_2.0
+0809b130 g     F .text	00000028              random_deinit
+08067d50 g     F .text	0000006c              wpa_sm_parse_own_wpa_ie
+00000000       F *UND*	00000000              SSL_set_session_id_context@@OPENSSL_1.0.0
+0805f070 g     F .text	00000012              os_daemonize_terminate
+00000000       F *UND*	00000000              ENGINE_ctrl@@OPENSSL_1.0.0
+08058420 g     F .text	00000068              wpas_notify_bss_removed
+0807ffd0 g     F .text	0000023b              wps_build_wfa_ext
+00000000       F *UND*	00000000              DH_generate_key@@OPENSSL_1.0.0
+0807ab80 g     F .text	00000002              wpas_wps_er_stop
+0811cd84 g     O .bss	00000004              wpa_debug_timestamp
+080b6bd0 g     F .text	000000b6              wpa_supplicant_ctrl_req_to_string
+00000000       F *UND*	00000000              readlink@@GLIBC_2.0
+0805ec90 g     F .text	0000009c              wmm_ac_restore_tspecs
+080ab110 g     F .text	0000011c              wpa_supplicant_update_mac_addr
+00000000       F *UND*	00000000              BN_set_word@@OPENSSL_1.0.0
+080a5ee0 g     F .text	0000013c              ieee802_11_vendor_ie_concat
+0808bbd0 g     F .text	0000002f              eapol_sm_notify_pmkid_attempt
+080a4f00 g     F .text	0000000f              sme_clear_on_disassoc
+08095930 g     F .text	0000017e              tls_connection_init
+080d3240 g     F .text	00000360              nl80211_get_hw_feature_data
+0805b510 g     F .text	0000002c              int_array_len
+00000000       F *UND*	00000000              strncasecmp@@GLIBC_2.0
+00000000       F *UND*	00000000              i2d_X509@@OPENSSL_1.0.0
+08090040 g     F .text	0000006c              eap_get_config_password
+0805abc0 g     F .text	00000126              printf_encode
+0808fd40 g     F .text	00000018              eap_sm_request_password
+0808e850 g     F .text	000001ab              eap_sm_buildIdentity
+0805f3b0 g     F .text	0000003a              os_fdatasync
+00000000       F *UND*	00000000              nla_put_u8
+08058350 g     F .text	00000002              wpas_notify_persistent_group_added
+00000000       F *UND*	00000000              EVP_CIPHER_CTX_set_padding@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              memmove@@GLIBC_2.0
+080acdf0 g     F .text	00000035              add_freq
+080cad30 g     F .text	0000001b              nl80211_bss_msg
+0808e830 g     F .text	00000018              eap_sm_request_identity
+08058330 g     F .text	00000002              wpas_notify_wps_event_pbc_overlap
+0807e720 g     F .text	000000c2              wps_build_wsc_nack
+0805eda0 g     F .text	0000008a              os_get_reltime
+00000000       F *UND*	00000000              BN_clear_free@@OPENSSL_1.0.0
+08090620 g     F .text	0000000f              eap_peer_was_failure_expected
+00000000       F *UND*	00000000              HMAC_Init_ex@@OPENSSL_1.0.0
+080a4e10 g     F .text	00000055              sme_state_changed
+080a6a90 g     F .text	000000d0              supp_rates_11b_only
+08099c50 g     F .text	00000023              crypto_bignum_init_set
+0808d060 g     F .text	00000054              eapol_sm_notify_portValid
+080db8a0 g     F .text	00000055              l2_packet_deinit
+08069b20 g     F .text	00000013              pmksa_cache_get_current
+080a6fa0 g     F .text	00000027              hw_get_chan
+0808a8e0 g     F .text	00000237              wps_registrar_add_pin
+080db200 g     F .text	0000016b              l2_packet_send
+00000000       F *UND*	00000000              BIO_read@@OPENSSL_1.0.0
+08080210 g     F .text	0000006f              wps_build_msg_type
+00000000       F *UND*	00000000              EVP_add_cipher@@OPENSSL_1.0.0
+0808d480 g     F .text	0000001a              eapol_sm_invalidate_cached_session
+08080280 g     F .text	00000099              wps_build_enrollee_nonce
+080b8420 g     F .text	0000007e              wpa_scan_get_vendor_ie_beacon
+00000000       F *UND*	00000000              sk_free@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              HMAC_Update@@OPENSSL_1.0.0
+0808cf60 g     F .text	0000002a              eapol_sm_notify_logoff
+00000000       F *UND*	00000000              send@@GLIBC_2.0
+00000000       F *UND*	00000000              getcwd@@GLIBC_2.0
+00000000       F *UND*	00000000              nl_cb_put
+080583b0 g     F .text	00000068              wpas_notify_bss_added
+0805efe0 g     F .text	00000083              os_daemonize
+0806e3a0 g     F .text	0000003f              wpa_compare_rsn_ie
+08058300 g     F .text	00000002              wpas_notify_wps_event_m2d
+0805bfe0 g     F .text	0000004f              wpa_hexdump_key
+08091020 g     F .text	000000c0              generate_authenticator_response
+0807b2b0 g     F .text	000000c8              uuid_bin2str
+0805acf0 g     F .text	000001c8              printf_decode
+08067750 g     F .text	000000de              wpa_sm_set_param
+0805fa50 g     F .text	00000033              eloop_register_read_sock
+0807e090 g     F .text	0000008a              wps_success_event
+08067730 g     F .text	00000014              wpa_sm_set_eapol
+0807ff50 g     F .text	00000073              wps_build_version
+0811cf84 g       *ABS*	00000000              _end
+0811cce0 g     O .bss	00000004              stdout@@GLIBC_2.0
+00000000       F *UND*	00000000              EVP_md5@@OPENSSL_1.0.0
+08058c70 g     F .text	00000066              wpa_bss_anqp_unshare_alloc
+080a4d10 g     F .text	0000003f              sme_event_auth_timed_out
+00000000       F *UND*	00000000              SSL_get_session@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              puts@@GLIBC_2.0
+08067de0 g     F .text	00000170              wpa_sm_drop_sa
+080a8cb0 g     F .text	00000099              wpa_supplicant_req_auth_timeout
+00000000       F *UND*	00000000              recvmsg@@GLIBC_2.0
+00000000       F *UND*	00000000              PKCS12_PBE_add@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              nlmsg_hdr
+00000000       F *UND*	00000000              ENGINE_finish@@OPENSSL_1.0.0
+08059260 g     F .text	00000072              wpa_bss_get_ie
+080901a0 g     F .text	00000034              eap_get_config_otp
+00000000       F *UND*	00000000              BIO_new@@OPENSSL_1.0.0
+08098c10 g     F .text	0000006d              aes_decrypt
+00000000       F *UND*	00000000              fork@@GLIBC_2.0
+080a7140 g     F .text	00000096              get_pri_sec_chan
+080d9840 g     F .text	000000d8              ieee80211_radiotap_iterator_init
+00000000       F *UND*	00000000              SSL_ctrl@@OPENSSL_1.0.0
+080acd20 g     F .text	000000ca              wpa_supplicant_update_config
+080b2c40 g     F .text	0000028a              wpa_supplicant_connect
+0808d680 g     F .text	0000001d              eapol_sm_failed
+08056130 g     F .text	0000006a              wpa_config_get
+080582f0 g     F .text	00000002              wpas_notify_wps_credential
+0805b750 g     F .text	0000003d              bin_clear_free
+08081a10 g     F .text	00000027              wps_build_rf_bands
+080a77d0 g     F .text	00000379              hostapd_set_freq_params
+00000000       F *UND*	00000000              EVP_aes_192_cbc@@OPENSSL_1.0.0
+08090010 g     F .text	0000002c              eap_get_config_identity
+080aaf00 g     F .text	0000006f              wpa_supplicant_set_bss_expiration_age
+080af490 g     F .text	0000007a              disallowed_ssid
+080902d0 g     F .text	0000000f              eap_key_available
+00000000       F *UND*	00000000              SSL_library_init@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              BN_num_bits@@OPENSSL_1.0.0
+0805a990 g     F .text	000000d0              wpa_snprintf_hex_sep
+08064950 g     F .text	0000009a              wpa_sm_set_pmk
+080649f0 g     F .text	0000009a              wpa_sm_set_pmk_from_pmksa
+080d9760 g     F .text	000000dc              nl80211_dump_scan
+00000000       F *UND*	00000000              setsockopt@@GLIBC_2.0
+0806e3e0 g     F .text	00000067              wpa_cipher_key_len
+0806c920 g     F .text	0000042e              wpa_gen_wpa_ie
+00000000       F *UND*	00000000              SSL_CTX_set_quiet_shutdown@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              d2i_OCSP_RESPONSE@@OPENSSL_1.0.0
+080add20 g     F .text	000002b5              wpa_supplicant_set_state
+080b7640 g     F .text	0000011d              wpa_supplicant_req_scan
+08090240 g     F .text	00000024              eap_get_config_phase1
+00000000       F *UND*	00000000              EVP_CIPHER_CTX_cleanup@@OPENSSL_1.0.0
+0806e450 g     F .text	000004cd              wpa_pmk_to_ptk
+0805f4a0 g     F .text	0000013a              os_exec
+080daaa0 g     F .text	0000020c              rfkill_init
+00000000       F *UND*	00000000              OCSP_check_validity@@OPENSSL_1.0.0
+0807c380 g     F .text	0000006f              eap_peer_wsc_register
+0809adb0 g     F .text	000001b7              random_pool_ready
+00000000       F *UND*	00000000              fcntl@@GLIBC_2.0
+08055780 g     F .text	00000060              wpa_config_update_prio_list
+00000000       F *UND*	00000000              nla_put_flag
+0807f8a0 g     F .text	0000028a              wps_build_public_key
+00000000       F *UND*	00000000              rand@@GLIBC_2.0
+080582a0 g     F .text	00000002              wpas_notify_network_request
+00000000       F *UND*	00000000              SSL_CIPHER_get_name@@OPENSSL_1.0.0
+0807ccb0 g     F .text	000000da              wps_build_assoc_req_ie
+08068fa0 g     F .text	00000024              rsn_preauth_scan_results
+080af880 g     F .text	00000061              wpas_rrm_reset
+00000000       F *UND*	00000000              ENGINE_load_dynamic@@OPENSSL_1.0.0
+0805c0f0 g     F .text	0000000a              wpa_msg_register_cb
+00000000       F *UND*	00000000              SSL_CTX_flush_sessions@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              strspn@@GLIBC_2.0
+08068dc0 g     F .text	000001d4              pmksa_candidate_add
+00000000       F *UND*	00000000              gmtime@@GLIBC_2.0
+080ab060 g     F .text	000000aa              wpa_supplicant_set_debug_params
+00000000       F *UND*	00000000              X509_STORE_set_flags@@OPENSSL_1.0.0
+0805a4c0 g     F .text	00000047              hex2byte
+080b9030 g     F .text	00000082              wpa_scan_free_params
+080b86f0 g     F .text	0000006a              wpa_supplicant_filter_bssid_match
+080b78e0 g     F .text	00000022              wpa_supplicant_notify_scanning
+0807ab90 g     F .text	00000003              wpas_wps_terminate_pending
+00000000       F *UND*	00000000              strncmp@@GLIBC_2.0
+080f87b0 g     O .rodata	00000004              wpa_supplicant_full_license2
+00000000       F *UND*	00000000              nla_get_string
+0805c6f0 g     F .text	00000106              wpa_msg_global_only
+00000000       F *UND*	00000000              genlmsg_attrdata
+00000000       F *UND*	00000000              EVP_DecryptUpdate@@OPENSSL_1.0.0
+08059140 g     F .text	0000008b              wpa_bss_get_bssid_latest
+080b6c90 g     F .text	0000012f              wpas_send_ctrl_req
+0807dde0 g     F .text	000000a2              wps_pin_valid
+08081460 g     F .text	000000e4              wps_build_serial_number
+00000000       F *UND*	00000000              __snprintf_chk@@GLIBC_2.3.4
+080950e0 g     F .text	0000049d              tls_init
+0805cd40 g     F .text	000000c5              wpabuf_concat
+00000000       F *UND*	00000000              sk_value@@OPENSSL_1.0.0
+08091160 g     F .text	000000a7              get_master_key
+080a6a60 g     F .text	00000027              ieee80211_is_dfs
+00000000       F *UND*	00000000              SSL_free@@OPENSSL_1.0.0
+0808d650 g     F .text	00000022              eapol_sm_set_ext_pw_ctx
+08067f50 g     F .text	0000007e              wpa_sm_notify_disassoc
+00000000       F *UND*	00000000              SSL_CTX_sess_set_remove_cb@@OPENSSL_1.0.0
+08081b10 g     F .text	000002fb              wps_process_device_attrs
+00000000       F *UND*	00000000              BN_mod_exp@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              X509_STORE_CTX_get_error_depth@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              OCSP_response_status@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              EVP_rc2_40_cbc@@OPENSSL_1.0.0
+0805a570 g     F .text	00000013              hwaddr_aton
+08058340 g     F .text	00000002              wpas_notify_network_added
+0811cce4 g     O .bss	00000004              optarg@@GLIBC_2.0
+08060b00 g     F .text	0000098a              wpa_config_read
+0808b630 g     F .text	000001aa              eapol_sm_get_status
+080585e0 g     F .text	000000a0              wpas_notify_resume
+0805b790 g     F .text	00000037              random_mac_addr
+08057d20 g     F .text	000001f0              wpa_config_alloc_empty
+080b8760 g     F .text	00000786              wpa_supplicant_get_scan_results
+00000000       F *UND*	00000000              SSL_CTX_new@@OPENSSL_1.0.0
+080be200 g     F .text	00000038              wpa_driver_wext_keymgmt2wext
+080da3e0 g     F .text	000000cf              linux_set_ifhwaddr
+08098ac0 g     F .text	000000b5              aes_encrypt_deinit
+08081ee0 g     F .text	00000067              wps_device_data_free
+00000000       F *UND*	00000000              fread@@GLIBC_2.0
+00000000       F *UND*	00000000              SSL_load_client_CA_file@@OPENSSL_1.0.0
+08098a50 g     F .text	0000006d              aes_encrypt
+0808cf10 g     F .text	0000004d              eapol_sm_notify_cached
+00000000       F *UND*	00000000              getsockopt@@GLIBC_2.0
+08067b90 g     F .text	000000df              wpa_sm_set_ap_wpa_ie
+0805a6a0 g     F .text	00000066              hwaddr_aton2
+00000000       F *UND*	00000000              closelog@@GLIBC_2.0
+080a6020 g     F .text	00000096              get_hdr_bssid
+080d8f70 g     F .text	00000621              bss_info_handler
+00000000       F *UND*	00000000              EVP_MD_size@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              AES_unwrap_key@@OPENSSL_1.0.0
+080bb690 g     F .text	000000d0              wpa_driver_wext_get_bssid
+08080640 g     F .text	0000012a              wps_build_encr_settings
+00000000       F *UND*	00000000              SSLeay_version@@OPENSSL_1.0.0
+0805fde0 g     F .text	0000004d              eloop_is_timeout_registered
+08067dc0 g     F .text	00000013              wpa_sm_pmksa_cache_list
+080cd130 g     F .text	000001d5              nl80211_create_iface
+08090c90 g     F .text	000000a3              challenge_response
+08090450 g     F .text	00000013              eap_get_config_blob
+080d54d0 g     F .text	000020dd              process_global_event
+00000000       F *UND*	00000000              genlmsg_put
+08058ce0 g     F .text	00000094              wpa_bss_get
+0807e250 g     F .text	00000030              wps_pbc_disable_event
+0806ea30 g     F .text	00000098              wpa_cipher_to_suite
+080a7e10 g     F .text	00000019              eap_update_len
+080815e0 g     F .text	000000a4              wps_build_secondary_dev_type
+080ab6c0 g     F .text	000000e7              radio_add_work
+08099ed0 g     F .text	00000057              crypto_bignum_div
+080cc7e0 g     F .text	0000005e              nl80211_get_link_noise
+0811cce0 g       *ABS*	00000000              _edata
+0808d6b0 g     F .text	0000001a              eapol_sm_erp_flush
+0805e870 g     F .text	000001f1              wpas_wmm_ac_status
+00000000       F *UND*	00000000              snprintf@@GLIBC_2.0
+080b77f0 g     F .text	00000047              wpa_supplicant_cancel_delayed_sched_scan
+0808d130 g     F .text	00000348              eapol_sm_rx_eapol
+00000000       F *UND*	00000000              OPENSSL_cleanse@@OPENSSL_1.0.0
+0805eac0 g     F .text	000001ca              wmm_ac_save_tspecs
+08058550 g     F .text	00000002              wpas_notify_debug_level_changed
+0809a490 g     F .text	00000178              dh_init
+080588c0 g     F .text	00000002              wpas_notify_network_type_changed
+00000000       F *UND*	00000000              nla_ok
+00000000       F *UND*	00000000              EVP_md4@@OPENSSL_1.0.0
+08055d00 g     F .text	0000007c              wpa_config_add_network
+0808e810 g     F .text	00000015              eap_sm_get_method_name
+080a4e70 g     F .text	0000008e              sme_disassoc_while_authenticating
+08098340 g     F .text	00000061              tls_connection_remove_session
+080905f0 g     F .text	00000022              eap_set_anon_id
+080bf990 g     F .text	0000000b              wpa_driver_wext_get_version
+0806a6e0 g     F .text	00000455              wpa_sm_stkstart
+0806e330 g     F .text	00000062              wpa_akm_to_suite
+00000000       F *UND*	00000000              EVP_EncryptInit_ex@@OPENSSL_1.0.0
+0805a250 g     F .text	000000a4              wpa_bss_get_max_rate
+08099810 g     F .text	00000012              dh5_free
+08080c30 g     F .text	0000010b              wps_process_authenticator
+080908a0 g     F .text	00000021              eap_peer_get_methods
+080982d0 g     F .text	00000025              tls_connection_set_success_data_resumed
+08097ba0 g     F .text	000005db              tls_global_set_params
+0805ba90 g     F .text	00000040              wpa_debug_print_timestamp
+08090c50 g     F .text	00000033              hash_nt_password_hash
+08099fc0 g     F .text	00000022              crypto_bignum_is_one
+080a71e0 g     F .text	000001d3              check_40mhz_5g
+08057f10 g     F .text	00000087              wpa_config_debug_dump_networks
+08067830 g     F .text	00000158              wpa_sm_get_status
+00000000       F *UND*	00000000              nl_cb_alloc
+08069b60 g     F .text	000001a9              pmksa_cache_set_current
+0807e280 g     F .text	000000b7              wps_dev_type_str2bin
+08081550 g     F .text	0000008d              wps_build_primary_dev_type
+0807cc40 g     F .text	0000002f              wps_get_uuid_e
+08069d10 g     F .text	0000017a              pmksa_cache_list
+00000000       F *UND*	00000000              sk_pop@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              recvfrom@@GLIBC_2.0
+0805a710 g     F .text	00000052              hexstr2bin
+00000000       F *UND*	00000000              X509_STORE_CTX_get_error@@OPENSSL_1.0.0
+0805f230 g     F .text	00000003              os_program_init
+08095e10 g     F .text	000000e9              tls_connection_prf
+0805a890 g     F .text	00000038              inc_byte_array
+08098d40 g     F .text	00000091              aes_wrap
+00000000       F *UND*	00000000              BN_bin2bn@@OPENSSL_1.0.0
+08058c50 g     F .text	0000001d              wpa_bss_anqp_alloc
+0807c9c0 g     F .text	0000005b              wps_is_selected_pin_registrar
+08080970 g     F .text	0000007a              wps_build_ap_channel
+00000000       F *UND*	00000000              strcmp@@GLIBC_2.0
+00000000       F *UND*	00000000              nla_parse
+00000000       F *UND*	00000000              EVP_aes_192_ecb@@OPENSSL_1.0.0
+08088d80 g     F .text	000000d8              wps_registrar_complete
+080988d0 g     F .text	0000004c              md5_vector
+08080510 g     F .text	00000068              wps_build_assoc_state
+0805b8b0 g     F .text	00000038              str_token
+08060610 g     F .text	0000000b              eloop_terminate
+00000000       F *UND*	00000000              DH_compute_key@@OPENSSL_1.0.0
+08060080 g     F .text	0000004b              eloop_register_signal_terminate
+00000000       F *UND*	00000000              __strdup@@GLIBC_2.0
+00000000       F *UND*	00000000              setenv@@GLIBC_2.0
+00000000       F *UND*	00000000              exit@@GLIBC_2.0
+08090660 g     F .text	00000057              eap_peer_get_type
+080ab8f0 g     F .text	00000297              wpa_supplicant_deauthenticate
+08058370 g     F .text	0000003c              wpas_notify_network_removed
+080b2a50 g     F .text	00000003              wpa_supplicant_scard_init
+08098300 g     F .text	0000003d              tls_connection_get_success_data
+08086870 g     F .text	000000d8              wps_registrar_init
+00000000       F *UND*	00000000              nlmsg_alloc
+080b8f30 g     F .text	000000c5              scan_only_handler
+08105844 g     O .rodata	00000010              wpa_drivers
+080b74a0 g     F .text	000000b2              wpa_supplicant_enabled_networks
+00000000       F *UND*	00000000              PKCS12_free@@OPENSSL_1.0.0
+08088ce0 g     F .text	00000096              wps_registrar_wps_cancel
+0809a310 g     F .text	00000163              tls_prf_sha256
+00000000       F *UND*	00000000              SSL_load_error_strings@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              EVP_CipherInit_ex@@OPENSSL_1.0.0
+080cc730 g     F .text	000000a7              nl80211_get_link_signal
+00000000       F *UND*	00000000              X509_get_subject_name@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              SSL_use_PrivateKey@@OPENSSL_1.0.0
+08079cd0 g     F .text	0000004b              wpas_wps_pbc_overlap
+080dbba2 g     F .text	00000000              .hidden __i686.get_pc_thunk.bx
+00000000       F *UND*	00000000              nla_put_u16
+0805c810 g     F .text	00000165              hostapd_logger
+08056fe0 g     F .text	000008b2              wpa_config_get_cred_no_key
+0806eb80 g     F .text	0000005d              wpa_cipher_put_suites
+00000000       F *UND*	00000000              BN_sub@@OPENSSL_1.0.0
+00000000       F *UND*	00000000              X509_print@@OPENSSL_1.0.0
+0808fdc0 g     F .text	00000018              eap_sm_request_passphrase
+0806d820 g     F .text	000004fe              wpa_parse_wpa_ie_rsn
+08058510 g     F .text	00000002              wpas_notify_bss_rates_changed
+00000000       F *UND*	00000000              __fdelt_chk@@GLIBC_2.15
+00000000       F *UND*	00000000              SSL_export_keying_material@@OPENSSL_1.0.1
+08051f30 g     F .text	0000048d              main
+08058230 g     F .text	00000002              wpas_notify_disconnect_reason
+0805fff0 g     F .text	0000008f              eloop_register_signal
+0804c0d8 g     F .init	00000000              _init
+080aaff0 g     F .text	0000006f              wpa_supplicant_set_scan_interval
+0807d080 g     F .text	00000031              wps_free_pending_msgs
+080b2a60 g     F .text	000001da              wpa_supplicant_pick_network
+08099c10 g     F .text	00000027              crypto_get_random
+00000000       F *UND*	00000000              EVP_DigestUpdate@@OPENSSL_1.0.0
+080767d0 g     F .text	0000006f              eap_peer_gtc_register
+080ac7f0 g     F .text	0000003a              wpa_supplicant_get_iface
+080a6f70 g     F .text	00000027              hw_get_freq
+00000000       F *UND*	00000000              SSL_use_RSAPrivateKey_ASN1@@OPENSSL_1.0.0
+0805bcf0 g     F .text	0000007d              wpa_printf
+08099f90 g     F .text	00000005              crypto_bignum_cmp
+08060620 g     F .text	000000bf              eloop_destroy
+08099fb0 g     F .text	0000000f              crypto_bignum_is_zero
+080b5800 g     F .text	00000062              wpa_blacklist_get
+00000000       F *UND*	00000000              DH_free@@OPENSSL_1.0.0
+080690d0 g     F .text	000000aa              rsn_preauth_get_status
+
+
