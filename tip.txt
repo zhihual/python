@@ -1314,3 +1314,60 @@ wpa_supplicant_event_assoc
 SM_STEP(SUPP_PAE)
 
 SM_STATE_ENTRY will mark change = 1, so we run again and again
+
+
+4/16
+
+Look at lora intraduction. the company name is Semtech which has IC and gateway.
+https://www.lora-alliance.org/
+
+http://www.multitech.net/ here is another IOT company
+http://www.kerlink.fr/en/ 3rd one.
+
+fork lora code on github
+
+https://iotblog.org/ one blog for lora
+
+
+https://github.com/TheThingsNetwork/ code example
+
+http://thethingsnetwork.org/
+
+4/28
+
+802.11k is radio measure meent, link and radio measure. also, neighbor reprot. three pair action frames.
+
+802.11j is for 5G japan, eur, us channel useage. 
+
+802.11v  WNM, wireless network managment
+
+
+The WNM service includes the following:
+— BSS Max idle period management
+— BSS transition management
+— Channel usage
+— Collocated interference reporting
+— Diagnostic reporting
+— Directed multicast service (DMS)
+— Event reporting
+— Flexible multicast service (FMS)
+— Location services
+— Multicast diagnostic reporting
+— Multiple BSSID capability
+— Proxy ARP
+— QoS traffic capability
+— SSID list
+— Triggered STA statistics
+— TIM broadcast
+— Timing measurement
+— Traffic filtering service
+— U-APSD Coexistence
+— WNM-Notification
+— WNM-Sleep mode
+
+802.11r is fast roaming during APs
+
+
+
+
+

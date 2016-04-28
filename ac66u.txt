@@ -155,6 +155,12 @@ Lean diff is one powerful command
 
 diff -Naur copyto copyfrom > my.diff.check 
 
+
+http://www.dd-wrt.com/wiki/index.php/Wl_command  // this is wl command introduction guide.
+
+lwip, doesn ap firmware use this ip stack? or use linux native stack?
+http://savannah.nongnu.org/projects/lwip/
+
 root@unknown:/tmp/home/root# wl
 Usage: wl [-a|i <adapter>] [-h] [-d|u|x] <command> [arguments]
 
