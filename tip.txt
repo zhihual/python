@@ -1367,7 +1367,47 @@ The WNM service includes the following:
 
 802.11r is fast roaming during APs
 
+802.11u is netowrk discovery and selection by STA
+ANQP
+EAS
+GAS
+NAI
+
+Interworking Information element,  access network options, B4 is present internet indicator
+
+PMK Caching vs OKC
+
+PMK Caching is defined in 802.11i . signle AP and one STA. 
+
+OKC, similar, but not in 802.11i.  multiple AP with one STA
+
+MSFT suport in xp since then. 
+
+http://community.arubanetworks.com/aruba/attachments/aruba/115/1097/1/Aruba+OKC+Implementation.pdf  //doc for PMK and OKC
 
 
+5/1
+
+l2_packet_receive -- start from here to analysis eapol state machine
+{
+l2->rx_callback // call up directly, prevous register   wpa_s->l2 = l2_packet_init(wpa_s->ifname,  wpa_drv_get_mac_addr(wpa_s),  ETH_P_EAPOL,  wpa_supplicant_rx_eapol, wpa_s, 0);
+equal call wpa_supplicant_rx_eapol 
+   --if ap,  wpa_supplicant_ap_rx_eapol
+   -- eapol_sm_rx_eapol // in eapol_supp_sm.c
+      two code path:  IEEE802_1X_TYPE_EAP_PACKET and IEEE802_1X_TYPE_EAPOL_KEY
+	  
+	  in IEEE802_1X_TYPE_EAP_PACKET
+	  {
+	     --sm->eapReqData = wpabuf_alloc_copy(hdr + 1, plen); // copy req data
+		 --eapol_sm_step to move forward  
+	  }
+	  
+	  in IEEE802_1X_TYPE_EAPOL_KEY
+	  {
+	    os_memcpy(sm->last_rx_key, buf, data_len);
+		sm->rxKey = TRUE;
+		eapol_sm_step(sm);
+	  }
+}
 
 

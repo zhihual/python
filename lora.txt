@@ -1,0 +1,4 @@
+iM880A 868MHz 
+STM32L151Cx + Sx1272  125kHz 250kHz 500kHz
+
+beacon interval 128s 
