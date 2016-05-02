@@ -7563,7 +7563,7 @@ Apr  5 17:49:29 zliu01 wpa_supplicant[1784]: wpas_m Associated to a new BSS: BSS
 Apr  5 17:49:29 zliu01 wpa_supplicant[1784]: wpas_m Associated with 00:0c:43:44:0d:a8
 Apr  5 17:49:29 zliu01 wpa_supplicant[1784]: wpas_m WPA: Association event - clear replay counter
 Apr  5 17:49:29 zliu01 wpa_supplicant[1784]: wpas_m WPA: Clear old PTK
-Apr  5 17:49:29 zliu01 wpa_supplicant[1784]: EAPOL: External notification - portEnabled=0
+Apr  5 17:49:29 zliu01 wpa_supplicant[1784]: EAPOL: External notification - portEnabled=0 // looking from here dliu
 Apr  5 17:49:29 zliu01 wpa_supplicant[1784]: EAPOL: External notification - portValid=0
 Apr  5 17:49:29 zliu01 wpa_supplicant[1784]: EAPOL: External notification - portEnabled=1
 Apr  5 17:49:29 zliu01 wpa_supplicant[1784]: EAPOL: SUPP_PAE entering state CONNECTING
@@ -7586,7 +7586,7 @@ Apr  5 17:49:29 zliu01 kernel: [3464081.514253] wlan: [12429:E :HDD] wlan_hdd_td
 Apr  5 17:49:29 zliu01 kernel: [3464081.514271] wlan: [12429:E :SME] sme_UpdateDSCPtoUPMapping: QOS Mapping IE not present
 Apr  5 17:49:29 zliu01 kernel: [3464081.514306] wlan: [12429:E :SME] No Pending command waiting
 Apr  5 17:49:30 zliu01 dhclient: DHCPDISCOVER on wlan2 to 255.255.255.255 port 67 interval 16
-Apr  5 17:49:30 zliu01 wpa_supplicant[1784]: eloop: handler =808cc80
+Apr  5 17:49:30 zliu01 wpa_supplicant[1784]: eloop: handler =808cc80 //eapol_port_timers_tick
 Apr  5 17:49:31 zliu01 wpa_supplicant[1784]: EAPOL: startWhen --> 0
 Apr  5 17:49:31 zliu01 wpa_supplicant[1784]: EAPOL: SUPP_PAE entering state CONNECTING
 Apr  5 17:49:31 zliu01 wpa_supplicant[1784]: EAPOL: txStart
