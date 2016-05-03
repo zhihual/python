@@ -1418,3 +1418,22 @@ So, I'm trying to find way to solve it.
 
 http://www.rsyslog.com/changing-the-settings/
 
+Method:
+
+1) vim /etc/rsyslog.conf 
+$SystemLogRateLimitInterval 0
+or 
+$SystemLogRateLimitInterval 10
+$SystemLogRateLimitBurst 500
+
+2) /etc/init.d/rsyslog restart
+
+Done
+
+Heard another way for wpa debug
+wpa_supplicant -Dnl80211 -i wlan0 -c /etc/wpa_supplicant.conf -dd 
+
+Great day, 
+
+Get the whole process of WPS connection.  The first 8 handshake goes into EAP state machie,  the later 4 handshake, goes to wpa statemachine.   wpa_sm_rx_eapol
+

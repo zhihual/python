@@ -595,20 +595,20 @@ May  3 15:22:38 zliu01 kernel: [5876525.127311] wlan: [0:I :HDD] hdd_set_multica
 May  3 15:22:38 zliu01 kernel: [5876525.127314] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[3] = 33:33:00:00:00:fb
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: startWhen --> 0
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_PAE entering state CONNECTING
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: txStart
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: txStart   // EAPOL-Start
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: TX EAPOL: dst=00:0c:43:44:0d:a8
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: eloop: handler =808cc80
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: eloop: handler =808cc80 //eapol_port_timers_tick
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=14
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: wpas_m Setting authentication timeout: 70 sec 0 usec
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: Received EAP-Packet frame
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: Received EAP-Packet frame  // EAP-Identity
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_PAE entering state RESTART
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state INITIALIZE
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDLE
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_PAE entering state AUTHENTICATING
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state REQUEST
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: getSuppRsp
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state RECEIVED
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state RECEIVED 
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: Received EAP-Request id=191 method=1 vendor=0 vendorMethod=0
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDENTITY
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: wpas_m CTRL-EVENT-EAP-STARTED EAP authentication started
@@ -618,13 +618,13 @@ May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state SEND_RESPO
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDLE
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RESPONSE
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: txSuppRsp
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: TX EAPOL: dst=00:0c:43:44:0d:a8
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: TX EAPOL: dst=00:0c:43:44:0d:a8  -- EAP-RESP/Identry
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RECEIVE
 May  3 15:22:39 zliu01 kernel: [5876525.493973] zliu HTT_TX_COMP_IND
 May  3 15:22:39 zliu01 kernel: [5876525.514370] zliu HTT_TX_COMP_IND
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=18
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: Received EAP-Packet frame
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: Received EAP-Packet frame  // M1
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state REQUEST
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: getSuppRsp
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state RECEIVED
@@ -641,7 +641,7 @@ May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: Received packet: Op-Code 
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: Received start
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: WAIT_START -> MESG
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: WPS: Enrollee Nonce - hexdump(len=16): a6 f6 03 86 8a 42 2e 62 0c 41 39 68 6e 44 a1 74
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: WPS: Building Message M1
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: WPS: Building Message M1 // M1
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: WPS:  * Version (hardcoded 0x10)
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: WPS:  * Message Type (4)
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: WPS:  * UUID-E
@@ -671,12 +671,12 @@ May  3 15:22:39 zliu01 wpa_supplicant[23094]: WPS:  * Version2 (0x20)
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: Generating Response
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: Sending out 362 bytes (message sent completely)
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG 
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x94e7440
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state SEND_RESPONSE
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDLE
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RESPONSE
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: txSuppRsp
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: txSuppRsp // M2
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: TX EAPOL: dst=00:0c:43:44:0d:a8
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RECEIVE
 May  3 15:22:39 zliu01 kernel: [5876525.535429] zliu HTT_TX_COMP_IND
@@ -708,7 +708,7 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: KeyWrapKey - hexdump(len=16):
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: EMSK - hexdump(len=32): c8 73 b0 26 b1 98 51 77 d4 54 84 fd 1f 91 ed f1 f6 cf 6c 1c 9e 48 0c fa 46 93 75 2e 63 f2 9a d8
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Primary Device Type: 6-0050F204-1
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Building Message M3
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Building Message M3 // M3
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: PSK1 - hexdump(len=16): 0e 97 aa 26 c3 0a 14 74 61 c0 f7 36 88 db 94 3d
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: PSK2 - hexdump(len=16): 0e 97 aa 26 c3 0a 14 74 61 c0 f7 36 88 db 94 3d
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS:  * Version (hardcoded 0x10)
@@ -744,14 +744,14 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state METHOD
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Received packet: Op-Code 4 Flags 0x0 Message Length 0
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Processing received message (len=192 op_code=4)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Received WSC_MSG
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Received M4
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Received M4  // M4
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: R-Hash1 - hexdump(len=32): 2c b6 3f 03 3d 2c cd 22 c6 8d bb 8e bc 92 33 b5 a9 be 5d 7e f3 d4 16 a4 c9 b5 6c ee c9 55 9f 4c
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: R-Hash2 - hexdump(len=32): 15 9e c2 b3 26 8a 38 03 bc 3f 10 34 01 06 71 2c 6b af 1e 28 77 74 3c d1 6e e7 b9 44 b9 61 8e 56
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Processing decrypted Encrypted Settings attribute
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: R-SNonce1 - hexdump(len=16): f6 1c d2 bb 88 b6 d5 ea 78 f6 a5 47 de cd 11 c9
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Registrar proved knowledge of the first half of the device password
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Building Message M5
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Building Message M5 // M5
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS:  * Version (hardcoded 0x10)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS:  * Message Type (9)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS:  * Registrar Nonce
@@ -768,7 +768,7 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: method process -> ignore=FALS
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state SEND_RESPONSE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDLE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RESPONSE
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: txSuppRsp
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: txSuppRsp  
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: TX EAPOL: dst=00:0c:43:44:0d:a8
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RECEIVE
 May  3 15:22:40 zliu01 kernel: [5876526.644570] zliu HTT_TX_COMP_IND
@@ -783,13 +783,13 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state METHOD
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Received packet: Op-Code 4 Flags 0x0 Message Length 0
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Processing received message (len=120 op_code=4)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Received WSC_MSG
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Received M6
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Received M6 // M6
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Processing decrypted Encrypted Settings attribute
 May  3 15:22:40 zliu01 kernel: [5876526.650213] zliu HTT_TX_COMP_IND
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: R-SNonce2 - hexdump(len=16): b5 8f 0d 54 c6 3d 30 8d a2 e1 94 c5 dd ba 50 07
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Registrar proved knowledge of the second half of the device password
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Building Message M7
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Building Message M7 // M7
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS:  * Version (hardcoded 0x10)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS:  * Message Type (11)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS:  * Registrar Nonce
@@ -821,7 +821,7 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state METHOD
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Received packet: Op-Code 4 Flags 0x0 Message Length 0
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Processing received message (len=216 op_code=4)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Received WSC_MSG
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Received M8
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Received M8 // M8
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Processing decrypted Encrypted Settings attribute
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Received Credential
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Process Credential
@@ -843,7 +843,7 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Replace WPS network block bas
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpa_driver_wext_get_capa
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: The AP was not found from BSS table - use credential as-is
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Building Message WSC_Done
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Building Message WSC_Done  // M-Done
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS:  * Version (hardcoded 0x10)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS:  * Message Type (15)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS:  * Enrollee Nonce
@@ -853,7 +853,7 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m WPS-SUCCESS
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Generating Response
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Sending out 60 bytes (message sent completely)
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> FAIL
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> FAIL // M-Fail
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: method process -> ignore=FALSE methodState=DONE decision=FAIL eapRespData=0x94e6d88
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state SEND_RESPONSE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDLE
@@ -868,7 +868,7 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: Received EAP-Packet frame
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state REQUEST
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: getSuppRsp
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state RECEIVED
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: Received EAP-Failure
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: Received EAP-Failure // EAP-Fail
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: Status notification: completion (param=failure)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: zliu CTRL-EVENT-EAP-STATUS status='completion' parameter='failure'
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state FAILURE
@@ -879,7 +879,7 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RECE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state FAIL
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state IDLE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL authentication completed - result=FAILURE
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Network configuration replaced - try to associate with the received credential (freq=0)
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Network configuration replaced - try to associate with the received credential (freq=0)  // Start to connect with really crendtial
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Request to deauthenticate - bssid=00:0c:43:44:0d:a8 pending_bssid=00:00:00:00:00:00 reason=3 state=ASSOCIATED
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpa_driver_wext_deauthenticate
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpa_driver_wext_mlme
@@ -1016,7 +1016,7 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPA: set AP WPA IE - hexdump(len=2
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPA: set AP RSN IE - hexdump(len=26): 30 18 01 00 00 0f ac 02 02 00 00 0f ac 02 00 0f ac 04 01 00 00 0f ac 02 00 00
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m WPA: using GTK TKIP
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m WPA: using PTK CCMP
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m WPA: using KEY_MGMT WPA-PSK
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m WPA: using KEY_MGMT WPA-PSK // use correct IE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPA: Set own WPA IE default - hexdump(len=22): 30 14 01 00 00 0f ac 02 01 00 00 0f ac 04 01 00 00 0f ac 02 00 00
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m State: DISCONNECTED -> ASSOCIATING
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
@@ -1220,9 +1220,9 @@ May  3 15:22:40 zliu01 kernel: [5876527.032558] wlan: [23094:I :HDD] Exit:iw_get
 May  3 15:22:40 zliu01 kernel: [5876527.032650] wlan: [23094:I :HDD] Enter:iw_get_essid
 May  3 15:22:40 zliu01 kernel: [5876527.032653] wlan: [23094:I :HDD] Exit:iw_get_essid
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=99
-May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
+May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8 
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m Setting authentication timeout: 10 sec 0 usec
-May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m IEEE 802.1X RX: version=1 type=3 length=95
+May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m IEEE 802.1X RX: version=1 type=3 length=95 // 802.1X
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m   EAPOL-Key type=2
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m   key_info 0x8a (ver=2 keyidx=0 rsvd=0 Pairwise Ack)
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m   key_length=16 key_data_length=0
@@ -1248,7 +1248,7 @@ May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: KEK - hexdump(len=16): 95 00 
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: TK - hexdump(len=16): c2 fb b2 5b c3 7c ec 98 5e df 2f 54 94 77 9b da
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: WPA IE for msg 2/4 - hexdump(len=22): 30 14 01 00 00 0f ac 02 01 00 00 0f ac 04 01 00 00 0f ac 02 00 00
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: Replay Counter - hexdump(len=8): 00 00 00 00 00 00 00 01
-May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: Sending EAPOL-Key 2/4
+May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: Sending EAPOL-Key 2/4 // M2
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: KCK - hexdump(len=16): ff e9 10 ef 1a ad 16 b9 da 13 98 a2 7d 12 67 6c
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: Derived Key MIC - hexdump(len=16): ab 4c ab aa ea 0e 6c 16 20 58 50 26 c6 94 6e 37
 May  3 15:22:41 zliu01 kernel: [5876527.237627] wlan: [23094:I :HDD] Enter:iw_get_essid
@@ -1271,11 +1271,11 @@ May  3 15:22:41 zliu01 wpa_supplicant[23094]:   key_mic - hexdump(len=16): d5 16
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: RSN: encrypted key data - hexdump(len=80): a1 b0 af 12 c6 43 f3 4b 2d a9 50 a5 c2 fd ad e3 33 c3 b5 8c cc 9b 06 f2 cf 42 0c 41 66 e4 70 ce 91 d0 8f d9 7e 01 3c f2 30 69 23 0b e6 fb c1 26 f4 35 eb 9a 64 d6 6f d1 d6 8f 14 59 e0 b7 7d c1 fe 74 12 48 91 a6 a0 de 8e f2 41 b1 76 a2 40 27
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: decrypted EAPOL-Key key data - hexdump(len=72): 30 18 01 00 00 0f ac 02 02 00 00 0f ac 02 00 0f ac 04 01 00 00 0f ac 02 00 00 dd 26 00 0f ac 01 01 00 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63 dd 00 00 00 00 00
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m State: 4WAY_HANDSHAKE -> 4WAY_HANDSHAKE
-May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: RX message 3 of 4-Way Handshake from 00:0c:43:44:0d:a8 (ver=2)
+May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: RX message 3 of 4-Way Handshake from 00:0c:43:44:0d:a8 (ver=2) // M3
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: IE KeyData - hexdump(len=72): 30 18 01 00 00 0f ac 02 02 00 00 0f ac 02 00 0f ac 04 01 00 00 0f ac 02 00 00 dd 26 00 0f ac 01 01 00 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63 dd 00 00 00 00 00
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: RSN IE in EAPOL-Key - hexdump(len=26): 30 18 01 00 00 0f ac 02 02 00 00 0f ac 02 00 0f ac 04 01 00 00 0f ac 02 00 00
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: GTK in EAPOL-Key - hexdump(len=40): dd 26 00 0f ac 01 01 00 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63
-May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: Sending EAPOL-Key 4/4
+May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: Sending EAPOL-Key 4/4  //M4
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: KCK - hexdump(len=16): ff e9 10 ef 1a ad 16 b9 da 13 98 a2 7d 12 67 6c
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: Derived Key MIC - hexdump(len=16): 57 70 e3 91 69 e1 57 99 4d cd 2d 89 f4 3e 9d 52
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: Installing PTK to the driver
@@ -1294,7 +1294,7 @@ May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpa_driver_wext_set_key_ext
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: Key negotiation completed with 00:0c:43:44:0d:a8 [PTK=CCMP GTK=TKIP]
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m Cancelling authentication timeout
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m State: GROUP_HANDSHAKE -> COMPLETED
-May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m Radio work 'connect'@0x94e6d38 done in 1.144757 seconds
+May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m Radio work 'connect'@0x94e6d38 done in 1.144757 seconds // finally done
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m CTRL-EVENT-CONNECTED - Connection to 00:0c:43:44:0d:a8 completed [id=0 id_str=]
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpa_driver_wext_set_operstate: operstate 0->1 (UP)
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=6 (IF_OPER_UP)
