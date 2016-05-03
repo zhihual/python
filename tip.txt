@@ -958,7 +958,8 @@ ps -ef | grep wpa to make sure no wpa runing, kill pid is ok
 3. wpa_cli -p /home/zliu/wpa_run
 
 Skills:  grep wpa_supplicant /var/log/syslog > outputfile
-         till -f /var/log/syslog
+         tail -f /var/log/syslog
+		 watch -d -n 1 cat /var/log/messages
 		 
 		 
 /etc/wpasupplicant/function.sh  here some wpa supplicant script
@@ -1410,4 +1411,10 @@ equal call wpa_supplicant_rx_eapol
 	  }
 }
 
+5/3 
+
+We meet the problem that wpa log is limited in syslog. 
+So, I'm trying to find way to solve it.
+
+http://www.rsyslog.com/changing-the-settings/
 
