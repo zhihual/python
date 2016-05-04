@@ -1400,7 +1400,7 @@ equal call wpa_supplicant_rx_eapol
 	  in IEEE802_1X_TYPE_EAP_PACKET
 	  {
 	     --sm->eapReqData = wpabuf_alloc_copy(hdr + 1, plen); // copy req data
-		 --eapol_sm_step to move forward  
+		 --eapol_sm_step to move forward  // should going into SM_ENTER(EAP, RECEIVED); sm->eapReq, this is set by sm->eapolEap = TRUE in SM_ENTER(SUPP_BE, REQUEST);
 	  }
 	  
 	  in IEEE802_1X_TYPE_EAPOL_KEY
@@ -1440,3 +1440,58 @@ Get the whole process of WPS connection.  The first 8 handshake goes into EAP st
 5/4
 
 
+5/2
+
+in function wpa_supplicant_rx_eapol, finally eapol reach to here. 
+what's the logic?
+
+if (!wpa_key_mgmt_wpa_psk(wpa_s->key_mgmt) &&
+	    eapol_sm_rx_eapol(wpa_s->eapol, src_addr, buf, len) > 0)  -- let's dig this firstly
+		return;
+	wpa_drv_poll(wpa_s);
+	if (!(wpa_s->drv_flags & WPA_DRIVER_FLAGS_4WAY_HANDSHAKE)) // this flag indicate drv do 4 way handshake
+		wpa_sm_rx_eapol(wpa_s->wpa, src_addr, buf, len);
+	else if (wpa_key_mgmt_wpa_ieee8021x(wpa_s->key_mgmt)) {
+		/*
+		 * Set portValid = TRUE here since we are going to skip 4-way
+		 * handshake processing which would normally set portValid. We
+		 * need this to allow the EAPOL state machines to be completed
+		 * without going through EAPOL-Key handshake.
+		 */
+		eapol_sm_notify_portValid(wpa_s->eapol, TRUE);
+	}
+
+Below is eap having callbacks for eapol state machine
+
+static const struct eapol_callbacks eapol_cb =
+{
+	eapol_sm_get_config,
+	eapol_sm_get_bool,
+	eapol_sm_set_bool,
+	eapol_sm_get_int,
+	eapol_sm_set_int,
+	eapol_sm_get_eapReqData,
+	eapol_sm_set_config_blob,
+	eapol_sm_get_config_blob,
+	eapol_sm_notify_pending,
+	eapol_sm_eap_param_needed,
+	eapol_sm_notify_cert,
+	eapol_sm_notify_status,
+#ifdef CONFIG_EAP_PROXY
+	eapol_sm_eap_proxy_cb,
+#endif /* CONFIG_EAP_PROXY */
+	eapol_sm_set_anon_id
+};
+
+SM_STATE(EAP, RECEIVED)
+{
+ *This state is entered when an EAP packet is received (eapReq == TRUE) to
+ * parse the packet header.
+	eapReqData = eapol_get_eapReqData(sm);
+	/* parse rxReq, rxSuccess, rxFailure, reqId, reqMethod */
+	eap_sm_parseEapReq(sm, eapReqData);
+	 -- switch(hdr->code) includig enum { EAP_CODE_REQUEST = 1, EAP_CODE_RESPONSE = 2, EAP_CODE_SUCCESS = 3,
+       EAP_CODE_FAILURE = 4, EAP_CODE_INITIATE = 5, EAP_CODE_FINISH = 6 };
+	 -- settle down sm->reqMethod = *pos++;
+	 -- set sm->rxReq = TRUE; // should be clues to trigger another loop
+}
