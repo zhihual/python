@@ -1437,3 +1437,6 @@ Great day,
 
 Get the whole process of WPS connection.  The first 8 handshake goes into EAP state machie,  the later 4 handshake, goes to wpa statemachine.   wpa_sm_rx_eapol
 
+5/4
+
+

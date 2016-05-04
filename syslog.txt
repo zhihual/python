@@ -587,7 +587,7 @@ May  3 15:22:37 zliu01 kernel: [5876523.488668] wlan: [22805:E :SME] No Pending 
 May  3 15:22:37 zliu01 kernel: [5876523.488696] wlan: [19056:I :HDD] wlan_hdd_roc_request_dequeue: 800: going to dequeue roc
 May  3 15:22:37 zliu01 kernel: [5876523.488700] wlan: [19056:I :HDD] Enter:wlan_hdd_validate_context
 May  3 15:22:37 zliu01 kernel: [5876523.488704] wlan: [19056:I :HDD] wlan_hdd_roc_request_dequeue: 814: list is empty
-May  3 15:22:38 zliu01 wpa_supplicant[23094]: eloop: handler =808cc80
+May  3 15:22:38 zliu01 wpa_supplicant[23094]: eloop: handler =808cc80 //eapol_port_timers_tick
 May  3 15:22:38 zliu01 kernel: [5876525.127296] wlan: [0:I :HDD] hdd_set_multicast_list: mc_count = 4
 May  3 15:22:38 zliu01 kernel: [5876525.127303] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[0] = 01:00:5e:00:00:01
 May  3 15:22:38 zliu01 kernel: [5876525.127307] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[1] = 33:33:00:00:00:01
@@ -595,20 +595,31 @@ May  3 15:22:38 zliu01 kernel: [5876525.127311] wlan: [0:I :HDD] hdd_set_multica
 May  3 15:22:38 zliu01 kernel: [5876525.127314] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[3] = 33:33:00:00:00:fb
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: startWhen --> 0
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_PAE entering state CONNECTING
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: txStart   // EAPOL-Start
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: TX EAPOL: dst=00:0c:43:44:0d:a8
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: txStart   // EAPOL-Start   
+                                              // callback call wpa_supplicant_eapol_send to send eapol out
+                                              // sm->ctx->eapol_send(sm->ctx->eapol_send_ctx,IEEE802_1X_TYPE_EAPOL_START, (u8 *) "", 0);
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: TX EAPOL: dst=00:0c:43:44:0d:a8  // call wpa_ether_send to sendout  -- > turn to l2_packet_send to send out packet
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: eloop: handler =808cc80 //eapol_port_timers_tick
+                                              // hear, eapol start sends out
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=14
+                                              // wpa_supplicant_rx_eapol called
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: wpas_m Setting authentication timeout: 70 sec 0 usec
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: Received EAP-Packet frame  // EAP-Identity
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: wpas_m Setting authentication timeout: 70 sec 0 usec // set timeout value
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: Received EAP-Packet frame  // EAP-Identity  // eapol_sm_rx_eapol function
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_PAE entering state RESTART
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state INITIALIZE
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDLE
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_PAE entering state AUTHENTICATING
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state REQUEST
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: getSuppRsp
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: getSuppRsp   // eapol_sm_getSuppRsp function called
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state RECEIVED 
+                                              // call eapol_get_eapReqData to get frame
+											  // call eap_sm_parseEapReq to parse frame
+ 
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: Received EAP-Request id=191 method=1 vendor=0 vendorMethod=0
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDENTITY
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: wpas_m CTRL-EVENT-EAP-STARTED EAP authentication started
