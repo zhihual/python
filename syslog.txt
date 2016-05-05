@@ -621,16 +621,42 @@ May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state RECEIVED
  
 
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: Received EAP-Request id=191 method=1 vendor=0 vendorMethod=0
-May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDENTITY
+May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDENTITY  //SM_STATE(EAP, IDENTITY)
+                                              // eapol_get_eapReqData get request data
+											  // eap_sm_processIdentity
+
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: wpas_m CTRL-EVENT-EAP-STARTED EAP authentication started
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: Status notification: started (param=)
+                                              // sm->eapol_cb->notify_status(sm->eapol_ctx, status, parameter);
+											  //  actaully, it's eapol_sm_notify_status, and wrapper again into wpa_supplicant_status_cb
+											  // wpas_notify_eap_status , finally call wpa_msg_ctrl
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: zliu CTRL-EVENT-EAP-STATUS status='started' parameter=''
+                                              // OK, we notified.  then, let's build response. 
+											  // eap_sm_buildIdentity(sm, sm->reqId, 0);  
+											  // no much print here. 
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state SEND_RESPONSE
+ 
+// eapol_set_bool(sm, EAPOL_eapResp, TRUE);
+// eapol_set_bool(sm, EAPOL_eapReq, FALSE);
+// eapol_set_int(sm, EAPOL_idleWhile, sm->ClientTimeout);
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDLE
+// something clear. EAP is the upper layer state machine
+
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RESPONSE
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: txSuppRsp
+// only have IDLE/RECEIVE/RESPONSE... 
+//	eapol_sm_txSuppRsp(sm);
+	sm->eapResp = FALSE;
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: TX EAPOL: dst=00:0c:43:44:0d:a8  -- EAP-RESP/Identry
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RECEIVE
+// in receive to tigger one more port check 
+// eapol_enable_timer_tick(sm);
+
 May  3 15:22:39 zliu01 kernel: [5876525.493973] zliu HTT_TX_COMP_IND
 May  3 15:22:39 zliu01 kernel: [5876525.514370] zliu HTT_TX_COMP_IND
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=18
@@ -639,15 +665,43 @@ May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: Received EAP-Packet frame  
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state REQUEST
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: getSuppRsp
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state RECEIVED
+
+//SM_STATE(EAP, RECEIVED) 
+// eap_sm_parseEapReq
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: Received EAP-Request id=192 method=254 vendor=14122 vendorMethod=1
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state GET_METHOD
+
+//SM_STATE(EAP, METHOD)
+// eapol_get_eapReqData
+// sm->eapRespData = sm->m->process(sm, sm->eap_method_priv, &ret, eapReqData); // caculate the response
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: wpas_m CTRL-EVENT-EAP-PROPOSED-METHOD vendor=14122 method=1
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: Status notification: accept proposed method (param=WSC)
+
+//eap_method = eap_peer_get_eap_method(sm->reqVendor, method); get eap method moudle hooked up.
+// how the method moudle hooked into list?
+wpa_supplicant_init 
+  --eap_register_methods
+    --eap_peer_wsc_register 
+	
+	   -- 	eap->init = eap_wsc_init;
+	   --   eap->deinit = eap_wsc_deinit;
+	   --   eap->process = eap_wsc_process;
+	   
+
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: zliu CTRL-EVENT-EAP-STATUS status='accept proposed method' parameter='WSC'
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: Initialize selected EAP method: vendor 14122 method 1 (WSC)
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: Fragment size limit 1398
+    // sm->eap_method_priv = sm->m->init(sm);  called
+
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: wpas_m CTRL-EVENT-EAP-METHOD EAP vendor 14122 method 1 (WSC) selected
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state METHOD
+//  eapReqData = eapol_get_eapReqData(sm);
+//  sm->eapRespData = sm->m->process(sm, sm->eap_method_priv, &ret,	 eapReqData);
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: Received packet: Op-Code 1 Flags 0x0 Message Length 0
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: Received start
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: WAIT_START -> MESG
@@ -683,8 +737,19 @@ May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: Generating Response
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: Sending out 362 bytes (message sent completely)
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG 
+
+// above all is the caculation process of 
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x94e7440
+
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state SEND_RESPONSE
+
+// send response 
+//  eapol_set_bool(sm, EAPOL_eapResp, TRUE);
+    	eapol_set_bool(sm, EAPOL_eapReq, FALSE);
+	eapol_set_int(sm, EAPOL_idleWhile, sm->ClientTimeout);
+
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDLE
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RESPONSE
 May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: txSuppRsp // M2
@@ -693,7 +758,7 @@ May  3 15:22:39 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RECE
 May  3 15:22:39 zliu01 kernel: [5876525.535429] zliu HTT_TX_COMP_IND
 May  3 15:22:40 zliu01 kernel: [5876526.407621] TXRX: Setting throttle level 2
 May  3 15:22:40 zliu01 kernel: [5876526.407629] wlan: [27017:E :WDA] TM Sending thermal mgmt cmd: low temp 90, upper temp 125, enabled 1
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: eloop: handler =808cc80
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: eloop: handler =808cc80 // eapol_port_timers_tick
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=467
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: Received EAP-Packet frame
@@ -702,7 +767,11 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: getSuppRsp
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state RECEIVED
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: Received EAP-Request id=193 method=254 vendor=14122 vendorMethod=1
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state METHOD
+
+
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Received packet: Op-Code 4 Flags 0x0 Message Length 0
+
+
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Processing received message (len=449 op_code=4)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Received WSC_MSG
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Received M2
@@ -738,12 +807,19 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Generating Response
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Sending out 124 bytes (message sent completely)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x94e50e8
+
+// method caculation done
+
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state SEND_RESPONSE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDLE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RESPONSE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: txSuppRsp
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: TX EAPOL: dst=00:0c:43:44:0d:a8
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RECEIVE
+
+// send out done
+
+
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=210
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: Received EAP-Packet frame
@@ -776,6 +852,9 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Generating Response
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Sending out 120 bytes (message sent completely)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x94e5228
+
+
+
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state SEND_RESPONSE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDLE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RESPONSE
@@ -814,6 +893,10 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Generating Response
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Sending out 120 bytes (message sent completely)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> MESG
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x94e49c0
+
+
+
+
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state SEND_RESPONSE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDLE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RESPONSE
@@ -866,6 +949,10 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Generating Response
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: Sending out 60 bytes (message sent completely)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP-WSC: MESG -> FAIL // M-Fail
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: method process -> ignore=FALSE methodState=DONE decision=FAIL eapRespData=0x94e6d88
+
+
+
+
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state SEND_RESPONSE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAP: EAP entering state IDLE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RESPONSE
@@ -889,7 +976,22 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: Supplicant port status: Una
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state RECEIVE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state FAIL
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state IDLE
+
+// SUPP_BE run to IDLE
+// then in eapol_sm_step call done  wpa_supplicant_eapol_cb
+   
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL authentication completed - result=FAILURE
+
+//  wpa_supplicant_eapol_cb
+    -- wpas_wps_clear_ap_info
+    -- eloop_cancel_timeout(wpas_wps_timeout, wpa_s, NULL);
+	-- wpa_supplicant_deauthenticate
+	    -- wpa_drv_deauthenticate(wpa_s, addr, reason_code);
+		-- os_memset(&event, 0, sizeof(event));
+		-- event.deauth_info.reason_code = (u16) reason_code;
+		-- event.deauth_info.locally_generated = 1;
+		-- wpa_supplicant_event(wpa_s, EVENT_DEAUTH, &event);
+	
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Network configuration replaced - try to associate with the received credential (freq=0)  // Start to connect with really crendtial
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Request to deauthenticate - bssid=00:0c:43:44:0d:a8 pending_bssid=00:00:00:00:00:00 reason=3 state=ASSOCIATED
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpa_driver_wext_deauthenticate
@@ -906,6 +1008,8 @@ May  3 15:22:40 zliu01 kernel: [5876526.690239] wlan: [22805:E :PE ] limSendDisa
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpa_driver_wext_disconnect
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: ioctl[SIOCSIWAP]
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: ioctl[SIOCSIWESSID]
+
+-- here is drived by deauth event thread
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Event DEAUTH (12) received
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Deauthentication notification
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m  * reason 3 (locally generated)
@@ -931,12 +1035,21 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpa_driver_wext_set_operstate: ope
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: External notification - portEnabled=0
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: External notification - portValid=0
+
+
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Checking whether fast association without a new scan can be used
+// here continue of application thread driven
+// bss = wpa_supplicant_pick_network(wpa_s, &ssid);
+
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Selecting BSS from priority group 0
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m 0: 00:0c:43:44:0d:a8 ssid='RalinkInitAP_440DA8' wpa_ie_len=26 rsn_ie_len=24 caps=0x11 level=-39 freq=2437  wps
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m    selected based on RSN IE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m    selected BSS 00:0c:43:44:0d:a8 ssid='RalinkInitAP_440DA8'
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Continue association from timeout
+// pick up one, and let's continue
+
+
+// This is driven by event
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WEXT: if_removed already cleared - ignore event
@@ -1000,6 +1113,11 @@ May  3 15:22:40 zliu01 kernel: [5876526.889436] TXRX: ol_rx_peer_unmap_handler: 
 May  3 15:22:40 zliu01 kernel: [5876526.889438] TXRX: Deleting peer f3fc3000 (00:0c:43:44:0d:a8)
 May  3 15:22:40 zliu01 kernel: [5876526.894126] TXRX: Setting throttle level 0
 May  3 15:22:40 zliu01 kernel: [5876526.894133] wlan: [27017:E :WDA] TM Sending thermal mgmt cmd: low temp 0, upper temp 110, enabled 1
+
+// wpas_wps_assoc_with_cred, continue driven by host 
+   -- wpas_select_network_from_last_scan. lucky, we don't lost
+   
+   
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WPS: Continuing association after eapol_cb
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Selecting BSS from priority group 0
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m 0: 00:0c:43:44:0d:a8 ssid='RalinkInitAP_440DA8' wpa_ie_len=26 rsn_ie_len=24 caps=0x11 level=-39 freq=2437  wps
@@ -1007,7 +1125,9 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m    selected based on RSN IE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m    selected BSS 00:0c:43:44:0d:a8 ssid='RalinkInitAP_440DA8'
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Considering connect request: reassociate: 1  selected: 00:0c:43:44:0d:a8  bssid: 00:00:00:00:00:00  pending: 00:00:00:00:00:00  wpa_state: DISCONNECTED  ssid=0x94e5308  current_ssid=(nil)
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Request association with 00:0c:43:44:0d:a8
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m zliu wpa_supplicant_associate
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m zliu wpa_supplicant_associate  
+
+// trigger connect
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Re-association to the same ESS
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Add radio work 'connect'@0x94e6d38
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m First radio work item in the queue - schedule start immediately
@@ -1150,7 +1270,11 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: RTM_NEWLINK, IFLA_IFNAME: Interfac
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WEXT: if_removed already cleared - ignore event
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: Wireless event: cmd=0x8b15 len=20
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpa_driver_wext_event_wireless cmd=8b15
-May  3 15:22:40 zliu01 wpa_supplicant[23094]: Wireless event: new AP: 00:0c:43:44:0d:a8
+May  3 15:22:40 zliu01 wpa_supplicant[23094]: Wireless event: new AP: 00:0c:43:44:0d:a8  
+
+// Here, we associate already. 
+
+
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpa_driver_wext_event_assoc_ies
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Event ASSOC (0) received
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: ioctl[SIOCGIWAP]
@@ -1170,6 +1294,10 @@ May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_PAE entering state CON
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state IDLE
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Setting authentication timeout: 10 sec 0 usec
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: wpas_m Cancelling scan request
+
+// Familiar code path
+
+
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: RTM_NEWLINK: operstate=0 ifi_flags=0x11003 ([UP][LOWER_UP])
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
 May  3 15:22:40 zliu01 wpa_supplicant[23094]: WEXT: if_removed already cleared - ignore event
@@ -1230,10 +1358,18 @@ May  3 15:22:40 zliu01 kernel: [5876527.032554] wlan: [23094:I :HDD] Enter:iw_ge
 May  3 15:22:40 zliu01 kernel: [5876527.032558] wlan: [23094:I :HDD] Exit:iw_get_ap_address
 May  3 15:22:40 zliu01 kernel: [5876527.032650] wlan: [23094:I :HDD] Enter:iw_get_essid
 May  3 15:22:40 zliu01 kernel: [5876527.032653] wlan: [23094:I :HDD] Exit:iw_get_essid
+
+// Ok, we heard something
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=99
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8 
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m Setting authentication timeout: 10 sec 0 usec
+
+
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m IEEE 802.1X RX: version=1 type=3 length=95 // 802.1X
+
+//wpa_supplicant_rx_eapol  go into wpa_sm_rx_eapol path  wpa.c file.
+
+
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m   EAPOL-Key type=2
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m   key_info 0x8a (ver=2 keyidx=0 rsvd=0 Pairwise Ack)
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m   key_length=16 key_data_length=0
