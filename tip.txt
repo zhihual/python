@@ -1495,3 +1495,7 @@ SM_STATE(EAP, RECEIVED)
 	 -- settle down sm->reqMethod = *pos++;
 	 -- set sm->rxReq = TRUE; // should be clues to trigger another loop
 }
+
+5/5 finished WPS_PBC analysis log. 
+
+Next, try WPA... and capture log.
