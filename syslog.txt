@@ -1369,7 +1369,8 @@ May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m IEEE 802.1X RX: version=1 t
 
 //wpa_supplicant_rx_eapol  go into wpa_sm_rx_eapol path  wpa.c file.
 
-
+// below is dump information
+//wpa_eapol_key_dump
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m   EAPOL-Key type=2
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m   key_info 0x8a (ver=2 keyidx=0 rsvd=0 Pairwise Ack)
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m   key_length=16 key_data_length=0
@@ -1379,9 +1380,15 @@ May  3 15:22:41 zliu01 wpa_supplicant[23094]:   key_iv - hexdump(len=16): 00 00 
 May  3 15:22:41 zliu01 wpa_supplicant[23094]:   key_rsc - hexdump(len=8): 00 00 00 00 00 00 00 00
 May  3 15:22:41 zliu01 wpa_supplicant[23094]:   key_id (reserved) - hexdump(len=8): 00 00 00 00 00 00 00 00
 May  3 15:22:41 zliu01 wpa_supplicant[23094]:   key_mic - hexdump(len=16): 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+// I'm lost here
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: ioctl[SIOCGIWESSID]
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: ioctl[SIOCGIWAP]
+// how comes upper two?
+
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m State: ASSOCIATED -> 4WAY_HANDSHAKE
+
+// here is wpa_supplicant_process_1_of_4 
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: RX message 1 of 4-Way Handshake from 00:0c:43:44:0d:a8 (ver=2)
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: RSN: msg 1/4 key data - hexdump(len=0):
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: Renewed SNonce - hexdump(len=32): 2e 15 f7 60 b5 ce d4 4c 04 b8 c6 a7 7e 6a 59 ab 8e 68 b8 99 55 e3 c2 b2 c5 20 d1 49 15 ed d4 53
@@ -1394,10 +1401,15 @@ May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: KCK - hexdump(len=16): ff e9 
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: KEK - hexdump(len=16): 95 00 c4 9e 3d 39 1e 1f 32 3f e0 55 af 76 34 fb
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: TK - hexdump(len=16): c2 fb b2 5b c3 7c ec 98 5e df 2f 54 94 77 9b da
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: WPA IE for msg 2/4 - hexdump(len=22): 30 14 01 00 00 0f ac 02 01 00 00 0f ac 04 01 00 00 0f ac 02 00 00
+// this is the function wpa_supplicant_send_2_of_4()
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: Replay Counter - hexdump(len=8): 00 00 00 00 00 00 00 01
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: Sending EAPOL-Key 2/4 // M2
+//wpa_eapol_key_send()
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: KCK - hexdump(len=16): ff e9 10 ef 1a ad 16 b9 da 13 98 a2 7d 12 67 6c
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: Derived Key MIC - hexdump(len=16): ab 4c ab aa ea 0e 6c 16 20 58 50 26 c6 94 6e 37
+// last, update tx eapol frame counter
+// eapol_sm_notify_tx_eapol_key(sm->eapol);
+
 May  3 15:22:41 zliu01 kernel: [5876527.237627] wlan: [23094:I :HDD] Enter:iw_get_essid
 May  3 15:22:41 zliu01 kernel: [5876527.237633] wlan: [23094:I :HDD] Exit:iw_get_essid
 May  3 15:22:41 zliu01 kernel: [5876527.237647] wlan: [23094:I :HDD] Enter:iw_get_ap_address
@@ -1418,35 +1430,54 @@ May  3 15:22:41 zliu01 wpa_supplicant[23094]:   key_mic - hexdump(len=16): d5 16
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: RSN: encrypted key data - hexdump(len=80): a1 b0 af 12 c6 43 f3 4b 2d a9 50 a5 c2 fd ad e3 33 c3 b5 8c cc 9b 06 f2 cf 42 0c 41 66 e4 70 ce 91 d0 8f d9 7e 01 3c f2 30 69 23 0b e6 fb c1 26 f4 35 eb 9a 64 d6 6f d1 d6 8f 14 59 e0 b7 7d c1 fe 74 12 48 91 a6 a0 de 8e f2 41 b1 76 a2 40 27
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: decrypted EAPOL-Key key data - hexdump(len=72): 30 18 01 00 00 0f ac 02 02 00 00 0f ac 02 00 0f ac 04 01 00 00 0f ac 02 00 00 dd 26 00 0f ac 01 01 00 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63 dd 00 00 00 00 00
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m State: 4WAY_HANDSHAKE -> 4WAY_HANDSHAKE
+// 			/* 3/4 4-Way Handshake */
+//     wpa_supplicant_process_3_of_4(sm, key, ver, key_data, key_data_len); // code flow goes to here
+
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: RX message 3 of 4-Way Handshake from 00:0c:43:44:0d:a8 (ver=2) // M3
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: IE KeyData - hexdump(len=72): 30 18 01 00 00 0f ac 02 02 00 00 0f ac 02 00 0f ac 04 01 00 00 0f ac 02 00 00 dd 26 00 0f ac 01 01 00 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63 dd 00 00 00 00 00
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: RSN IE in EAPOL-Key - hexdump(len=26): 30 18 01 00 00 0f ac 02 02 00 00 0f ac 02 00 0f ac 04 01 00 00 0f ac 02 00 00
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: GTK in EAPOL-Key - hexdump(len=40): dd 26 00 0f ac 01 01 00 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: Sending EAPOL-Key 4/4  //M4
+
+// sendout
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: KCK - hexdump(len=16): ff e9 10 ef 1a ad 16 b9 da 13 98 a2 7d 12 67 6c
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: Derived Key MIC - hexdump(len=16): 57 70 e3 91 69 e1 57 99 4d cd 2d 89 f4 3e 9d 52
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: Installing PTK to the driver
+// wpa_supplicant_install_ptk here install ptk
+
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpa_driver_wext_set_key: alg=3 key_idx=0 set_tx=1 seq_len=6 key_len=16
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpa_driver_wext_set_key_ext
 May  3 15:22:41 zliu01 kernel: [5876527.248534] wlan: [23094:I :HDD] Enter:iw_set_encodeext
 May  3 15:22:41 zliu01 kernel: [5876527.248539] wlan: [23094:I :HDD] iw_set_encodeext:cipher_alg:3 key_len[16] *pEncryptionType :6
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: EAPOL: External notification - portValid=1
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m State: 4WAY_HANDSHAKE -> GROUP_HANDSHAKE
+// wpa_sm_set_state(sm, WPA_GROUP_HANDSHAKE);
+
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: RSN: received GTK in pairwise handshake - hexdump(len=34): 01 00 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: Group Key - hexdump(len=32): 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: Installing GTK to the driver (keyidx=1 tx=0 len=32)
+// wpa_supplicant_pairwise_gtk --> will call wpa_supplicant_install_gtk(sm, &gd, key->key_rsc))) to install GTK
+   -- wpa_supplicant_key_neg_complete(sm, sm->bssid,key_info & WPA_KEY_INFO_SECURE);
+      -- wpa_sm_set_state(sm, WPA_COMPLETED);
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: WPA: RSC - hexdump(len=6): 99 05 00 00 00 00
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpa_driver_wext_set_key: alg=2 key_idx=1 set_tx=0 seq_len=6 key_len=32
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpa_driver_wext_set_key_ext
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m WPA: Key negotiation completed with 00:0c:43:44:0d:a8 [PTK=CCMP GTK=TKIP]
+
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m Cancelling authentication timeout
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m State: GROUP_HANDSHAKE -> COMPLETED
+
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m Radio work 'connect'@0x94e6d38 done in 1.144757 seconds // finally done
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpas_m CTRL-EVENT-CONNECTED - Connection to 00:0c:43:44:0d:a8 completed [id=0 id_str=]
+// in wpa_supplicant_set_state function to notify event
+
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: wpa_driver_wext_set_operstate: operstate 0->1 (UP)
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=6 (IF_OPER_UP)
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: EAPOL: External notification - portValid=1
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: EAPOL: External notification - EAP success=1
+// still in group success fucntion 
+// wpa_supplicant_key_neg_complete()
+
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_PAE entering state AUTHENTICATING
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: EAPOL: SUPP_BE entering state SUCCESS
 May  3 15:22:41 zliu01 wpa_supplicant[23094]: EAP: EAP entering state DISABLED
