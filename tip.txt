@@ -1495,3 +1495,8 @@ SM_STATE(EAP, RECEIVED)
 	 -- settle down sm->reqMethod = *pos++;
 	 -- set sm->rxReq = TRUE; // should be clues to trigger another loop
 }
+
+5/4
+http://club.autohome.com.cn/bbs/thread-c-874-34965773-1.html#3  car develop
+
+study some car related mateir
