@@ -1496,7 +1496,33 @@ SM_STATE(EAP, RECEIVED)
 	 -- set sm->rxReq = TRUE; // should be clues to trigger another loop
 }
 
+
 5/4
 http://club.autohome.com.cn/bbs/thread-c-874-34965773-1.html#3  car develop
 
 study some car related mateir
+5/5 
+Finished WPS_PBC analysis log. 
+
+Next, try WPA... and capture log.-- done, 
+
+wps_pin any 6666 --done
+
+5/6
+
+starting on host hostapd
+
+Build
+1. extra source code
+2. make defconfig copy and rename to .config
+3. make. 
+4. stop as error "cannot find -lssl" "cannot find -lcrypto"
+5. after change makefile Q=@ to Q=; then, make makefile will give more inform. it points to /user/local/lib to search libary.
+   so, add it mauanlly. 
+6. Build success
+
+Setup one simple AP. --failed. 
+
+Looks we need make nl80211 driver works firstly.
+
+

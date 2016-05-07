@@ -1,0 +1,1744 @@
+
+
+
+/*PIN*/
+
+
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: eloop: handler =80a8820
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_debug_level =2 1 0
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: syslog=1  tracing=0
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_supplicant v2.5
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: random: Trying to read entropy from /dev/random
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: Successfully initialized wpa_supplicant
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: zliu wpa_supplicant_init finished
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: Initializing interface 'wlan2' conf 'N/A' driver 'wext' ctrl_interface '/home/zliu/wpa_run' bridge 'N/A'
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: WEXT: wpa_driver_wext_init
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: WEXT: cfg80211-based driver detected
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wext: interface wlan2 phy: phy6
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: rfkill: initial event: idx=6 type=1 op=0 soft=0 hard=0
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_pmksa
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: ioctl[SIOCSIWPMKSA]: 3
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: ioctl[SIOCSIWPMKSA]: Invalid argument
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_set_mode
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: WEXT: Interface up
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_get_range
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpas_m Event INTERFACE_ENABLED (26) received
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: SIOCGIWRANGE: WE(compiled)=22 WE(source)=22 enc_capa=0xf
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpas_m Interface was enabled
+May  6 17:34:44 zliu01 wpa_supplicant[7700]:   capabilities: key_mgmt 0xf enc 0x1f flags 0x0
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_disconnect
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: ioctl[SIOCSIWAP]
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: ioctl[SIOCSIWESSID]
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: WEXT: Driver: usb
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: netlink: Operstate: ifindex=15 linkmode=1 (userspace-control), operstate=5 (IF_OPER_DORMANT)
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: WEXT: SIOCSIWAUTH(param 7 value 0x1) failed: No such device)
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: Add interface wlan2 to a new radio phy6
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_get_capa
+May  6 17:34:44 zliu01 kernel: [6143878.381435] wlan: [7700:I :HDD] hdd_netdev_notifier_call: wlan2 New Net Device State = 13
+May  6 17:34:44 zliu01 kernel: [6143878.381442] wlan: [7700:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:34:44 zliu01 kernel: [6143878.381447] wlan: [7700:W :HDD] wlan_hdd_exit_lowpower: Not in standby or deep sleep. Ignore start cmd 0
+May  6 17:34:44 zliu01 kernel: [6143878.381451] wlan: [0:I :HDD] hdd_set_multicast_list: mc_count = 0
+May  6 17:34:44 zliu01 kernel: [6143878.381456] wlan: [0:I :HDD] hdd_set_multicast_list: mc_count = 0
+May  6 17:34:44 zliu01 kernel: [6143878.381489] wlan: [0:I :HDD] hdd_set_multicast_list: mc_count = 1
+May  6 17:34:44 zliu01 kernel: [6143878.381493] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[0] = 01:00:5e:00:00:01
+May  6 17:34:44 zliu01 kernel: [6143878.381497] IPv6: ADDRCONF(NETDEV_UP): wlan2: link is not ready
+May  6 17:34:44 zliu01 kernel: [6143878.381501] wlan: [7700:I :HDD] wlan_hdd_cfg80211_set_power_mgmt: ENTRY ACTIVE 1
+May  6 17:34:44 zliu01 kernel: [6143878.381504] wlan: [7700:I :HDD] Enter:__wlan_hdd_cfg80211_set_power_mgmt
+May  6 17:34:44 zliu01 kernel: [6143878.381507] wlan: [7700:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:34:44 zliu01 kernel: [6143878.381510] wlan: [7700:IH:HDD] power mode=0
+May  6 17:34:44 zliu01 kernel: [6143878.381512] wlan: [7700:IH:HDD] wlan_hdd_set_powersave:Wlan driver Entering Bmps 
+May  6 17:34:44 zliu01 kernel: [6143878.381519] wlan: [7700:E :SME] PmcOffloadEnableStaModePowerSave: 3818: Failed to Queue Sta Mode Ps Request
+May  6 17:34:44 zliu01 kernel: [6143878.381523] wlan: [7700: D:HDD] __wlan_hdd_cfg80211_set_power_mgmt: DHCP stop indicated through power save
+May  6 17:34:44 zliu01 kernel: [6143878.381530] wlan: [7700:I :HDD] Exit:__wlan_hdd_cfg80211_set_power_mgmt
+May  6 17:34:44 zliu01 kernel: [6143878.381534] wlan: [7700:I :HDD] wlan_hdd_cfg80211_set_power_mgmt: ENTRY INACTIVE 0
+May  6 17:34:44 zliu01 kernel: [6143878.381537] wlan: [7700:I :HDD] hdd_netdev_notifier_call: wlan2 New Net Device State = 1
+May  6 17:34:44 zliu01 kernel: [6143878.381568] wlan: [7700:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:34:44 zliu01 kernel: [6143878.381571] wlan: [7700:E :HDD] hdd_ioctl: unknown ioctl 35638
+May  6 17:34:44 zliu01 kernel: [6143878.381610] wlan: [7700:I :HDD] Enter:iw_set_mode
+May  6 17:34:44 zliu01 kernel: [6143878.381613] wlan: [7700:I :HDD] iw_set_mode Old Bss type = 1
+May  6 17:34:44 zliu01 kernel: [6143878.381617] wlan: [7700:I :HDD] iw_set_mode Setting AP Mode as IW_MODE_INFRA
+May  6 17:34:44 zliu01 kernel: [6143878.381619] wlan: [7700:I :HDD] Exit:iw_set_mode
+May  6 17:34:44 zliu01 kernel: [6143878.381633] wlan: [7700:I :HDD] Enter:iw_get_range
+May  6 17:34:44 zliu01 kernel: [6143878.381636] wlan: [7700:I :HDD] active_phy_mode = 10
+May  6 17:34:44 zliu01 kernel: [6143878.381639] wlan: [7700:I :HDD] Exit:iw_get_range
+May  6 17:34:44 zliu01 kernel: [6143878.381653] wlan: [7700:I :HDD] In iw_get_mode
+May  6 17:34:44 zliu01 kernel: [6143878.381655] wlan: [7700:I :HDD] iw_get_mode returns IW_MODE_INFRA
+May  6 17:34:44 zliu01 kernel: [6143878.381663] wlan: [7700:I :HDD] Enter:iw_set_ap_address
+May  6 17:34:44 zliu01 kernel: [6143878.381665] wlan: [7700:I :HDD] iw_set_ap_address 00:00:00:00:00:00
+May  6 17:34:44 zliu01 kernel: [6143878.381667] wlan: [7700:I :HDD] Exit:iw_set_ap_address
+May  6 17:34:44 zliu01 kernel: [6143878.381680] wlan: [7700:I :HDD] Enter:iw_set_essid
+May  6 17:34:44 zliu01 kernel: [6143878.383481] wlan: [7700:I :HDD] Enter:iw_set_auth
+May  6 17:34:44 zliu01 kernel: [6143878.383485] wlan: [7700:W :HDD] iw_set_auth called with unsupported auth type 7
+May  6 17:34:44 zliu01 kernel: [6143878.383487] wlan: [7700:I :HDD] Exit:iw_set_auth
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpas_m Own MAC address: 00:03:7f:00:00:10
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_set_key: alg=0 key_idx=0 set_tx=0 seq_len=0 key_len=0
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_set_key_ext
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_set_key: alg=0 key_idx=1 set_tx=0 seq_len=0 key_len=0
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_set_key_ext
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_set_key: alg=0 key_idx=2 set_tx=0 seq_len=0 key_len=0
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_set_key_ext
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_set_key: alg=0 key_idx=3 set_tx=0 seq_len=0 key_len=0
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_set_key_ext
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_set_countermeasures
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: WEXT: SIOCSIWAUTH(param 4 value 0x0) failed: No such device)
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpas_m RSN: flushing PMKID list in the driver
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_pmksa
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: ioctl[SIOCSIWPMKSA]: 3
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: ioctl[SIOCSIWPMKSA]: Invalid argument
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpas_m State: DISCONNECTED -> INACTIVE
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpas_m WPS: UUID based on MAC address: 8a552eb6-b43a-5260-ab01-2f30bf37211e
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: ENGINE: Loading dynamic engine
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: ENGINE: Loading dynamic engine
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: EAPOL: SUPP_PAE entering state DISCONNECTED
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: EAPOL: Supplicant port status: Unauthorized
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: EAPOL: KEY_RX entering state NO_KEY_RECEIVE
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: EAPOL: SUPP_BE entering state INITIALIZE
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: EAP: EAP entering state DISABLED
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: Using existing control interface directory.
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: ctrl_iface bind(PF_UNIX) failed: Address already in use
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: ctrl_iface exists and seems to be in use - cannot override it
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: Delete '/home/zliu/wpa_run/wlan2' manually if it is not used anymore
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: Failed to initialize control interface '/home/zliu/wpa_run'.#012You may have another wpa_supplicant process already running or the file was#012left by an unclean termination of wpa_supplicant in which case you will need#012to manually remove this file before starting wpa_supplicant again.
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: Failed to add interface wlan2
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpas_m Request to deauthenticate - bssid=00:00:00:00:00:00 pending_bssid=00:00:00:00:00:00 reason=3 state=INACTIVE
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpas_m State: INACTIVE -> DISCONNECTED
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: EAPOL: External notification - portEnabled=0
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: EAPOL: External notification - portValid=0
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_set_countermeasures
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: WEXT: SIOCSIWAUTH(param 4 value 0x0) failed: Address already in use)
+May  6 17:34:44 zliu01 kernel: [6143878.399798] wlan: [7700:I :HDD] Enter:iw_set_encodeext
+May  6 17:34:44 zliu01 kernel: [6143878.399829] wlan: [7700:I :HDD] Enter:iw_set_encodeext
+May  6 17:34:44 zliu01 kernel: [6143878.399864] wlan: [7700:I :HDD] Enter:iw_set_encodeext
+May  6 17:34:44 zliu01 kernel: [6143878.399888] wlan: [7700:I :HDD] Enter:iw_set_encodeext
+May  6 17:34:44 zliu01 kernel: [6143878.399901] wlan: [7700:I :HDD] Enter:iw_set_auth
+May  6 17:34:44 zliu01 kernel: [6143878.399904] wlan: [7700:IH:HDD] Counter Measure stopped=0
+May  6 17:34:44 zliu01 kernel: [6143878.399907] wlan: [7700:I :HDD] Exit:iw_set_auth
+May  6 17:34:44 zliu01 kernel: [6143878.399944] wlan: [7700:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:34:44 zliu01 kernel: [6143878.399947] wlan: [7700:E :HDD] hdd_ioctl: unknown ioctl 35638
+May  6 17:34:44 zliu01 kernel: [6143878.401923] wlan: [7700:I :HDD] Enter:iw_set_auth
+May  6 17:34:44 zliu01 kernel: [6143878.401927] wlan: [7700:IH:HDD] Counter Measure stopped=0
+May  6 17:34:44 zliu01 kernel: [6143878.401929] wlan: [7700:I :HDD] Exit:iw_set_auth
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpas_m WPA: Clear old PMK and PTK
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpas_m Cancelling scan request
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpas_m Cancelling authentication timeout
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: Remove interface wlan2 from radio phy6
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: Remove radio phy6
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: WEXT: SIOCSIWAUTH(param 7 value 0x0) failed: Address already in use)
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: wpa_driver_wext_disconnect
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: ioctl[SIOCSIWAP]
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: ioctl[SIOCSIWESSID]
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: netlink: Operstate: ifindex=15 linkmode=0 (kernel-control), operstate=6 (IF_OPER_UP)
+May  6 17:34:44 zliu01 wpa_supplicant[7700]: zliu wpa_supplicant_add_iface finished
+May  6 17:34:44 zliu01 kernel: [6143878.431266] wlan: [7700:I :HDD] Enter:iw_set_auth
+May  6 17:34:44 zliu01 kernel: [6143878.431271] wlan: [7700:W :HDD] iw_set_auth called with unsupported auth type 7
+May  6 17:34:44 zliu01 kernel: [6143878.431274] wlan: [7700:I :HDD] Exit:iw_set_auth
+May  6 17:34:44 zliu01 kernel: [6143878.431287] wlan: [7700:I :HDD] In iw_get_mode
+May  6 17:34:44 zliu01 kernel: [6143878.431289] wlan: [7700:I :HDD] iw_get_mode returns IW_MODE_INFRA
+May  6 17:34:44 zliu01 kernel: [6143878.431296] wlan: [7700:I :HDD] Enter:iw_set_ap_address
+May  6 17:34:44 zliu01 kernel: [6143878.431299] wlan: [7700:I :HDD] iw_set_ap_address 00:00:00:00:00:00
+May  6 17:34:44 zliu01 kernel: [6143878.431301] wlan: [7700:I :HDD] Exit:iw_set_ap_address
+May  6 17:34:44 zliu01 kernel: [6143878.431308] wlan: [7700:I :HDD] Enter:iw_set_essid
+May  6 17:34:44 zliu01 kernel: [6143878.431375] wlan: [0:I :HDD] hdd_set_multicast_list: mc_count = 1
+May  6 17:34:44 zliu01 kernel: [6143878.431380] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[0] = 01:00:5e:00:00:01
+May  6 17:34:44 zliu01 kernel: [6143878.431390] wlan: [7700:I :HDD] hdd_netdev_notifier_call: wlan2 New Net Device State = 9
+May  6 17:34:44 zliu01 kernel: [6143878.431393] wlan: [7700:I :HDD] hdd_netdev_notifier_call: Scan is not Pending from user
+May  6 17:34:44 zliu01 kernel: [6143878.431410] wlan: [7700:I :HDD] Enter:hdd_stop
+May  6 17:34:44 zliu01 kernel: [6143878.431412] wlan: [7700:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:34:44 zliu01 kernel: [6143878.431415] wlan: [7700:I :HDD] hdd_stop: Disabling OS Tx queues
+May  6 17:34:44 zliu01 kernel: [6143878.431417] wlan: [7700:I :HDD] Enter:hdd_stop_adapter
+May  6 17:34:44 zliu01 kernel: [6143878.431425] wlan: [7700:I :HDD] Exit:hdd_stop_adapter
+May  6 17:34:44 zliu01 kernel: [6143878.431427] wlan: [7700:I :HDD] Enter:hdd_deinit_adapter
+May  6 17:34:44 zliu01 kernel: [6143878.431429] wlan: [7700:I :HDD] Exit:hdd_deinit_adapter
+May  6 17:34:44 zliu01 kernel: [6143878.431432] wlan: [7700:I :HDD] hdd_stop: All Interfaces are Down entering standby
+May  6 17:34:44 zliu01 kernel: [6143878.431435] wlan: [7700:IL:HDD] wlan_hdd_enter_lowpower: Driver stop is not enabled 0
+May  6 17:34:44 zliu01 kernel: [6143878.431437] wlan: [7700:I :HDD] Exit:hdd_stop
+May  6 17:34:44 zliu01 kernel: [6143878.431494] wlan: [7700:I :HDD] hdd_netdev_notifier_call: wlan2 New Net Device State = 2
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpas_m State: INTERFACE_DISABLED -> DISCONNECTED
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpas_m Setting scan request: 0.000000 sec
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b06 len=8
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b06
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b1a len=8
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b1a
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1002 ()
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: WEXT: Interface down
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpas_m Event INTERFACE_DISABLED (27) received
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpas_m Interface was disabled
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpas_m State: DISCONNECTED -> DISCONNECTED
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portEnabled=0
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portValid=0
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpas_m State: DISCONNECTED -> INTERFACE_DISABLED
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: WEXT: Ignore interface up event since interface wlan2 is down
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b1a len=8
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b1a
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: wpas_m Skip scan - interface disabled
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: eloop: handler =80ba3e0
+May  6 17:34:44 zliu01 wpa_supplicant[7037]: l2_packet_receive - recvfrom: Network is down
+May  6 17:34:46 zliu01 dhclient: DHCPDISCOVER on wlan2 to 255.255.255.255 port 67 interval 13
+May  6 17:34:46 zliu01 dhclient: send_packet: Network is down
+May  6 17:34:54 zliu01 wpa_supplicant[7037]: eloop: handler =80a8820
+May  6 17:34:55 zliu01 wpa_supplicant[7037]: CTRL_IFACE monitor attached /tmp/wpa_ctrl_7705-2\x00
+May  6 17:34:55 zliu01 wpa_supplicant[7037]: wpas_m Control interface command 'LIST_NETWORKS'
+May  6 17:34:59 zliu01 dhclient: DHCPDISCOVER on wlan2 to 255.255.255.255 port 67 interval 17
+May  6 17:34:59 zliu01 dhclient: send_packet: Network is down
+May  6 17:35:03 zliu01 wpa_supplicant[7037]: wpas_m Control interface command 'WPS_PBC any 6666'
+May  6 17:35:03 zliu01 wpa_supplicant[7037]: CTRL_IFACE WPS_PBC: invalid BSSID 'any 6666'
+May  6 17:35:04 zliu01 wpa_supplicant[7037]: eloop: handler =80a8820
+May  6 17:35:14 zliu01 wpa_supplicant[7037]: eloop: handler =80a8820
+May  6 17:35:16 zliu01 dhclient: DHCPDISCOVER on wlan2 to 255.255.255.255 port 67 interval 10
+May  6 17:35:16 zliu01 dhclient: send_packet: Network is down
+May  6 17:35:24 zliu01 wpa_supplicant[7037]: eloop: handler =80a8820
+May  6 17:35:24 zliu01 wpa_supplicant[7037]: wpas_m Control interface command 'WPS_PIN any 6666'
+May  6 17:35:24 zliu01 wpa_supplicant[7037]: wpas_m Setting scan request: 0.000000 sec
+May  6 17:35:24 zliu01 wpa_supplicant[7037]: wpas_m Skip scan - interface disabled
+May  6 17:35:24 zliu01 wpa_supplicant[7037]: eloop: handler =80ba3e0
+May  6 17:35:26 zliu01 dhclient: No DHCPOFFERS received.
+May  6 17:35:26 zliu01 dhclient: No working leases in persistent database - sleeping.
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WEXT: Interface up
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: wpas_m Event INTERFACE_ENABLED (26) received
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: wpas_m Interface was enabled
+May  6 17:35:26 zliu01 avahi-autoipd(wlan2)[7738]: Found user 'avahi-autoipd' (UID 106) and group 'avahi-autoipd' (GID 117).
+May  6 17:35:26 zliu01 avahi-autoipd(wlan2)[7738]: Successfully called chroot().
+May  6 17:35:26 zliu01 avahi-autoipd(wlan2)[7738]: Successfully dropped root privileges.
+May  6 17:35:26 zliu01 avahi-autoipd(wlan2)[7738]: Starting with address 169.254.2.82
+May  6 17:35:26 zliu01 kernel: [6143920.361518] wlan: [7738:I :HDD] hdd_netdev_notifier_call: wlan2 New Net Device State = 13
+May  6 17:35:26 zliu01 kernel: [6143920.361523] wlan: [7738:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:35:26 zliu01 kernel: [6143920.361527] wlan: [7738:W :HDD] wlan_hdd_exit_lowpower: Not in standby or deep sleep. Ignore start cmd 0
+May  6 17:35:26 zliu01 kernel: [6143920.361530] wlan: [0:I :HDD] hdd_set_multicast_list: mc_count = 0
+May  6 17:35:26 zliu01 kernel: [6143920.361533] wlan: [0:I :HDD] hdd_set_multicast_list: mc_count = 0
+May  6 17:35:26 zliu01 kernel: [6143920.361560] wlan: [0:I :HDD] hdd_set_multicast_list: mc_count = 1
+May  6 17:35:26 zliu01 kernel: [6143920.361564] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[0] = 01:00:5e:00:00:01
+May  6 17:35:26 zliu01 kernel: [6143920.361567] IPv6: ADDRCONF(NETDEV_UP): wlan2: link is not ready
+May  6 17:35:26 zliu01 kernel: [6143920.361573] wlan: [7738:I :HDD] wlan_hdd_cfg80211_set_power_mgmt: ENTRY ACTIVE 1
+May  6 17:35:26 zliu01 kernel: [6143920.361575] wlan: [7738:I :HDD] Enter:__wlan_hdd_cfg80211_set_power_mgmt
+May  6 17:35:26 zliu01 kernel: [6143920.361578] wlan: [7738:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:35:26 zliu01 kernel: [6143920.361581] wlan: [7738:IH:HDD] power mode=0
+May  6 17:35:26 zliu01 kernel: [6143920.361583] wlan: [7738:IH:HDD] wlan_hdd_set_powersave:Wlan driver Entering Bmps 
+May  6 17:35:26 zliu01 kernel: [6143920.361590] wlan: [7738:E :SME] PmcOffloadEnableStaModePowerSave: 3818: Failed to Queue Sta Mode Ps Request
+May  6 17:35:26 zliu01 kernel: [6143920.361593] wlan: [7738: D:HDD] __wlan_hdd_cfg80211_set_power_mgmt: DHCP stop indicated through power save
+May  6 17:35:26 zliu01 kernel: [6143920.361600] wlan: [7738:I :HDD] Exit:__wlan_hdd_cfg80211_set_power_mgmt
+May  6 17:35:26 zliu01 kernel: [6143920.361603] wlan: [7738:I :HDD] wlan_hdd_cfg80211_set_power_mgmt: ENTRY INACTIVE 0
+May  6 17:35:26 zliu01 kernel: [6143920.361606] wlan: [7738:I :HDD] hdd_netdev_notifier_call: wlan2 New Net Device State = 1
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: wpas_m State: INTERFACE_DISABLED -> DISCONNECTED
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: wpas_m Setting scan request: 0.000000 sec
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: wpas_m State: DISCONNECTED -> SCANNING
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: wpas_m Starting AP scan for wildcard SSID
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS: Building WPS IE for Probe Request
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Version (hardcoded 0x10)
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Request Type
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Config Methods (2108)
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * UUID-E
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Primary Device Type
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * RF Bands (3)
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Association State
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Configuration Error (0)
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Device Password ID (0)
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Manufacturer
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Model Name
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Model Number
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Device Name
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Version2 (0x20)
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: WPS:  * Request to Enroll (1)
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: wpas_m Add radio work 'scan'@0x84eedf8
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: wpas_m First radio work item in the queue - schedule start immediately
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: eloop: handler =80ba3e0
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: wpas_m Starting radio work 'scan'@0x84eedf8 after 0.000028 second wait
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: wpa_driver_wext_scan
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: Scan requested (ret=0) - scan timeout 30 seconds
+May  6 17:35:26 zliu01 wpa_supplicant[7037]: eloop: handler =80a8730
+May  6 17:35:26 zliu01 kernel: [6143920.425958] wlan: [7037:I :HDD] Enter:iw_set_scan
+May  6 17:35:26 zliu01 kernel: [6143920.425964] wlan: [7037:I :HDD] iw_set_scan: enter !!!
+May  6 17:35:26 zliu01 kernel: [6143920.425977] wlan: [7037:E :SME] No Pending command waiting
+May  6 17:35:26 zliu01 kernel: [6143920.425988] wlan: [7037:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:26 zliu01 kernel: [6143920.426000] wlan: [7037:I :HDD] Exit:iw_set_scan
+May  6 17:35:26 zliu01 kernel: [6143920.426003] wlan: [7037:I :HDD] iw_set_scan: exit !!!
+May  6 17:35:26 zliu01 kernel: [6143920.426011] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:26 zliu01 kernel: [6143920.426029] wlan: [22805:E :WDA] Zliu engineer's driver running!!!!
+May  6 17:35:26 zliu01 kernel: [6143920.426029] 
+May  6 17:35:26 zliu01 kernel: [6143920.426034] wlan: [22805:E :WDA] zliu scan_id a011, vdev_id 0, scan type 0, msg_type 1103
+May  6 17:35:26 zliu01 kernel: [6143920.430240] TXRX: Setting throttle level 2
+May  6 17:35:26 zliu01 kernel: [6143920.430245] wlan: [27017:E :WDA] TM Sending thermal mgmt cmd: low temp 90, upper temp 125, enabled 1
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b19 len=8
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b19
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m Event SCAN_RESULTS (3) received
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpa_driver_wext_giwscan
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: Scan results did not fit - trying larger buffer (8192 bytes)
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpa_driver_wext_giwscan
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpa_driver_wext_get_scan_results
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 kernel: [6143922.944649] wlan: [27017:E :WDA]  scan complete - scan_id a011, vdev_id 0
+May  6 17:35:29 zliu01 kernel: [6143922.944750] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 kernel: [6143922.944782] wlan: [22805:E :SME] Found 20 BSS
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 kernel: [6143922.944910] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:29 zliu01 kernel: [6143922.944913] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 kernel: [6143922.944917] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 kernel: [6143922.944944] wlan: [22805:I :HDD] Enter:hdd_ScanRequestCallback
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 kernel: [6143922.944947] wlan: [22805:W :HDD] hdd_ScanRequestCallback called with halHandle = eb1a8000, pContext = e9dec000, scanID = 16, returned status = 0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 kernel: [6143922.944953] wlan: [22805:I :HDD] Exit:hdd_ScanRequestCallback
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: freq in scan results (BSSID=60:a4:4c:27:0d:fc m=161 e=0)
+May  6 17:35:29 zliu01 kernel: [6143922.944955] wlan: [22805:I :HDD] hdd_ScanRequestCallback: exit !!!
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 kernel: [6143922.944957] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 kernel: [6143922.945126] wlan: [7037:I :HDD] iw_get_scan: enter buffer length 4096!!!
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 kernel: [6143922.945130] wlan: [7037:I :HDD] Enter:iw_get_scan
+May  6 17:35:29 zliu01 kernel: [6143922.945154] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:0c:43:44:0d:a8
+May  6 17:35:29 zliu01 kernel: [6143922.945164] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 kernel: [6143922.945170] wlan: [7037:I :HDD] hdd_IndicateScanResult 84:1b:5e:6b:3e:0c
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 kernel: [6143922.945176] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945181] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:23:cd:51:c8:a6
+May  6 17:35:29 zliu01 kernel: [6143922.945187] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945193] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:12:31:23:13:14
+May  6 17:35:29 zliu01 kernel: [6143922.945199] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 kernel: [6143922.945204] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:24:a5:d8:6d:16
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 kernel: [6143922.945211] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945216] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:27:0d:f8
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 kernel: [6143922.945222] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 kernel: [6143922.945227] wlan: [7037:I :HDD] hdd_IndicateScanResult 1c:7e:e5:94:00:fc
+May  6 17:35:29 zliu01 kernel: [6143922.945234] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 kernel: [6143922.945239] wlan: [7037:I :HDD] hdd_IndicateScanResult 28:cf:da:b3:e7:7b
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 kernel: [6143922.945244] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 kernel: [6143922.945249] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:27:0d:fc
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 kernel: [6143922.945253] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 kernel: [6143922.945256] wlan: [7037:I :HDD] hdd_IndicateScanResult d4:6d:50:ee:2c:12
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: freq in scan results (BSSID=60:a4:4c:d2:d1:34 m=149 e=0)
+May  6 17:35:29 zliu01 kernel: [6143922.945261] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 kernel: [6143922.945264] wlan: [7037:I :HDD] hdd_IndicateScanResult d4:6d:50:ee:2c:11
+May  6 17:35:29 zliu01 kernel: [6143922.945269] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945271] wlan: [7037:E :HDD] hdd_AddIwStreamEvent: no space left to add event
+May  6 17:35:29 zliu01 kernel: [6143922.945273] wlan: [7037:E :HDD] hdd_IndicateScanResult: no space for SIOCGIWENCODE
+May  6 17:35:29 zliu01 kernel: [6143922.945276] wlan: [7037:I :HDD] Exit:iw_get_scan
+May  6 17:35:29 zliu01 kernel: [6143922.945278] wlan: [7037:I :HDD] iw_get_scan: exit total 10 BSS reported !!!
+May  6 17:35:29 zliu01 kernel: [6143922.945296] wlan: [7037:I :HDD] iw_get_scan: enter buffer length 8192!!!
+May  6 17:35:29 zliu01 kernel: [6143922.945299] wlan: [7037:I :HDD] Enter:iw_get_scan
+May  6 17:35:29 zliu01 kernel: [6143922.945317] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:0c:43:44:0d:a8
+May  6 17:35:29 zliu01 kernel: [6143922.945322] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945325] wlan: [7037:I :HDD] hdd_IndicateScanResult 84:1b:5e:6b:3e:0c
+May  6 17:35:29 zliu01 kernel: [6143922.945329] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945332] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:23:cd:51:c8:a6
+May  6 17:35:29 zliu01 kernel: [6143922.945337] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945340] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:12:31:23:13:14
+May  6 17:35:29 zliu01 kernel: [6143922.945344] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945347] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:24:a5:d8:6d:16
+May  6 17:35:29 zliu01 kernel: [6143922.945352] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945355] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:27:0d:f8
+May  6 17:35:29 zliu01 kernel: [6143922.945358] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945361] wlan: [7037:I :HDD] hdd_IndicateScanResult 1c:7e:e5:94:00:fc
+May  6 17:35:29 zliu01 kernel: [6143922.945366] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945369] wlan: [7037:I :HDD] hdd_IndicateScanResult 28:cf:da:b3:e7:7b
+May  6 17:35:29 zliu01 kernel: [6143922.945372] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945375] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:27:0d:fc
+May  6 17:35:29 zliu01 kernel: [6143922.945379] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945382] wlan: [7037:I :HDD] hdd_IndicateScanResult d4:6d:50:ee:2c:12
+May  6 17:35:29 zliu01 kernel: [6143922.945386] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945389] wlan: [7037:I :HDD] hdd_IndicateScanResult d4:6d:50:ee:2c:11
+May  6 17:35:29 zliu01 kernel: [6143922.945394] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945397] wlan: [7037:I :HDD] hdd_IndicateScanResult d4:6d:50:ff:6a:92
+May  6 17:35:29 zliu01 kernel: [6143922.945401] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945404] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:d2:d1:30
+May  6 17:35:29 zliu01 kernel: [6143922.945408] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945411] wlan: [7037:I :HDD] hdd_IndicateScanResult 06:0b:c0:03:5e:de
+May  6 17:35:29 zliu01 kernel: [6143922.945415] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945418] wlan: [7037:I :HDD] hdd_IndicateScanResult 44:94:fc:43:c7:33
+May  6 17:35:29 zliu01 kernel: [6143922.945422] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945425] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:d2:d1:34
+May  6 17:35:29 zliu01 kernel: [6143922.945428] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945431] wlan: [7037:I :HDD] hdd_IndicateScanResult 0a:0b:c0:03:5e:de
+May  6 17:35:29 zliu01 kernel: [6143922.945435] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945439] wlan: [7037:I :HDD] hdd_IndicateScanResult 82:86:f2:0c:8f:1e
+May  6 17:35:29 zliu01 kernel: [6143922.945442] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945445] wlan: [7037:I :HDD] hdd_IndicateScanResult bc:ee:7b:8f:a7:60
+May  6 17:35:29 zliu01 kernel: [6143922.945449] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945452] wlan: [7037:I :HDD] hdd_IndicateScanResult 04:a1:51:2b:03:eb
+May  6 17:35:29 zliu01 kernel: [6143922.945456] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:29 zliu01 kernel: [6143922.945460] wlan: [7037:I :HDD] Exit:iw_get_scan
+May  6 17:35:29 zliu01 kernel: [6143922.945462] wlan: [7037:I :HDD] iw_get_scan: exit total 20 BSS reported !!!
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: Received 8192 bytes of scan results (20 BSSes)
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m WPS: Order scan results with WPS provisioning rules
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Start scan result update 14
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 35 BSSID 00:0c:43:44:0d:a8 SSID 'RalinkInitAP_440DA8' freq 2437
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 35 00:0c:43:44:0d:a8
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 36 BSSID 84:1b:5e:6b:3e:0c SSID 'Netgear2000' freq 2412
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 36 84:1b:5e:6b:3e:0c
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 37 BSSID 00:23:cd:51:c8:a6 SSID 'xx_1' freq 2412
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 37 00:23:cd:51:c8:a6
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 38 BSSID 00:12:31:23:13:14 SSID 'c_z_q' freq 2412
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 38 00:12:31:23:13:14
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 39 BSSID 1c:7e:e5:94:00:fc SSID 'p2p_24' freq 2437
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 39 1c:7e:e5:94:00:fc
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 40 BSSID 60:a4:4c:d2:d1:30 SSID 'aptest4' freq 2427
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 40 60:a4:4c:d2:d1:30
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 41 BSSID 44:94:fc:43:c7:33 SSID 'GO-2G' freq 2437
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 41 44:94:fc:43:c7:33
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 42 BSSID 60:a4:4c:d2:d1:34 SSID 'ASUS_5G' freq 0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 42 60:a4:4c:d2:d1:34
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 43 BSSID bc:ee:7b:8f:a7:60 SSID 'N2' freq 2437
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 43 bc:ee:7b:8f:a7:60
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 44 BSSID 04:a1:51:2b:03:eb SSID 'NETGEAR18-ZSJ' freq 2437
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 44 04:a1:51:2b:03:eb
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 45 BSSID 00:24:a5:d8:6d:16 SSID 'BUFFALO-ch1_zh' freq 2412
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 45 00:24:a5:d8:6d:16
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 46 BSSID 60:a4:4c:27:0d:f8 SSID 'carl_2G' freq 2437
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 46 60:a4:4c:27:0d:f8
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 47 BSSID 28:cf:da:b3:e7:7b SSID 'apple6666' freq 2437
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 47 28:cf:da:b3:e7:7b
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 48 BSSID d4:6d:50:ee:2c:11 SSID 'Hydra' freq 2462
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 48 d4:6d:50:ee:2c:11
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 49 BSSID d4:6d:50:ee:2c:12 SSID 'QGuest' freq 2462
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 49 d4:6d:50:ee:2c:12
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 50 BSSID d4:6d:50:ff:6a:92 SSID 'QGuest' freq 2412
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 50 d4:6d:50:ff:6a:92
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 51 BSSID 06:0b:c0:03:5e:de SSID 'WAPI_CERT' freq 2437
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 51 06:0b:c0:03:5e:de
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 52 BSSID 60:a4:4c:27:0d:fc SSID 'carl-5G' freq 0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 52 60:a4:4c:27:0d:fc
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 53 BSSID 0a:0b:c0:03:5e:de SSID 'WAPI_PSK' freq 2437
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 53 0a:0b:c0:03:5e:de
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 54 BSSID 82:86:f2:0c:8f:1e SSID 'googoo_2g' freq 2462
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 54 82:86:f2:0c:8f:1e
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: BSS: last_scan_res_used=20/32
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m New scan results available (own=0 ext=0)
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-SCAN-RESULTS 
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: zliu WPS-AP-AVAILABLE 
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP 00:0c:43:44:0d:a8 type 0 added
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP 84:1b:5e:6b:3e:0c type 0 added
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP 00:23:cd:51:c8:a6 type 0 added
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP 00:12:31:23:13:14 type 0 added
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP 1c:7e:e5:94:00:fc type 0 added
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP 60:a4:4c:d2:d1:30 type 0 added
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP 44:94:fc:43:c7:33 type 0 added
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP 60:a4:4c:d2:d1:34 type 0 added
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP bc:ee:7b:8f:a7:60 type 0 added
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP 04:a1:51:2b:03:eb type 0 added
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP[0] 00:0c:43:44:0d:a8 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP[1] 84:1b:5e:6b:3e:0c type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP[2] 00:23:cd:51:c8:a6 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP[3] 00:12:31:23:13:14 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP[4] 1c:7e:e5:94:00:fc type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP[5] 60:a4:4c:d2:d1:30 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP[6] 44:94:fc:43:c7:33 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP[7] 60:a4:4c:d2:d1:34 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP[8] bc:ee:7b:8f:a7:60 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: AP[9] 04:a1:51:2b:03:eb type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m Radio work 'scan'@0x84eedf8 done in 2.518888 seconds
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m Selecting BSS from priority group 0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 0: 00:0c:43:44:0d:a8 ssid='RalinkInitAP_440DA8' wpa_ie_len=26 rsn_ie_len=24 caps=0x11 level=-39 freq=2437  wps
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 1: 84:1b:5e:6b:3e:0c ssid='Netgear2000' wpa_ie_len=0 rsn_ie_len=20 caps=0x11 level=-48 freq=2412  wps
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 2: 00:23:cd:51:c8:a6 ssid='xx_1' wpa_ie_len=0 rsn_ie_len=20 caps=0x11 level=-49 freq=2412  wps
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 3: 00:12:31:23:13:14 ssid='c_z_q' wpa_ie_len=0 rsn_ie_len=20 caps=0x11 level=-55 freq=2412  wps
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 4: 1c:7e:e5:94:00:fc ssid='p2p_24' wpa_ie_len=22 rsn_ie_len=20 caps=0x11 level=-68 freq=2437  wps
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 5: 60:a4:4c:d2:d1:30 ssid='aptest4' wpa_ie_len=0 rsn_ie_len=0 caps=0x1 level=-71 freq=2427  wps
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 6: 44:94:fc:43:c7:33 ssid='GO-2G' wpa_ie_len=0 rsn_ie_len=0 caps=0x1 level=-74 freq=2437  wps
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 7: 60:a4:4c:d2:d1:34 ssid='ASUS_5G' wpa_ie_len=0 rsn_ie_len=0 caps=0x1 level=-76 freq=0  wps
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 8: bc:ee:7b:8f:a7:60 ssid='N2' wpa_ie_len=0 rsn_ie_len=20 caps=0x11 level=-83 freq=2437  wps
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 9: 04:a1:51:2b:03:eb ssid='NETGEAR18-ZSJ' wpa_ie_len=0 rsn_ie_len=0 caps=0x1 level=-90 freq=2437  wps
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 10: 00:24:a5:d8:6d:16 ssid='BUFFALO-ch1_zh' wpa_ie_len=0 rsn_ie_len=0 caps=0x1 level=-56 freq=2412 
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 11: 60:a4:4c:27:0d:f8 ssid='carl_2G' wpa_ie_len=0 rsn_ie_len=20 caps=0x11 level=-67 freq=2437 
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 12: 28:cf:da:b3:e7:7b ssid='apple6666' wpa_ie_len=22 rsn_ie_len=24 caps=0x11 level=-70 freq=2437 
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 13: d4:6d:50:ee:2c:11 ssid='Hydra' wpa_ie_len=0 rsn_ie_len=20 caps=0x11 level=-71 freq=2462 
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 14: d4:6d:50:ee:2c:12 ssid='QGuest' wpa_ie_len=0 rsn_ie_len=0 caps=0x1 level=-73 freq=2462 
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 15: d4:6d:50:ff:6a:92 ssid='QGuest' wpa_ie_len=0 rsn_ie_len=0 caps=0x1 level=-74 freq=2412 
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 16: 06:0b:c0:03:5e:de ssid='WAPI_CERT' wpa_ie_len=0 rsn_ie_len=0 caps=0x11 level=-74 freq=2437 
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 17: 60:a4:4c:27:0d:fc ssid='carl-5G' wpa_ie_len=0 rsn_ie_len=20 caps=0x11 level=-75 freq=0 
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 18: 0a:0b:c0:03:5e:de ssid='WAPI_PSK' wpa_ie_len=0 rsn_ie_len=0 caps=0x11 level=-76 freq=2437 
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m 19: 82:86:f2:0c:8f:1e ssid='googoo_2g' wpa_ie_len=0 rsn_ie_len=20 caps=0x11 level=-80 freq=2462 
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m    skip - SSID mismatch
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m No suitable network found
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m Use shorter wait during WPS processing
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m Setting scan request: 0.500000 sec
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m Starting AP scan for wildcard SSID
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS: Building WPS IE for Probe Request
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Version (hardcoded 0x10)
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Request Type
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Config Methods (2108)
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * UUID-E
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Primary Device Type
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * RF Bands (3)
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Association State
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Configuration Error (0)
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Device Password ID (0)
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Manufacturer
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Model Name
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Model Number
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Device Name
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Version2 (0x20)
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: WPS:  * Request to Enroll (1)
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m Add radio work 'scan'@0x84f06e0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m First radio work item in the queue - schedule start immediately
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: eloop: handler =80ba3e0
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpas_m Starting radio work 'scan'@0x84f06e0 after 0.000031 second wait
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: wpa_driver_wext_scan
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: Scan requested (ret=0) - scan timeout 30 seconds
+May  6 17:35:29 zliu01 wpa_supplicant[7037]: eloop: handler =80a8730
+May  6 17:35:29 zliu01 kernel: [6143923.448793] wlan: [7037:I :HDD] Enter:iw_set_scan
+May  6 17:35:29 zliu01 kernel: [6143923.448799] wlan: [7037:I :HDD] iw_set_scan: enter !!!
+May  6 17:35:29 zliu01 kernel: [6143923.448809] wlan: [7037:E :SME] No Pending command waiting
+May  6 17:35:29 zliu01 kernel: [6143923.448817] wlan: [7037:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:29 zliu01 kernel: [6143923.448826] wlan: [7037:I :HDD] Exit:iw_set_scan
+May  6 17:35:29 zliu01 kernel: [6143923.448828] wlan: [7037:I :HDD] iw_set_scan: exit !!!
+May  6 17:35:29 zliu01 kernel: [6143923.448838] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:29 zliu01 kernel: [6143923.448856] wlan: [22805:E :WDA] Zliu engineer's driver running!!!!
+May  6 17:35:29 zliu01 kernel: [6143923.448856] 
+May  6 17:35:29 zliu01 kernel: [6143923.448861] wlan: [22805:E :WDA] zliu scan_id a012, vdev_id 0, scan type 0, msg_type 1103
+May  6 17:35:31 zliu01 avahi-autoipd(wlan2)[7738]: Callout BIND, address 169.254.2.82 on interface wlan2
+May  6 17:35:31 zliu01 kernel: [6143925.273741] wlan: [0:I :HDD] hdd_set_multicast_list: mc_count = 2
+May  6 17:35:31 zliu01 kernel: [6143925.273748] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[0] = 01:00:5e:00:00:01
+May  6 17:35:31 zliu01 kernel: [6143925.273752] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[1] = 01:00:5e:00:00:fb
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b19 len=8
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b19
+May  6 17:35:32 zliu01 kernel: [6143925.967707] wlan: [27017:E :WDA]  scan complete - scan_id a012, vdev_id 0
+May  6 17:35:32 zliu01 kernel: [6143925.967776] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:32 zliu01 kernel: [6143925.967803] wlan: [22805:E :SME] Found 19 BSS
+May  6 17:35:32 zliu01 kernel: [6143925.967954] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Event SCAN_RESULTS (3) received
+May  6 17:35:32 zliu01 kernel: [6143925.967957] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:32 zliu01 kernel: [6143925.967961] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:32 zliu01 kernel: [6143925.967988] wlan: [22805:I :HDD] Enter:hdd_ScanRequestCallback
+May  6 17:35:32 zliu01 kernel: [6143925.967991] wlan: [22805:W :HDD] hdd_ScanRequestCallback called with halHandle = eb1a8000, pContext = e9dec000, scanID = 17, returned status = 0
+May  6 17:35:32 zliu01 kernel: [6143925.967996] wlan: [22805:I :HDD] Exit:hdd_ScanRequestCallback
+May  6 17:35:32 zliu01 kernel: [6143925.967998] wlan: [22805:I :HDD] hdd_ScanRequestCallback: exit !!!
+May  6 17:35:32 zliu01 kernel: [6143925.968024] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:32 zliu01 kernel: [6143925.968185] wlan: [7037:I :HDD] iw_get_scan: enter buffer length 4096!!!
+May  6 17:35:32 zliu01 kernel: [6143925.968190] wlan: [7037:I :HDD] Enter:iw_get_scan
+May  6 17:35:32 zliu01 kernel: [6143925.968212] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:0c:43:44:0d:a8
+May  6 17:35:32 zliu01 kernel: [6143925.968223] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968228] wlan: [7037:I :HDD] hdd_IndicateScanResult 84:1b:5e:6b:3e:0c
+May  6 17:35:32 zliu01 kernel: [6143925.968235] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968240] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:23:cd:51:c8:a6
+May  6 17:35:32 zliu01 kernel: [6143925.968247] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968252] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:12:31:23:13:14
+May  6 17:35:32 zliu01 kernel: [6143925.968258] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968267] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:24:a5:d8:6d:16
+May  6 17:35:32 zliu01 kernel: [6143925.968275] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968280] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:27:0d:f8
+May  6 17:35:32 zliu01 kernel: [6143925.968286] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968290] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:27:0d:fc
+May  6 17:35:32 zliu01 kernel: [6143925.968296] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968301] wlan: [7037:I :HDD] hdd_IndicateScanResult d4:6d:50:ee:2c:12
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_giwscan
+May  6 17:35:32 zliu01 kernel: [6143925.968308] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968314] wlan: [7037:I :HDD] hdd_IndicateScanResult d4:6d:50:ee:2c:11
+May  6 17:35:32 zliu01 kernel: [6143925.968322] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968327] wlan: [7037:I :HDD] hdd_IndicateScanResult d4:6d:50:ff:6a:92
+May  6 17:35:32 zliu01 kernel: [6143925.968334] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968340] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:d2:d1:30
+May  6 17:35:32 zliu01 kernel: [6143925.968351] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968355] wlan: [7037:E :HDD] hdd_AddIwStreamEvent: no space left to add event
+May  6 17:35:32 zliu01 kernel: [6143925.968357] wlan: [7037:E :HDD] hdd_AddIwStreamEvent: no space left to add event
+May  6 17:35:32 zliu01 kernel: [6143925.968359] wlan: [7037:E :HDD] hdd_IndicateScanResult: no space for SIOCGIWENCODE
+May  6 17:35:32 zliu01 kernel: [6143925.968363] wlan: [7037:I :HDD] Exit:iw_get_scan
+May  6 17:35:32 zliu01 kernel: [6143925.968365] wlan: [7037:I :HDD] iw_get_scan: exit total 10 BSS reported !!!
+May  6 17:35:32 zliu01 kernel: [6143925.968379] wlan: [7037:I :HDD] iw_get_scan: enter buffer length 8192!!!
+May  6 17:35:32 zliu01 kernel: [6143925.968380] wlan: [7037:I :HDD] Enter:iw_get_scan
+May  6 17:35:32 zliu01 kernel: [6143925.968392] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:0c:43:44:0d:a8
+May  6 17:35:32 zliu01 kernel: [6143925.968397] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968400] wlan: [7037:I :HDD] hdd_IndicateScanResult 84:1b:5e:6b:3e:0c
+May  6 17:35:32 zliu01 kernel: [6143925.968404] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968407] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:23:cd:51:c8:a6
+May  6 17:35:32 zliu01 kernel: [6143925.968411] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968415] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:12:31:23:13:14
+May  6 17:35:32 zliu01 kernel: [6143925.968419] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968422] wlan: [7037:I :HDD] hdd_IndicateScanResult 00:24:a5:d8:6d:16
+May  6 17:35:32 zliu01 kernel: [6143925.968426] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968429] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:27:0d:f8
+May  6 17:35:32 zliu01 kernel: [6143925.968432] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968435] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:27:0d:fc
+May  6 17:35:32 zliu01 kernel: [6143925.968439] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968442] wlan: [7037:I :HDD] hdd_IndicateScanResult d4:6d:50:ee:2c:12
+May  6 17:35:32 zliu01 kernel: [6143925.968448] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968458] wlan: [7037:I :HDD] hdd_IndicateScanResult d4:6d:50:ee:2c:11
+May  6 17:35:32 zliu01 kernel: [6143925.968469] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968474] wlan: [7037:I :HDD] hdd_IndicateScanResult d4:6d:50:ff:6a:92
+May  6 17:35:32 zliu01 kernel: [6143925.968481] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968487] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:d2:d1:30
+May  6 17:35:32 zliu01 kernel: [6143925.968493] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968498] wlan: [7037:I :HDD] hdd_IndicateScanResult 1c:7e:e5:94:00:fc
+May  6 17:35:32 zliu01 kernel: [6143925.968505] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968511] wlan: [7037:I :HDD] hdd_IndicateScanResult 44:94:fc:43:c7:33
+May  6 17:35:32 zliu01 kernel: [6143925.968516] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968521] wlan: [7037:I :HDD] hdd_IndicateScanResult 28:cf:da:b3:e7:7b
+May  6 17:35:32 zliu01 kernel: [6143925.968527] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968532] wlan: [7037:I :HDD] hdd_IndicateScanResult 74:d0:2b:5c:b3:74
+May  6 17:35:32 zliu01 kernel: [6143925.968537] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968542] wlan: [7037:I :HDD] hdd_IndicateScanResult 60:a4:4c:d2:d1:34
+May  6 17:35:32 zliu01 kernel: [6143925.968547] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968552] wlan: [7037:I :HDD] hdd_IndicateScanResult 0a:0b:c0:03:5e:de
+May  6 17:35:32 zliu01 kernel: [6143925.968559] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968564] wlan: [7037:I :HDD] hdd_IndicateScanResult 82:86:f2:0c:8f:1e
+May  6 17:35:32 zliu01 kernel: [6143925.968570] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968575] wlan: [7037:I :HDD] hdd_IndicateScanResult bc:ee:7b:8f:a7:60
+May  6 17:35:32 zliu01 kernel: [6143925.968584] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968594] wlan: [7037:I :HDD] hdd_IndicateScanResult 06:0b:c0:03:5e:de
+May  6 17:35:32 zliu01 kernel: [6143925.968605] wlan: [7037:I :HDD] Enter:hdd_GetWPARSNIEs
+May  6 17:35:32 zliu01 kernel: [6143925.968612] wlan: [7037:I :HDD] Exit:iw_get_scan
+May  6 17:35:32 zliu01 kernel: [6143925.968615] wlan: [7037:I :HDD] iw_get_scan: exit total 20 BSS reported !!!
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: Scan results did not fit - trying larger buffer (8192 bytes)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_giwscan
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_get_scan_results
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: freq in scan results (BSSID=60:a4:4c:27:0d:fc m=161 e=0)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: freq in scan results (BSSID=74:d0:2b:5c:b3:74 m=149 e=0)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: freq in scan results (BSSID=60:a4:4c:d2:d1:34 m=149 e=0)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wext_get_scan_qual
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: Received 8192 bytes of scan results (20 BSSes)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m WPS: Order scan results with WPS provisioning rules
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m BSS: Start scan result update 15
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m BSS: Add new id 55 BSSID 74:d0:2b:5c:b3:74 SSID 'B_legacy_AP_5G' freq 0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-BSS-ADDED 55 74:d0:2b:5c:b3:74
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: BSS: last_scan_res_used=20/32
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m New scan results available (own=0 ext=0)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-SCAN-RESULTS 
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: zliu WPS-AP-AVAILABLE-AUTH 
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS: AP 00:0c:43:44:0d:a8 changed type 0 -> 1
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS: AP[0] 00:0c:43:44:0d:a8 type=1 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS: AP[1] 84:1b:5e:6b:3e:0c type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS: AP[2] 00:23:cd:51:c8:a6 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS: AP[3] 00:12:31:23:13:14 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS: AP[4] 1c:7e:e5:94:00:fc type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS: AP[5] 60:a4:4c:d2:d1:30 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS: AP[6] 44:94:fc:43:c7:33 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS: AP[7] 60:a4:4c:d2:d1:34 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS: AP[8] bc:ee:7b:8f:a7:60 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS: AP[9] 04:a1:51:2b:03:eb type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Radio work 'scan'@0x84f06e0 done in 2.518433 seconds
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Selecting BSS from priority group 0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m 0: 00:0c:43:44:0d:a8 ssid='RalinkInitAP_440DA8' wpa_ie_len=26 rsn_ie_len=24 caps=0x11 level=-43 freq=2437  wps
+May  6 17:35:32 zliu01 wpa_supplicant[7037]:    selected based on WPS IE (Authorized MAC or Active PIN)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m    selected BSS 00:0c:43:44:0d:a8 ssid='RalinkInitAP_440DA8'
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Considering connect request: reassociate: 1  selected: 00:0c:43:44:0d:a8  bssid: 00:00:00:00:00:00  pending: 00:00:00:00:00:00  wpa_state: SCANNING  ssid=0x84f0280  current_ssid=(nil)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Request association with 00:0c:43:44:0d:a8
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m zliu wpa_supplicant_associate
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Add radio work 'connect'@0x84eedf8
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m First radio work item in the queue - schedule start immediately
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Starting radio work 'connect'@0x84eedf8 after 0.000025 second wait
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Trying to associate with 00:0c:43:44:0d:a8 (SSID='RalinkInitAP_440DA8' freq=2437 MHz)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Cancelling scan request
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m WPA: clearing own WPA/RSN IE
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Automatic auth_alg selection: 0x1
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS: Building WPS IE for (Re)Association Request
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS:  * Version (hardcoded 0x10)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS:  * Request Type
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WPS:  * Version2 (0x20)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m WPA: clearing AP WPA IE
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m WPA: clearing AP RSN IE
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m WPA: clearing own WPA/RSN IE
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m State: SCANNING -> ASSOCIATING
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: Limit connection to BSSID 00:0c:43:44:0d:a8 freq=2437 MHz based on scan results (bssid_set=0)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_associate
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: ioctl[SIOCSIWESSID]
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_drop_unencrypted
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 5 value 0x0) failed: Resource temporarily unavailable)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 6 value 0x1) failed: Resource temporarily unavailable)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: IW_AUTH_80211_AUTH_ALG: 1
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_mode
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_gen_ie
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 0 value 0x1) failed: Resource temporarily unavailable)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_cipher2wext
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 1 value 0x1) failed: Resource temporarily unavailable)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_cipher2wext
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 2 value 0x1) failed: Resource temporarily unavailable)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_keymgmt2wext
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 3 value 0x0) failed: Resource temporarily unavailable)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 10 value 0x1) failed: Resource temporarily unavailable)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_psk
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 8 value 0x1) failed: Resource temporarily unavailable)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: ioctl[SIOCSIWFREQ]
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: ioctl[SIOCSIWAP]
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: ioctl[SIOCSIWESSID]
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Setting authentication timeout: 10 sec 0 usec
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: EAPOL: External notification - EAP success=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: EAPOL: External notification - EAP fail=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portControl=Auto
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: eloop: handler =80a8730
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b1a len=8
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b1a
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b06 len=8
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b06
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b04 len=12
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b04
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b1a len=27
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b1a
+May  6 17:35:32 zliu01 kernel: [6143925.970005] wlan: [7037:I :HDD] Enter:iw_set_essid
+May  6 17:35:32 zliu01 kernel: [6143925.970021] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970024] wlan: [7037:W :HDD] iw_set_auth called with unsupported auth type 5
+May  6 17:35:32 zliu01 kernel: [6143925.970026] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970039] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970041] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970055] wlan: [7037:I :HDD] Enter:iw_set_mode
+May  6 17:35:32 zliu01 kernel: [6143925.970057] wlan: [7037:I :HDD] iw_set_mode Old Bss type = 1
+May  6 17:35:32 zliu01 kernel: [6143925.970059] wlan: [7037:I :HDD] iw_set_mode Setting AP Mode as IW_MODE_INFRA
+May  6 17:35:32 zliu01 kernel: [6143925.970061] wlan: [7037:I :HDD] Exit:iw_set_mode
+May  6 17:35:32 zliu01 kernel: [6143925.970069] wlan: [7037:I :HDD] Enter:iw_set_genie
+May  6 17:35:32 zliu01 kernel: [6143925.970071] wlan: [7037:I :HDD] iw_set_genie ioctl IE[0xDD], LEN[24]
+May  6 17:35:32 zliu01 kernel: [6143925.970074] wlan: [7037:I :HDD] iw_set_genie: IE[0xDD], LEN[24]
+May  6 17:35:32 zliu01 kernel: [6143925.970076] wlan: [7037:I :HDD] iw_set_genie Set WPS OUI(00 50 f2 04) IE(len 26)
+May  6 17:35:32 zliu01 kernel: [6143925.970078] wlan: [7037:I :HDD] Exit:iw_set_genie
+May  6 17:35:32 zliu01 kernel: [6143925.970081] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970082] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970095] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970097] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970107] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970109] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970120] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970121] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970128] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970130] wlan: [7037:W :HDD] iw_set_auth called with unsupported auth type 10
+May  6 17:35:32 zliu01 kernel: [6143925.970132] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970143] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970144] wlan: [7037:W :HDD] iw_set_auth called with unsupported auth type 8
+May  6 17:35:32 zliu01 kernel: [6143925.970146] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:32 zliu01 kernel: [6143925.970154] wlan: [7037:I :HDD] Enter:iw_set_freq
+May  6 17:35:32 zliu01 kernel: [6143925.970155] wlan: [7037:I :HDD] setCHANNEL ioctl
+May  6 17:35:32 zliu01 kernel: [6143925.970158] wlan: [7037:I :HDD] pRoamProfile->operationChannel  = 6
+May  6 17:35:32 zliu01 kernel: [6143925.970160] wlan: [7037:I :HDD] Exit:iw_set_freq
+May  6 17:35:32 zliu01 kernel: [6143925.970168] wlan: [7037:I :HDD] Enter:iw_set_ap_address
+May  6 17:35:32 zliu01 kernel: [6143925.970171] wlan: [7037:I :HDD] iw_set_ap_address 00:0c:43:44:0d:a8
+May  6 17:35:32 zliu01 kernel: [6143925.970173] wlan: [7037:I :HDD] Exit:iw_set_ap_address
+May  6 17:35:32 zliu01 kernel: [6143925.970179] wlan: [7037:I :HDD] Enter:iw_set_essid
+May  6 17:35:32 zliu01 kernel: [6143925.970182] wlan: [7037:I :HDD] iw_set_essid: Setting WAPI AUTH Type and Encryption Mode values
+May  6 17:35:32 zliu01 kernel: [6143925.970249] wlan: [7037:IH:HDD] CSR Callback: status= 10 result= 0 roamID=1
+May  6 17:35:32 zliu01 kernel: [6143925.970252] wlan: [7037:IH:HDD] CSR Callback: status= 6 result= 0 roamID=1
+May  6 17:35:32 zliu01 kernel: [6143925.970264] wlan: [7037:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:32 zliu01 kernel: [6143925.970285] wlan: [7037:I :HDD] Exit:iw_set_essid
+May  6 17:35:32 zliu01 kernel: [6143925.970306] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:32 zliu01 kernel: [6143925.970363] wlan: [22805:E :WDA] wma_create_peer: Created peer with peer_addr 00:0c:43:44:0d:a8 vdev_id 0, peer_count - 2
+May  6 17:35:32 zliu01 kernel: [6143925.970679] TXRX: ol_txrx_peer_find_add_id: Delete Peer f1539000
+May  6 17:35:32 zliu01 kernel: [6143926.003120] TXRX: Setting throttle level 0
+May  6 17:35:32 zliu01 kernel: [6143926.003128] wlan: [27017:E :WDA] TM Sending thermal mgmt cmd: low temp 0, upper temp 110, enabled 1
+May  6 17:35:32 zliu01 kernel: [6143926.011487] TXRX: Setting throttle level 1
+May  6 17:35:32 zliu01 kernel: [6143926.011492] wlan: [27017:E :WDA] TM Sending thermal mgmt cmd: low temp 90, upper temp 115, enabled 1
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8c02 len=263
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8c02
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8c02 len=174
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8c02
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b15 len=20
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b15
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: Wireless event: new AP: 00:0c:43:44:0d:a8
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_assoc_ies
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Event ASSOC (0) received
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: ioctl[SIOCGIWAP]
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m State: ASSOCIATING -> ASSOCIATED
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Associated to a new BSS: BSSID=00:0c:43:44:0d:a8
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Associated with 00:0c:43:44:0d:a8
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m WPA: Association event - clear replay counter
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m WPA: Clear old PTK
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portEnabled=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portValid=0
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portEnabled=1
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_PAE entering state CONNECTING
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: EAPOL: enable timer tick
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state IDLE
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: EAP: EAP entering state INITIALIZE
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: EAP: EAP entering state IDLE
+May  6 17:35:32 zliu01 kernel: [6143926.147288] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:32 zliu01 kernel: [6143926.147300] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:32 zliu01 kernel: [6143926.147344] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:32 zliu01 kernel: [6143926.147348] wlan: [22805:E :PE ] wlan_cfgGetInt: 333: Not valid cfg id 1
+May  6 17:35:32 zliu01 kernel: [6143926.147388] wlan: [22805:E :WDA] wma_add_sta_req_sta_mode: statype 0 vdev_id 0 aid 1 bssid 00:0c:43:44:0d:a8 staIdx 1 status 0
+May  6 17:35:32 zliu01 kernel: [6143926.147394] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:32 zliu01 kernel: [6143926.147420] wlan: [22805:IH:HDD] CSR Callback: status= 7 result= 2 roamID=1
+May  6 17:35:32 zliu01 kernel: [6143926.147422] wlan: [22805:I :HDD] ****eCSR_ROAM_ASSOCIATION_COMPLETION****
+May  6 17:35:32 zliu01 kernel: [6143926.147425] wlan: [22805:I :HDD] hdd_AssociationCompletionHandler: Set HDD connState to eConnectionState_Associated
+May  6 17:35:32 zliu01 kernel: [6143926.147427] wlan: [22805:I :HDD] hdd_connSetConnectionState: 161: ConnectionState Changed from oldState:0 to State:2
+May  6 17:35:32 zliu01 kernel: [6143926.147442] wlan: [22805:IL:HDD] hdd_wmm_connect: Entered
+May  6 17:35:32 zliu01 kernel: [6143926.147444] wlan: [22805:IL:HDD] hdd_wmm_connect: qap is 1, qosConnection is 1, acmMask is 0x0
+May  6 17:35:32 zliu01 kernel: [6143926.147446] wlan: [22805:IL:HDD] hdd_wmm_connect: ac 0 off
+May  6 17:35:32 zliu01 kernel: [6143926.147448] wlan: [22805:IL:HDD] hdd_wmm_connect: ac 1 off
+May  6 17:35:32 zliu01 kernel: [6143926.147450] wlan: [22805:IL:HDD] hdd_wmm_connect: ac 2 off
+May  6 17:35:32 zliu01 kernel: [6143926.147451] wlan: [22805:IL:HDD] hdd_wmm_connect: ac 3 off
+May  6 17:35:32 zliu01 kernel: [6143926.147453] wlan: [22805:IL:HDD] hdd_wmm_connect: Exiting
+May  6 17:35:32 zliu01 kernel: [6143926.147456] wlan: [22805:I :HDD] wlan_hdd_incr_active_session: 13317: No.# of active sessions for mode 0 = 1
+May  6 17:35:32 zliu01 kernel: [6143926.147458] wlan: 00:03:7f:00:00:10 connected to 00:0c:43:44:0d:ffffffa8
+May  6 17:35:32 zliu01 kernel: [6143926.147460] wlan: [22805:I :HDD] hdd_SendUpdateBeaconIEsEvent: Beacon IEs is now at 0013
+May  6 17:35:32 zliu01 kernel: [6143926.147462] wlan: [22805:I :HDD] hdd_SendUpdateBeaconIEsEvent: Beacon IEs length = 399
+May  6 17:35:32 zliu01 kernel: [6143926.147465] wlan: [22805:I :HDD] hdd_SendUpdateBeaconIEsEvent: Beacon IEs length to supplicant = 244
+May  6 17:35:32 zliu01 kernel: [6143926.147469] wlan: [22805:I :HDD] hdd_SendUpdateBeaconIEsEvent: Beacon IEs length to supplicant = 155
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Setting authentication timeout: 10 sec 0 usec
+May  6 17:35:32 zliu01 kernel: [6143926.147473] wlan: [22805:E :HDD] MODE 0, CH 6, LWM 0, HWM 0, TXQDEP 1500
+May  6 17:35:32 zliu01 kernel: [6143926.147476] wlan: [22805:E :HDD] wlan(6) 00:0c:43:44:0d:a8 Standalone
+May  6 17:35:32 zliu01 kernel: [6143926.147479] wlan: [22805:IL:HDD] New WiFi channel 6 gAmpChannel 0 gWiFiChannel 0
+May  6 17:35:32 zliu01 kernel: [6143926.147481] wlan: [22805:W :HDD] NLINK: netlink_broadcast failed err = -3
+May  6 17:35:32 zliu01 kernel: [6143926.147488] wlan: [7042:I :HDD] wlan_hdd_roc_request_dequeue: 800: going to dequeue roc
+May  6 17:35:32 zliu01 kernel: [6143926.147490] wlan: [7042:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:35:32 zliu01 kernel: [6143926.147492] wlan: [7042:I :HDD] wlan_hdd_roc_request_dequeue: 814: list is empty
+May  6 17:35:32 zliu01 kernel: [6143926.147533] IPv6: ADDRCONF(NETDEV_CHANGE): wlan2: link becomes ready
+May  6 17:35:32 zliu01 kernel: [6143926.147538] wlan: [0:I :HDD] hdd_set_multicast_list: mc_count = 3
+May  6 17:35:32 zliu01 kernel: [6143926.147542] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[0] = 01:00:5e:00:00:01
+May  6 17:35:32 zliu01 kernel: [6143926.147546] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[1] = 01:00:5e:00:00:fb
+May  6 17:35:32 zliu01 kernel: [6143926.147550] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[2] = 33:33:00:00:00:01
+May  6 17:35:32 zliu01 kernel: [6143926.147593] wlan: [0:I :HDD] hdd_set_multicast_list: mc_count = 4
+May  6 17:35:32 zliu01 kernel: [6143926.147597] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[0] = 01:00:5e:00:00:01
+May  6 17:35:32 zliu01 kernel: [6143926.147600] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[1] = 01:00:5e:00:00:fb
+May  6 17:35:32 zliu01 kernel: [6143926.147603] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[2] = 33:33:00:00:00:01
+May  6 17:35:32 zliu01 kernel: [6143926.147606] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[3] = 33:33:ff:00:00:10
+May  6 17:35:32 zliu01 kernel: [6143926.147627] wlan: [7042:I :HDD] hdd_netdev_notifier_call: wlan2 New Net Device State = 4
+May  6 17:35:32 zliu01 kernel: [6143926.147667] wlan: [22805:E :HDD] wlan_hdd_tdls_connection_callback: 2027: pHddCtx or pHddTdlsCtx points to NULL
+May  6 17:35:32 zliu01 kernel: [6143926.147670] wlan: [22805:I :HDD] Enter:wlan_hdd_cfg80211_update_bss_db
+May  6 17:35:32 zliu01 kernel: [6143926.147675] wlan: [22805:I :HDD] Enter:wlan_hdd_cfg80211_inform_bss
+May  6 17:35:32 zliu01 kernel: [6143926.147685] wlan: [22805:I :HDD] hdd_AssociationCompletionHandler: sending connect indication to nl80211:for bssid 00:0c:43:44:0d:a8 reason:2 and Status:7
+May  6 17:35:32 zliu01 kernel: [6143926.147691] wlan: [22805:IL:HDD] hdd_wmm_assoc: Entered
+May  6 17:35:32 zliu01 kernel: [6143926.147695] wlan: [22805:IL:HDD] hdd_wmm_assoc: U-APSD mask is 0x00
+May  6 17:35:32 zliu01 kernel: [6143926.147698] wlan: [22805:E :SME] sme_UpdateDSCPtoUPMapping: QOS Mapping IE not present
+May  6 17:35:32 zliu01 kernel: [6143926.147701] wlan: [22805:IL:HDD] hdd_wmm_init: Entered
+May  6 17:35:32 zliu01 kernel: [6143926.147704] wlan: [22805:IL:HDD] hdd_wmm_assoc: Exiting
+May  6 17:35:32 zliu01 kernel: [6143926.147710] wlan: [22805:I :HDD] hdd_roamRegisterSTA: WAPI STA Registered: 0
+May  6 17:35:32 zliu01 kernel: [6143926.147713] wlan: [22805:IM:HDD] HDD register TL Sec_enabled= 0.
+May  6 17:35:32 zliu01 kernel: [6143926.147716] wlan: [22805:IH:HDD] HDD register TL QoS_enabled=1
+May  6 17:35:32 zliu01 kernel: [6143926.147719] wlan: [22805:IH:HDD] hdd_roamRegisterSTA: HDD register TL ucInitState=1
+May  6 17:35:32 zliu01 kernel: [6143926.147726] wlan: [22805:IM:HDD] STA type 0 fConnected 1
+May  6 17:35:32 zliu01 kernel: [6143926.147729] wlan: [22805:IM:HDD] ULA auth StaId= 1. Changing TL state to CONNECTEDat Join time
+May  6 17:35:32 zliu01 kernel: [6143926.147733] wlan: [22805:I :HDD] hdd_connSetAuthenticated: 146: Authenticated state Changed from oldState:0 to State:0
+May  6 17:35:32 zliu01 kernel: [6143926.147742] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:32 zliu01 kernel: [6143926.147746] wlan: [22805:IH:HDD] CSR Callback: status= 5 result= 0 roamID=1
+May  6 17:35:32 zliu01 kernel: [6143926.147755] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:32 zliu01 kernel: [6143926.147770] wlan: [7042:I :HDD] wlan_hdd_roc_request_dequeue: 800: going to dequeue roc
+May  6 17:35:32 zliu01 kernel: [6143926.147774] wlan: [7042:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:35:32 zliu01 kernel: [6143926.147777] wlan: [7042:I :HDD] wlan_hdd_roc_request_dequeue: 814: list is empty
+May  6 17:35:32 zliu01 kernel: [6143926.148197] wlan: [7037:I :HDD] Enter:iw_get_ap_address
+May  6 17:35:32 zliu01 kernel: [6143926.148202] wlan: [7037:I :HDD] Exit:iw_get_ap_address
+May  6 17:35:32 zliu01 kernel: [6143926.148260] wlan: [7037:I :HDD] hdd_netdev_notifier_call: wlan2 New Net Device State = 4
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: wpas_m Cancelling scan request
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x11043 ([UP][RUNNING][LOWER_UP])
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x11003 ([UP][LOWER_UP])
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:32 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:33 zliu01 wpa_supplicant[7037]: eloop: handler =808cc80
+May  6 17:35:33 zliu01 kernel: [6143927.305398] wlan: [0:I :HDD] hdd_set_multicast_list: mc_count = 5
+May  6 17:35:33 zliu01 kernel: [6143927.305405] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[0] = 01:00:5e:00:00:01
+May  6 17:35:33 zliu01 kernel: [6143927.305409] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[1] = 01:00:5e:00:00:fb
+May  6 17:35:33 zliu01 kernel: [6143927.305413] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[2] = 33:33:00:00:00:01
+May  6 17:35:33 zliu01 kernel: [6143927.305416] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[3] = 33:33:ff:00:00:10
+May  6 17:35:33 zliu01 kernel: [6143927.305420] wlan: [0:I :HDD] hdd_set_multicast_list: mlist[4] = 33:33:00:00:00:fb
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: eloop: handler =80a8820
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: startWhen --> 0
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_PAE entering state CONNECTING
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: txStart
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: TX EAPOL: dst=00:0c:43:44:0d:a8
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: eloop: handler =808cc80
+May  6 17:35:34 zliu01 kernel: [6143928.152536] zliu HTT_TX_COMP_IND
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=14
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: wpas_m Setting authentication timeout: 70 sec 0 usec
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: Received EAP-Packet frame
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_PAE entering state RESTART
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: EAP entering state INITIALIZE
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: EAP entering state IDLE
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_PAE entering state AUTHENTICATING
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state REQUEST
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: getSuppRsp
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: EAP entering state RECEIVED
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: Received EAP-Request id=28 method=1 vendor=0 vendorMethod=0
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: EAP entering state IDENTITY
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: wpas_m CTRL-EVENT-EAP-STARTED EAP authentication started
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: Status notification: started (param=)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-EAP-STATUS status='started' parameter=''
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: EAP entering state SEND_RESPONSE
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: EAP entering state IDLE
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RESPONSE
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: txSuppRsp
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: TX EAPOL: dst=00:0c:43:44:0d:a8
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RECEIVE
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=18
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: Received EAP-Packet frame
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state REQUEST
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: getSuppRsp
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: EAP entering state RECEIVED
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: Received EAP-Request id=29 method=254 vendor=14122 vendorMethod=1
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: EAP entering state GET_METHOD
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: wpas_m CTRL-EVENT-EAP-PROPOSED-METHOD vendor=14122 method=1
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: Status notification: accept proposed method (param=WSC)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-EAP-STATUS status='accept proposed method' parameter='WSC'
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: Initialize selected EAP method: vendor 14122 method 1 (WSC)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS: AP PIN dev_password - hexdump(len=4): 36 36 36 36
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP-WSC: Fragment size limit 1398
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: wpas_m CTRL-EVENT-EAP-METHOD EAP vendor 14122 method 1 (WSC) selected
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: EAP entering state METHOD
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP-WSC: Received packet: Op-Code 1 Flags 0x0 Message Length 0
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP-WSC: Received start
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP-WSC: WAIT_START -> MESG
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS: Enrollee Nonce - hexdump(len=16): ab 84 0c c6 02 b0 3d ef 84 22 79 f3 14 a3 6c 28
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS: Building Message M1
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Version (hardcoded 0x10)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Message Type (4)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * UUID-E
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * MAC Address (00:03:7f:00:00:10)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Enrollee Nonce
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Public Key
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS: Generate new DH keys
+May  6 17:35:34 zliu01 kernel: [6143928.162921] zliu HTT_TX_COMP_IND
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS: DH Private Key - hexdump(len=192): 7a ec b9 4b c8 a6 2e 60 7d 16 2c 36 e1 13 9b 2e 7b fa b3 50 a4 6a 32 95 ae 53 40 c6 d0 82 0a b4 9c d9 cd a1 49 2d 25 14 ee 00 cd a6 a0 2d fa 9f aa 41 be ce 73 38 9b f1 08 83 17 4e 19 f0 07 99 1e e4 e2 5a 12 8c f5 49 e9 54 a6 93 a8 6d a8 f3 52 c7 cc d4 eb cc de aa 2c b1 dc ce 81 a3 3a c4 79 e9 2a cc 07 ae 05 a1 0c 05 74 d5 60 94 31 da f8 cb 71 e1 c8 e8 d8 b0 78 79 60 9e 78 e6 e2 1b 4f 0c ad cc 93 da d0 4c 9c b8 59 1c 23 46 94 0e 9d b2 07 fb 82 1d c7 f1 ad 27 4e c4 77 d0 21 01 cc b0 64 85 8b b6 a6 58 eb 1a cf 79 dc 22 96 33 95 c1 02 e5 e1 c6 dc f0 8e ff 3e 00 d4 57 57 58
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS: DH own Public Key - hexdump(len=192): af 43 80 92 9d 70 b3 8e 0f 15 87 74 15 b1 0a 39 74 5a 0a 83 d7 46 e8 ca a3 24 01 7d e1 a6 95 d0 d8 2f cc 47 ee 84 f2 5c 3e 36 48 dd 2e 95 2a 1b 16 5d d6 30 5d 0b 81 4f 7e e1 42 61 a1 25 b6 23 ad 37 ac fc 28 c9 4a 10 d4 eb 0a 19 1b 94 ad 11 2d 32 26 f5 05 3d ec 8b 5c ae 97 a6 90 6b 94 7f 79 db bc f0 4e e8 41 0b 96 ce ef 0a fd 1e 80 29 37 b7 42 f6 18 08 a5 d0 34 dc 58 00 c8 37 97 6b 1c 86 dd d9 9b df 76 bf e0 53 44 48 8a 27 d0 ac b7 be fe 12 66 a7 aa 64 b3 06 96 0f 82 61 25 a1 83 5b 60 3c 6e 75 aa eb 0b 1b 82 97 88 e4 42 99 b6 77 3c 30 e1 43 4c 11 e0 76 f0 c3 b5 d5 9a bc
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Authentication Type Flags
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Encryption Type Flags
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Connection Type Flags
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Config Methods (2108)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Wi-Fi Protected Setup State (1)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Manufacturer
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Model Name
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Model Number
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Serial Number
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Primary Device Type
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Device Name
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * RF Bands (3)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Association State
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Device Password ID (0)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Configuration Error (0)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * OS Version
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: WPS:  * Version2 (0x20)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP-WSC: Generating Response
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP-WSC: Sending out 362 bytes (message sent completely)
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x84efac0
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: EAP entering state SEND_RESPONSE
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAP: EAP entering state IDLE
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RESPONSE
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: txSuppRsp
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: TX EAPOL: dst=00:0c:43:44:0d:a8
+May  6 17:35:34 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RECEIVE
+May  6 17:35:34 zliu01 kernel: [6143928.178310] zliu HTT_TX_COMP_IND
+May  6 17:35:35 zliu01 kernel: [6143929.017897] TXRX: Setting throttle level 2
+May  6 17:35:35 zliu01 kernel: [6143929.017903] wlan: [27017:E :WDA] TM Sending thermal mgmt cmd: low temp 90, upper temp 125, enabled 1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: eloop: handler =808cc80
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=467
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: Received EAP-Packet frame
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state REQUEST
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: getSuppRsp
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state RECEIVED
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: Received EAP-Request id=30 method=254 vendor=14122 vendorMethod=1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state METHOD
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: Received packet: Op-Code 4 Flags 0x0 Message Length 0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Processing received message (len=449 op_code=4)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Received WSC_MSG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Received M2
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Registrar Nonce - hexdump(len=16): 2d a9 e2 f0 f8 c7 0f c3 40 65 1c 93 9f 5f 82 11
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: UUID-R - hexdump(len=16): 28 80 28 80 28 80 18 80 a8 80 00 0c 43 44 0d a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Device Password ID 0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: DH Private Key - hexdump(len=192): 7a ec b9 4b c8 a6 2e 60 7d 16 2c 36 e1 13 9b 2e 7b fa b3 50 a4 6a 32 95 ae 53 40 c6 d0 82 0a b4 9c d9 cd a1 49 2d 25 14 ee 00 cd a6 a0 2d fa 9f aa 41 be ce 73 38 9b f1 08 83 17 4e 19 f0 07 99 1e e4 e2 5a 12 8c f5 49 e9 54 a6 93 a8 6d a8 f3 52 c7 cc d4 eb cc de aa 2c b1 dc ce 81 a3 3a c4 79 e9 2a cc 07 ae 05 a1 0c 05 74 d5 60 94 31 da f8 cb 71 e1 c8 e8 d8 b0 78 79 60 9e 78 e6 e2 1b 4f 0c ad cc 93 da d0 4c 9c b8 59 1c 23 46 94 0e 9d b2 07 fb 82 1d c7 f1 ad 27 4e c4 77 d0 21 01 cc b0 64 85 8b b6 a6 58 eb 1a cf 79 dc 22 96 33 95 c1 02 e5 e1 c6 dc f0 8e ff 3e 00 d4 57 57 58
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: DH peer Public Key - hexdump(len=192): e0 f9 be fa cd 27 cb a3 df c0 8e 6f e5 ec 6c 9c a4 ef 10 7f af a6 18 df 4d b7 c2 88 17 d5 f8 11 3b a8 c2 50 9b f5 8f 1f 85 e5 52 d0 84 7b 18 53 c5 2f 59 0d d7 36 62 a5 2a c4 02 67 cb ad fa d4 d5 2f 0f 68 3b 83 6e c2 9c ac b8 ce ff e4 ac 70 8c 1c 71 44 a3 bf 1b 8e 54 0e e4 9a 6a a7 2d aa 19 84 f8 dd 62 8b 55 61 e7 ed 29 09 13 af 03 d2 1f 7a 6d 65 16 d7 9f 50 c7 f5 c1 fe 2a 47 fc e2 c4 9f d4 9d 54 97 ca e8 d1 fa 2b 62 40 09 00 26 bb 4c 09 77 ee 1a e4 8e 58 bf c0 de 0c d0 2a 50 88 ce 57 14 72 25 85 76 56 4b 30 ad 63 de d6 0e 44 bb fc cf a7 59 c9 d5 6f 67 b0 60 13 71 6c c2
+May  6 17:35:35 zliu01 avahi-autoipd(wlan2)[7738]: Successfully claimed IP address 169.254.2.82
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: DH shared key - hexdump(len=192): c0 bb 36 56 a2 06 ad e3 e0 a5 63 e0 1b 5c 3b 25 c7 e7 69 5c 7e 03 68 9b 1c 24 ae d7 3e 9f 86 18 f1 1e 65 e8 0a 46 83 0d 2c 5c cb 29 39 05 a3 c8 a9 bf 45 db c2 cd fe 9d 89 e9 f6 5e 18 91 99 4b 8d f3 56 84 f0 87 13 0a bb 54 e1 38 7d d7 63 f2 2e cb 0a 02 9a 6a 19 18 4a a4 13 01 e3 66 09 e5 f4 e5 a1 49 16 e2 34 a4 57 52 65 d6 28 77 51 bc 80 46 d3 77 d0 c8 60 17 52 90 a0 48 df 0a 31 a2 54 ca e2 dc 5e eb 14 81 75 bb fe 17 12 44 3e fd 99 ac 4f 1b 46 4f 37 dd 61 0e c6 00 72 cd 48 cd 06 cd a0 7a 3b c0 e0 03 a4 50 b2 d8 de a7 b6 2b c9 4b 87 ba aa b9 cf a4 1d fe b9 cc f8 c3 60 20
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: DHKey - hexdump(len=32): 0f 57 29 ba 5e 9f 2e e5 a3 5c ec f9 e7 85 19 f6 64 d8 1e 93 45 a8 93 94 ef 69 f3 fe a5 ad 0e 5a
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: KDK - hexdump(len=32): 68 6b 72 78 da 79 cd e1 6b 23 f9 07 2b 8c 28 bf ea d6 0e f6 8f 5c a6 85 38 fc db f7 a4 43 9d c8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: AuthKey - hexdump(len=32): f3 bc d7 2a cf 04 e3 56 e4 7b c4 fe 3b 1b 2a 43 26 65 07 ec ec b3 95 4f c5 9f 11 8b 6d 77 0d 68
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: KeyWrapKey - hexdump(len=16): 09 b6 30 7e e6 3c 47 4b 72 6f 6d d8 83 9a d0 31
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: EMSK - hexdump(len=32): 96 99 a5 bb 88 0f 57 ee 24 05 4c 04 fd 5d f2 30 2a 7f 2e 0a e2 ba 7f 1f 98 7a 17 bf 3b 63 47 d4
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Primary Device Type: 6-0050F204-1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Building Message M3
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: PSK1 - hexdump(len=16): 34 da bb 31 29 1e 95 aa 18 5d c6 bc af 24 50 d6
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: PSK2 - hexdump(len=16): 34 da bb 31 29 1e 95 aa 18 5d c6 bc af 24 50 d6
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Version (hardcoded 0x10)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Message Type (7)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Registrar Nonce
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: E-S1 - hexdump(len=16): a1 40 ac 15 53 c7 14 54 57 2a db 4a 10 73 21 54
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: E-S2 - hexdump(len=16): 90 e9 ca 46 26 69 e0 09 ce 23 b2 f0 81 98 ca 0a
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * E-Hash1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: E-Hash1 - hexdump(len=32): 3b 53 11 63 43 ef 5a 06 c3 9f fa 9f 61 72 bf b3 e9 d8 9c 78 2d 86 16 23 52 37 5e 2b b6 0e 97 f9
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * E-Hash2
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: E-Hash2 - hexdump(len=32): fc 0e 6a dc d8 da 51 db bf 8a 29 2e 15 c9 3b de 1a c5 d8 0b 01 74 3e bf 32 d3 5a 2d 75 89 f8 a3
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Version2 (0x20)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Authenticator
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: Generating Response
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: Sending out 124 bytes (message sent completely)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x84effc8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state SEND_RESPONSE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state IDLE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RESPONSE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: txSuppRsp
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: TX EAPOL: dst=00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RECEIVE
+May  6 17:35:35 zliu01 kernel: [6143929.296378] zliu HTT_TX_COMP_IND
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=210
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: Received EAP-Packet frame
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state REQUEST
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: getSuppRsp
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state RECEIVED
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: Received EAP-Request id=31 method=254 vendor=14122 vendorMethod=1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state METHOD
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: Received packet: Op-Code 4 Flags 0x0 Message Length 0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Processing received message (len=192 op_code=4)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Received WSC_MSG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Received M4
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: R-Hash1 - hexdump(len=32): 04 66 bb 84 68 5a c2 95 3f ea 68 34 d3 2e 12 f8 6c 74 f2 7d 07 80 e5 8b b3 58 4e fa 26 a4 fa d3
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: R-Hash2 - hexdump(len=32): eb 71 b1 08 cd 12 f3 37 67 43 5e 32 9c f1 01 be e4 24 41 14 26 11 14 d2 09 e1 17 2b 99 99 c8 f0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Processing decrypted Encrypted Settings attribute
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: R-SNonce1 - hexdump(len=16): 37 f5 25 bd 0d 63 72 d0 4f 3b 0d c7 a5 c5 31 3a
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Registrar proved knowledge of the first half of the device password
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Building Message M5
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Version (hardcoded 0x10)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Message Type (9)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Registrar Nonce
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * E-SNonce1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Key Wrap Authenticator
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Encrypted Settings
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Version2 (0x20)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Authenticator
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: Generating Response
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: Sending out 120 bytes (message sent completely)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x84effc8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state SEND_RESPONSE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state IDLE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RESPONSE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: txSuppRsp
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: TX EAPOL: dst=00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RECEIVE
+May  6 17:35:35 zliu01 kernel: [6143929.325401] zliu HTT_TX_COMP_IND
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=138
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: Received EAP-Packet frame
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state REQUEST
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: getSuppRsp
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state RECEIVED
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: Received EAP-Request id=32 method=254 vendor=14122 vendorMethod=1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state METHOD
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: Received packet: Op-Code 4 Flags 0x0 Message Length 0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Processing received message (len=120 op_code=4)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Received WSC_MSG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Received M6
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Processing decrypted Encrypted Settings attribute
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: R-SNonce2 - hexdump(len=16): ed 29 91 83 b4 d7 2f c1 65 1a 06 2a 3b 15 c5 c3
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Registrar proved knowledge of the second half of the device password
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Building Message M7
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Version (hardcoded 0x10)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Message Type (11)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Registrar Nonce
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * E-SNonce2
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Key Wrap Authenticator
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Encrypted Settings
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Version2 (0x20)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Authenticator
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: Generating Response
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: Sending out 120 bytes (message sent completely)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x84f0668
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state SEND_RESPONSE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state IDLE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RESPONSE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: txSuppRsp
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: TX EAPOL: dst=00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RECEIVE
+May  6 17:35:35 zliu01 kernel: [6143929.332908] zliu HTT_TX_COMP_IND
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=234
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: Received EAP-Packet frame
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state REQUEST
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: getSuppRsp
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state RECEIVED
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: Received EAP-Request id=33 method=254 vendor=14122 vendorMethod=1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state METHOD
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: Received packet: Op-Code 4 Flags 0x0 Message Length 0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Processing received message (len=216 op_code=4)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Received WSC_MSG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Received M8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Processing decrypted Encrypted Settings attribute
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Received Credential
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Process Credential
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Network Index: 49
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Authentication Type: 0x22
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Encryption Type: 0xc
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Network Key Index: 1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Network Key - hexdump(len=64): 62 62 30 34 34 63 65 31 63 35 64 65 62 30 38 64 35 33 37 61 31 36 33 64 31 62 31 39 30 38 38 61 33 33 63 64 32 34 36 31 30 30 37 37 64 33 63 30 30 30 63 34 33 32 33 39 66 61 64 35 63 61 36 61
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: MAC Address 00:03:7f:00:00:10
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m WPS-CRED-RECEIVED 
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Received Credential attribute - hexdump(len=127): 10 0e 00 7b 10 26 00 01 31 10 45 00 13 52 61 6c 69 6e 6b 49 6e 69 74 41 50 5f 34 34 30 44 41 38 10 03 00 02 00 22 10 0f 00 02 00 0c 10 28 00 01 01 10 27 00 40 62 62 30 34 34 63 65 31 63 35 64 65 62 30 38 64 35 33 37 61 31 36 33 64 31 62 31 39 30 38 38 61 33 33 63 64 32 34 36 31 30 30 37 37 64 33 63 30 30 30 63 34 33 32 33 39 66 61 64 35 63 61 36 61 10 20 00 06 00 03 7f 00 00 10
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Authentication Type 0x22
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Encryption Type 0xc
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Network Key Index 1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Network Key - hexdump(len=64): 62 62 30 34 34 63 65 31 63 35 64 65 62 30 38 64 35 33 37 61 31 36 33 64 31 62 31 39 30 38 38 61 33 33 63 64 32 34 36 31 30 30 37 37 64 33 63 30 30 30 63 34 33 32 33 39 66 61 64 35 63 61 36 61
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: MAC Address 00:03:7f:00:00:10
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Workaround - convert mixed-mode auth_type into WPA2PSK
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Replace WPS network block based on the received credential
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_get_capa
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: The AP was not found from BSS table - use credential as-is
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Building Message WSC_Done
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Version (hardcoded 0x10)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Message Type (15)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Enrollee Nonce
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Registrar Nonce
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS:  * Version2 (0x20)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m WPS-SUCCESS 
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> MESG
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: Generating Response
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: Sending out 60 bytes (message sent completely)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP-WSC: MESG -> FAIL
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: method process -> ignore=FALSE methodState=DONE decision=FAIL eapRespData=0x84f0208
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state SEND_RESPONSE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state IDLE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RESPONSE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: txSuppRsp
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: TX EAPOL: dst=00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RECEIVE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: Received EAP-Packet frame
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state REQUEST
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: getSuppRsp
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state RECEIVED
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: Received EAP-Failure
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: Status notification: completion (param=failure)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: zliu CTRL-EVENT-EAP-STATUS status='completion' parameter='failure'
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state FAILURE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m CTRL-EVENT-EAP-FAILURE EAP authentication failed
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_PAE entering state HELD
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: Supplicant port status: Unauthorized
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state RECEIVE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state FAIL
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state IDLE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL authentication completed - result=FAILURE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Network configuration replaced - try to associate with the received credential (freq=0)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Request to deauthenticate - bssid=00:0c:43:44:0d:a8 pending_bssid=00:00:00:00:00:00 reason=3 state=ASSOCIATED
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_deauthenticate
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_mlme
+May  6 17:35:35 zliu01 kernel: [6143929.344263] zliu HTT_TX_COMP_IND
+May  6 17:35:35 zliu01 kernel: [6143929.345904] wlan: [7037:I :HDD] Enter:iw_set_mlme
+May  6 17:35:35 zliu01 kernel: [6143929.345931] wlan: [7037:IH:HDD] CSR Callback: status= 12 result= 19 roamID=0
+May  6 17:35:35 zliu01 kernel: [6143929.345933] wlan: [7037:IH:HDD] Roaming started due to connection lost
+May  6 17:35:35 zliu01 kernel: [6143929.345946] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:35 zliu01 kernel: [6143929.346058] WDA_TxAbort-27080: WDA_TxAbort: vdevid 0 bssid 00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 kernel: [6143929.346087] wlan: [22805:IH:HDD] CSR Callback: status= 32 result= 46 roamID=0
+May  6 17:35:35 zliu01 kernel: [6143929.346093] wlan: [22805:IH:HDD] hdd_tdlsStatusUpdate: DEL_ALL_TDLS_PEER_IND staIdx 0 00:00:00:00:00:00
+May  6 17:35:35 zliu01 kernel: [6143929.346097] wlan: [22805:I :HDD] hdd_RoamTdlsStatusUpdateHandler: TDLS ctx is null, ignore roamResult (46)
+May  6 17:35:35 zliu01 kernel: [6143929.347556] wlan: [22805:E :PE ] limSendDisassocCnf: 3828: FT Preauth Session (d6868000,0) Cleanup
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_disconnect
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: ioctl[SIOCSIWAP]
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: ioctl[SIOCSIWESSID]
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Event DEAUTH (12) received
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Deauthentication notification
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m  * reason 3 (locally generated)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Deauthentication frame IE(s) - hexdump(len=0): [NULL]
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m CTRL-EVENT-DISCONNECTED bssid=00:0c:43:44:0d:a8 reason=3 locally_generated=1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Auto connect enabled: try to reconnect (wps=1/0 wpa_state=6)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Setting scan request: 0.100000 sec
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Radio work 'connect'@0x84eedf8 done in 3.575073 seconds
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Ignore connection failure due to local request to disconnect
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m WPA: Clear old PMK and PTK
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Disconnect event - remove keys
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m State: ASSOCIATED -> DISCONNECTED
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portEnabled=0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_PAE entering state DISCONNECTED
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: Supplicant port status: Unauthorized
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state INITIALIZE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAP: EAP entering state DISABLED
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portValid=0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m State: DISCONNECTED -> DISCONNECTED
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portEnabled=0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portValid=0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Checking whether fast association without a new scan can be used
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Selecting BSS from priority group 0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m 0: 00:0c:43:44:0d:a8 ssid='RalinkInitAP_440DA8' wpa_ie_len=26 rsn_ie_len=24 caps=0x11 level=-43 freq=2437  wps
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m    selected based on RSN IE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m    selected BSS 00:0c:43:44:0d:a8 ssid='RalinkInitAP_440DA8'
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Continue association from timeout
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b15 len=20
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b15
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Wireless event: new AP: 00:00:00:00:00:00
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Event DISASSOC (1) received
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Disassociation notification
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Auto connect enabled: try to reconnect (wps=0/0 wpa_state=0)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Do not request new immediate scan
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m WPA: Clear old PMK and PTK
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Disconnect event - remove keys
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m State: DISCONNECTED -> DISCONNECTED
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portEnabled=0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portValid=0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b1a len=8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b1a
+May  6 17:35:35 zliu01 kernel: [6143929.547634] TXRX: ol_txrx_peer_detach:peer f1539000 (00:0c:43:44:0d:a8)
+May  6 17:35:35 zliu01 kernel: [6143929.547640] wlan: [22805:E :WDA] wma_remove_peer: Removed peer with peer_addr 00:0c:43:44:0d:a8 vdevid 0 peer_count 1
+May  6 17:35:35 zliu01 kernel: [6143929.547651] wlan: [22805:E :WDA] wmi_unified_vdev_down_send: vdev_id 0
+May  6 17:35:35 zliu01 kernel: [6143929.547669] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:35 zliu01 kernel: [6143929.547724] wlan: [22805:IH:HDD] CSR Callback: status= 8 result= 5 roamID=0
+May  6 17:35:35 zliu01 kernel: [6143929.547726] wlan: [22805:I :HDD] ****eCSR_ROAM_DISASSOCIATED****
+May  6 17:35:35 zliu01 kernel: [6143929.547739] wlan: [22805:I :HDD] hdd_DisConnectHandler: Set HDD connState to eConnectionState_Disconnecting
+May  6 17:35:35 zliu01 kernel: [6143929.547741] wlan: [22805:I :HDD] hdd_connSetConnectionState: 161: ConnectionState Changed from oldState:2 to State:5
+May  6 17:35:35 zliu01 kernel: [6143929.547747] wlan: [22805:I :HDD] wlan_hdd_decr_active_session: 13350: No.# of active sessions for mode 0 = 0
+May  6 17:35:35 zliu01 kernel: [6143929.547749] wlan: [22805:IL:HDD] hdd_wmm_init: Entered
+May  6 17:35:35 zliu01 kernel: [6143929.547750] wlan: disconnected
+May  6 17:35:35 zliu01 kernel: [6143929.547753] wlan: [22805:E :HDD] wlan(0) 00:00:00:00:00:00 Standalone
+May  6 17:35:35 zliu01 kernel: [6143929.547758] wlan: [22805:IL:HDD] WiFi unassociated; gAmpChannel 0 gWiFiChannel 6
+May  6 17:35:35 zliu01 kernel: [6143929.547760] wlan: [22805:W :HDD] NLINK: netlink_broadcast failed err = -3
+May  6 17:35:35 zliu01 kernel: [6143929.547762] wlan: [22805:IH:HDD] hdd_DisConnectHandler: sent disconnected event to nl80211
+May  6 17:35:35 zliu01 kernel: [6143929.547767] wlan: [22805:IL:HDD] hdd_wmm_adapter_clear: Entered
+May  6 17:35:35 zliu01 kernel: [6143929.547782] wlan: [22805:I :HDD] hdd_DisConnectHandler: Set HDD connState to eConnectionState_NotConnected
+May  6 17:35:35 zliu01 kernel: [6143929.547784] wlan: [22805:I :HDD] hdd_connSetConnectionState: 161: ConnectionState Changed from oldState:5 to State:0
+May  6 17:35:35 zliu01 kernel: [6143929.547787] wlan: [22805:E :HDD] wlan_hdd_tdls_disconnection_callback: 2067: pHddCtx or pHddTdlsCtx points to NULL
+May  6 17:35:35 zliu01 kernel: [6143929.547792] wlan: [22805:I :HDD] wlan_hdd_set_mc_addr_list: 8740: gMCAddrListEnable is not enabled in INI
+May  6 17:35:35 zliu01 kernel: [6143929.547796] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:35 zliu01 kernel: [6143929.547800] wlan: [7037:I :HDD] Exit:iw_set_mlme
+May  6 17:35:35 zliu01 kernel: [6143929.547804] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:35 zliu01 kernel: [6143929.547811] wlan: [28849:I :HDD] wlan_hdd_roc_request_dequeue: 800: going to dequeue roc
+May  6 17:35:35 zliu01 kernel: [6143929.547813] wlan: [28849:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:35:35 zliu01 kernel: [6143929.547814] wlan: [7037:I :HDD] In iw_get_mode
+May  6 17:35:35 zliu01 kernel: [6143929.547816] wlan: [28849:I :HDD] wlan_hdd_roc_request_dequeue: 814: list is empty
+May  6 17:35:35 zliu01 kernel: [6143929.547820] wlan: [7037:I :HDD] iw_get_mode returns IW_MODE_INFRA
+May  6 17:35:35 zliu01 kernel: [6143929.547865] wlan: [7037:I :HDD] Enter:iw_set_ap_address
+May  6 17:35:35 zliu01 kernel: [6143929.547870] wlan: [7037:I :HDD] iw_set_ap_address 00:00:00:00:00:00
+May  6 17:35:35 zliu01 kernel: [6143929.547872] wlan: [7037:I :HDD] Exit:iw_set_ap_address
+May  6 17:35:35 zliu01 kernel: [6143929.547884] wlan: [7037:I :HDD] Enter:iw_set_essid
+May  6 17:35:35 zliu01 kernel: [6143929.547999] TXRX: ol_rx_peer_unmap_handler: Remove the ID 11 reference to peer f1539000
+May  6 17:35:35 zliu01 kernel: [6143929.548003] TXRX: ol_rx_peer_unmap_handler: Remove the ID 59 reference to peer f1539000
+May  6 17:35:35 zliu01 kernel: [6143929.548006] TXRX: Deleting peer f1539000 (00:0c:43:44:0d:a8)
+May  6 17:35:35 zliu01 kernel: [6143929.548200] wlan: [23103:I :HDD] hdd_netdev_notifier_call: wlan2 New Net Device State = 4
+May  6 17:35:35 zliu01 kernel: [6143929.552690] TXRX: Setting throttle level 0
+May  6 17:35:35 zliu01 kernel: [6143929.552695] wlan: [27017:E :WDA] TM Sending thermal mgmt cmd: low temp 0, upper temp 110, enabled 1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPS: Continuing association after eapol_cb
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Selecting BSS from priority group 0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m 0: 00:0c:43:44:0d:a8 ssid='RalinkInitAP_440DA8' wpa_ie_len=26 rsn_ie_len=24 caps=0x11 level=-43 freq=2437  wps
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m    selected based on RSN IE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m    selected BSS 00:0c:43:44:0d:a8 ssid='RalinkInitAP_440DA8'
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Considering connect request: reassociate: 1  selected: 00:0c:43:44:0d:a8  bssid: 00:00:00:00:00:00  pending: 00:00:00:00:00:00  wpa_state: DISCONNECTED  ssid=0x84f0280  current_ssid=(nil)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Request association with 00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m zliu wpa_supplicant_associate
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Re-association to the same ESS
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Add radio work 'connect'@0x84eedf8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m First radio work item in the queue - schedule start immediately
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: eloop: handler =8077840
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Starting radio work 'connect'@0x84eedf8 after 0.000029 second wait
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Trying to associate with 00:0c:43:44:0d:a8 (SSID='RalinkInitAP_440DA8' freq=2437 MHz)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Cancelling scan request
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m WPA: clearing own WPA/RSN IE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Automatic auth_alg selection: 0x1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Overriding auth_alg selection: 0x1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RSN: PMKSA cache search - network_ctx=0x84f0280 try_opportunistic=0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RSN: Search for BSSID 00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RSN: No PMKSA cache entry found
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m RSN: using IEEE 802.11i/D9.0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m WPA: Selected cipher suites: group 8 pairwise 24 key_mgmt 2 proto 2
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPA: set AP WPA IE - hexdump(len=28): dd 1a 00 50 f2 01 01 00 00 50 f2 02 02 00 00 50 f2 02 00 50 f2 04 01 00 00 50 f2 02
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPA: set AP RSN IE - hexdump(len=26): 30 18 01 00 00 0f ac 02 02 00 00 0f ac 02 00 0f ac 04 01 00 00 0f ac 02 00 00
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m WPA: using GTK TKIP
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m WPA: using PTK CCMP
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m WPA: using KEY_MGMT WPA-PSK
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WPA: Set own WPA IE default - hexdump(len=22): 30 14 01 00 00 0f ac 02 01 00 00 0f ac 04 01 00 00 0f ac 02 00 00
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m State: DISCONNECTED -> ASSOCIATING
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Limit connection to BSSID 00:0c:43:44:0d:a8 freq=2437 MHz based on scan results (bssid_set=0)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_associate
+May  6 17:35:35 zliu01 kernel: [6143929.558904] wlan: [7037:I :HDD] Enter:iw_set_essid
+May  6 17:35:35 zliu01 kernel: [6143929.558945] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:35 zliu01 kernel: [6143929.558949] wlan: [7037:W :HDD] iw_set_auth called with unsupported auth type 5
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: ioctl[SIOCSIWESSID]
+May  6 17:35:35 zliu01 kernel: [6143929.558952] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:35 zliu01 kernel: [6143929.558970] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:35 zliu01 kernel: [6143929.558973] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:35 zliu01 kernel: [6143929.559002] wlan: [7037:I :HDD] Enter:iw_set_mode
+May  6 17:35:35 zliu01 kernel: [6143929.559006] wlan: [7037:I :HDD] iw_set_mode Old Bss type = 1
+May  6 17:35:35 zliu01 kernel: [6143929.559009] wlan: [7037:I :HDD] iw_set_mode Setting AP Mode as IW_MODE_INFRA
+May  6 17:35:35 zliu01 kernel: [6143929.559012] wlan: [7037:I :HDD] Exit:iw_set_mode
+May  6 17:35:35 zliu01 kernel: [6143929.559058] wlan: [7037:I :HDD] Enter:iw_set_genie
+May  6 17:35:35 zliu01 kernel: [6143929.559063] wlan: [7037:I :HDD] iw_set_genie ioctl IE[0x30], LEN[20]
+May  6 17:35:35 zliu01 kernel: [6143929.559066] wlan: [7037:I :HDD] iw_set_genie: IE[0x30], LEN[20]
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_drop_unencrypted
+May  6 17:35:35 zliu01 kernel: [6143929.559069] wlan: [7037:I :HDD] iw_set_genie Set RSN IE (len 22)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 5 value 0x1) failed: Resource temporarily unavailable)
+May  6 17:35:35 zliu01 kernel: [6143929.559072] wlan: [7037:I :HDD] Exit:iw_set_genie
+May  6 17:35:35 zliu01 kernel: [6143929.559077] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 6 value 0x1) failed: Resource temporarily unavailable)
+May  6 17:35:35 zliu01 kernel: [6143929.559080] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: IW_AUTH_80211_AUTH_ALG: 1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_mode
+May  6 17:35:35 zliu01 kernel: [6143929.559100] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:35 zliu01 kernel: [6143929.559104] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_gen_ie
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 0 value 0x4) failed: Resource temporarily unavailable)
+May  6 17:35:35 zliu01 kernel: [6143929.559123] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_cipher2wext
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 1 value 0x8) failed: Resource temporarily unavailable)
+May  6 17:35:35 zliu01 kernel: [6143929.559126] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_cipher2wext
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 2 value 0x4) failed: Resource temporarily unavailable)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_keymgmt2wext
+May  6 17:35:35 zliu01 kernel: [6143929.559305] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 3 value 0x2) failed: Resource temporarily unavailable)
+May  6 17:35:35 zliu01 kernel: [6143929.559308] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:35 zliu01 kernel: [6143929.559394] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:35 zliu01 kernel: [6143929.559397] wlan: [7037:W :HDD] iw_set_auth called with unsupported auth type 10
+May  6 17:35:35 zliu01 kernel: [6143929.559400] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:35 zliu01 kernel: [6143929.559425] wlan: [7037:I :HDD] Enter:iw_set_auth
+May  6 17:35:35 zliu01 kernel: [6143929.559428] wlan: [7037:W :HDD] iw_set_auth called with unsupported auth type 8
+May  6 17:35:35 zliu01 kernel: [6143929.559431] wlan: [7037:I :HDD] Exit:iw_set_auth
+May  6 17:35:35 zliu01 kernel: [6143929.559445] wlan: [7037:I :HDD] Enter:iw_set_freq
+May  6 17:35:35 zliu01 kernel: [6143929.559448] wlan: [7037:I :HDD] setCHANNEL ioctl
+May  6 17:35:35 zliu01 kernel: [6143929.559452] wlan: [7037:I :HDD] pRoamProfile->operationChannel  = 6
+May  6 17:35:35 zliu01 kernel: [6143929.559455] wlan: [7037:I :HDD] Exit:iw_set_freq
+May  6 17:35:35 zliu01 kernel: [6143929.559495] wlan: [7037:I :HDD] Enter:iw_set_ap_address
+May  6 17:35:35 zliu01 kernel: [6143929.559500] wlan: [7037:I :HDD] iw_set_ap_address 00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 kernel: [6143929.559503] wlan: [7037:I :HDD] Exit:iw_set_ap_address
+May  6 17:35:35 zliu01 kernel: [6143929.559516] wlan: [7037:I :HDD] Enter:iw_set_essid
+May  6 17:35:35 zliu01 kernel: [6143929.559521] wlan: [7037:I :HDD] hdd_ProcessGENIE: 3546: hdd_ProcessGENIE: pairwise cipher suite count: 1
+May  6 17:35:35 zliu01 kernel: [6143929.559525] wlan: [7037:I :HDD] hdd_ProcessGENIE: 3548: hdd_ProcessGENIE: authentication suite count: 1
+May  6 17:35:35 zliu01 kernel: [6143929.559529] wlan: [7037:I :HDD] hdd_TranslateRSNToCsrEncryptionType: 3441: cipher_type: 6
+May  6 17:35:35 zliu01 kernel: [6143929.559532] wlan: [7037:I :HDD] hdd_TranslateRSNToCsrEncryptionType: 3441: cipher_type: 5
+May  6 17:35:35 zliu01 kernel: [6143929.559536] wlan: [7037:I :HDD] hdd_SetGENIEToCsr: CSR AuthType = 8, EncryptionType = 6 mcEncryptionType = 5
+May  6 17:35:35 zliu01 kernel: [6143929.559538] wlan: [7037:I :HDD] Enter:hdd_set_csr_auth_type
+May  6 17:35:35 zliu01 kernel: [6143929.559541] wlan: [7037:I :HDD] hdd_set_csr_auth_type: pHddStaCtx->conn_info.authType = 1
+May  6 17:35:35 zliu01 kernel: [6143929.559550] wlan: [7037:I :HDD] hdd_set_csr_auth_type Set roam Authtype to 8
+May  6 17:35:35 zliu01 kernel: [6143929.559557] wlan: [7037:I :HDD] Exit:hdd_set_csr_auth_type
+May  6 17:35:35 zliu01 kernel: [6143929.559562] wlan: [7037:I :HDD] iw_set_essid: Setting WAPI AUTH Type and Encryption Mode values
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 10 value 0x1) failed: Resource temporarily unavailable)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_psk
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: SIOCSIWAUTH(param 8 value 0x0) failed: Resource temporarily unavailable)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: ioctl[SIOCSIWFREQ]
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: ioctl[SIOCSIWAP]
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: ioctl[SIOCSIWESSID]
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Setting authentication timeout: 10 sec 0 usec
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - EAP success=0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - EAP fail=0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portControl=Auto
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: eloop: handler =80a8730
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b1a len=8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b1a
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b06 len=8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b06
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b04 len=12
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b04
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b1a len=27
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b1a
+May  6 17:35:35 zliu01 kernel: [6143929.559675] wlan: [7037:IH:HDD] CSR Callback: status= 10 result= 0 roamID=1
+May  6 17:35:35 zliu01 kernel: [6143929.559681] wlan: [7037:IH:HDD] CSR Callback: status= 6 result= 0 roamID=1
+May  6 17:35:35 zliu01 kernel: [6143929.559698] wlan: [7037:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:35 zliu01 kernel: [6143929.559726] wlan: [7037:I :HDD] Exit:iw_set_essid
+May  6 17:35:35 zliu01 kernel: [6143929.559747] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:35 zliu01 kernel: [6143929.559799] wlan: [22805:E :WDA] wma_create_peer: Created peer with peer_addr 00:0c:43:44:0d:a8 vdev_id 0, peer_count - 2
+May  6 17:35:35 zliu01 kernel: [6143929.560710] TXRX: ol_txrx_peer_find_add_id: Delete Peer f159e000
+May  6 17:35:35 zliu01 kernel: [6143929.601011] TXRX: Setting throttle level 1
+May  6 17:35:35 zliu01 kernel: [6143929.601020] wlan: [27017:E :WDA] TM Sending thermal mgmt cmd: low temp 90, upper temp 115, enabled 1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8c02 len=263
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8c02
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8c02 len=149
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8c02
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Wireless event: cmd=0x8b15 len=20
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_wireless cmd=8b15
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: Wireless event: new AP: 00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_event_assoc_ies
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Event ASSOC (0) received
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: ioctl[SIOCGIWAP]
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m State: ASSOCIATING -> ASSOCIATED
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_operstate: operstate 0->0 (DORMANT)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=5 (IF_OPER_DORMANT)
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Associated to a new BSS: BSSID=00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: ioctl[SIOCGIWESSID]
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Associated with 00:0c:43:44:0d:a8
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m WPA: Association event - clear replay counter
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m WPA: Clear old PTK
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portEnabled=0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portValid=0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - EAP success=0
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portEnabled=1
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_PAE entering state CONNECTING
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state IDLE
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Setting authentication timeout: 10 sec 0 usec
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: wpas_m Cancelling scan request
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x11043 ([UP][RUNNING][LOWER_UP])
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=0 ifi_flags=0x11003 ([UP][LOWER_UP])
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:35 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:35 zliu01 kernel: [6143929.659751] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:35 zliu01 kernel: [6143929.659762] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:35 zliu01 kernel: [6143929.659807] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:35 zliu01 kernel: [6143929.659810] wlan: [22805:E :PE ] wlan_cfgGetInt: 333: Not valid cfg id 1
+May  6 17:35:35 zliu01 kernel: [6143929.659852] wlan: [22805:E :WDA] wma_add_sta_req_sta_mode: statype 0 vdev_id 0 aid 1 bssid 00:0c:43:44:0d:a8 staIdx 1 status 0
+May  6 17:35:35 zliu01 kernel: [6143929.659857] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:35 zliu01 kernel: [6143929.659884] wlan: [22805:IH:HDD] CSR Callback: status= 7 result= 2 roamID=1
+May  6 17:35:35 zliu01 kernel: [6143929.659886] wlan: [22805:I :HDD] ****eCSR_ROAM_ASSOCIATION_COMPLETION****
+May  6 17:35:35 zliu01 kernel: [6143929.659888] wlan: [22805:I :HDD] hdd_AssociationCompletionHandler: Set HDD connState to eConnectionState_Associated
+May  6 17:35:35 zliu01 kernel: [6143929.659890] wlan: [22805:I :HDD] hdd_connSetConnectionState: 161: ConnectionState Changed from oldState:0 to State:2
+May  6 17:35:35 zliu01 kernel: [6143929.659905] wlan: [22805:IL:HDD] hdd_wmm_connect: Entered
+May  6 17:35:35 zliu01 kernel: [6143929.659907] wlan: [22805:IL:HDD] hdd_wmm_connect: qap is 1, qosConnection is 1, acmMask is 0x0
+May  6 17:35:35 zliu01 kernel: [6143929.659909] wlan: [22805:IL:HDD] hdd_wmm_connect: ac 0 off
+May  6 17:35:35 zliu01 kernel: [6143929.659911] wlan: [22805:IL:HDD] hdd_wmm_connect: ac 1 off
+May  6 17:35:35 zliu01 kernel: [6143929.659913] wlan: [22805:IL:HDD] hdd_wmm_connect: ac 2 off
+May  6 17:35:35 zliu01 kernel: [6143929.659915] wlan: [22805:IL:HDD] hdd_wmm_connect: ac 3 off
+May  6 17:35:35 zliu01 kernel: [6143929.659917] wlan: [22805:IL:HDD] hdd_wmm_connect: Exiting
+May  6 17:35:35 zliu01 kernel: [6143929.659919] wlan: [22805:I :HDD] wlan_hdd_incr_active_session: 13317: No.# of active sessions for mode 0 = 1
+May  6 17:35:35 zliu01 kernel: [6143929.659922] wlan: 00:03:7f:00:00:10 connected to 00:0c:43:44:0d:ffffffa8
+May  6 17:35:35 zliu01 kernel: [6143929.659924] wlan: [22805:I :HDD] hdd_SendUpdateBeaconIEsEvent: Beacon IEs is now at 0013
+May  6 17:35:35 zliu01 kernel: [6143929.659926] wlan: [22805:I :HDD] hdd_SendUpdateBeaconIEsEvent: Beacon IEs length = 374
+May  6 17:35:35 zliu01 kernel: [6143929.659928] wlan: [22805:I :HDD] hdd_SendUpdateBeaconIEsEvent: Beacon IEs length to supplicant = 244
+May  6 17:35:35 zliu01 kernel: [6143929.659933] wlan: [22805:I :HDD] hdd_SendUpdateBeaconIEsEvent: Beacon IEs length to supplicant = 130
+May  6 17:35:35 zliu01 kernel: [6143929.659937] wlan: [22805:E :HDD] MODE 0, CH 6, LWM 0, HWM 0, TXQDEP 1500
+May  6 17:35:35 zliu01 kernel: [6143929.659940] wlan: [22805:E :HDD] wlan(6) 00:0c:43:44:0d:a8 Standalone
+May  6 17:35:35 zliu01 kernel: [6143929.659943] wlan: [22805:IL:HDD] New WiFi channel 6 gAmpChannel 0 gWiFiChannel 0
+May  6 17:35:35 zliu01 kernel: [6143929.659946] wlan: [22805:W :HDD] NLINK: netlink_broadcast failed err = -3
+May  6 17:35:35 zliu01 kernel: [6143929.659952] wlan: [28849:I :HDD] wlan_hdd_roc_request_dequeue: 800: going to dequeue roc
+May  6 17:35:35 zliu01 kernel: [6143929.659955] wlan: [28849:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:35:35 zliu01 kernel: [6143929.659966] wlan: [28849:I :HDD] wlan_hdd_roc_request_dequeue: 814: list is empty
+May  6 17:35:35 zliu01 kernel: [6143929.660002] wlan: [28849:I :HDD] hdd_netdev_notifier_call: wlan2 New Net Device State = 4
+May  6 17:35:35 zliu01 kernel: [6143929.660031] wlan: [22805:E :HDD] wlan_hdd_tdls_connection_callback: 2027: pHddCtx or pHddTdlsCtx points to NULL
+May  6 17:35:35 zliu01 kernel: [6143929.660034] wlan: [22805:I :HDD] Enter:wlan_hdd_cfg80211_update_bss_db
+May  6 17:35:35 zliu01 kernel: [6143929.660039] wlan: [22805:I :HDD] Enter:wlan_hdd_cfg80211_inform_bss
+May  6 17:35:35 zliu01 kernel: [6143929.660047] wlan: [22805:I :HDD] hdd_AssociationCompletionHandler: sending connect indication to nl80211:for bssid 00:0c:43:44:0d:a8 reason:2 and Status:7
+May  6 17:35:35 zliu01 kernel: [6143929.660054] wlan: [22805:IL:HDD] hdd_wmm_assoc: Entered
+May  6 17:35:35 zliu01 kernel: [6143929.660057] wlan: [22805:IL:HDD] hdd_wmm_assoc: U-APSD mask is 0x00
+May  6 17:35:35 zliu01 kernel: [6143929.660060] wlan: [22805:E :SME] sme_UpdateDSCPtoUPMapping: QOS Mapping IE not present
+May  6 17:35:35 zliu01 kernel: [6143929.660063] wlan: [22805:IL:HDD] hdd_wmm_init: Entered
+May  6 17:35:35 zliu01 kernel: [6143929.660065] wlan: [22805:IL:HDD] hdd_wmm_assoc: Exiting
+May  6 17:35:35 zliu01 kernel: [6143929.660070] wlan: [22805:I :HDD] hdd_roamRegisterSTA: WAPI STA Registered: 0
+May  6 17:35:35 zliu01 kernel: [6143929.660073] wlan: [22805:IM:HDD] HDD register TL Sec_enabled= 1.
+May  6 17:35:35 zliu01 kernel: [6143929.660076] wlan: [22805:IH:HDD] HDD register TL QoS_enabled=1
+May  6 17:35:35 zliu01 kernel: [6143929.660079] wlan: [22805:IH:HDD] hdd_roamRegisterSTA: HDD register TL ucInitState=1
+May  6 17:35:35 zliu01 kernel: [6143929.660086] wlan: [22805:IM:HDD] STA type 0 fConnected 1
+May  6 17:35:35 zliu01 kernel: [6143929.660089] wlan: [22805:IM:HDD] ULA auth StaId= 1. Changing TL state to CONNECTEDat Join time
+May  6 17:35:35 zliu01 kernel: [6143929.660093] wlan: [22805:I :HDD] hdd_connSetAuthenticated: 146: Authenticated state Changed from oldState:0 to State:0
+May  6 17:35:35 zliu01 kernel: [6143929.660101] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:35 zliu01 kernel: [6143929.660106] wlan: [22805:IH:HDD] CSR Callback: status= 5 result= 0 roamID=1
+May  6 17:35:35 zliu01 kernel: [6143929.660115] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:35 zliu01 kernel: [6143929.660127] wlan: [28849:I :HDD] wlan_hdd_roc_request_dequeue: 800: going to dequeue roc
+May  6 17:35:35 zliu01 kernel: [6143929.660130] wlan: [28849:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:35:35 zliu01 kernel: [6143929.660133] wlan: [28849:I :HDD] wlan_hdd_roc_request_dequeue: 814: list is empty
+May  6 17:35:35 zliu01 kernel: [6143929.660195] wlan: [7037:I :HDD] Enter:iw_get_ap_address
+May  6 17:35:35 zliu01 kernel: [6143929.660197] wlan: [7037:I :HDD] Exit:iw_get_ap_address
+May  6 17:35:35 zliu01 kernel: [6143929.660224] wlan: [7037:I :HDD] hdd_netdev_notifier_call: wlan2 New Net Device State = 4
+May  6 17:35:35 zliu01 kernel: [6143929.660264] wlan: [7037:I :HDD] Enter:iw_get_essid
+May  6 17:35:35 zliu01 kernel: [6143929.660266] wlan: [7037:I :HDD] Exit:iw_get_essid
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=99
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m Setting authentication timeout: 10 sec 0 usec
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m IEEE 802.1X RX: version=1 type=3 length=95
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m   EAPOL-Key type=2
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m   key_info 0x8a (ver=2 keyidx=0 rsvd=0 Pairwise Ack)
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m   key_length=16 key_data_length=0
+May  6 17:35:36 zliu01 wpa_supplicant[7037]:   replay_counter - hexdump(len=8): 00 00 00 00 00 00 00 01
+May  6 17:35:36 zliu01 wpa_supplicant[7037]:   key_nonce - hexdump(len=32): d6 16 f1 c0 0c fc 8b fc 14 a9 c9 09 4c b3 9f d9 44 50 4b f3 ea d7 ee 8a 34 21 7c 2a 26 0c ae 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]:   key_iv - hexdump(len=16): 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]:   key_rsc - hexdump(len=8): 00 00 00 00 00 00 00 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]:   key_id (reserved) - hexdump(len=8): 00 00 00 00 00 00 00 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]:   key_mic - hexdump(len=16): 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: ioctl[SIOCGIWESSID]
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: ioctl[SIOCGIWAP]
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m State: ASSOCIATED -> 4WAY_HANDSHAKE
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m WPA: RX message 1 of 4-Way Handshake from 00:0c:43:44:0d:a8 (ver=2)
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: RSN: msg 1/4 key data - hexdump(len=0):
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: Renewed SNonce - hexdump(len=32): 2a 1f 43 e8 31 54 a8 12 ec 69 8f 7f 57 57 4f 89 61 90 05 28 83 95 af 53 e9 b3 48 84 70 04 34 16
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: PTK derivation - A1=00:03:7f:00:00:10 A2=00:0c:43:44:0d:a8
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: Nonce1 - hexdump(len=32): 2a 1f 43 e8 31 54 a8 12 ec 69 8f 7f 57 57 4f 89 61 90 05 28 83 95 af 53 e9 b3 48 84 70 04 34 16
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: Nonce2 - hexdump(len=32): d6 16 f1 c0 0c fc 8b fc 14 a9 c9 09 4c b3 9f d9 44 50 4b f3 ea d7 ee 8a 34 21 7c 2a 26 0c ae 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: PMK - hexdump(len=32): bb 04 4c e1 c5 de b0 8d 53 7a 16 3d 1b 19 08 8a 33 cd 24 61 00 77 d3 c0 00 c4 32 39 fa d5 ca 6a
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: PTK - hexdump(len=48): 04 d1 ef 33 7c 88 62 17 b0 2c 62 23 e2 e4 42 55 b5 e5 e6 c1 be 81 5f cb 1e 96 15 88 b4 e1 41 31 d9 c4 ee d7 46 24 53 aa 3f c8 1b 5c 00 5a be b5
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: KCK - hexdump(len=16): 04 d1 ef 33 7c 88 62 17 b0 2c 62 23 e2 e4 42 55
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: KEK - hexdump(len=16): b5 e5 e6 c1 be 81 5f cb 1e 96 15 88 b4 e1 41 31
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: TK - hexdump(len=16): d9 c4 ee d7 46 24 53 aa 3f c8 1b 5c 00 5a be b5
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: WPA IE for msg 2/4 - hexdump(len=22): 30 14 01 00 00 0f ac 02 01 00 00 0f ac 04 01 00 00 0f ac 02 00 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: Replay Counter - hexdump(len=8): 00 00 00 00 00 00 00 01
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m WPA: Sending EAPOL-Key 2/4
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: KCK - hexdump(len=16): 04 d1 ef 33 7c 88 62 17 b0 2c 62 23 e2 e4 42 55
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: Derived Key MIC - hexdump(len=16): 4e fd b5 35 2c 0f 91 95 8e 2c 6f 27 bf 43 bc 1b
+May  6 17:35:36 zliu01 kernel: [6143929.858572] wlan: [7037:I :HDD] Enter:iw_get_essid
+May  6 17:35:36 zliu01 kernel: [6143929.858577] wlan: [7037:I :HDD] Exit:iw_get_essid
+May  6 17:35:36 zliu01 kernel: [6143929.858585] wlan: [7037:I :HDD] Enter:iw_get_ap_address
+May  6 17:35:36 zliu01 kernel: [6143929.858588] wlan: [7037:I :HDD] Exit:iw_get_ap_address
+May  6 17:35:36 zliu01 kernel: [6143929.863104] zliu HTT_TX_COMP_IND
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: l2_packet_receive: src=00:0c:43:44:0d:a8 len=179
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m RX EAPOL from 00:0c:43:44:0d:a8
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m IEEE 802.1X RX: version=1 type=3 length=175
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m   EAPOL-Key type=2
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m   key_info 0x13ca (ver=2 keyidx=0 rsvd=0 Pairwise Install Ack MIC Secure Encr)
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m   key_length=16 key_data_length=80
+May  6 17:35:36 zliu01 wpa_supplicant[7037]:   replay_counter - hexdump(len=8): 00 00 00 00 00 00 00 02
+May  6 17:35:36 zliu01 wpa_supplicant[7037]:   key_nonce - hexdump(len=32): d6 16 f1 c0 0c fc 8b fc 14 a9 c9 09 4c b3 9f d9 44 50 4b f3 ea d7 ee 8a 34 21 7c 2a 26 0c ae 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]:   key_iv - hexdump(len=16): 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]:   key_rsc - hexdump(len=8): 00 01 00 00 00 00 00 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]:   key_id (reserved) - hexdump(len=8): 00 00 00 00 00 00 00 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]:   key_mic - hexdump(len=16): 5e 07 d9 f5 ee 71 91 0f af 2b 40 14 4f cf 32 e6
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: RSN: encrypted key data - hexdump(len=80): 82 00 d3 eb 8d 5b b1 74 4c 33 46 1a d7 3f 0a e1 64 6a c5 a7 ee 2e 09 40 fe c6 dc 8a 3c 41 65 be a8 72 a6 f9 4c 7d c6 8e 2d 4f 86 ad e8 a0 cb fa df a0 70 a6 e9 86 16 12 fe 08 d4 2f 71 29 8d d2 7f 47 0d 23 da cf 46 72 23 0c e3 76 1b 93 c0 2b
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: decrypted EAPOL-Key key data - hexdump(len=72): 30 18 01 00 00 0f ac 02 02 00 00 0f ac 02 00 0f ac 04 01 00 00 0f ac 02 00 00 dd 26 00 0f ac 01 01 00 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63 dd 00 00 00 00 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m State: 4WAY_HANDSHAKE -> 4WAY_HANDSHAKE
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m WPA: RX message 3 of 4-Way Handshake from 00:0c:43:44:0d:a8 (ver=2)
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: IE KeyData - hexdump(len=72): 30 18 01 00 00 0f ac 02 02 00 00 0f ac 02 00 0f ac 04 01 00 00 0f ac 02 00 00 dd 26 00 0f ac 01 01 00 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63 dd 00 00 00 00 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: RSN IE in EAPOL-Key - hexdump(len=26): 30 18 01 00 00 0f ac 02 02 00 00 0f ac 02 00 0f ac 04 01 00 00 0f ac 02 00 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: GTK in EAPOL-Key - hexdump(len=40): dd 26 00 0f ac 01 01 00 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m WPA: Sending EAPOL-Key 4/4
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: KCK - hexdump(len=16): 04 d1 ef 33 7c 88 62 17 b0 2c 62 23 e2 e4 42 55
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: Derived Key MIC - hexdump(len=16): cf 52 88 a4 9b cf 86 5c 15 ce a6 f8 3b 41 ee 25
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m WPA: Installing PTK to the driver
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_key: alg=3 key_idx=0 set_tx=1 seq_len=6 key_len=16
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_key_ext
+May  6 17:35:36 zliu01 kernel: [6143929.866114] wlan: [7037:I :HDD] Enter:iw_set_encodeext
+May  6 17:35:36 zliu01 kernel: [6143929.866119] wlan: [7037:I :HDD] iw_set_encodeext:cipher_alg:3 key_len[16] *pEncryptionType :6
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portValid=1
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m State: 4WAY_HANDSHAKE -> GROUP_HANDSHAKE
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: RSN: received GTK in pairwise handshake - hexdump(len=34): 01 00 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: Group Key - hexdump(len=32): 47 43 26 16 93 74 64 19 b0 e3 d2 aa d8 53 14 83 01 a2 c2 03 5b 1a ef 42 bc af fe 3b 48 78 72 63
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m WPA: Installing GTK to the driver (keyidx=1 tx=0 len=32)
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WPA: RSC - hexdump(len=6): 00 01 00 00 00 00
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_key: alg=2 key_idx=1 set_tx=0 seq_len=6 key_len=32
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_key_ext
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m WPA: Key negotiation completed with 00:0c:43:44:0d:a8 [PTK=CCMP GTK=TKIP]
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m Cancelling authentication timeout
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m State: GROUP_HANDSHAKE -> COMPLETED
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m Radio work 'connect'@0x84eedf8 done in 1.104885 seconds
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpas_m CTRL-EVENT-CONNECTED - Connection to 00:0c:43:44:0d:a8 completed [id=0 id_str=]
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: wpa_driver_wext_set_operstate: operstate 0->1 (UP)
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: netlink: Operstate: ifindex=15 linkmode=-1 (no change), operstate=6 (IF_OPER_UP)
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: EAPOL: External notification - portValid=1
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: EAPOL: External notification - EAP success=1
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_PAE entering state AUTHENTICATING
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state SUCCESS
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: EAP: EAP entering state DISABLED
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_PAE entering state AUTHENTICATED
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: EAPOL: Supplicant port status: Authorized
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: EAPOL: SUPP_BE entering state IDLE
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: EAPOL authentication completed - result=SUCCESS
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: eloop: handler =808cc80
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: RTM_NEWLINK: operstate=1 ifi_flags=0x11043 ([UP][RUNNING][LOWER_UP])
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan2' added
+May  6 17:35:36 zliu01 wpa_supplicant[7037]: WEXT: if_removed already cleared - ignore event
+May  6 17:35:36 zliu01 kernel: [6143930.664179] wlan: [7037:E :HDD] wlan_hdd_check_ula_done: 1532: failure wait on ULA to complete 0
+May  6 17:35:36 zliu01 kernel: [6143930.664201] wlan: [7037:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:36 zliu01 kernel: [6143930.664244] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:36 zliu01 kernel: [6143930.664271] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:36 zliu01 kernel: [6143930.664278] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:36 zliu01 kernel: [6143930.664310] wlan: [22805:IH:HDD] CSR Callback: status= 18 result= 0 roamID=1
+May  6 17:35:36 zliu01 kernel: [6143930.664312] wlan: [22805:I :HDD] Enter:hdd_RoamSetKeyCompleteHandler
+May  6 17:35:36 zliu01 kernel: [6143930.664315] wlan: [22805:IH:HDD] Set Key completion roamStatus =18 roamResult=0 00:0c:43:44:0d:a8
+May  6 17:35:36 zliu01 kernel: [6143930.664321] wlan: [22805:I :HDD] hdd_connSetAuthenticated: 146: Authenticated state Changed from oldState:0 to State:1
+May  6 17:35:36 zliu01 kernel: [6143930.664326] wlan: [22805:I :HDD] Exit:hdd_RoamSetKeyCompleteHandler
+May  6 17:35:36 zliu01 kernel: [6143930.664331] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:36 zliu01 kernel: [6143930.664333] wlan: [7037:I :HDD] Enter:iw_set_encodeext
+May  6 17:35:36 zliu01 kernel: [6143930.664337] wlan: [7037:I :HDD] iw_set_encodeext:cipher_alg:2 key_len[32] *pEncryptionType :5
+May  6 17:35:36 zliu01 kernel: [6143930.664347] wlan: [7037:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:36 zliu01 kernel: [6143930.664362] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:36 zliu01 kernel: [6143930.664380] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:36 zliu01 kernel: [6143930.664385] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:36 zliu01 kernel: [6143930.664389] wlan: [22805:IH:HDD] CSR Callback: status= 18 result= 22 roamID=1
+May  6 17:35:36 zliu01 kernel: [6143930.664392] wlan: [22805:I :HDD] Enter:hdd_RoamSetKeyCompleteHandler
+May  6 17:35:36 zliu01 kernel: [6143930.664396] wlan: [22805:IH:HDD] Set Key completion roamStatus =18 roamResult=22 ff:ff:ff:ff:ff:ff
+May  6 17:35:36 zliu01 kernel: [6143930.664402] wlan: [22805:I :HDD] hdd_connSetAuthenticated: 146: Authenticated state Changed from oldState:1 to State:1
+May  6 17:35:36 zliu01 kernel: [6143930.664405] wlan: [22805:IM:HDD] Key set for StaId= 1.  Changing TL state to AUTHENTICATED
+May  6 17:35:36 zliu01 kernel: [6143930.664411] wlan: [22805:I :HDD] hdd_connSetAuthenticated: 146: Authenticated state Changed from oldState:1 to State:1
+May  6 17:35:36 zliu01 kernel: [6143930.664416] wlan: [22805:I :HDD] Exit:hdd_RoamSetKeyCompleteHandler
+May  6 17:35:36 zliu01 kernel: [6143930.664420] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:36 zliu01 kernel: [6143930.664430] wlan: [28849:I :HDD] wlan_hdd_roc_request_dequeue: 800: going to dequeue roc
+May  6 17:35:36 zliu01 kernel: [6143930.664433] wlan: [28849:I :HDD] Enter:wlan_hdd_validate_context
+May  6 17:35:36 zliu01 kernel: [6143930.664437] wlan: [28849:I :HDD] wlan_hdd_roc_request_dequeue: 814: list is empty
+May  6 17:35:36 zliu01 kernel: [6143930.664478] wlan: [7037:I :HDD] hdd_netdev_notifier_call: wlan2 New Net Device State = 4
+May  6 17:35:36 zliu01 kernel: [6143930.667657] zliu HTT_TX_COMP_IND
+May  6 17:35:36 zliu01 kernel: [6143930.744996] TXRX: Setting throttle level 2
+May  6 17:35:36 zliu01 kernel: [6143930.745002] wlan: [27017:E :WDA] TM Sending thermal mgmt cmd: low temp 90, upper temp 125, enabled 1
+May  6 17:35:37 zliu01 kernel: [6143930.916871] zliu HTT_TX_COMP_IND
+May  6 17:35:37 zliu01 kernel: [6143931.318708] zliu HTT_TX_COMP_IND
+May  6 17:35:37 zliu01 kernel: [6143931.418668] zliu HTT_TX_COMP_IND
+May  6 17:35:37 zliu01 wpa_supplicant[7037]: eloop: handler =80636c0
+May  6 17:35:37 zliu01 wpa_supplicant[7037]: EAPOL: startWhen --> 0
+May  6 17:35:37 zliu01 wpa_supplicant[7037]: EAPOL: disable timer tick
+May  6 17:35:37 zliu01 wpa_supplicant[7037]: eloop: handler =808cc80
+May  6 17:35:38 zliu01 kernel: [6143932.419390] zliu HTT_TX_COMP_IND
+May  6 17:35:40 zliu01 kernel: [6143934.414321] zliu HTT_TX_COMP_IND
+May  6 17:35:41 zliu01 kernel: [6143935.347734] zliu HTT_TX_COMP_IND
+May  6 17:35:41 zliu01 kernel: [6143935.680466] wlan: [22805:IL:HDD] NLINK: Ready Indication Send Fail nl_srv_nl_ready_indication, err -3
+May  6 17:35:41 zliu01 kernel: [6143935.680474] wlan: [22805:E :SME] No Pending command waiting
+May  6 17:35:44 zliu01 wpa_supplicant[7037]: eloop: handler =80a8820
+May  6 17:35:45 zliu01 wpa_supplicant[7037]: eloop: handler =8078fa0
+May  6 17:35:46 zliu01 kernel: [6143940.400488] zliu HTT_TX_COMP_IND
+May  6 17:35:48 zliu01 kernel: [6143942.438342] zliu HTT_TX_COMP_IND
+May  6 17:35:54 zliu01 wpa_supplicant[7037]: eloop: handler =80a8820
+May  6 17:36:02 zliu01 kernel: [6143956.409128] zliu HTT_TX_COMP_IND
+May  6 17:36:04 zliu01 wpa_supplicant[7037]: eloop: handler =80a8820
+May  6 17:36:04 zliu01 kernel: [6143958.446598] zliu HTT_TX_COMP_IND
+May  6 17:36:14 zliu01 wpa_supplicant[7037]: eloop: handler =80a8820
+May  6 17:36:21 zliu01 wpa_supplicant[7037]: CTRL_IFACE monitor detached /tmp/wpa_ctrl_7705-2\x00
+May  6 17:36:24 zliu01 wpa_supplicant[7037]: eloop: handler =80a8820
+May  6 17:36:34 zliu01 wpa_supplicant[7037]: eloop: handler =80a8820
+May  6 17:36:34 zliu01 kernel: [6143988.442655] zliu HTT_TX_COMP_IND
