@@ -1550,3 +1550,10 @@ wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP
 #################################
+
+http://blog.csdn.net/xiaojsj111/article/details/30482001
+
+This doc has good explian on linux concurrence mode
+
+OK, let's trun back to build CLD2.0 and installed on another laptop...
+
