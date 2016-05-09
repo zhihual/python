@@ -1550,3 +1550,27 @@ wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP
 #################################
+
+5/9  
+
+Start to look at USB kernel driver
+
+1. KBuild and Makefile is mandatory.  Kconfig is not used on build. 
+2. Makefile pass config to KBuild. and KBuild then run to build process
+
+can change ko name in Makefile
+
+change hostapd to nl80211 compatible, then, all code is running now. 
+
+Renew how to debug linux core dump.
+
+From WPA Supplicant code, there are 
+nl80211 wext hostap bsd openbsd ndis wired macsec_qca roboswitch atheros 10 kinds of driver interface.
+
+
+netlink descritpion
+
+http://man7.org/linux/man-pages/man7/netlink.7.html
+netlink - communication between kernel and user space (AF_NETLINK)
+
+http://www.infradead.org/~tgr/libnl/doc/core.html#_introduction
