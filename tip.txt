@@ -1574,3 +1574,13 @@ http://man7.org/linux/man-pages/man7/netlink.7.html
 netlink - communication between kernel and user space (AF_NETLINK)
 
 http://www.infradead.org/~tgr/libnl/doc/core.html#_introduction
+
+
+insmod wlan.ko
+sleep 3
+
+iw dev wlan2 interface add ap0 type managed
+sleep 1
+ifconfig ap0 up 
+
+Great, create ap+sta successfully.
