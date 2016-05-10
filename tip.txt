@@ -1584,3 +1584,15 @@ sleep 1
 ifconfig ap0 up 
 
 Great, create ap+sta successfully.
+
+try to build usb driver, but hit error on symbol can't find. Stop trying, and look inside...
+
+cc1: warnings being treated as errors
+solve method, remove WERROR_CFLAGS = -Werror
+
+http://www.infradead.org/~tgr/libnl/doc/core.html#_introduction 
+This guy web has framework information
+
+
+http://lxr.free-electrons.com/ident?v=3.10&i=INIT_COMPLETION
+really good web to search linux header/symbolss
