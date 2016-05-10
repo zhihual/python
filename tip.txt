@@ -1584,3 +1584,16 @@ sleep 1
 ifconfig ap0 up 
 
 Great, create ap+sta successfully.
+
+5/10
+
+use netlink as one application to kernel method. done...
+
+IPC(Inter-Process Communication) , what a wonderful name..
+
+linux socket address faimilry is define in ./x86-v3.10/include/linux/socket.h
+
+gcc basic way
+
+gcc -o app  app.c
+
