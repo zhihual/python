@@ -1597,3 +1597,17 @@ gcc basic way
 
 gcc -o app  app.c
 
+P2p setup process
+
+1.Wpa_supplicant –Dnl80211 –i wlan0 –c /data/misc/wifi/wlan_supplicant.conf &
+2.Wpa_cli –I wlan0 –p /data/misc/wifi/sockets/
+3.>scan
+4.….
+5.Wlan0 can connect the AP successfully, use “iwconfig” check wlan0 info as ESSID:p2p_24” Frequency :2.427 GHz
+6.Wpa_supplicant –Dnl80211 –i p2p0 –c /data/misc/wifi/p2p_supplicant.conf &
+7.Wpa_cli –I p2p0 –p /data/misc/wifi/sockets/ 
+8.>p2p_find
+9.>p2p_connect mac of dut pbc go_intent=1 
+10.P2P also connect successfully, but GO beacon is in 1 channel
+
+wiphy should be kenerl interface.
