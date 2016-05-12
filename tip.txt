@@ -1625,3 +1625,172 @@ P2p setup process
 
 wiphy should be kenerl interface.
 
+5/11 
+
+freertos, footprint...
+
+
+xTaskCreate
+{
+   allocate TCB 
+   allocate Stack Space
+   prvInitialiseNewTask()
+   prvAddNewTaskToReadyList
+   
+   return pass or out of memory
+}
+
+prvInitialiseNewTask
+{
+   check portPRIVILEGE_BIT. but it 00, looks weired
+   memset(0x5u) of stack memory, for debug easy
+   caculate stack top and end.
+   save taskname in TCB
+   check pririty and save it in TCB
+   init state list and event list
+   vPortStoreTaskMPUSettings // should save MPU registry
+   pxPortInitialiseStack  // should be setup return address and other stack...
+       -- pxThreadState->pvThread = CreateThread( NULL, 0, ( LPTHREAD_START_ROUTINE ) pxCode, pvParameters, CREATE_SUSPENDED, NULL );
+	      // create simulate thread to simulate task.
+   finally, give the TCB out.
+}
+
+prvAddNewTaskToReadyList
+{
+   in_critica_section
+   uxCurrentNumberOfTasks++ // live task increase
+   If,  put task as current tcb. this is the new task. 
+        if only 1 task, init task prvInitialiseTaskLists()
+   In fact, caculate current running TCB
+   uxTaskNumber++
+   traceTASK_CREATE()
+   prvAddTaskToReadyList() // add to ready list  pxReadyTasksLists this is global var
+   portSETUP_TCB 
+   out_critical_section
+   backdoor to give access of high priority new task run
+}
+
+vTaskStartScheduler // trigger the live of OS
+{
+  // create IDLE task
+  xReturn = xTaskCreate( prvIdleTask, "IDLE", usIdleTaskStackSize, ( void * ) NULL, ( tskIDLE_PRIORITY | portPRIVILEGE_BIT ), &xIdleTaskHandle ); /
+  
+  // create timer
+  xTimerCreateTimerTask
+  
+  // disable ISR
+  portDISABLE_INTERRUPTS
+
+  // schedule is running and clear tick to zero
+  xNextTaskUnblockTime = portMAX_DELAY;
+  xSchedulerRunning = pdTRUE;
+  xTickCount = ( TickType_t ) 0U;
+
+  xPortStartScheduler // should be ask MCP low layer to go
+      -- vPortSetInterruptHandler( portINTERRUPT_YIELD, prvProcessYieldInterrupt );
+	  -- vPortSetInterruptHandler( portINTERRUPT_TICK, prvProcessTickInterrupt );
+	     // install interrupt
+      -- pvHandle = CreateThread( NULL, 0, prvSimulatedPeripheralTimer, NULL, CREATE_SUSPENDED, NULL );
+	     // create hw timer tick thread
+	  -- pxThreadState = ( xThreadState * ) *( ( size_t * ) pxCurrentTCB ); 
+	     // start run...
+	  -- prvProcessSimulatedInterrupts // handle simulated interrupt.
+	     // So, we have main thread,  timer thread, and each task thread.
+		  -- ulIsrHandler() // run isr handler
+		  -- vTaskSwitchContext();
+		  -- SuspendThread( pxThreadState->pvThread ); // the old one and
+		  -- ResumeThread( pxThreadState->pvThread ); // resume the new one
+}
+
+
+prvSimulatedPeripheralTimer // this is simulate timer
+{
+   -- use sleep to simulate ticket.
+}
+
+
+List
+{
+   itemcount
+   pointer to ListItems. (pxIndex)
+   pointer to MiniListItem_t (xListEnd)
+   
+   ListItem
+   {
+      xItemValue U16               //Mini
+	  Pointer ListItem pxNext      //Mini
+	  Pointer ListItem pxPrevious  //Mini
+	  void* pvOwner
+	  void* pvContainer
+   }
+  
+}
+
+done read of list.h list.c. Start Queue
+
+5/12 
+
+Start of Queue
+
+xQueueCreate( uxQueueLength, uxItemSize ) // number, and each item size
+xQueueCreateStatic( uxQueueLength, uxItemSize, pucQueueStorage, pxQueueBuffer ) // number, each size, place to item, place to hold structer itself
+xQueueSendToFront( xQueue, pvItemToQueue, xTicksToWait ) // insert queue front. but, can't called in ISR
+xQueueSendToBack( xQueue, pvItemToQueue, xTicksToWait ) // send queue in back end.
+
+xQueueGenericSend is the generic implementations.
+xQueueOverwrite( xQueue, pvItemToQueue ) // read/write length =1 queue
+
+#define xQueuePeek( xQueue, pvBuffer, xTicksToWait ) // peak, but, what's the directly to get?  or, already saved in structure?
+
+xQueueGenericReceive // this is generic function to peek and receive. it looks receive will remove, but peek not.
+
+uxQueueMessagesWaiting // return queue number already taken
+
+uxQueueSpacesAvailable // return queue free slot number
+
+xQueueSendToFrontFromISR
+xQueueSendToBackFromISR // not sure, how this work
+
+xQueueGiveFromISR // what's this for?
+
+* co-routines. // what's hell of this? leave it later
+
+vQueueAddToRegistry // this is for debugger useage? how to use it?
+
+
+xQueueGenericCreate        // create queue
+xQueueGenericCreateStatic   
+
+vQueueWaitForMessageRestricted // this is waiting for one item??
+
+#define pxMutexHolder					pcTail
+#define uxQueueType						pcHead
+#define queueQUEUE_IS_MUTEX				NULL 
+
+xQueue
+{
+   pchead
+   pctail
+   pcwiteto
+   pcreadfrom
+   
+   waittosend
+   waittorecev
+   
+   uxMessagesWaiting // equal number
+   uxLength
+   uxItemSize
+   
+   cRxLock
+   cTxLock
+}
+
+have a medium level read of task. Next, return back again to task.c
+
+
+
+
+queue registry is just for save queue name and queue handle
+
+
+
