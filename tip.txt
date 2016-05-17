@@ -1793,4 +1793,66 @@ have a medium level read of task. Next, return back again to task.c
 queue registry is just for save queue name and queue handle
 
 
+5/13 
 
+http://www.myir-tech.com/resource/419.asp  ARM chip trend
+
+Cotex-M3 Family class
+
+
+5/17
+
+OTA
+
+OTA Steps, Failure recovery, Log 
+
+Small Size. FOTA 
+
+http://blog.csdn.net/thinkinwm/article/details/8960506  OMA Server
+
+http://www.redstone.net.cn/index.php?m=content&c=index&a=lists&catid=12#  
+
+Android OTA/FOTA: Google diff arithmetic Full Image and Differential Image
+
+Key feature:
+small footprint : full image and different image
+lost power recover :  done active after image validation and before reboot
+failure recover : 
+update successfully update : report success
+continue download like thoundbird. : fragment, or set  checksum
+install/uninstall/add app: 
+diagnose reprot current status:  HW diagnose.
+implement from 5% to 100%, and collect feedback to continue..
+Client pull image: avoid gateway..
+Gateway push image: Gate+Sensor solution.
+MSFT CHID update theory..  version control 
+
+ID information:
+HW version:
+HW ID:
+Software list: name,version, cl, date, memory useage, run time, hw diagnose, status.
+
+
+Open Mobile Alliance-Device Management (OMA-DM) standard  SCOMO
+How to test 
+
+push moudle can give sensor the ability to report IP data, location...etc.
+
+minicom is serial port on linux
+
+
+Crash collection / Dump analysis autoamtic/ Error analsysis 
+
+zip data. : URL http://msgpack.org/ fork source code
+use http push to upload to server.
+use gdb to analysis
+
+
+State status report
+
+RFM69CW    RF moudle  https://detail.1688.com/pic/36463984720.html?spm=a261y.7663282.1998411378.1.eKQuq5
+http://www.360doc.com/content/15/0121/20/213482_442654642.shtml
+Huawei desgin doc
+http://wenku.baidu.com/view/a7da66ed5901020207409ced.html
+http://www.sae.org.cn/index // car 
+https://harizanov.com/2015/06/firmware-over-the-air-fota-for-esp8266-soc/  tech web
