@@ -1551,9 +1551,317 @@ wpa_pairwise=TKIP
 rsn_pairwise=CCMP
 #################################
 
+
 http://blog.csdn.net/xiaojsj111/article/details/30482001
 
 This doc has good explian on linux concurrence mode
 
 OK, let's trun back to build CLD2.0 and installed on another laptop...
+
+=======
+5/9  
+
+Start to look at USB kernel driver
+
+1. KBuild and Makefile is mandatory.  Kconfig is not used on build. 
+2. Makefile pass config to KBuild. and KBuild then run to build process
+
+can change ko name in Makefile
+
+change hostapd to nl80211 compatible, then, all code is running now. 
+
+Renew how to debug linux core dump.
+
+From WPA Supplicant code, there are 
+nl80211 wext hostap bsd openbsd ndis wired macsec_qca roboswitch atheros 10 kinds of driver interface.
+
+
+netlink descritpion
+
+http://man7.org/linux/man-pages/man7/netlink.7.html
+netlink - communication between kernel and user space (AF_NETLINK)
+
+http://www.infradead.org/~tgr/libnl/doc/core.html#_introduction
+
+
+insmod wlan.ko
+sleep 3
+
+iw dev wlan2 interface add ap0 type managed
+sleep 1
+ifconfig ap0 up 
+
+Great, create ap+sta successfully.
+
+
+try to build usb driver, but hit error on symbol can't find. Stop trying, and look inside...
+
+cc1: warnings being treated as errors
+solve method, remove WERROR_CFLAGS = -Werror
+
+http://www.infradead.org/~tgr/libnl/doc/core.html#_introduction 
+This guy web has framework information
+
+
+http://lxr.free-electrons.com/ident?v=3.10&i=INIT_COMPLETION
+really good web to search linux header/symbolss
+=======
+5/10
+
+use netlink as one application to kernel method. done...
+
+IPC(Inter-Process Communication) , what a wonderful name..
+
+linux socket address faimilry is define in ./x86-v3.10/include/linux/socket.h
+
+gcc basic way
+
+gcc -o app  app.c
+
+P2p setup process
+
+1.Wpa_supplicant –Dnl80211 –i wlan0 –c /data/misc/wifi/wlan_supplicant.conf &
+2.Wpa_cli –I wlan0 –p /data/misc/wifi/sockets/
+3.>scan
+4.….
+5.Wlan0 can connect the AP successfully, use “iwconfig” check wlan0 info as ESSID:p2p_24” Frequency :2.427 GHz
+6.Wpa_supplicant –Dnl80211 –i p2p0 –c /data/misc/wifi/p2p_supplicant.conf &
+7.Wpa_cli –I p2p0 –p /data/misc/wifi/sockets/ 
+8.>p2p_find
+9.>p2p_connect mac of dut pbc go_intent=1 
+10.P2P also connect successfully, but GO beacon is in 1 channel
+
+wiphy should be kenerl interface.
+
+5/11 
+
+freertos, footprint...
+
+
+xTaskCreate
+{
+   allocate TCB 
+   allocate Stack Space
+   prvInitialiseNewTask()
+   prvAddNewTaskToReadyList
+   
+   return pass or out of memory
+}
+
+prvInitialiseNewTask
+{
+   check portPRIVILEGE_BIT. but it 00, looks weired
+   memset(0x5u) of stack memory, for debug easy
+   caculate stack top and end.
+   save taskname in TCB
+   check pririty and save it in TCB
+   init state list and event list
+   vPortStoreTaskMPUSettings // should save MPU registry
+   pxPortInitialiseStack  // should be setup return address and other stack...
+       -- pxThreadState->pvThread = CreateThread( NULL, 0, ( LPTHREAD_START_ROUTINE ) pxCode, pvParameters, CREATE_SUSPENDED, NULL );
+	      // create simulate thread to simulate task.
+   finally, give the TCB out.
+}
+
+prvAddNewTaskToReadyList
+{
+   in_critica_section
+   uxCurrentNumberOfTasks++ // live task increase
+   If,  put task as current tcb. this is the new task. 
+        if only 1 task, init task prvInitialiseTaskLists()
+   In fact, caculate current running TCB
+   uxTaskNumber++
+   traceTASK_CREATE()
+   prvAddTaskToReadyList() // add to ready list  pxReadyTasksLists this is global var
+   portSETUP_TCB 
+   out_critical_section
+   backdoor to give access of high priority new task run
+}
+
+vTaskStartScheduler // trigger the live of OS
+{
+  // create IDLE task
+  xReturn = xTaskCreate( prvIdleTask, "IDLE", usIdleTaskStackSize, ( void * ) NULL, ( tskIDLE_PRIORITY | portPRIVILEGE_BIT ), &xIdleTaskHandle ); /
+  
+  // create timer
+  xTimerCreateTimerTask
+  
+  // disable ISR
+  portDISABLE_INTERRUPTS
+
+  // schedule is running and clear tick to zero
+  xNextTaskUnblockTime = portMAX_DELAY;
+  xSchedulerRunning = pdTRUE;
+  xTickCount = ( TickType_t ) 0U;
+
+  xPortStartScheduler // should be ask MCP low layer to go
+      -- vPortSetInterruptHandler( portINTERRUPT_YIELD, prvProcessYieldInterrupt );
+	  -- vPortSetInterruptHandler( portINTERRUPT_TICK, prvProcessTickInterrupt );
+	     // install interrupt
+      -- pvHandle = CreateThread( NULL, 0, prvSimulatedPeripheralTimer, NULL, CREATE_SUSPENDED, NULL );
+	     // create hw timer tick thread
+	  -- pxThreadState = ( xThreadState * ) *( ( size_t * ) pxCurrentTCB ); 
+	     // start run...
+	  -- prvProcessSimulatedInterrupts // handle simulated interrupt.
+	     // So, we have main thread,  timer thread, and each task thread.
+		  -- ulIsrHandler() // run isr handler
+		  -- vTaskSwitchContext();
+		  -- SuspendThread( pxThreadState->pvThread ); // the old one and
+		  -- ResumeThread( pxThreadState->pvThread ); // resume the new one
+}
+
+
+prvSimulatedPeripheralTimer // this is simulate timer
+{
+   -- use sleep to simulate ticket.
+}
+
+
+List
+{
+   itemcount
+   pointer to ListItems. (pxIndex)
+   pointer to MiniListItem_t (xListEnd)
+   
+   ListItem
+   {
+      xItemValue U16               //Mini
+	  Pointer ListItem pxNext      //Mini
+	  Pointer ListItem pxPrevious  //Mini
+	  void* pvOwner
+	  void* pvContainer
+   }
+  
+}
+
+done read of list.h list.c. Start Queue
+
+5/12 
+
+Start of Queue
+
+xQueueCreate( uxQueueLength, uxItemSize ) // number, and each item size
+xQueueCreateStatic( uxQueueLength, uxItemSize, pucQueueStorage, pxQueueBuffer ) // number, each size, place to item, place to hold structer itself
+xQueueSendToFront( xQueue, pvItemToQueue, xTicksToWait ) // insert queue front. but, can't called in ISR
+xQueueSendToBack( xQueue, pvItemToQueue, xTicksToWait ) // send queue in back end.
+
+xQueueGenericSend is the generic implementations.
+xQueueOverwrite( xQueue, pvItemToQueue ) // read/write length =1 queue
+
+#define xQueuePeek( xQueue, pvBuffer, xTicksToWait ) // peak, but, what's the directly to get?  or, already saved in structure?
+
+xQueueGenericReceive // this is generic function to peek and receive. it looks receive will remove, but peek not.
+
+uxQueueMessagesWaiting // return queue number already taken
+
+uxQueueSpacesAvailable // return queue free slot number
+
+xQueueSendToFrontFromISR
+xQueueSendToBackFromISR // not sure, how this work
+
+xQueueGiveFromISR // what's this for?
+
+* co-routines. // what's hell of this? leave it later
+
+vQueueAddToRegistry // this is for debugger useage? how to use it?
+
+
+xQueueGenericCreate        // create queue
+xQueueGenericCreateStatic   
+
+vQueueWaitForMessageRestricted // this is waiting for one item??
+
+#define pxMutexHolder					pcTail
+#define uxQueueType						pcHead
+#define queueQUEUE_IS_MUTEX				NULL 
+
+xQueue
+{
+   pchead
+   pctail
+   pcwiteto
+   pcreadfrom
+   
+   waittosend
+   waittorecev
+   
+   uxMessagesWaiting // equal number
+   uxLength
+   uxItemSize
+   
+   cRxLock
+   cTxLock
+}
+
+have a medium level read of task. Next, return back again to task.c
+
+
+
+
+queue registry is just for save queue name and queue handle
+
+
+5/13 
+
+http://www.myir-tech.com/resource/419.asp  ARM chip trend
+
+Cotex-M3 Family class
+
+
+5/17
+
+OTA
+
+OTA Steps, Failure recovery, Log 
+
+Small Size. FOTA 
+
+http://blog.csdn.net/thinkinwm/article/details/8960506  OMA Server
+
+http://www.redstone.net.cn/index.php?m=content&c=index&a=lists&catid=12#  
+
+Android OTA/FOTA: Google diff arithmetic Full Image and Differential Image
+
+Key feature:
+small footprint : full image and different image
+lost power recover :  done active after image validation and before reboot
+failure recover : 
+update successfully update : report success
+continue download like thoundbird. : fragment, or set  checksum
+install/uninstall/add app: 
+diagnose reprot current status:  HW diagnose.
+implement from 5% to 100%, and collect feedback to continue..
+Client pull image: avoid gateway..
+Gateway push image: Gate+Sensor solution.
+MSFT CHID update theory..  version control 
+
+ID information:
+HW version:
+HW ID:
+Software list: name,version, cl, date, memory useage, run time, hw diagnose, status.
+
+
+Open Mobile Alliance-Device Management (OMA-DM) standard  SCOMO
+How to test 
+
+push moudle can give sensor the ability to report IP data, location...etc.
+
+minicom is serial port on linux
+
+
+Crash collection / Dump analysis autoamtic/ Error analsysis 
+
+zip data. : URL http://msgpack.org/ fork source code
+use http push to upload to server.
+use gdb to analysis
+
+
+State status report
+
+RFM69CW    RF moudle  https://detail.1688.com/pic/36463984720.html?spm=a261y.7663282.1998411378.1.eKQuq5
+http://www.360doc.com/content/15/0121/20/213482_442654642.shtml
+Huawei desgin doc
+http://wenku.baidu.com/view/a7da66ed5901020207409ced.html
+http://www.sae.org.cn/index // car 
+https://harizanov.com/2015/06/firmware-over-the-air-fota-for-esp8266-soc/  tech web
 
