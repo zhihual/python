@@ -1907,3 +1907,29 @@ well done one elf, exe and core analysis
 4. addr2line -a 0x8048454 -e testcrash -f can get function name.
 
 all done.
+
+http://blog.jobbole.com/45733/ this is one URL for more memory analysis
+
+http://blog.csdn.net/liigo/article/details/582231  GDB typical command
+http://blog.csdn.net/hejinjing_tom_com/article/details/9472041  have sample GDB in thread
+
+Let's dig AP Firmware
+
+1) analysis how config through httpd...
+
+http://192.168.1.1/nas-ftp.asp
+
+Java script do some work, collect data/settings, and finally, call into tomato.cgi
+
+But, what's is CGI
+
+http://www.jdon.com/idea/cgi.htm CGI guide
+
+tomato.cgi is in httpd exe.  
+plug tfusb, kernel can recong
+
+nvram is one tool to access nvm configuration space.
+the space is under control of kernel /dev/nvram
+
+
+
