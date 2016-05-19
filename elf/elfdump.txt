@@ -1,0 +1,849 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           Intel 80386
+  Version:                           0x1
+  Entry point address:               0x8049a78
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          212380 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         9
+  Size of section headers:           40 (bytes)
+  Number of section headers:         37
+  Section header string table index: 34
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .interp           PROGBITS        08048154 000154 000013 00   A  0   0  1
+  [ 2] .note.ABI-tag     NOTE            08048168 000168 000020 00   A  0   0  4
+  [ 3] .note.gnu.build-i NOTE            08048188 000188 000024 00   A  0   0  4
+  [ 4] .gnu.hash         GNU_HASH        080481ac 0001ac 000034 04   A  5   0  4
+  [ 5] .dynsym           DYNSYM          080481e0 0001e0 0005c0 10   A  6   1  4
+  [ 6] .dynstr           STRTAB          080487a0 0007a0 000365 00   A  0   0  1
+  [ 7] .gnu.version      VERSYM          08048b06 000b06 0000b8 02   A  5   0  2
+  [ 8] .gnu.version_r    VERNEED         08048bc0 000bc0 000090 00   A  6   2  4
+  [ 9] .rel.dyn          REL             08048c50 000c50 000028 08   A  5   0  4
+  [10] .rel.plt          REL             08048c78 000c78 0002a8 08   A  5  12  4
+  [11] .init             PROGBITS        08048f20 000f20 00002e 00  AX  0   0  4
+  [12] .plt              PROGBITS        08048f50 000f50 000560 04  AX  0   0 16
+  [13] .text             PROGBITS        080494b0 0014b0 0094bc 00  AX  0   0 16
+  [14] .fini             PROGBITS        0805296c 00a96c 00001a 00  AX  0   0  4
+  [15] .rodata           PROGBITS        080529a0 00a9a0 005699 00   A  0   0 32
+  [16] .eh_frame_hdr     PROGBITS        0805803c 01003c 0008bc 00   A  0   0  4
+  [17] .eh_frame         PROGBITS        080588f8 0108f8 002920 00   A  0   0  4
+  [18] .ctors            PROGBITS        0805cf0c 013f0c 000008 00  WA  0   0  4
+  [19] .dtors            PROGBITS        0805cf14 013f14 000008 00  WA  0   0  4
+  [20] .jcr              PROGBITS        0805cf1c 013f1c 000004 00  WA  0   0  4
+  [21] .dynamic          DYNAMIC         0805cf20 013f20 0000d0 08  WA  6   0  4
+  [22] .got              PROGBITS        0805cff0 013ff0 000004 04  WA  0   0  4
+  [23] .got.plt          PROGBITS        0805cff4 013ff4 000160 04  WA  0   0  4
+  [24] .data             PROGBITS        0805d154 014154 000040 00  WA  0   0  4
+  [25] .bss              NOBITS          0805d1a0 014194 0011c0 00  WA  0   0 32
+  [26] .comment          PROGBITS        00000000 014194 00002a 01  MS  0   0  1
+  [27] .debug_aranges    PROGBITS        00000000 0141be 0000e8 00      0   0  1
+  [28] .debug_info       PROGBITS        00000000 0142a6 00c040 00      0   0  1
+  [29] .debug_abbrev     PROGBITS        00000000 0202e6 001a69 00      0   0  1
+  [30] .debug_line       PROGBITS        00000000 021d4f 00335c 00      0   0  1
+  [31] .debug_str        PROGBITS        00000000 0250ab 0024d7 01  MS  0   0  1
+  [32] .debug_loc        PROGBITS        00000000 027582 00b522 00      0   0  1
+  [33] .debug_ranges     PROGBITS        00000000 032aa4 0011a0 00      0   0  1
+  [34] .shstrtab         STRTAB          00000000 033c44 000155 00      0   0  1
+  [35] .symtab           SYMTAB          00000000 034364 001e40 10     36 261  4
+  [36] .strtab           STRTAB          00000000 0361a4 002033 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings)
+  I (info), L (link order), G (group), T (TLS), E (exclude), x (unknown)
+  O (extra OS processing required) o (OS specific), p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  PHDR           0x000034 0x08048034 0x08048034 0x00120 0x00120 R E 0x4
+  INTERP         0x000154 0x08048154 0x08048154 0x00013 0x00013 R   0x1
+      [Requesting program interpreter: /lib/ld-linux.so.2]
+  LOAD           0x000000 0x08048000 0x08048000 0x13218 0x13218 R E 0x1000
+  LOAD           0x013f0c 0x0805cf0c 0x0805cf0c 0x00288 0x01454 RW  0x1000
+  DYNAMIC        0x013f20 0x0805cf20 0x0805cf20 0x000d0 0x000d0 RW  0x4
+  NOTE           0x000168 0x08048168 0x08048168 0x00044 0x00044 R   0x4
+  GNU_EH_FRAME   0x01003c 0x0805803c 0x0805803c 0x008bc 0x008bc R   0x4
+  GNU_STACK      0x000000 0x00000000 0x00000000 0x00000 0x00000 RW  0x4
+  GNU_RELRO      0x013f0c 0x0805cf0c 0x0805cf0c 0x000f4 0x000f4 R   0x1
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     
+   01     .interp 
+   02     .interp .note.ABI-tag .note.gnu.build-id .gnu.hash .dynsym .dynstr .gnu.version .gnu.version_r .rel.dyn .rel.plt .init .plt .text .fini .rodata .eh_frame_hdr .eh_frame 
+   03     .ctors .dtors .jcr .dynamic .got .got.plt .data .bss 
+   04     .dynamic 
+   05     .note.ABI-tag .note.gnu.build-id 
+   06     .eh_frame_hdr 
+   07     
+   08     .ctors .dtors .jcr .dynamic .got 
+
+Dynamic section at offset 0x13f20 contains 21 entries:
+  Tag        Type                         Name/Value
+ 0x00000001 (NEEDED)                     Shared library: [librt.so.1]
+ 0x00000001 (NEEDED)                     Shared library: [libc.so.6]
+ 0x0000000c (INIT)                       0x8048f20
+ 0x0000000d (FINI)                       0x805296c
+ 0x6ffffef5 (GNU_HASH)                   0x80481ac
+ 0x00000005 (STRTAB)                     0x80487a0
+ 0x00000006 (SYMTAB)                     0x80481e0
+ 0x0000000a (STRSZ)                      869 (bytes)
+ 0x0000000b (SYMENT)                     16 (bytes)
+ 0x00000015 (DEBUG)                      0x0
+ 0x00000003 (PLTGOT)                     0x805cff4
+ 0x00000002 (PLTRELSZ)                   680 (bytes)
+ 0x00000014 (PLTREL)                     REL
+ 0x00000017 (JMPREL)                     0x8048c78
+ 0x00000011 (REL)                        0x8048c50
+ 0x00000012 (RELSZ)                      40 (bytes)
+ 0x00000013 (RELENT)                     8 (bytes)
+ 0x6ffffffe (VERNEED)                    0x8048bc0
+ 0x6fffffff (VERNEEDNUM)                 2
+ 0x6ffffff0 (VERSYM)                     0x8048b06
+ 0x00000000 (NULL)                       0x0
+
+Relocation section '.rel.dyn' at offset 0xc50 contains 5 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+0805cff0  00002406 R_386_GLOB_DAT    00000000   __gmon_start__
+0805d1a0  00005805 R_386_COPY        0805d1a0   stderr
+0805d1a8  00005a05 R_386_COPY        0805d1a8   optind
+0805d1c0  00005705 R_386_COPY        0805d1c0   stdout
+0805d1c4  00005b05 R_386_COPY        0805d1c4   optarg
+
+Relocation section '.rel.plt' at offset 0xc78 contains 85 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+0805d000  00000107 R_386_JUMP_SLOT   00000000   unsetenv
+0805d004  00000207 R_386_JUMP_SLOT   00000000   __snprintf_chk
+0805d008  00000307 R_386_JUMP_SLOT   00000000   strstr
+0805d00c  00000407 R_386_JUMP_SLOT   00000000   strcmp
+0805d010  00000507 R_386_JUMP_SLOT   00000000   __vfprintf_chk
+0805d014  00000607 R_386_JUMP_SLOT   00000000   read
+0805d018  00000707 R_386_JUMP_SLOT   00000000   fflush
+0805d01c  00000807 R_386_JUMP_SLOT   00000000   memmove
+0805d020  00000907 R_386_JUMP_SLOT   00000000   free
+0805d024  00000a07 R_386_JUMP_SLOT   00000000   memcpy
+0805d028  00000b07 R_386_JUMP_SLOT   00000000   fclose
+0805d02c  00000c07 R_386_JUMP_SLOT   00000000   signal
+0805d030  00000d07 R_386_JUMP_SLOT   00000000   memcmp
+0805d034  00000e07 R_386_JUMP_SLOT   00000000   gettimeofday
+0805d038  00000f07 R_386_JUMP_SLOT   00000000   sleep
+0805d03c  00001007 R_386_JUMP_SLOT   00000000   select
+0805d040  00001107 R_386_JUMP_SLOT   00000000   alarm
+0805d044  00001207 R_386_JUMP_SLOT   00000000   mktime
+0805d048  00001307 R_386_JUMP_SLOT   00000000   __stack_chk_fail
+0805d04c  00001407 R_386_JUMP_SLOT   00000000   __fdelt_chk
+0805d050  00001507 R_386_JUMP_SLOT   00000000   unlink
+0805d054  00001607 R_386_JUMP_SLOT   00000000   fseek
+0805d058  00001707 R_386_JUMP_SLOT   00000000   perror
+0805d05c  00001807 R_386_JUMP_SLOT   00000000   waitpid
+0805d060  00001907 R_386_JUMP_SLOT   00000000   usleep
+0805d064  00001a07 R_386_JUMP_SLOT   00000000   __vsyslog_chk
+0805d068  00001b07 R_386_JUMP_SLOT   00000000   fread
+0805d06c  00001c07 R_386_JUMP_SLOT   00000000   getpid
+0805d070  00001d07 R_386_JUMP_SLOT   00000000   daemon
+0805d074  00001e07 R_386_JUMP_SLOT   00000000   getenv
+0805d078  00001f07 R_386_JUMP_SLOT   00000000   realloc
+0805d07c  00002007 R_386_JUMP_SLOT   00000000   malloc
+0805d080  00002107 R_386_JUMP_SLOT   00000000   puts
+0805d084  00002207 R_386_JUMP_SLOT   00000000   strerror
+0805d088  00002307 R_386_JUMP_SLOT   00000000   __memcpy_chk
+0805d08c  00002407 R_386_JUMP_SLOT   00000000   __gmon_start__
+0805d090  00002507 R_386_JUMP_SLOT   00000000   exit
+0805d094  00002607 R_386_JUMP_SLOT   00000000   localtime
+0805d098  00002707 R_386_JUMP_SLOT   00000000   closelog
+0805d09c  00002807 R_386_JUMP_SLOT   00000000   strchr
+0805d0a0  00002907 R_386_JUMP_SLOT   00000000   getcwd
+0805d0a4  00002a07 R_386_JUMP_SLOT   00000000   strlen
+0805d0a8  00002b07 R_386_JUMP_SLOT   00000000   setenv
+0805d0ac  00002c07 R_386_JUMP_SLOT   00000000   __libc_start_main
+0805d0b0  00002d07 R_386_JUMP_SLOT   00000000   getopt
+0805d0b4  00002e07 R_386_JUMP_SLOT   00000000   strcasecmp
+0805d0b8  00002f07 R_386_JUMP_SLOT   00000000   execv
+0805d0bc  00003007 R_386_JUMP_SLOT   00000000   fcntl
+0805d0c0  00003107 R_386_JUMP_SLOT   00000000   bind
+0805d0c4  00003207 R_386_JUMP_SLOT   00000000   ftell
+0805d0c8  00003307 R_386_JUMP_SLOT   00000000   setvbuf
+0805d0cc  00003407 R_386_JUMP_SLOT   00000000   fopen
+0805d0d0  00003507 R_386_JUMP_SLOT   00000000   gmtime
+0805d0d4  00003607 R_386_JUMP_SLOT   00000000   memset
+0805d0d8  00003707 R_386_JUMP_SLOT   00000000   snprintf
+0805d0dc  00003807 R_386_JUMP_SLOT   00000000   __strdup
+0805d0e0  00003907 R_386_JUMP_SLOT   00000000   putchar
+0805d0e4  00003a07 R_386_JUMP_SLOT   00000000   __errno_location
+0805d0e8  00003b07 R_386_JUMP_SLOT   00000000   fileno
+0805d0ec  00003c07 R_386_JUMP_SLOT   00000000   __vsnprintf_chk
+0805d0f0  00003d07 R_386_JUMP_SLOT   00000000   strncasecmp
+0805d0f4  00003e07 R_386_JUMP_SLOT   00000000   access
+0805d0f8  00003f07 R_386_JUMP_SLOT   00000000   __printf_chk
+0805d0fc  00004007 R_386_JUMP_SLOT   00000000   __syslog_chk
+0805d100  00004107 R_386_JUMP_SLOT   00000000   fork
+0805d104  00004207 R_386_JUMP_SLOT   00000000   readdir
+0805d108  00004307 R_386_JUMP_SLOT   00000000   strrchr
+0805d10c  00004507 R_386_JUMP_SLOT   00000000   openlog
+0805d110  00004607 R_386_JUMP_SLOT   00000000   qsort
+0805d114  00004707 R_386_JUMP_SLOT   00000000   socket
+0805d118  00004807 R_386_JUMP_SLOT   00000000   __fprintf_chk
+0805d11c  00004907 R_386_JUMP_SLOT   00000000   clock_gettime
+0805d120  00004a07 R_386_JUMP_SLOT   00000000   strncmp
+0805d124  00004b07 R_386_JUMP_SLOT   00000000   fdatasync
+0805d128  00004c07 R_386_JUMP_SLOT   00000000   random
+0805d12c  00004d07 R_386_JUMP_SLOT   00000000   strtol
+0805d130  00004e07 R_386_JUMP_SLOT   00000000   connect
+0805d134  00004f07 R_386_JUMP_SLOT   00000000   recv
+0805d138  00005007 R_386_JUMP_SLOT   00000000   close
+0805d13c  00005107 R_386_JUMP_SLOT   00000000   closedir
+0805d140  00005207 R_386_JUMP_SLOT   00000000   opendir
+0805d144  00005307 R_386_JUMP_SLOT   00000000   __assert_fail
+0805d148  00005407 R_386_JUMP_SLOT   00000000   __ctype_b_loc
+0805d14c  00005507 R_386_JUMP_SLOT   00000000   send
+0805d150  00005607 R_386_JUMP_SLOT   00000000   calloc
+
+There are no unwind sections in this file.
+
+Symbol table '.dynsym' contains 92 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00000000     0 FUNC    GLOBAL DEFAULT  UND unsetenv@GLIBC_2.0 (2)
+     2: 00000000     0 FUNC    GLOBAL DEFAULT  UND __snprintf_chk@GLIBC_2.3.4 (3)
+     3: 00000000     0 FUNC    GLOBAL DEFAULT  UND strstr@GLIBC_2.0 (2)
+     4: 00000000     0 FUNC    GLOBAL DEFAULT  UND strcmp@GLIBC_2.0 (2)
+     5: 00000000     0 FUNC    GLOBAL DEFAULT  UND __vfprintf_chk@GLIBC_2.3.4 (3)
+     6: 00000000     0 FUNC    GLOBAL DEFAULT  UND read@GLIBC_2.0 (2)
+     7: 00000000     0 FUNC    GLOBAL DEFAULT  UND fflush@GLIBC_2.0 (2)
+     8: 00000000     0 FUNC    GLOBAL DEFAULT  UND memmove@GLIBC_2.0 (2)
+     9: 00000000     0 FUNC    GLOBAL DEFAULT  UND free@GLIBC_2.0 (2)
+    10: 00000000     0 FUNC    GLOBAL DEFAULT  UND memcpy@GLIBC_2.0 (2)
+    11: 00000000     0 FUNC    GLOBAL DEFAULT  UND fclose@GLIBC_2.1 (4)
+    12: 00000000     0 FUNC    GLOBAL DEFAULT  UND signal@GLIBC_2.0 (2)
+    13: 00000000     0 FUNC    GLOBAL DEFAULT  UND memcmp@GLIBC_2.0 (2)
+    14: 00000000     0 FUNC    GLOBAL DEFAULT  UND gettimeofday@GLIBC_2.0 (2)
+    15: 00000000     0 FUNC    GLOBAL DEFAULT  UND sleep@GLIBC_2.0 (2)
+    16: 00000000     0 FUNC    GLOBAL DEFAULT  UND select@GLIBC_2.0 (2)
+    17: 00000000     0 FUNC    GLOBAL DEFAULT  UND alarm@GLIBC_2.0 (2)
+    18: 00000000     0 FUNC    GLOBAL DEFAULT  UND mktime@GLIBC_2.0 (2)
+    19: 00000000     0 FUNC    GLOBAL DEFAULT  UND __stack_chk_fail@GLIBC_2.4 (5)
+    20: 00000000     0 FUNC    GLOBAL DEFAULT  UND __fdelt_chk@GLIBC_2.15 (6)
+    21: 00000000     0 FUNC    GLOBAL DEFAULT  UND unlink@GLIBC_2.0 (2)
+    22: 00000000     0 FUNC    GLOBAL DEFAULT  UND fseek@GLIBC_2.0 (2)
+    23: 00000000     0 FUNC    GLOBAL DEFAULT  UND perror@GLIBC_2.0 (2)
+    24: 00000000     0 FUNC    GLOBAL DEFAULT  UND waitpid@GLIBC_2.0 (2)
+    25: 00000000     0 FUNC    GLOBAL DEFAULT  UND usleep@GLIBC_2.0 (2)
+    26: 00000000     0 FUNC    GLOBAL DEFAULT  UND __vsyslog_chk@GLIBC_2.4 (5)
+    27: 00000000     0 FUNC    GLOBAL DEFAULT  UND fread@GLIBC_2.0 (2)
+    28: 00000000     0 FUNC    GLOBAL DEFAULT  UND getpid@GLIBC_2.0 (2)
+    29: 00000000     0 FUNC    GLOBAL DEFAULT  UND daemon@GLIBC_2.0 (2)
+    30: 00000000     0 FUNC    GLOBAL DEFAULT  UND getenv@GLIBC_2.0 (2)
+    31: 00000000     0 FUNC    GLOBAL DEFAULT  UND realloc@GLIBC_2.0 (2)
+    32: 00000000     0 FUNC    GLOBAL DEFAULT  UND malloc@GLIBC_2.0 (2)
+    33: 00000000     0 FUNC    GLOBAL DEFAULT  UND puts@GLIBC_2.0 (2)
+    34: 00000000     0 FUNC    GLOBAL DEFAULT  UND strerror@GLIBC_2.0 (2)
+    35: 00000000     0 FUNC    GLOBAL DEFAULT  UND __memcpy_chk@GLIBC_2.3.4 (3)
+    36: 00000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+    37: 00000000     0 FUNC    GLOBAL DEFAULT  UND exit@GLIBC_2.0 (2)
+    38: 00000000     0 FUNC    GLOBAL DEFAULT  UND localtime@GLIBC_2.0 (2)
+    39: 00000000     0 FUNC    GLOBAL DEFAULT  UND closelog@GLIBC_2.0 (2)
+    40: 00000000     0 FUNC    GLOBAL DEFAULT  UND strchr@GLIBC_2.0 (2)
+    41: 00000000     0 FUNC    GLOBAL DEFAULT  UND getcwd@GLIBC_2.0 (2)
+    42: 00000000     0 FUNC    GLOBAL DEFAULT  UND strlen@GLIBC_2.0 (2)
+    43: 00000000     0 FUNC    GLOBAL DEFAULT  UND setenv@GLIBC_2.0 (2)
+    44: 00000000     0 FUNC    GLOBAL DEFAULT  UND __libc_start_main@GLIBC_2.0 (2)
+    45: 00000000     0 FUNC    GLOBAL DEFAULT  UND getopt@GLIBC_2.0 (2)
+    46: 00000000     0 FUNC    GLOBAL DEFAULT  UND strcasecmp@GLIBC_2.0 (2)
+    47: 00000000     0 FUNC    GLOBAL DEFAULT  UND execv@GLIBC_2.0 (2)
+    48: 00000000     0 FUNC    GLOBAL DEFAULT  UND fcntl@GLIBC_2.0 (2)
+    49: 00000000     0 FUNC    GLOBAL DEFAULT  UND bind@GLIBC_2.0 (2)
+    50: 00000000     0 FUNC    GLOBAL DEFAULT  UND ftell@GLIBC_2.0 (2)
+    51: 00000000     0 FUNC    GLOBAL DEFAULT  UND setvbuf@GLIBC_2.0 (2)
+    52: 00000000     0 FUNC    GLOBAL DEFAULT  UND fopen@GLIBC_2.1 (4)
+    53: 00000000     0 FUNC    GLOBAL DEFAULT  UND gmtime@GLIBC_2.0 (2)
+    54: 00000000     0 FUNC    GLOBAL DEFAULT  UND memset@GLIBC_2.0 (2)
+    55: 00000000     0 FUNC    GLOBAL DEFAULT  UND snprintf@GLIBC_2.0 (2)
+    56: 00000000     0 FUNC    GLOBAL DEFAULT  UND __strdup@GLIBC_2.0 (2)
+    57: 00000000     0 FUNC    GLOBAL DEFAULT  UND putchar@GLIBC_2.0 (2)
+    58: 00000000     0 FUNC    GLOBAL DEFAULT  UND __errno_location@GLIBC_2.0 (2)
+    59: 00000000     0 FUNC    GLOBAL DEFAULT  UND fileno@GLIBC_2.0 (2)
+    60: 00000000     0 FUNC    GLOBAL DEFAULT  UND __vsnprintf_chk@GLIBC_2.3.4 (3)
+    61: 00000000     0 FUNC    GLOBAL DEFAULT  UND strncasecmp@GLIBC_2.0 (2)
+    62: 00000000     0 FUNC    GLOBAL DEFAULT  UND access@GLIBC_2.0 (2)
+    63: 00000000     0 FUNC    GLOBAL DEFAULT  UND __printf_chk@GLIBC_2.3.4 (3)
+    64: 00000000     0 FUNC    GLOBAL DEFAULT  UND __syslog_chk@GLIBC_2.4 (5)
+    65: 00000000     0 FUNC    GLOBAL DEFAULT  UND fork@GLIBC_2.0 (2)
+    66: 00000000     0 FUNC    GLOBAL DEFAULT  UND readdir@GLIBC_2.0 (2)
+    67: 00000000     0 FUNC    GLOBAL DEFAULT  UND strrchr@GLIBC_2.0 (2)
+    68: 00000000     0 NOTYPE  WEAK   DEFAULT  UND _Jv_RegisterClasses
+    69: 00000000     0 FUNC    GLOBAL DEFAULT  UND openlog@GLIBC_2.0 (2)
+    70: 00000000     0 FUNC    GLOBAL DEFAULT  UND qsort@GLIBC_2.0 (2)
+    71: 00000000     0 FUNC    GLOBAL DEFAULT  UND socket@GLIBC_2.0 (2)
+    72: 00000000     0 FUNC    GLOBAL DEFAULT  UND __fprintf_chk@GLIBC_2.3.4 (3)
+    73: 00000000     0 FUNC    GLOBAL DEFAULT  UND clock_gettime@GLIBC_2.2 (7)
+    74: 00000000     0 FUNC    GLOBAL DEFAULT  UND strncmp@GLIBC_2.0 (2)
+    75: 00000000     0 FUNC    GLOBAL DEFAULT  UND fdatasync@GLIBC_2.0 (2)
+    76: 00000000     0 FUNC    GLOBAL DEFAULT  UND random@GLIBC_2.0 (2)
+    77: 00000000     0 FUNC    GLOBAL DEFAULT  UND strtol@GLIBC_2.0 (2)
+    78: 00000000     0 FUNC    GLOBAL DEFAULT  UND connect@GLIBC_2.0 (2)
+    79: 00000000     0 FUNC    GLOBAL DEFAULT  UND recv@GLIBC_2.0 (2)
+    80: 00000000     0 FUNC    GLOBAL DEFAULT  UND close@GLIBC_2.0 (2)
+    81: 00000000     0 FUNC    GLOBAL DEFAULT  UND closedir@GLIBC_2.0 (2)
+    82: 00000000     0 FUNC    GLOBAL DEFAULT  UND opendir@GLIBC_2.0 (2)
+    83: 00000000     0 FUNC    GLOBAL DEFAULT  UND __assert_fail@GLIBC_2.0 (2)
+    84: 00000000     0 FUNC    GLOBAL DEFAULT  UND __ctype_b_loc@GLIBC_2.3 (8)
+    85: 00000000     0 FUNC    GLOBAL DEFAULT  UND send@GLIBC_2.0 (2)
+    86: 00000000     0 FUNC    GLOBAL DEFAULT  UND calloc@GLIBC_2.0 (2)
+    87: 0805d1c0     4 OBJECT  GLOBAL DEFAULT   25 stdout@GLIBC_2.0 (2)
+    88: 0805d1a0     4 OBJECT  GLOBAL DEFAULT   25 stderr@GLIBC_2.0 (2)
+    89: 080529a4     4 OBJECT  GLOBAL DEFAULT   15 _IO_stdin_used
+    90: 0805d1a8     4 OBJECT  GLOBAL DEFAULT   25 optind@GLIBC_2.0 (2)
+    91: 0805d1c4     4 OBJECT  GLOBAL DEFAULT   25 optarg@GLIBC_2.0 (2)
+
+Symbol table '.symtab' contains 484 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 08048154     0 SECTION LOCAL  DEFAULT    1 
+     2: 08048168     0 SECTION LOCAL  DEFAULT    2 
+     3: 08048188     0 SECTION LOCAL  DEFAULT    3 
+     4: 080481ac     0 SECTION LOCAL  DEFAULT    4 
+     5: 080481e0     0 SECTION LOCAL  DEFAULT    5 
+     6: 080487a0     0 SECTION LOCAL  DEFAULT    6 
+     7: 08048b06     0 SECTION LOCAL  DEFAULT    7 
+     8: 08048bc0     0 SECTION LOCAL  DEFAULT    8 
+     9: 08048c50     0 SECTION LOCAL  DEFAULT    9 
+    10: 08048c78     0 SECTION LOCAL  DEFAULT   10 
+    11: 08048f20     0 SECTION LOCAL  DEFAULT   11 
+    12: 08048f50     0 SECTION LOCAL  DEFAULT   12 
+    13: 080494b0     0 SECTION LOCAL  DEFAULT   13 
+    14: 0805296c     0 SECTION LOCAL  DEFAULT   14 
+    15: 080529a0     0 SECTION LOCAL  DEFAULT   15 
+    16: 0805803c     0 SECTION LOCAL  DEFAULT   16 
+    17: 080588f8     0 SECTION LOCAL  DEFAULT   17 
+    18: 0805cf0c     0 SECTION LOCAL  DEFAULT   18 
+    19: 0805cf14     0 SECTION LOCAL  DEFAULT   19 
+    20: 0805cf1c     0 SECTION LOCAL  DEFAULT   20 
+    21: 0805cf20     0 SECTION LOCAL  DEFAULT   21 
+    22: 0805cff0     0 SECTION LOCAL  DEFAULT   22 
+    23: 0805cff4     0 SECTION LOCAL  DEFAULT   23 
+    24: 0805d154     0 SECTION LOCAL  DEFAULT   24 
+    25: 0805d1a0     0 SECTION LOCAL  DEFAULT   25 
+    26: 00000000     0 SECTION LOCAL  DEFAULT   26 
+    27: 00000000     0 SECTION LOCAL  DEFAULT   27 
+    28: 00000000     0 SECTION LOCAL  DEFAULT   28 
+    29: 00000000     0 SECTION LOCAL  DEFAULT   29 
+    30: 00000000     0 SECTION LOCAL  DEFAULT   30 
+    31: 00000000     0 SECTION LOCAL  DEFAULT   31 
+    32: 00000000     0 SECTION LOCAL  DEFAULT   32 
+    33: 00000000     0 SECTION LOCAL  DEFAULT   33 
+    34: 00000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+    35: 0805cf0c     0 OBJECT  LOCAL  DEFAULT   18 __CTOR_LIST__
+    36: 0805cf14     0 OBJECT  LOCAL  DEFAULT   19 __DTOR_LIST__
+    37: 0805cf1c     0 OBJECT  LOCAL  DEFAULT   20 __JCR_LIST__
+    38: 08049aa0     0 FUNC    LOCAL  DEFAULT   13 __do_global_dtors_aux
+    39: 0805d1c8     1 OBJECT  LOCAL  DEFAULT   25 completed.6159
+    40: 0805d1cc     4 OBJECT  LOCAL  DEFAULT   25 dtor_idx.6161
+    41: 08049b00     0 FUNC    LOCAL  DEFAULT   13 frame_dummy
+    42: 00000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+    43: 0805cf10     0 OBJECT  LOCAL  DEFAULT   18 __CTOR_END__
+    44: 0805b214     0 OBJECT  LOCAL  DEFAULT   17 __FRAME_END__
+    45: 0805cf1c     0 OBJECT  LOCAL  DEFAULT   20 __JCR_END__
+    46: 08052940     0 FUNC    LOCAL  DEFAULT   13 __do_global_ctors_aux
+    47: 00000000     0 FILE    LOCAL  DEFAULT  ABS wpa_cli.c
+    48: 08049b30    60 FUNC    LOCAL  DEFAULT   13 get_cmd_arg_num
+    49: 08049b70    77 FUNC    LOCAL  DEFAULT   13 cli_txt_list_flush
+    50: 08049bc0   160 FUNC    LOCAL  DEFAULT   13 wpa_cli_edit_filter_histo
+    51: 08056dc0  2060 OBJECT  LOCAL  DEFAULT   15 wpa_cli_commands
+    52: 08049c60    33 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_quit
+    53: 0805d1e0     4 OBJECT  LOCAL  DEFAULT   25 interactive
+    54: 0805d1f4     4 OBJECT  LOCAL  DEFAULT   25 wpa_cli_quit
+    55: 08049c90     5 FUNC    LOCAL  DEFAULT   13 wpa_cli_edit_eof_cb
+    56: 08049ca0     5 FUNC    LOCAL  DEFAULT   13 wpa_cli_terminate
+    57: 08049cb0   136 FUNC    LOCAL  DEFAULT   13 wpa_cli_close_connection
+    58: 0805d1e4     4 OBJECT  LOCAL  DEFAULT   25 ctrl_conn
+    59: 0805d1ec     4 OBJECT  LOCAL  DEFAULT   25 wpa_cli_attached
+    60: 0805d1e8     4 OBJECT  LOCAL  DEFAULT   25 mon_conn
+    61: 08049d40    59 FUNC    LOCAL  DEFAULT   13 str_starts
+    62: 08049d80    59 FUNC    LOCAL  DEFAULT   13 str_match
+    63: 08049dc0     5 FUNC    LOCAL  DEFAULT   13 wpa_cli_msg_cb
+    64: 08049dd0    45 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_license
+    65: 08049e00    19 FUNC    LOCAL  DEFAULT   13 wpa_cli_show_network_vari
+    66: 08049e20   406 FUNC    LOCAL  DEFAULT   13 _wpa_ctrl_command
+    67: 0805d1f8     4 OBJECT  LOCAL  DEFAULT   25 ifname_prefix
+    68: 08049fc0    10 FUNC    LOCAL  DEFAULT   13 wpa_ctrl_command
+    69: 08049fd0    11 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_erp_flush
+    70: 08049fe0    11 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_flush
+    71: 08049ff0    11 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_reauthenticat
+    72: 0804a000    11 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_pktcnt_poll
+    73: 0804a010    11 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_signal_poll
+    74: 0804a020    11 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wmm_ac_status
+    75: 0804a030    11 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_resume
+    76: 0804a040    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_suspend
+    77: 0804a050    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_er_stop
+    78: 0804a060    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_cancel
+    79: 0804a070    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_interface_lis
+    80: 0804a080    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_terminate
+    81: 0804a090    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_reconfigure
+    82: 0804a0a0    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_scan_results
+    83: 0804a0b0    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_reconnect
+    84: 0804a0c0    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_disconnect
+    85: 0804a0d0    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_save_config
+    86: 0804a0e0    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_add_cred
+    87: 0804a0f0    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_list_creds
+    88: 0804a100    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_list_networks
+    89: 0804a110    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_reattach
+    90: 0804a120    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_reassociate
+    91: 0804a130    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_pmksa_flush
+    92: 0804a140    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_pmksa
+    93: 0804a150    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_logoff
+    94: 0804a160    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_logon
+    95: 0804a170    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_dump
+    96: 0804a180    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_mib
+    97: 0804a190    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_relog
+    98: 0804a1a0    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_ping
+    99: 0804a1b0    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_ifname
+   100: 0804a1c0   143 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_status
+   101: 0804a250   463 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_er_config
+   102: 0804a420   555 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_reg
+   103: 0804a650   407 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_interface_add
+   104: 0804a7f0   343 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_sim
+   105: 0804a950   343 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_passphrase
+   106: 0804aab0   343 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_otp
+   107: 0804ac10   343 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_pin
+   108: 0804ad70   343 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_new_password
+   109: 0804aed0   343 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_password
+   110: 0804b030   343 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_identity
+   111: 0804b190   152 FUNC    LOCAL  DEFAULT   13 wpa_cli_get_default_ifnam
+   112: 0805d160     4 OBJECT  LOCAL  DEFAULT   24 ctrl_iface_dir
+   113: 0804b230   470 FUNC    LOCAL  DEFAULT   13 wpa_request
+   114: 0804b410   165 FUNC    LOCAL  DEFAULT   13 wpa_cli_edit_cmd_cb
+   115: 0804b4c0   499 FUNC    LOCAL  DEFAULT   13 wpa_cli_open_connection
+   116: 0805d1dc     4 OBJECT  LOCAL  DEFAULT   25 client_socket_dir
+   117: 0804d7d0    12 FUNC    LOCAL  DEFAULT   13 wpa_cli_mon_receive
+   118: 0804b6c0   175 FUNC    LOCAL  DEFAULT   13 wpa_cli_exec
+   119: 0804b770  1141 FUNC    LOCAL  DEFAULT   13 wpa_cli_action_process
+   120: 0805d1d4     4 OBJECT  LOCAL  DEFAULT   25 ctrl_ifname
+   121: 0805d164     4 OBJECT  LOCAL  DEFAULT   24 wpa_cli_connected
+   122: 0805d1f0     4 OBJECT  LOCAL  DEFAULT   25 wpa_cli_last_id
+   123: 0805d1d0     4 OBJECT  LOCAL  DEFAULT   25 action_file
+   124: 0804bbf0     9 FUNC    LOCAL  DEFAULT   13 wpa_cli_action_cb
+   125: 0804bc00   253 FUNC    LOCAL  DEFAULT   13 print_help
+   126: 0804bd00    25 FUNC    LOCAL  DEFAULT   13 usage
+   127: 0804bd20    30 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_help
+   128: 0804bd40   182 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_interface
+   129: 0804be00   208 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_bss_flush
+   130: 0804bed0   137 FUNC    LOCAL  DEFAULT   13 cli_txt_list_add
+   131: 0804bf60   271 FUNC    LOCAL  DEFAULT   13 update_ifnames
+   132: 0805d180     8 OBJECT  LOCAL  DEFAULT   24 ifnames
+   133: 0804c070   271 FUNC    LOCAL  DEFAULT   13 update_networks
+   134: 0805d170     8 OBJECT  LOCAL  DEFAULT   24 networks
+   135: 0804c180    60 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_add_network
+   136: 0804c1c0   199 FUNC    LOCAL  DEFAULT   13 update_bssid_list
+   137: 0805d168     8 OBJECT  LOCAL  DEFAULT   24 bsses
+   138: 0804c290    65 FUNC    LOCAL  DEFAULT   13 wpa_cli_reconnect
+   139: 0804c2e0   151 FUNC    LOCAL  DEFAULT   13 wpa_cli_ping
+   140: 0805d15c     4 OBJECT  LOCAL  DEFAULT   24 ping_interval
+   141: 0804c380   431 FUNC    LOCAL  DEFAULT   13 try_connection
+   142: 0805d200     4 OBJECT  LOCAL  DEFAULT   25 hfile
+   143: 0804d950   336 FUNC    LOCAL  DEFAULT   13 wpa_cli_edit_completion_c
+   144: 0805d1fc     4 OBJECT  LOCAL  DEFAULT   25 edit_started
+   145: 0805d204     4 OBJECT  LOCAL  DEFAULT   25 warning_displayed
+   146: 0804c530   216 FUNC    LOCAL  DEFAULT   13 wpa_cli_action_ping
+   147: 0804c610   355 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd
+   148: 0804c780    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_get_pref_freq
+   149: 0804c7b0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_mac_rand_scan
+   150: 0804c7e0    32 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_neighbor_rep_
+   151: 0804c800    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_vendor
+   152: 0804c830    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_radio_work
+   153: 0804c860    55 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_raw
+   154: 0804c8a0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_tdls_cancel_c
+   155: 0804c8d0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_tdls_chan_swi
+   156: 0804c900    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wmm_ac_delts
+   157: 0804c930    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wmm_ac_addts
+   158: 0804c960    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_tdls_link_sta
+   159: 0804c990    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_tdls_teardown
+   160: 0804c9c0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_tdls_setup
+   161: 0804c9f0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_tdls_discover
+   162: 0804ca20    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_sta_autoconne
+   163: 0804ca50    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_roam
+   164: 0804ca80    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_ibss_rsn
+   165: 0804cab0    69 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_er_set_co
+   166: 0804cb00    69 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_er_learn
+   167: 0804cb50    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_er_pbc
+   168: 0804cb80    69 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_er_pin
+   169: 0804cbd0    32 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_er_start
+   170: 0804cbf0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_ap_pin
+   171: 0804cc20    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_check_pin
+   172: 0804cc50    69 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_pin
+   173: 0804cca0    32 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_wps_pbc
+   174: 0804ccc0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_ft_ds
+   175: 0804ccf0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_stkstart
+   176: 0804cd20    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_bss_expire_co
+   177: 0804cd50    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_bss_expire_ag
+   178: 0804cd80    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_scan_interval
+   179: 0804cdb0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_ap_scan
+   180: 0804cde0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_interface_rem
+   181: 0804ce10    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_bss
+   182: 0804ce40    32 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_scan
+   183: 0804ce60    69 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_get_cred
+   184: 0804ceb0    69 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_set_cred
+   185: 0804cf00    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_remove_cred
+   186: 0804cf30    91 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_dup_network
+   187: 0804cf90    91 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_get_network
+   188: 0804cff0    91 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_set_network
+   189: 0804d050    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_disable_netwo
+   190: 0804d080    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_enable_networ
+   191: 0804d0b0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_select_networ
+   192: 0804d0e0    32 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_log_level
+   193: 0804d100    32 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_blacklist
+   194: 0804d120    69 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_bssid
+   195: 0804d170    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_preauthentica
+   196: 0804d1a0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_get
+   197: 0804d1d0    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_level
+   198: 0804d200    35 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_note
+   199: 0804d230   206 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_set
+   200: 0804d300   166 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_get_capabilit
+   201: 0804d3b0    79 FUNC    LOCAL  DEFAULT   13 wpa_cli_cmd_remove_networ
+   202: 0804d400   954 FUNC    LOCAL  DEFAULT   13 wpa_cli_recv_pending
+   203: 0804d7c0    14 FUNC    LOCAL  DEFAULT   13 wpa_cli_action_receive
+   204: 0804d7e0   320 FUNC    LOCAL  DEFAULT   13 wpa_list_cmd_list
+   205: 0805d178     8 OBJECT  LOCAL  DEFAULT   24 p2p_groups
+   206: 0804d920    40 FUNC    LOCAL  DEFAULT   13 wpa_cli_complete_help
+   207: 0804daa0   123 FUNC    LOCAL  DEFAULT   13 cli_txt_list_array
+   208: 0804db20    46 FUNC    LOCAL  DEFAULT   13 wpa_cli_complete_network_
+   209: 0804db50    45 FUNC    LOCAL  DEFAULT   13 wpa_cli_complete_bss
+   210: 0804db80   244 FUNC    LOCAL  DEFAULT   13 wpa_cli_complete_set
+   211: 0804dc80   118 FUNC    LOCAL  DEFAULT   13 wpa_cli_complete_get
+   212: 0804dd00   118 FUNC    LOCAL  DEFAULT   13 wpa_cli_complete_network
+   213: 080575e0   328 OBJECT  LOCAL  DEFAULT   15 network_fields
+   214: 0804dd80   126 FUNC    LOCAL  DEFAULT   13 wpa_cli_complete_dup_netw
+   215: 0805d1d8     4 OBJECT  LOCAL  DEFAULT   25 pid_file
+   216: 0805d188     8 OBJECT  LOCAL  DEFAULT   24 p2p_peers
+   217: 00000000     0 FILE    LOCAL  DEFAULT  ABS wpa_ctrl.c
+   218: 0805d208     4 OBJECT  LOCAL  DEFAULT   25 counter.5390
+   219: 0804e4b0   154 FUNC    LOCAL  DEFAULT   13 wpa_ctrl_attach_helper
+   220: 00000000     0 FILE    LOCAL  DEFAULT  ABS wpa_debug.c
+   221: 0804e6c0   453 FUNC    LOCAL  DEFAULT   13 _wpa_hexdump_ascii
+   222: 0805d218     4 OBJECT  LOCAL  DEFAULT   25 wpa_debug_syslog
+   223: 0804e960   560 FUNC    LOCAL  DEFAULT   13 _wpa_hexdump.part.2
+   224: 08057af8    20 OBJECT  LOCAL  DEFAULT   15 CSWTCH.53
+   225: 0805d21c     4 OBJECT  LOCAL  DEFAULT   25 wpa_msg_cb
+   226: 0805d220     4 OBJECT  LOCAL  DEFAULT   25 wpa_msg_ifname_cb
+   227: 08057b0c    20 OBJECT  LOCAL  DEFAULT   15 __func__.5457
+   228: 0805d224     4 OBJECT  LOCAL  DEFAULT   25 hostapd_logger_cb
+   229: 08057b20    24 OBJECT  LOCAL  DEFAULT   15 CSWTCH.63
+   230: 00000000     0 FILE    LOCAL  DEFAULT  ABS common.c
+   231: 0804f640    35 FUNC    LOCAL  DEFAULT   13 freq_cmp
+   232: 0804f670    55 FUNC    LOCAL  DEFAULT   13 hex2num
+   233: 0804f700    83 FUNC    LOCAL  DEFAULT   13 hwaddr_parse
+   234: 0805d240   129 OBJECT  LOCAL  DEFAULT   25 ssid_txt.5951
+   235: 00000000     0 FILE    LOCAL  DEFAULT  ABS os_unix.c
+   236: 0805d190     4 OBJECT  LOCAL  DEFAULT   24 clock_id.5465
+   237: 00000000     0 FILE    LOCAL  DEFAULT  ABS eloop.c
+   238: 08051530   120 FUNC    LOCAL  DEFAULT   13 eloop_sock_table_dispatch
+   239: 080515b0    41 FUNC    LOCAL  DEFAULT   13 eloop_remove_timeout
+   240: 080515e0   132 FUNC    LOCAL  DEFAULT   13 eloop_sock_table_destroy
+   241: 08051670   146 FUNC    LOCAL  DEFAULT   13 eloop_handle_signal
+   242: 0805d2e0    84 OBJECT  LOCAL  DEFAULT   25 eloop
+   243: 08051710    35 FUNC    LOCAL  DEFAULT   13 eloop_handle_alarm
+   244: 08051740   155 FUNC    LOCAL  DEFAULT   13 eloop_sock_table_set_fds.
+   245: 08058010    25 OBJECT  LOCAL  DEFAULT   15 __PRETTY_FUNCTION__.5453
+   246: 080517e0   136 FUNC    LOCAL  DEFAULT   13 eloop_process_pending_sig
+   247: 08058004    12 OBJECT  LOCAL  DEFAULT   15 CSWTCH.25
+   248: 08057ff0    20 OBJECT  LOCAL  DEFAULT   15 __PRETTY_FUNCTION__.5499
+   249: 00000000     0 FILE    LOCAL  DEFAULT  ABS edit_simple.c
+   250: 080526e0   247 FUNC    LOCAL  DEFAULT   13 edit_read_char
+   251: 0805d350     4 OBJECT  LOCAL  DEFAULT   25 cmdbuf_pos
+   252: 0805d360  4096 OBJECT  LOCAL  DEFAULT   25 cmdbuf
+   253: 0805d340     4 OBJECT  LOCAL  DEFAULT   25 edit_cb_ctx
+   254: 0805d344     4 OBJECT  LOCAL  DEFAULT   25 edit_cmd_cb
+   255: 0805d34c     4 OBJECT  LOCAL  DEFAULT   25 ps2
+   256: 0805d348     4 OBJECT  LOCAL  DEFAULT   25 edit_eof_cb
+   257: 0805cf0c     0 NOTYPE  LOCAL  DEFAULT   18 __init_array_end
+   258: 0805cf20     0 OBJECT  LOCAL  DEFAULT   21 _DYNAMIC
+   259: 0805cf0c     0 NOTYPE  LOCAL  DEFAULT   18 __init_array_start
+   260: 0805cff4     0 OBJECT  LOCAL  DEFAULT   23 _GLOBAL_OFFSET_TABLE_
+   261: 08052930     2 FUNC    GLOBAL DEFAULT   13 __libc_csu_fini
+   262: 00000000     0 FUNC    GLOBAL DEFAULT  UND unsetenv@@GLIBC_2.0
+   263: 080513f0   314 FUNC    GLOBAL DEFAULT   13 os_exec
+   264: 08050fe0   128 FUNC    GLOBAL DEFAULT   13 os_get_random
+   265: 00000000     0 FUNC    GLOBAL DEFAULT  UND __snprintf_chk@@GLIBC_2.3
+   266: 00000000     0 FUNC    GLOBAL DEFAULT  UND strstr@@GLIBC_2.0
+   267: 00000000     0 FUNC    GLOBAL DEFAULT  UND strcmp@@GLIBC_2.0
+   268: 00000000     0 FUNC    GLOBAL DEFAULT  UND __vfprintf_chk@@GLIBC_2.3
+   269: 08052932     0 FUNC    GLOBAL HIDDEN    13 __i686.get_pc_thunk.bx
+   270: 08052650   142 FUNC    GLOBAL DEFAULT   13 eloop_wait_for_read_sock
+   271: 00000000     0 FUNC    GLOBAL DEFAULT  UND read@@GLIBC_2.0
+   272: 08051300    58 FUNC    GLOBAL DEFAULT   13 os_fdatasync
+   273: 0805d154     0 NOTYPE  WEAK   DEFAULT   24 data_start
+   274: 00000000     0 FUNC    GLOBAL DEFAULT  UND fflush@@GLIBC_2.0
+   275: 0805d1a0     4 OBJECT  GLOBAL DEFAULT   25 stderr@@GLIBC_2.0
+   276: 0805d20c     4 OBJECT  GLOBAL DEFAULT   25 wpa_debug_timestamp
+   277: 08052880     2 FUNC    GLOBAL DEFAULT   13 edit_clear_line
+   278: 0804e8c0    21 FUNC    GLOBAL DEFAULT   13 wpa_debug_close_syslog
+   279: 00000000     0 FUNC    GLOBAL DEFAULT  UND memmove@@GLIBC_2.0
+   280: 00000000     0 FUNC    GLOBAL DEFAULT  UND free@@GLIBC_2.0
+   281: 0804eec0   262 FUNC    GLOBAL DEFAULT   13 wpa_msg_ctrl
+   282: 08051c60   194 FUNC    GLOBAL DEFAULT   13 eloop_cancel_timeout_one
+   283: 08051fd0    75 FUNC    GLOBAL DEFAULT   13 eloop_register_signal_ter
+   284: 080513c0    47 FUNC    GLOBAL DEFAULT   13 os_memcmp_const
+   285: 00000000     0 FUNC    GLOBAL DEFAULT  UND memcpy@@GLIBC_2.0
+   286: 0805d214     4 OBJECT  GLOBAL DEFAULT   25 wpa_debug_level
+   287: 08052630    30 FUNC    GLOBAL DEFAULT   13 eloop_terminated
+   288: 0805d194     0 NOTYPE  GLOBAL DEFAULT  ABS _edata
+   289: 0804fb80   208 FUNC    GLOBAL DEFAULT   13 wpa_snprintf_hex_sep
+   290: 00000000     0 FUNC    GLOBAL DEFAULT  UND fclose@@GLIBC_2.1
+   291: 08050aa0    56 FUNC    GLOBAL DEFAULT   13 str_token
+   292: 0804de00   891 FUNC    GLOBAL DEFAULT   13 wpa_ctrl_open2
+   293: 080519a0    51 FUNC    GLOBAL DEFAULT   13 eloop_register_read_sock
+   294: 00000000     0 FUNC    GLOBAL DEFAULT  UND signal@@GLIBC_2.0
+   295: 00000000     0 FUNC    GLOBAL DEFAULT  UND memcmp@@GLIBC_2.0
+   296: 08050c80    58 FUNC    GLOBAL DEFAULT   13 os_sleep
+   297: 00000000     0 FUNC    GLOBAL DEFAULT  UND gettimeofday@@GLIBC_2.0
+   298: 00000000     0 FUNC    GLOBAL DEFAULT  UND sleep@@GLIBC_2.0
+   299: 00000000     0 FUNC    GLOBAL DEFAULT  UND select@@GLIBC_2.0
+   300: 0804fa80    56 FUNC    GLOBAL DEFAULT   13 inc_byte_array
+   301: 080519e0   160 FUNC    GLOBAL DEFAULT   13 eloop_unregister_sock
+   302: 0804ec20    33 FUNC    GLOBAL DEFAULT   13 wpa_hexdump_ascii
+   303: 0805296c     0 FUNC    GLOBAL DEFAULT   14 _fini
+   304: 0805d1a8     4 OBJECT  GLOBAL DEFAULT   25 optind@@GLIBC_2.0
+   305: 00000000     0 FUNC    GLOBAL DEFAULT  UND alarm@@GLIBC_2.0
+   306: 00000000     0 FUNC    GLOBAL DEFAULT  UND mktime@@GLIBC_2.0
+   307: 00000000     0 FUNC    GLOBAL DEFAULT  UND __stack_chk_fail@@GLIBC_2
+   308: 080518a0   252 FUNC    GLOBAL DEFAULT   13 eloop_register_sock
+   309: 0804f2e0   262 FUNC    GLOBAL DEFAULT   13 wpa_msg_global_only
+   310: 0804ecb0    44 FUNC    GLOBAL DEFAULT   13 wpa_debug_setup_stdout
+   311: 0804e1a0    61 FUNC    GLOBAL DEFAULT   13 wpa_ctrl_close
+   312: 08050110    63 FUNC    GLOBAL DEFAULT   13 is_hex
+   313: 0804f590   167 FUNC    GLOBAL DEFAULT   13 str_to_debug_level
+   314: 080502a0   394 FUNC    GLOBAL DEFAULT   13 wpa_config_parse_string
+   315: 08050870   130 FUNC    GLOBAL DEFAULT   13 int_array_add_unique
+   316: 00000000     0 FUNC    GLOBAL DEFAULT  UND __fdelt_chk@@GLIBC_2.15
+   317: 00000000     0 FUNC    GLOBAL DEFAULT  UND unlink@@GLIBC_2.0
+   318: 08050730   178 FUNC    GLOBAL DEFAULT   13 int_array_concat
+   319: 08051060     5 FUNC    GLOBAL DEFAULT   13 os_random
+   320: 08051d80   213 FUNC    GLOBAL DEFAULT   13 eloop_deplete_timeout
+   321: 0804ece0    10 FUNC    GLOBAL DEFAULT   13 wpa_msg_register_cb
+   322: 00000000     0 FUNC    GLOBAL DEFAULT  UND fseek@@GLIBC_2.0
+   323: 0804f960   287 FUNC    GLOBAL DEFAULT   13 hwaddr_mask_txt
+   324: 00000000     0 FUNC    GLOBAL DEFAULT  UND perror@@GLIBC_2.0
+   325: 08051d30    77 FUNC    GLOBAL DEFAULT   13 eloop_is_timeout_register
+   326: 00000000     0 FUNC    GLOBAL DEFAULT  UND waitpid@@GLIBC_2.0
+   327: 0804f780   165 FUNC    GLOBAL DEFAULT   13 hwaddr_masked_aton
+   328: 00000000     0 FUNC    GLOBAL DEFAULT  UND usleep@@GLIBC_2.0
+   329: 00000000     0 FUNC    GLOBAL DEFAULT  UND __vsyslog_chk@@GLIBC_2.4
+   330: 00000000     0 FUNC    GLOBAL DEFAULT  UND fread@@GLIBC_2.0
+   331: 0804ed00   443 FUNC    GLOBAL DEFAULT   13 wpa_msg
+   332: 0805cf18     0 OBJECT  GLOBAL HIDDEN    19 __DTOR_END__
+   333: 08051070   268 FUNC    GLOBAL DEFAULT   13 os_rel2abs_path
+   334: 00000000     0 FUNC    GLOBAL DEFAULT  UND getpid@@GLIBC_2.0
+   335: 0804e570    57 FUNC    GLOBAL DEFAULT   13 wpa_ctrl_recv
+   336: 0804f6b0    71 FUNC    GLOBAL DEFAULT   13 hex2byte
+   337: 0804ecf0    10 FUNC    GLOBAL DEFAULT   13 wpa_msg_register_ifname_c
+   338: 08050700    44 FUNC    GLOBAL DEFAULT   13 int_array_len
+   339: 08051a80    27 FUNC    GLOBAL DEFAULT   13 eloop_unregister_read_soc
+   340: 08050ae0   181 FUNC    GLOBAL DEFAULT   13 utf8_unescape
+   341: 00000000     0 FUNC    GLOBAL DEFAULT  UND daemon@@GLIBC_2.0
+   342: 0804f760    19 FUNC    GLOBAL DEFAULT   13 hwaddr_aton
+   343: 00000000     0 FUNC    GLOBAL DEFAULT  UND getenv@@GLIBC_2.0
+   344: 00000000     0 FUNC    GLOBAL DEFAULT  UND realloc@@GLIBC_2.0
+   345: 0804e1e0   706 FUNC    GLOBAL DEFAULT   13 wpa_ctrl_request
+   346: 0804e5b0   186 FUNC    GLOBAL DEFAULT   13 wpa_ctrl_pending
+   347: 00000000     0 FUNC    GLOBAL DEFAULT  UND malloc@@GLIBC_2.0
+   348: 0805d154     0 NOTYPE  GLOBAL DEFAULT   24 __data_start
+   349: 0804e8e0   125 FUNC    GLOBAL DEFAULT   13 wpa_printf
+   350: 0804f900    82 FUNC    GLOBAL DEFAULT   13 hexstr2bin
+   351: 08052560    11 FUNC    GLOBAL DEFAULT   13 eloop_terminate
+   352: 00000000     0 FUNC    GLOBAL DEFAULT  UND puts@@GLIBC_2.0
+   353: 08051f40   143 FUNC    GLOBAL DEFAULT   13 eloop_register_signal
+   354: 080511c0   258 FUNC    GLOBAL DEFAULT   13 os_readfile
+   355: 00000000     0 FUNC    GLOBAL DEFAULT  UND strerror@@GLIBC_2.0
+   356: 00000000     0 FUNC    GLOBAL DEFAULT  UND __memcpy_chk@@GLIBC_2.3.4
+   357: 080500b0    72 FUNC    GLOBAL DEFAULT   13 wpa_ssid_txt
+   358: 080527e0   131 FUNC    GLOBAL DEFAULT   13 edit_init
+   359: 00000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+   360: 00000000     0 FUNC    GLOBAL DEFAULT  UND exit@@GLIBC_2.0
+   361: 08050f30   131 FUNC    GLOBAL DEFAULT   13 os_daemonize
+   362: 0805d158     0 OBJECT  GLOBAL HIDDEN    24 __dso_handle
+   363: 08050940    61 FUNC    GLOBAL DEFAULT   13 bin_clear_free
+   364: 0804e180    27 FUNC    GLOBAL DEFAULT   13 wpa_ctrl_open
+   365: 080529a4     4 OBJECT  GLOBAL DEFAULT   15 _IO_stdin_used
+   366: 08050ba0   178 FUNC    GLOBAL DEFAULT   13 utf8_escape
+   367: 0804e890    42 FUNC    GLOBAL DEFAULT   13 wpa_debug_open_syslog
+   368: 08050c60    17 FUNC    GLOBAL DEFAULT   13 is_ctrl_char
+   369: 00000000     0 FUNC    GLOBAL DEFAULT  UND localtime@@GLIBC_2.0
+   370: 00000000     0 FUNC    GLOBAL DEFAULT  UND closelog@@GLIBC_2.0
+   371: 08050cf0   138 FUNC    GLOBAL DEFAULT   13 os_get_reltime
+   372: 00000000     0 FUNC    GLOBAL DEFAULT  UND strchr@@GLIBC_2.0
+   373: 0804f570    23 FUNC    GLOBAL DEFAULT   13 debug_level_str
+   374: 00000000     0 FUNC    GLOBAL DEFAULT  UND getcwd@@GLIBC_2.0
+   375: 0804ebd0    79 FUNC    GLOBAL DEFAULT   13 wpa_hexdump_key
+   376: 08052570   191 FUNC    GLOBAL DEFAULT   13 eloop_destroy
+   377: 00000000     0 FUNC    GLOBAL DEFAULT  UND strlen@@GLIBC_2.0
+   378: 00000000     0 FUNC    GLOBAL DEFAULT  UND setenv@@GLIBC_2.0
+   379: 0804fdb0   294 FUNC    GLOBAL DEFAULT   13 printf_encode
+   380: 00000000     0 FUNC    GLOBAL DEFAULT  UND __libc_start_main@@GLIBC_
+   381: 00000000     0 FUNC    GLOBAL DEFAULT  UND getopt@@GLIBC_2.0
+   382: 0804fee0   456 FUNC    GLOBAL DEFAULT   13 printf_decode
+   383: 0804eb90    50 FUNC    GLOBAL DEFAULT   13 wpa_hexdump
+   384: 080511b0     5 FUNC    GLOBAL DEFAULT   13 os_unsetenv
+   385: 0804e550    14 FUNC    GLOBAL DEFAULT   13 wpa_ctrl_attach
+   386: 0804f1e0   254 FUNC    GLOBAL DEFAULT   13 wpa_msg_no_global
+   387: 08050cc0    46 FUNC    GLOBAL DEFAULT   13 os_get_time
+   388: 00000000     0 FUNC    GLOBAL DEFAULT  UND strcasecmp@@GLIBC_2.0
+   389: 00000000     0 FUNC    GLOBAL DEFAULT  UND execv@@GLIBC_2.0
+   390: 08050590    63 FUNC    GLOBAL DEFAULT   13 freq_range_list_includes
+   391: 080528c0    97 FUNC    GLOBAL DEFAULT   13 __libc_csu_init
+   392: 0804e680    64 FUNC    GLOBAL DEFAULT   13 wpa_debug_print_timestamp
+   393: 00000000     0 FUNC    GLOBAL DEFAULT  UND fcntl@@GLIBC_2.0
+   394: 080509c0    63 FUNC    GLOBAL DEFAULT   13 random_mac_addr_keep_oui
+   395: 00000000     0 FUNC    GLOBAL DEFAULT  UND bind@@GLIBC_2.0
+   396: 0804f3f0    10 FUNC    GLOBAL DEFAULT   13 hostapd_logger_register_c
+   397: 00000000     0 FUNC    GLOBAL DEFAULT  UND ftell@@GLIBC_2.0
+   398: 00000000     0 FUNC    GLOBAL DEFAULT  UND setvbuf@@GLIBC_2.0
+   399: 00000000     0 FUNC    GLOBAL DEFAULT  UND fopen@@GLIBC_2.1
+   400: 00000000     0 FUNC    GLOBAL DEFAULT  UND gmtime@@GLIBC_2.0
+   401: 00000000     0 FUNC    GLOBAL DEFAULT  UND memset@@GLIBC_2.0
+   402: 00000000     0 FUNC    GLOBAL DEFAULT  UND snprintf@@GLIBC_2.0
+   403: 00000000     0 FUNC    GLOBAL DEFAULT  UND __strdup@@GLIBC_2.0
+   404: 00000000     0 FUNC    GLOBAL DEFAULT  UND putchar@@GLIBC_2.0
+   405: 0805e360     0 NOTYPE  GLOBAL DEFAULT  ABS _end
+   406: 00000000     0 FUNC    GLOBAL DEFAULT  UND __errno_location@@GLIBC_2
+   407: 08049a78     0 FUNC    GLOBAL DEFAULT   13 _start
+   408: 0804ec90     3 FUNC    GLOBAL DEFAULT   13 wpa_debug_open_file
+   409: 00000000     0 FUNC    GLOBAL DEFAULT  UND fileno@@GLIBC_2.0
+   410: 08051190     2 FUNC    GLOBAL DEFAULT   13 os_program_deinit
+   411: 08052050  1295 FUNC    GLOBAL DEFAULT   13 eloop_run
+   412: 080529a0     4 OBJECT  GLOBAL DEFAULT   15 _fp_hw
+   413: 08050900    61 FUNC    GLOBAL DEFAULT   13 str_clear_free
+   414: 0805d210     4 OBJECT  GLOBAL DEFAULT   25 wpa_debug_show_keys
+   415: 00000000     0 FUNC    GLOBAL DEFAULT  UND __vsnprintf_chk@@GLIBC_2.
+   416: 08051e60   213 FUNC    GLOBAL DEFAULT   13 eloop_replenish_timeout
+   417: 00000000     0 FUNC    GLOBAL DEFAULT  UND strncasecmp@@GLIBC_2.0
+   418: 0804ec50    35 FUNC    GLOBAL DEFAULT   13 wpa_hexdump_ascii_key
+   419: 00000000     0 FUNC    GLOBAL DEFAULT  UND access@@GLIBC_2.0
+   420: 0805d1c0     4 OBJECT  GLOBAL DEFAULT   25 stdout@@GLIBC_2.0
+   421: 0805d194     0 NOTYPE  GLOBAL DEFAULT  ABS __bss_start
+   422: 08052890    47 FUNC    GLOBAL DEFAULT   13 edit_redraw
+   423: 080494b0  1477 FUNC    GLOBAL DEFAULT   13 main
+   424: 00000000     0 FUNC    GLOBAL DEFAULT  UND __printf_chk@@GLIBC_2.3.4
+   425: 080512d0    48 FUNC    GLOBAL DEFAULT   13 os_file_exists
+   426: 08052020    35 FUNC    GLOBAL DEFAULT   13 eloop_register_signal_rec
+   427: 0804f890   102 FUNC    GLOBAL DEFAULT   13 hwaddr_aton2
+   428: 0804e670     7 FUNC    GLOBAL DEFAULT   13 wpa_ctrl_get_fd
+   429: 00000000     0 FUNC    GLOBAL DEFAULT  UND __syslog_chk@@GLIBC_2.4
+   430: 00000000     0 FUNC    GLOBAL DEFAULT  UND fork@@GLIBC_2.0
+   431: 0804fd00   162 FUNC    GLOBAL DEFAULT   13 wpa_snprintf_hex_uppercas
+   432: 00000000     0 FUNC    GLOBAL DEFAULT  UND readdir@@GLIBC_2.0
+   433: 08051340    27 FUNC    GLOBAL DEFAULT   13 os_zalloc
+   434: 080505d0   299 FUNC    GLOBAL DEFAULT   13 freq_range_list_str
+   435: 00000000     0 FUNC    GLOBAL DEFAULT  UND strrchr@@GLIBC_2.0
+   436: 08050ed0    88 FUNC    GLOBAL DEFAULT   13 os_gmtime
+   437: 08050fc0    18 FUNC    GLOBAL DEFAULT   13 os_daemonize_terminate
+   438: 0804f830    82 FUNC    GLOBAL DEFAULT   13 hwaddr_compact_aton
+   439: 00000000     0 NOTYPE  WEAK   DEFAULT  UND _Jv_RegisterClasses
+   440: 00000000     0 FUNC    GLOBAL DEFAULT  UND openlog@@GLIBC_2.0
+   441: 08051360    86 FUNC    GLOBAL DEFAULT   13 os_strlcpy
+   442: 08051870    39 FUNC    GLOBAL DEFAULT   13 eloop_init
+   443: 08051aa0   318 FUNC    GLOBAL DEFAULT   13 eloop_register_timeout
+   444: 080507f0   125 FUNC    GLOBAL DEFAULT   13 int_array_sort_unique
+   445: 00000000     0 FUNC    GLOBAL DEFAULT  UND qsort@@GLIBC_2.0
+   446: 00000000     0 FUNC    GLOBAL DEFAULT  UND socket@@GLIBC_2.0
+   447: 08051be0   122 FUNC    GLOBAL DEFAULT   13 eloop_cancel_timeout
+   448: 00000000     0 FUNC    GLOBAL DEFAULT  UND __fprintf_chk@@GLIBC_2.3.
+   449: 00000000     0 FUNC    GLOBAL DEFAULT  UND clock_gettime@@GLIBC_2.2
+   450: 08050d80   327 FUNC    GLOBAL DEFAULT   13 os_mktime
+   451: 08050150   234 FUNC    GLOBAL DEFAULT   13 merge_byte_arrays
+   452: 0804fac0    68 FUNC    GLOBAL DEFAULT   13 wpa_get_ntp_timestamp
+   453: 08050240    84 FUNC    GLOBAL DEFAULT   13 dup_binstr
+   454: 080511a0     5 FUNC    GLOBAL DEFAULT   13 os_setenv
+   455: 08050100     5 FUNC    GLOBAL DEFAULT   13 __hide_aliasing_typecast
+   456: 00000000     0 FUNC    GLOBAL DEFAULT  UND strncmp@@GLIBC_2.0
+   457: 0804f0d0   262 FUNC    GLOBAL DEFAULT   13 wpa_msg_global_ctrl
+   458: 08050a00   156 FUNC    GLOBAL DEFAULT   13 cstr_token
+   459: 00000000     0 FUNC    GLOBAL DEFAULT  UND fdatasync@@GLIBC_2.0
+   460: 08051180     3 FUNC    GLOBAL DEFAULT   13 os_program_init
+   461: 00000000     0 FUNC    GLOBAL DEFAULT  UND random@@GLIBC_2.0
+   462: 0805d1c4     4 OBJECT  GLOBAL DEFAULT   25 optarg@@GLIBC_2.0
+   463: 0804ec80     3 FUNC    GLOBAL DEFAULT   13 wpa_debug_reopen_file
+   464: 08050980    55 FUNC    GLOBAL DEFAULT   13 random_mac_addr
+   465: 00000000     0 FUNC    GLOBAL DEFAULT  UND strtol@@GLIBC_2.0
+   466: 0804fb10   100 FUNC    GLOBAL DEFAULT   13 wpa_scnprintf
+   467: 00000000     0 FUNC    GLOBAL DEFAULT  UND connect@@GLIBC_2.0
+   468: 08048f20     0 FUNC    GLOBAL DEFAULT   11 _init
+   469: 0804f400   357 FUNC    GLOBAL DEFAULT   13 hostapd_logger
+   470: 00000000     0 FUNC    GLOBAL DEFAULT  UND recv@@GLIBC_2.0
+   471: 0804efd0   254 FUNC    GLOBAL DEFAULT   13 wpa_msg_global
+   472: 0804e560    11 FUNC    GLOBAL DEFAULT   13 wpa_ctrl_detach
+   473: 00000000     0 FUNC    GLOBAL DEFAULT  UND close@@GLIBC_2.0
+   474: 00000000     0 FUNC    GLOBAL DEFAULT  UND closedir@@GLIBC_2.0
+   475: 0804fc50   162 FUNC    GLOBAL DEFAULT   13 wpa_snprintf_hex
+   476: 0804eca0     2 FUNC    GLOBAL DEFAULT   13 wpa_debug_close_file
+   477: 00000000     0 FUNC    GLOBAL DEFAULT  UND opendir@@GLIBC_2.0
+   478: 08050430   347 FUNC    GLOBAL DEFAULT   13 freq_range_list_parse
+   479: 00000000     0 FUNC    GLOBAL DEFAULT  UND __assert_fail@@GLIBC_2.0
+   480: 00000000     0 FUNC    GLOBAL DEFAULT  UND __ctype_b_loc@@GLIBC_2.3
+   481: 00000000     0 FUNC    GLOBAL DEFAULT  UND send@@GLIBC_2.0
+   482: 08052870    13 FUNC    GLOBAL DEFAULT   13 edit_deinit
+   483: 00000000     0 FUNC    GLOBAL DEFAULT  UND calloc@@GLIBC_2.0
+
+Histogram for `.gnu.hash' bucket list length (total of 3 buckets):
+ Length  Number     % of total  Coverage
+      0  0          (  0.0%)
+      1  1          ( 33.3%)     20.0%
+      2  2          ( 66.7%)    100.0%
+
+Version symbols section '.gnu.version' contains 92 entries:
+ Addr: 0000000008048b06  Offset: 0x000b06  Link: 5 (.dynsym)
+  000:   0 (*local*)       2 (GLIBC_2.0)     3 (GLIBC_2.3.4)   2 (GLIBC_2.0)  
+  004:   2 (GLIBC_2.0)     3 (GLIBC_2.3.4)   2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  008:   2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     4 (GLIBC_2.1)  
+  00c:   2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  010:   2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     5 (GLIBC_2.4)  
+  014:   6 (GLIBC_2.15)    2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  018:   2 (GLIBC_2.0)     2 (GLIBC_2.0)     5 (GLIBC_2.4)     2 (GLIBC_2.0)  
+  01c:   2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  020:   2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     3 (GLIBC_2.3.4)
+  024:   0 (*local*)       2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  028:   2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  02c:   2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  030:   2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  034:   4 (GLIBC_2.1)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  038:   2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  03c:   3 (GLIBC_2.3.4)   2 (GLIBC_2.0)     2 (GLIBC_2.0)     3 (GLIBC_2.3.4)
+  040:   5 (GLIBC_2.4)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  044:   0 (*local*)       2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  048:   3 (GLIBC_2.3.4)   7 (GLIBC_2.2)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  04c:   2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  050:   2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  054:   8 (GLIBC_2.3)     2 (GLIBC_2.0)     2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+  058:   2 (GLIBC_2.0)     1 (*global*)      2 (GLIBC_2.0)     2 (GLIBC_2.0)  
+
+Version needs section '.gnu.version_r' contains 2 entries:
+ Addr: 0x0000000008048bc0  Offset: 0x000bc0  Link: 6 (.dynstr)
+  000000: Version: 1  File: librt.so.1  Cnt: 1
+  0x0010:   Name: GLIBC_2.2  Flags: none  Version: 7
+  0x0020: Version: 1  File: libc.so.6  Cnt: 6
+  0x0030:   Name: GLIBC_2.3  Flags: none  Version: 8
+  0x0040:   Name: GLIBC_2.15  Flags: none  Version: 6
+  0x0050:   Name: GLIBC_2.4  Flags: none  Version: 5
+  0x0060:   Name: GLIBC_2.1  Flags: none  Version: 4
+  0x0070:   Name: GLIBC_2.3.4  Flags: none  Version: 3
+  0x0080:   Name: GLIBC_2.0  Flags: none  Version: 2
+
+Notes at offset 0x00000168 with length 0x00000020:
+  Owner                 Data size	Description
+  GNU                  0x00000010	NT_GNU_ABI_TAG (ABI version tag)
+    OS: Linux, ABI: 2.6.24
+
+Notes at offset 0x00000188 with length 0x00000024:
+  Owner                 Data size	Description
+  GNU                  0x00000014	NT_GNU_BUILD_ID (unique build ID bitstring)
+    Build ID: 26fa1a639d89fc8564b2c3009f915bf2916d53eb

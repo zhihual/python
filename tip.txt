@@ -1847,6 +1847,20 @@ zip data. : URL http://msgpack.org/ fork source code
 use http push to upload to server.
 use gdb to analysis
 
+corefile is one of elf format. 
+
+to generate core:
+ulimit -c unlimited
+echo “/data/coredump/core.%e.%p” >/proc/sys/kernel/core_pattern
+
+Auto generate core dump action:
+1.
+/etc/profile 
+ulimit -c unlimite
+
+2.
+rc.local 
+echo /data/coredump/core.%e.%p> /proc/sys/kernel/core_pattern
 
 State status report
 
@@ -1856,3 +1870,18 @@ Huawei desgin doc
 http://wenku.baidu.com/view/a7da66ed5901020207409ced.html
 http://www.sae.org.cn/index // car 
 https://harizanov.com/2015/06/firmware-over-the-air-fota-for-esp8266-soc/  tech web
+
+5/18
+
+GDB crash analysis
+
+find ./ | grep , this is a good way to locate file..
+
+use script, like python to get dump, line, address.. 
+
+Core dump guide
+http://blog.csdn.net/_xiao/article/details/22389997
+
+3.1.10\fs\binfmt_elf.c kernel source code
+
+http://www.cnblogs.com/xmphoenix/archive/2011/10/23/2221879.html  ELF guide
