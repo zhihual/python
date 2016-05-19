@@ -1551,6 +1551,14 @@ wpa_pairwise=TKIP
 rsn_pairwise=CCMP
 #################################
 
+
+http://blog.csdn.net/xiaojsj111/article/details/30482001
+
+This doc has good explian on linux concurrence mode
+
+OK, let's trun back to build CLD2.0 and installed on another laptop...
+
+=======
 5/9  
 
 Start to look at USB kernel driver
@@ -1871,6 +1879,7 @@ http://wenku.baidu.com/view/a7da66ed5901020207409ced.html
 http://www.sae.org.cn/index // car 
 https://harizanov.com/2015/06/firmware-over-the-air-fota-for-esp8266-soc/  tech web
 
+
 5/18
 
 GDB crash analysis
@@ -1885,3 +1894,5 @@ http://blog.csdn.net/_xiao/article/details/22389997
 3.1.10\fs\binfmt_elf.c kernel source code
 
 http://www.cnblogs.com/xmphoenix/archive/2011/10/23/2221879.html  ELF guide
+=======
+
