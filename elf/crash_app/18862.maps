@@ -1,0 +1,14 @@
+08048000-08049000 r-xp 00000000 08:01 9445606    /home/zliu/code/crash/testcrash
+08049000-0804a000 r--p 00000000 08:01 9445606    /home/zliu/code/crash/testcrash
+0804a000-0804b000 rw-p 00001000 08:01 9445606    /home/zliu/code/crash/testcrash
+b75eb000-b75ec000 rw-p 00000000 00:00 0 
+b75ec000-b778b000 r-xp 00000000 08:01 4981663    /lib/i386-linux-gnu/libc-2.15.so
+b778b000-b778d000 r--p 0019f000 08:01 4981663    /lib/i386-linux-gnu/libc-2.15.so
+b778d000-b778e000 rw-p 001a1000 08:01 4981663    /lib/i386-linux-gnu/libc-2.15.so
+b778e000-b7791000 rw-p 00000000 00:00 0 
+b779f000-b77a3000 rw-p 00000000 00:00 0 
+b77a3000-b77a4000 r-xp 00000000 00:00 0          [vdso]
+b77a4000-b77c4000 r-xp 00000000 08:01 4981643    /lib/i386-linux-gnu/ld-2.15.so
+b77c4000-b77c5000 r--p 0001f000 08:01 4981643    /lib/i386-linux-gnu/ld-2.15.so
+b77c5000-b77c6000 rw-p 00020000 08:01 4981643    /lib/i386-linux-gnu/ld-2.15.so
+bfd4b000-bfd6c000 rw-p 00000000 00:00 0          [stack]

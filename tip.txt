@@ -1894,5 +1894,16 @@ http://blog.csdn.net/_xiao/article/details/22389997
 3.1.10\fs\binfmt_elf.c kernel source code
 
 http://www.cnblogs.com/xmphoenix/archive/2011/10/23/2221879.html  ELF guide
-=======
 
+5/19
+
+The doc explained strip, why and how
+
+well done one elf, exe and core analysis
+1. cat /proc/pid/maps, can get memory map
+2. gdb -c core and file exename , then bt can get trace.
+3. exe address is defined and load in same address
+4. readelf -a exe > dump.txt
+4. addr2line -a 0x8048454 -e testcrash -f can get function name.
+
+all done.
