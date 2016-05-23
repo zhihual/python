@@ -1931,5 +1931,36 @@ plug tfusb, kernel can recong
 nvram is one tool to access nvm configuration space.
 the space is under control of kernel /dev/nvram
 
+5/23
+
+Continue looking on freeRTOS
+
+openwrt has frinderly documations
+
+need to understand, how image makes...
+
+https://www.xdty.org/1860 
+
+Read finish openwrt doc, and pick up 14.04 and setup virtual build machine. 
+
+Why use 14.04 x64, it's because tomato had alreay build successfully on that.
+
+make pure 12.04 and 14.04 image, but, can't connect to internet
+
+download source code 
+1) git clone git://git.openwrt.org/15.05/openwrt.git
+
+2)cd openwrt
+./scripts/feeds update -a
+./scripts/feeds install -a
+
+3)build result is under bin/x86. 
+
+4)use vm machine open it, it works..  But, looks not build in webserver.
 
 
+5)re-make menuconfig, and add lci.  
+
+6) fix error of missing gettext  ubuntu: apt-get install php-gettext, apt-get install gettext
+
+3.18.20 2015
