@@ -1931,5 +1931,7 @@ plug tfusb, kernel can recong
 nvram is one tool to access nvm configuration space.
 the space is under control of kernel /dev/nvram
 
+what I know is , in embeded, httpd is http://www.acme.com/software/mini_httpd/
 
+http://www.acme.com/software/micro_httpd/ even small, comments 200 lines code
 
