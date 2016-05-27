@@ -2029,3 +2029,10 @@ http://blog.csdn.net/sydjm/article/details/46238617 Makefile framework analysis
 
 remake -x V=s can output detial information. 
 remake need apt-get install
+
+
+5/27
+
+Start to learning how to use SDK toolchain and imagebuilder
+below is one good step and example
+http://www.bubuko.com/infodetail-900581.html
