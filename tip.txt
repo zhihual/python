@@ -2029,3 +2029,58 @@ http://blog.csdn.net/sydjm/article/details/46238617 Makefile framework analysis
 
 remake -x V=s can output detial information. 
 remake need apt-get install
+
+
+5/30 
+keep debugging ap firmware, the frame work.
+/usr/sbin/hostapd -P /var/run/wifi-phy0.pid -B /var/run/hostapd-phy0.conf
+
+Why use kill -pid kill hostapd process, but, it still restart by deamon. Need investigate.
+
+ daemon.notice netifd: radio0 (4693): Configuration file: /var/run/hostapd-phy0.conf  -- radio0
+ daemon.notice netifd: radio0 (4693): wlan0: interface state UNINITIALIZED->COUNTRY_UPDATE -- wlan0
+ kern.info kernel: [ 1264.140000] br-lan: port 2(wlan0) entered forwarding state -- port2.
+ 
+ What does those mean...?
+ 
+ 5/31
+ 
+is it right to switch to driver self? since get one point clear and leaveage current resource...
+
+grub is putting at /boot/grub/grub.conf.  in untuntu, /etc/default/grub set the configuration, and make /boot/grub/grub.conf by tools.
+
+What's the network interface in linux means?
+
+iw dev show only one wifi phy
+iw list show 2 interface coming from same phy. 
+
+physical network interface vs virtual network interface
+eth0 
+radio0
+wlan.
+
+ailase vlans stacked vlans, bridgeds, tunnel interfaces, special purpose,  wireles
+
+wireless one phyisncal network interface and one master virtial interface, with other virtual interface... 
+
+linux driver architecture
+https://www.linux.com/blog/linux-wireless-networking-short-walk
+https://wireless.wiki.kernel.org/en/developers/documentation
+
+wiphy_register // registry cfg80211 :)
+
+
+1.learn how to read Makefile and Kbuild. 
+
+It turns out, first round use Makefile, and second round use Kbuild. But for compatible, second round is hidden.
+
+obj-m = moudle name
+moudlename.-y = can assign the segment
+
+2. It turns out wiphy and netdev are two structure for driver with os.
+
+3. It turns out git push orignal master need to push locla to bare remoe git store
+
+
+
+
