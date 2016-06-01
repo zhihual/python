@@ -2082,5 +2082,10 @@ moudlename.-y = can assign the segment
 3. It turns out git push orignal master need to push locla to bare remoe git store
 
 
+6/1 
 
+/include/linux/wait.h
+wait_queue_head_t
+
+http://blog.csdn.net/luoqindong/article/details/17840095
 
