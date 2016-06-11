@@ -2089,3 +2089,37 @@ wait_queue_head_t
 
 http://blog.csdn.net/luoqindong/article/details/17840095
 
+
+6/11 good luck at re-work
+
+1. learn how to enable samba on ap
+
+http://blog.csdn.net/crazyleen/article/details/39993855  the guide doc
+
+http://www.tuicool.com/articles/eEVN3qf
+
+2  opkg can install already setupped pakcage, just like pc.. 
+
+3  understand how chomod and mask useage. including umask dmask fmask
+
+http://blog.csdn.net/aegoose/article/details/25439649
+
+http://jingyan.baidu.com/article/5225f26b6b273fe6fa090829.html
+
+4. company smaba share server settings
+
+http://yuanbin.blog.51cto.com/363003/114207/
+
+5. learn about system user account
+linux adduser-s /sbin/nologin vs /bin/false difference
+/etc/passwd
+/etc/shadow
+
+http://www.ithao123.cn/content-577983.html 
+
+
+5. smbpasswd usage 
+http://zhidao.baidu.com/link?url=5nLQDK2mYjl53yoNh1jwmUCHsnM5-w2KaqWoO3x4IxhsIJBJc6Ipwo43j0buf1e_3g5JDlsfdhUUndFhVeEbwK
+
+
+
