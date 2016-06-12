@@ -2030,6 +2030,14 @@ http://blog.csdn.net/sydjm/article/details/46238617 Makefile framework analysis
 remake -x V=s can output detial information. 
 remake need apt-get install
 
+5/27
+
+Start to learning how to use SDK toolchain and imagebuilder
+below is one good step and example
+http://www.bubuko.com/infodetail-900581.html
+
+
+
 
 5/30 
 keep debugging ap firmware, the frame work.
@@ -2124,3 +2132,4 @@ http://zhidao.baidu.com/link?url=5nLQDK2mYjl53yoNh1jwmUCHsnM5-w2KaqWoO3x4IxhsIJB
 6. AR9331 
 http://wenku.baidu.com/link?url=DiNIarOZfCH8JKRCxuiwAYXXpH4eXZC6qoXDtbe5NquKSHsWDKO5H9AGq3rl9eN9GQHIJsfG7BcA1SOJm3YP6I7inTOHY2Chefke-BFI3ke
 
+=======
