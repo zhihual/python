@@ -1988,6 +1988,14 @@ Finally, x86 full build done from 9:00 AM to 4:15 PM.  8 hours with good downloa
 
 https://wiki.openwrt.org/doc/howto/virtualbox
 
+Download and install VirtualBox
+Get an OpenWrt image:
+Download the generic combined image, e.g. chaos_calmer/15.05/x86/)
+Uncompress the image if needed: gunzip openwrt.img.gz
+Convert it to native VirtualBox format: VBoxManage convertfromraw --format VDI openwrt.img openwrt.vdi (in virtualbox version 5.0.12 the "--format VDI" is at the end of command)
+Or compile your own image (Target System → x86 and Target Images → Build VirtualBox image files). ext4 needs to be enabled first.
+
+
 5/15
 http://downloads.openwrt.io/sources/  openWRT source package depot
 
