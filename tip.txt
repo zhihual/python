@@ -2148,3 +2148,6 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/mt244274(v=vs.85).aspx
 
 2. To add http server, need make moudle 'y', not 'm'
 
+6/15
+1. sogou map is good for java use and demo
+http://map.sogou.com/api/documentation/javascript/api2.5/examples/index.html
