@@ -2132,4 +2132,11 @@ http://zhidao.baidu.com/link?url=5nLQDK2mYjl53yoNh1jwmUCHsnM5-w2KaqWoO3x4IxhsIJB
 6. AR9331 
 http://wenku.baidu.com/link?url=DiNIarOZfCH8JKRCxuiwAYXXpH4eXZC6qoXDtbe5NquKSHsWDKO5H9AGq3rl9eN9GQHIJsfG7BcA1SOJm3YP6I7inTOHY2Chefke-BFI3ke
 
-=======
+6/14
+1.
+WISPr authentication
+https://msdn.microsoft.com/en-us/library/windows/hardware/mt244328(v=vs.85).aspx
+https://msdn.microsoft.com/en-us/library/windows/hardware/mt244274(v=vs.85).aspx
+
+2. To add http server, need make moudle 'y', not 'm'
+

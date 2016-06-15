@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=gb2312"/>
+<title>搜狗地图 JavaScript API 示例: 简单Brand示例</title>
+<style type="text/css">
+html {height: auto;}
+body {height: auto;margin: 0;padding: 0;}
+#map_canvas {width:1000px;height: 500px;position: absolute;}
+@media print {#map_canvas {height: 950px;}}
+.brand_one{font-size:12px;color:#fff;white-space:nowrap;margin:12px 0 0;}
+</style>
+<script type="text/javascript" src="http://api.go2map.com/maps/js/api_v2.5.1.js"></script>
+<script type="text/javascript">
+
+var time = 0;
+function myrefresh() 
+{ 
+ time = time+1;
+ initialize(); 
+} 
+
+  function initialize() {
+    
+    var string1 = time.toString();
+	var local = time+3;
+	var string2 = local.toString();
+    var myOptions = {
+      zoom: 14,
+      center: new sogou.maps.Point( 13522000,3641093),
+      mapTypeId: sogou.maps.MapTypeId.ROADMAP
+    }
+    var map = new sogou.maps.Map(document.getElementById("map_canvas"), myOptions);
+    var brandOne = new sogou.maps.Brand({
+        position: new sogou.maps.Point( 13522000,3641093),
+        map: map,
+        //spirit 缺省则用默认样式
+        spirit:
+        {
+            url:"http://api.go2map.com/maps/images/v2.5/2.png",
+            imgSize:[140,77],
+            //[[左侧],[中间],[右侧],[尖脚]]
+            //[clipLeft,clipTop,width,heigth]
+            clips:[[0,0,8,51],[8,0,1,51],[132,0,8,51],[0,53,33,23]],
+            //[尖脚绑定坐标的位置]
+            anchor:[16,23],
+            //尖脚微调偏移
+            footOffset:[0,-3]
+        }
+        ,content:"Shanghai<br>Lora01:Cnt:"+string1
+        //是否可见，可缺省，缺省为true
+        ,visible:true
+        //指定内容区固定宽度为80，如果不指定，则会根据内容大小自动适应
+        //,fixSize:new sogou.maps.Size(80,0)
+        //指定css，css要在样式表事先定义好
+        ,css:"brand_one"
+    });
+    var brandTwo = new sogou.maps.Brand({
+        position: new sogou.maps.Point( 13522500,3642093),
+          map: map,
+        //spirit 缺省则用默认样式
+         spirit:
+        {
+            url:"http://api.go2map.com/maps/images/v2.5/2.png",
+            imgSize:[140,77],
+            //[[左侧],[中间],[右侧],[尖脚]]
+            //[clipLeft,clipTop,width,heigth]
+            clips:[[0,0,8,51],[8,0,1,51],[132,0,8,51],[0,53,33,23]],
+            //[尖脚绑定坐标的位置]
+            anchor:[16,23],
+            //尖脚微调偏移
+            footOffset:[0,-3]
+        }
+        ,content:"Shanghai<br>Lora02:Cnt:"+string2
+        //是否可见，可缺省，缺省为true
+        ,visible:true
+        //指定内容区固定宽度为80，如果不指定，则会根据内容大小自动适应
+        //,fixSize:new sogou.maps.Size(80,0)
+        //指定css，css要在样式表事先定义好
+        ,css:"brand_one"
+    });
+  
+
+    setTimeout('myrefresh()',2000); //指定1秒刷新一次 
+  
+  }
+  
+</script>
+</head>
+<body onload="initialize()">
+  <div id="map_canvas"></div>
+</body>
+</html>
