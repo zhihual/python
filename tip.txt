@@ -2151,3 +2151,38 @@ https://msdn.microsoft.com/en-us/library/windows/hardware/mt244274(v=vs.85).aspx
 6/15
 1. sogou map is good for java use and demo
 http://map.sogou.com/api/documentation/javascript/api2.5/examples/index.html
+
+6/22
+Back from Changtan, star working.
+
+Lora server website
+http://loraserver.readthedocs.io/en/latest/
+
+https://github.com/brocaar/loraserver // this is the code path
+
+Communication with the applications and gateways is done over MQTT. 
+
+Configuration of applications and nodes can be done with the provided web-interface or the JSON-RPC API.
+
+ Mosquitto is a popular open-source MQTT server. 
+ 
+ http://mosquitto.org/
+ 
+ LoRa Server stores all persistent data into a PostgreSQL database.
+ 
+ LoRa Server stores all session-related and non-persistent data into a Redis database. Note that at least Redis 2.6.0 is required.
+ 
+ LoRa Semtech Bridge
+ 
+ Server+Database(SQL)+Save(Redis)+LoRa Semtech Bridge(https://github.com/zhihual/lora-semtech-bridge)
+ 
+ Most LoRa gateways are using a UDP protocol defined by Semtech (UDP). To publish these packets over MQTT, you need to install LoRa Semtech Bridge
+ 
+ authentication of the gateway or the server (good point)
+ 
+ the acknowledges are only used for network quality assessment, not to correct UDP datagrams 
+losses (no retries). (Retry, good point)
+
+6/23
+
+done packet forward tx and rx analysis
