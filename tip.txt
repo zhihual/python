@@ -2198,3 +2198,31 @@ done packet forward tx and rx analysis
 6. install redis
 7. create a database
 8  loraserver.exe --db-automigrate --band US_902_928 --net-id 010203 --postgres-dsn "postgres://postgres:t-span@localhost/lora?sslmode=disable" run command
+
+6/25
+
+1. target, trying to can build go semtech gateway
+
+http://www.vaikan.com/go/a-tour-of-go/#1 //go language turial
+
+http://golangtc.com/ // google development language
+
+https://tour.go-zh.org/welcome/1 can run sample web
+
+http://www.cnblogs.com/ghj1976/archive/2013/03/24/2979668.html  windows enviroment setting
+
+2. tips, 
+1. install windows build package
+2. install git in cygwin
+3. set GOPATH
+4. export GOROOT=$HOME/go
+5. export PATH=$PATH:$GOROOT/bin
+6. Go get below 
+github.com/Sirupsen/logrus"
+	"github.com/brocaar/lora-semtech-bridge/backend/mqttpubsub"
+	"github.com/brocaar/lora-semtech-bridge/gateway"
+	"github.com/brocaar/lorawan"
+	"github.com/codegangsta/cli"
+7  Go to gatway and build.
+
+To run, need run mosquitto first. 
