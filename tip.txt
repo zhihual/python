@@ -2197,7 +2197,7 @@ done packet forward tx and rx analysis
 5. install postgresql
 6. install redis
 7. create a database
-8  loraserver.exe --db-automigrate --band US_902_928 --net-id 010203 --postgres-dsn "postgres://postgres:t-span@localhost/lora?sslmode=disable" run command
+8  loraserver.exe --db-automigrate --band US_902_928 --net-id 01020304 --postgres-dsn "postgres://postgres:t-span@localhost/lora?sslmode=disable" run command
 
 6/25
 
@@ -2226,3 +2226,18 @@ github.com/Sirupsen/logrus"
 7  Go to gatway and build.
 
 To run, need run mosquitto first. 
+
+6/29
+Make Lora working. Great day!!
+
+1. Lantern help to solved googled.
+2. simpackge playload need fit phy/mac format
+3. cnt need update according.
+4. skip server MIC valdiation
+5. band is just in luckly and pick up one
+6. pkt_forward <-udp-> MQTT <-> wlanserver
+7. can use mosquitto_sub.exe -t "application/0101010101010101/#" -v to show what we received.
+
+sim change. lorawan change. mac protocal is read and there..
+
+git http://www.cnblogs.com/springbarley/archive/2012/11/03/2752984.html push test branch to server
