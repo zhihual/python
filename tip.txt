@@ -2241,3 +2241,7 @@ Make Lora working. Great day!!
 sim change. lorawan change. mac protocal is read and there..
 
 git http://www.cnblogs.com/springbarley/archive/2012/11/03/2752984.html push test branch to server
+
+8. read band folder. now, know how band looks like.
+9  read fhdr.go.  mac header parser.
+
