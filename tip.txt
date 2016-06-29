@@ -2197,7 +2197,7 @@ done packet forward tx and rx analysis
 5. install postgresql
 6. install redis
 7. create a database
-8  loraserver.exe --db-automigrate --band US_902_928 --net-id 01020304 --postgres-dsn "postgres://postgres:t-span@localhost/lora?sslmode=disable" run command
+8  loraserver.exe --db-automigrate --band US_902_928 --net-id 010203 --postgres-dsn "postgres://postgres:t-span@localhost/lora?sslmode=disable" run command
 
 6/25
 
