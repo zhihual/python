@@ -2288,3 +2288,41 @@ start to check server code.
 	* push packet to redis
 	* get channel list
 	* get node API
+
+7  SQL command
+    select * from applicatoin
+    select * from "tablename"
+
+8  Reading encryption from node code
+  1. Join_Accept:  
+     Decrypt first, use MacAppKey to extract;
+  	    //LoRaMacJoinDecrypt( payload + 1, size - 1, LoRaMacAppKey, LoRaMacRxPayload + 1 );   
+	 Compute MIC
+	    //LoRaMacJoinComputeMic( LoRaMacRxPayload, size - LORAMAC_MFR_LEN, LoRaMacAppKey, &mic );
+	 IF MIC Match: LoRaMacJoinComputeSKeys , output LoRaMacAppSKey. Notie *S*
+  2. FRAME_TYPE_DATA_CONFIRMED_DOWN/FRAME_TYPE_DATA_UNCONFIRMED_DOWN
+     Check addr first, first 4 bytes.
+	 Get LoRaMacNwkSKey  LoRaMacAppSKey
+	 compute MIC and compare
+	   //LoRaMacComputeMic( payload, size - LORAMAC_MFR_LEN, nwkSKey, address, DOWN_LINK, downLinkCounter, &mic );
+	 decode frame  
+	 //LoRaMacPayloadDecrypt
+
+9  Tx frame.
+   1. fill macHDR 1 byte
+   2. if FRAME_TYPE_JOIN_REQ
+         copy 8 bytes AppEUI
+		 copy 8 bytes MacDevEUI
+		 copy MacDevNonce
+		 compute MIC
+		 set at the end
+      if FRAME_TYPE_DATA_CONFIRMED_UP/FRAME_TYPE_DATA_UNCONFIRMED_UP
+	     1. set dev mac addr
+		 2. set fctrl value
+		 3. set link value
+         4. LoRaMacPayloadEncrypt // encrypt
+		 5. LoRaMacComputeMic // compute MIC
+	 
+	 
+	 
+	 
