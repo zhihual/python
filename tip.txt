@@ -2245,3 +2245,46 @@ git http://www.cnblogs.com/springbarley/archive/2012/11/03/2752984.html push tes
 8. read band folder. now, know how band looks like.
 9  read fhdr.go.  mac header parser.
 
+
+6/30
+
+start to check server code.
+1. in main run
+    * connect postgresql data base
+	* make redis pool tool
+	* setup application backend
+	* auto-migrate the database, if possible
+	* make connext, and start new server
+	* setup json-rpc api handler
+	* start the http server
+2. gw, err := gateway.NewBackend(c.String("gw-mqtt-server"), c.String("gw-mqtt-username"),
+    this is in loraserver\internal\loraserver\gateway\mqttpubsub 
+	* b.conn = mqtt.NewClient(opts) and then connect
+	* This file is, on tx, public data to mqtt. If receive, queue packet in queue, and there is api to query queue package.
+
+3. // setup application backend
+	app, err := application.NewBackend(rp, c.String("app-mqtt-server"), 
+	path: loraserver\internal\loraserver\application\mqttpubsub
+	* connect client at begining
+	* looks more like tx only
+4. look top layer application go
+	* looks nothing with handle packet. just database handling.
+	* clues disconnect on #4. 
+5. new thread. loraserver.go  it looks the main enginee on handle packet..
+    * handleRXPackets
+	* handleTXPayloads
+	* close Gateway, Application 
+	* tx time, put into addTXPayloadToQueue
+	* rx time. Gateway.RXPacketChan then call handleRXPacket -> validateAndCollectDataUpRXPacket // to validate packet.
+	* how to validate:  1. get macpayload, 2. get session data, 3. call validateAndGetFullFCntUp to validate.  4. if ok, validate MIC. 5. if datae, decrpt frame. 6. finally, handleCollectedDataUpPackets{ a sendRXInfoNotification give notification, b.  ctx.Application.Send, to application, c. save count, d. do downling reply, handleDataDownReply -- ctx.Application.SendNotification notify to send, ctx.Gateway.Send. saveNodeSession}
+	
+	* ok how tx works?
+	* Get tx packet ctx.Application.TXPayloadChan()
+	* Add to queue addTXPayloadToQueue , implement in node.go. fill in ridis???
+	* is b.conn.Publish(topic, 0, false, bytes); token.Wait() && token.Error() != nil , public to MQTT is the last step to send one packet? yes, server put into mqtt. mqtt sub is on behalf of handle packet exchange from gate and server exe
+
+6. start to check node.go
+    * database operation 
+	* push packet to redis
+	* get channel list
+	* get node API
