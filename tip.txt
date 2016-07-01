@@ -1864,7 +1864,10 @@ echo “/data/coredump/core.%e.%p” >/proc/sys/kernel/core_pattern
 Auto generate core dump action:
 1.
 /etc/profile 
-ulimit -c unlimite
+ulimit -c unlimited
+
+gdb –core=core.xxxx
+file ./a.out
 
 2.
 rc.local 
@@ -2323,6 +2326,11 @@ start to check server code.
          4. LoRaMacPayloadEncrypt // encrypt
 		 5. LoRaMacComputeMic // compute MIC
 	 
-	 
+7/1
+
+    1. enctryption is done yesterday. begin to work on integrate mores
+	2. compile finished
+	3. gcc -g flag make symbol in  -O2 flag is for compile optimize.. remove it.
+	4. mac is running
 	 
 	 
