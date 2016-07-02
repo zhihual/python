@@ -2333,4 +2333,8 @@ start to check server code.
 	3. gcc -g flag make symbol in  -O2 flag is for compile optimize.. remove it.
 	4. mac is running
 	 
-	 
+7/2 
+
+    1. Set local EVN path in .bashrc
+	2. Build openwrt success
+    3. Build kernel file success
