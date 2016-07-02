@@ -2338,3 +2338,12 @@ start to check server code.
     1. Set local EVN path in .bashrc
 	2. Build openwrt success
     3. Build kernel file success
+	4. Start to onboard testing.
+	   4.1 verify board vs board ok  
+	       70 tx -> 60 rx  no work  60 not receive.
+	       70 rx-> 60tx  ok.!!
+	5. finally device <--> /dev/ by mknod name type device's major device's minor
+	6. kernel driver add phy index, lv_lora add link test. so, in theory, kernel file is ok.
+	
+	7. try to push to upper
+	
