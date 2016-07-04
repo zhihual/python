@@ -2332,5 +2332,17 @@ start to check server code.
 	2. compile finished
 	3. gcc -g flag make symbol in  -O2 flag is for compile optimize.. remove it.
 	4. mac is running
-	 
+
+7/3
+    1. integration, join req received successfully by server. join resp send out by server, forward by gate, but client not received.
+    2. need to do 
+	   a. modify rand nonce	 --done
+	   b. modify radofile. 
+	   c. study stm32 enviorment
+	   d. learn go and sql part
+	   
+	3. git cherry-pick usage. 
+	4  git checkout -b branch3 1a222c3 // create new branch with define commit id
+	   very useful git guide http://pinkyjie.com/2014/08/10/git-notes-part-3/
+	
 	 
