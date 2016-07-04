@@ -2363,4 +2363,7 @@ start to check server code.
 	
 	7. try to push to upper
 	
+7/4 
 
+   # install IAR,  1. install CD and driver  2. copy linece file to specific folder.
+   # try to build client code build success. next step, burn and run...
