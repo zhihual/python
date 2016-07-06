@@ -2365,6 +2365,33 @@ start to check server code.
 	
 7/4 
 
-   # install IAR,  1. install CD and driver  2. copy linece file to specific folder.
-   # try to build client code build success. next step, burn and run...
-   # learn one tips on git  git branch --set-upstream-to=origin/<branch> armclient
+   1.install IAR,  1. install CD and driver  2. copy linece file to specific folder.
+   2.try to build client code build success. next step, burn and run...
+   3.learn one tips on git  git branch --set-upstream-to=origin/<branch> armclient
+
+7/5
+   1. read client code..
+   2. study go language with SQL baisc operation.
+   3. travel plan
+   4. start to note work in onenotes
+   5. https://www.uantwerpen.be/en/rg/mosaic/software/ieee-802-11ah/ 
+      https://github.com/MOSAIC-UA/802.11ah-ns3.
+
+7/6 
+   1. night process, setup enviorment same as july 3.
+   2. tx is ok, stm32<-> 9311. rx still need tuning.
+   3. need recheck radio part rx code.
+   4. need recheck mac radio part code.
+ 
+   5. Shandong.  SH->LYG (1stday)->QD (2stday)->WH(3stday)->YT(??)->PENGLAI(5th day)->CD(?)->RZ(6th Day)->SHs(7th day)
+      
+	  To:  1st noon-> afternnon SH->LYG
+	  QIN: 2st morning->afternoon LYG->QINDAO. half day trip
+	  QIN: 3rd day.
+	  WH: 4rd day morning -> WH  play 
+	  PENGLAI: 5th day WH morning->PENGLAI play
+      RZ:  6th	dayPENGLAI-> RZ
+	  SH: 7th day
+   
+    http://www.xcar.com.cn/bbs/viewthread.php?tid=14473635&page=2    
+ 
