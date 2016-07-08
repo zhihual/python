@@ -2394,4 +2394,49 @@ start to check server code.
 	  SH: 7th day
    
     http://www.xcar.com.cn/bbs/viewthread.php?tid=14473635&page=2    
+
+7/7  
+    1. ready register and compare with two solutions. better understanding of logic
+	2. read datasheet, more clear on mode switch mode
  
+7/8
+    1. radio rx looks works last night. 
+	2. more understand of code. next action is tunning mac
+	3. need find one good compare tool  : http://winmerge.org/ winmerge
+	4. read some SQL guide. http://jingyan.baidu.com/article/3ea51489ec3cb452e71bba52.html
+	   a. postgres default account. use to create others account, database
+	   b. login cmd "psql" -> password postgres, -- create password for postgres..
+	   c. CREATE USER 'username' WITH PASSWORD 'password' -- create one new user
+	   d. CREATE DATABASE 'databasename' OWNER 'username' -- create one db for new user
+	   e. GRANT ALL PRIVILIEGES ON DATABASE 'dbname' to 'username' --  grant other all rights to user
+	   f. q
+	   
+	   // login data base
+	    psql -U 'user' -d 'dbname' -h 127.0.0.1 -p 5432 -- this is the default port.
+        # 创建新表
+        CREATE TABLE usertbl(name VARCHAR(20), signupdate DATE);
+        # 插入数据
+        INSERT INTO usertbl(name, signupdate) VALUES('张三', '2013-12-22');
+		# 选择记录
+		SELECT * FROM user_tbl;
+		# 更新数据
+		UPDATE user_tbl set name = '李四' WHERE name = '张三';
+		# 删除记录
+		DELETE FROM user_tbl WHERE name = '李四' ;
+		# 添加栏位
+		ALTER TABLE user_tbl ADD email VARCHAR(40);
+		# 更新结构
+		ALTER TABLE usertbl ALTER COLUMN signupdate SET NOT NULL;
+		# 更名栏位
+		ALTER TABLE usertbl RENAME COLUMN signupdate TO signup;
+		# 删除栏位
+		ALTER TABLE user_tbl DROP COLUMN email;
+		# 表格更名 
+		ALTER TABLE usertbl RENAME TO backuptbl;
+		# 删除表格
+		DROP TABLE IF EXISTS backup_tbl;
+	   
+	   http://wenku.baidu.com/view/805facd6195f312b3169a541.html ppt
+	   
+	   
+	
