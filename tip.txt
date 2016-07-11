@@ -2438,5 +2438,26 @@ start to check server code.
 	   
 	   http://wenku.baidu.com/view/805facd6195f312b3169a541.html ppt
 	   
-	   
+7/11 
+    1. Lora Client <->Gate<->Server all done.  Next step, learn SQL language. 
+	2. Setup Andriod APP.
+   
+    # Even though SQL is new to me. But, looks need to learn and debug go first, and the method to learn SQL. 
+	# SQL is save, but need app to use it. Go is the app avaviable to study.
+	
+	3. learn LiteIDE.  good compile IDE
+	Function declartion:
+	func functionName(parameter_list) (return_value_list) {
+     …
+    }
+	// multi return function
+	func FunctionName (a typea, b typeb) (t1 type1, t2 type2)
+	// declare variabel
+	var varname type(var type)
+	const identifier [type] = value  // define const
+	a, b = b, a // this is good in Golang. funny
+	
+	Go even support fushu...
+	
+	func myFunc(a, b, arg ...int) {} variable length define.
 	
