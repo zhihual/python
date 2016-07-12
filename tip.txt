@@ -2461,3 +2461,46 @@ start to check server code.
 	
 	func myFunc(a, b, arg ...int) {} variable length define.
 	
+7/12 
+   1. Learn MIT Tech review
+   https://www.technologyreview.com/s/542561/wi-fi-trick-gives-devices-super-accurate-indoor-location-fixes/
+   // received pdf abstract
+   http://www.subpos.org/ // position project
+   
+   2. Array
+      var identifier [len]type
+	  
+	  var arr2 [5]int 
+	  var arr1 = new([5]int)
+	  arr1 的类型是 *[5]int，而 arr2的类型是 [5]int
+   3. Slide
+   
+	  var identifier []type
+	  ar slice1 []type = arr1[start:end]
+   4. Map: Dictionary
+      var map1 map[keytype]valuetype
+      var map1 map[string]int
+
+   5. Structer 
+      type identifier struct {
+        field1 type1
+        field2 type2
+        ...
+      }
+   6. Interface
+ 
+       type Namer interface {
+            Method1(param_list) return_type
+            Method2(param_list) return_type
+            ...
+       }
+	7 Processer communication
+	  var identifier chan datatype
+	  无缓冲通道成为了多个协程同步的完美工具。
+	  
+	  // buf channel
+	  buf := 100
+      ch1 := make(chan string, buf)
+	  
+	  
+	8 go fucntion can create one thread
