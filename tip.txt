@@ -2504,3 +2504,7 @@ start to check server code.
 	  
 	  
 	8 go fucntion can create one thread
+
+7/13 
+
+    1. send qq or weichat message...
