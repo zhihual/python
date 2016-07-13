@@ -2332,7 +2332,7 @@ start to check server code.
 	2. compile finished
 	3. gcc -g flag make symbol in  -O2 flag is for compile optimize.. remove it.
 	4. mac is running
-<<<<<<< HEAD
+
 
 7/3
     1. integration, join req received successfully by server. join resp send out by server, forward by gate, but client not received.
@@ -2394,6 +2394,124 @@ start to check server code.
 	  SH: 7th day
    
     http://www.xcar.com.cn/bbs/viewthread.php?tid=14473635&page=2    
+
+7/7  
+    1. ready register and compare with two solutions. better understanding of logic
+	2. read datasheet, more clear on mode switch mode
  
+
 7/7
    # meet fatal: loose object git error
+=======
+7/8
+    1. radio rx looks works last night. 
+	2. more understand of code. next action is tunning mac
+	3. need find one good compare tool  : http://winmerge.org/ winmerge
+	4. read some SQL guide. http://jingyan.baidu.com/article/3ea51489ec3cb452e71bba52.html
+	   a. postgres default account. use to create others account, database
+	   b. login cmd "psql" -> password postgres, -- create password for postgres..
+	   c. CREATE USER 'username' WITH PASSWORD 'password' -- create one new user
+	   d. CREATE DATABASE 'databasename' OWNER 'username' -- create one db for new user
+	   e. GRANT ALL PRIVILIEGES ON DATABASE 'dbname' to 'username' --  grant other all rights to user
+	   f. q
+	   
+	   // login data base
+	    psql -U 'user' -d 'dbname' -h 127.0.0.1 -p 5432 -- this is the default port.
+        # 创建新表
+        CREATE TABLE usertbl(name VARCHAR(20), signupdate DATE);
+        # 插入数据
+        INSERT INTO usertbl(name, signupdate) VALUES('张三', '2013-12-22');
+		# 选择记录
+		SELECT * FROM user_tbl;
+		# 更新数据
+		UPDATE user_tbl set name = '李四' WHERE name = '张三';
+		# 删除记录
+		DELETE FROM user_tbl WHERE name = '李四' ;
+		# 添加栏位
+		ALTER TABLE user_tbl ADD email VARCHAR(40);
+		# 更新结构
+		ALTER TABLE usertbl ALTER COLUMN signupdate SET NOT NULL;
+		# 更名栏位
+		ALTER TABLE usertbl RENAME COLUMN signupdate TO signup;
+		# 删除栏位
+		ALTER TABLE user_tbl DROP COLUMN email;
+		# 表格更名 
+		ALTER TABLE usertbl RENAME TO backuptbl;
+		# 删除表格
+		DROP TABLE IF EXISTS backup_tbl;
+	   
+	   http://wenku.baidu.com/view/805facd6195f312b3169a541.html ppt
+	   
+7/11 
+    1. Lora Client <->Gate<->Server all done.  Next step, learn SQL language. 
+	2. Setup Andriod APP.
+   
+    # Even though SQL is new to me. But, looks need to learn and debug go first, and the method to learn SQL. 
+	# SQL is save, but need app to use it. Go is the app avaviable to study.
+	
+	3. learn LiteIDE.  good compile IDE
+	Function declartion:
+	func functionName(parameter_list) (return_value_list) {
+     …
+    }
+	// multi return function
+	func FunctionName (a typea, b typeb) (t1 type1, t2 type2)
+	// declare variabel
+	var varname type(var type)
+	const identifier [type] = value  // define const
+	a, b = b, a // this is good in Golang. funny
+	
+	Go even support fushu...
+	
+	func myFunc(a, b, arg ...int) {} variable length define.
+	
+7/12 
+   1. Learn MIT Tech review
+   https://www.technologyreview.com/s/542561/wi-fi-trick-gives-devices-super-accurate-indoor-location-fixes/
+   // received pdf abstract
+   http://www.subpos.org/ // position project
+   
+   2. Array
+      var identifier [len]type
+	  
+	  var arr2 [5]int 
+	  var arr1 = new([5]int)
+	  arr1 的类型是 *[5]int，而 arr2的类型是 [5]int
+   3. Slide
+   
+	  var identifier []type
+	  ar slice1 []type = arr1[start:end]
+   4. Map: Dictionary
+      var map1 map[keytype]valuetype
+      var map1 map[string]int
+
+   5. Structer 
+      type identifier struct {
+        field1 type1
+        field2 type2
+        ...
+      }
+   6. Interface
+ 
+       type Namer interface {
+            Method1(param_list) return_type
+            Method2(param_list) return_type
+            ...
+       }
+	7 Processer communication
+	  var identifier chan datatype
+	  无缓冲通道成为了多个协程同步的完美工具。
+	  
+	  // buf channel
+	  buf := 100
+      ch1 := make(chan string, buf)
+	  
+	  
+	8 go fucntion can create one thread
+
+7/13 
+
+    1. send qq or weichat message...done
+    2. fetch http put .. done
+	3. parser jason ... working
+	   https://gobyexample.com/json
