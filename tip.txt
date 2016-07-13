@@ -2395,3 +2395,5 @@ start to check server code.
    
     http://www.xcar.com.cn/bbs/viewthread.php?tid=14473635&page=2    
  
+7/7
+   # meet fatal: loose object git error
