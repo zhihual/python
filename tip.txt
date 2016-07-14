@@ -2515,3 +2515,14 @@ start to check server code.
     2. fetch http put .. done
 	3. parser jason ... working
 	   https://gobyexample.com/json
+
+7/14
+
+    1. understand interface now. parse jason doen.
+	2. func (r *rect) area() int { // this is struct method
+	       return r.width * r.height
+       }
+
+       func area(r *rect) int { // this is function
+	       return r.width * r.height
+       }
