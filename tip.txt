@@ -2526,3 +2526,7 @@ start to check server code.
        func area(r *rect) int { // this is function
 	       return r.width * r.height
        }
+
+7/15 
+    1. Caculate actually income rate
+	   http://salarycalculator.sinaapp.com/
