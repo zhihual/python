@@ -2530,3 +2530,6 @@ start to check server code.
 7/15 
     1. Caculate actually income rate
 	   http://salarycalculator.sinaapp.com/
+	   
+	2. Start to learning Linux
+	
