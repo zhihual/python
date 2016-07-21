@@ -2398,10 +2398,13 @@ start to check server code.
 							 drive     9 hours kil 0.5 *720*2 315*2 = 1350
       Plan:
 
-      7/27  Moring 470kil 5.5 hour 	 盐城吃饭 9:00 leave home            全季酒店(连云港市政府店)  1day 500    net 0.5 day 
-      7/28  Moring 250kil 3hour      9:00 leave 12:00 arrival   全季酒店(青岛香港中路店)  1day 1500   net 0.5 day
-	  7/29  run in city                                         青岛多元锦江大饭店  备选 青岛中心假日酒店        net 1 day
-      7/30                           afternoon                  宿  连云港
+      7/27  Moring 470kil 5.5 hour 	13:30 leave home   日照君临天下大酒店(君临观海)  1day 700   
+	        尚逸宏裕海鲜自助   东港区 黄海三路与海滨二路交汇处
+	        灯塔广场---世帆赛基地--万平口风景区--第三海水浴场---李家台赶海园--森林公园--万宝风景区
+      7/28  Moring 250kil 2hour     9:00 leave 11:00 arrival   青岛东方梅地亚酒店
+	        休息 金沙滩/银沙滩  
+	  7/29  青岛 run in city	全季酒店(青岛香港中路店)  1day 1500   net 0.5 day  海博/啤酒/八大关/石老人 
+	  7/30  leave 3:00 PM   arrive 5:00  宿  连云港
       7/31  back at home   	  
 	  
 	  http://www.mafengwo.cn/i/5401845.html 这个攻略。
@@ -2411,6 +2414,11 @@ start to check server code.
 	             嘉禾泽润大酒店-叨鱼主题餐厅  海鲜
             黄岛区城市阳台 赶海
        
+	  日照游玩：
+	  日照君临天下大酒店(君临观海) [万平口]东港区海曲东路288号(万平口大桥西)
+	  
+	  
+	  
     http://www.xcar.com.cn/bbs/viewthread.php?tid=14473635&page=2    
 
 7/7  
@@ -2592,3 +2600,8 @@ start to check server code.
 	   
 	   someone's openwrt learning doc
 	   http://download.csdn.net/detail/suiyuan19840208/7441867
+	   
+7/20 
+    1. Continue study opewrt build log.  build 1 kernel, use tool to combile kernel,loader,and rootfs together, then make one image.
+	   Ref URL http://www.cnblogs.com/sammei/p/3983605.html
+	           http://blog.csdn.net/lurayvis/article/details/10242457
