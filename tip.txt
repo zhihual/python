@@ -2605,3 +2605,16 @@ start to check server code.
     1. Continue study opewrt build log.  build 1 kernel, use tool to combile kernel,loader,and rootfs together, then make one image.
 	   Ref URL http://www.cnblogs.com/sammei/p/3983605.html
 	           http://blog.csdn.net/lurayvis/article/details/10242457
+
+7/21
+    1. Where comes from the ap firmware? look at build log..
+	   looks build .ko first, then, build vmlinux
+	2. find one openwrt url http://gashero.iteye.com/blog/476327
+	3. most likely b43 is the module, i'm looking for
+	   https://wiki.openwrt.org/doc/hardware/soc  this URL has each AP moudle specification
+	   
+	   b43 is the driver
+	   hostapd-wpad-mini is the wpa supplicant.. great!!
+	   
+	 4.http://blog.csdn.net/bailyzheng/article/details/41626291 so netifd is build by other exec. 
+	   So, how hostadp running...

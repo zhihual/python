@@ -1,0 +1,159 @@
+Mon May 30 10:21:03 2016 daemon.notice netifd: Interface 'wan6' has link connectivity 
+Mon May 30 10:21:03 2016 daemon.notice netifd: Interface 'wan6' is setting up now
+Mon May 30 10:21:03 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 10:21:04 2016 daemon.notice netifd: wan (799): udhcpc (v1.23.2) started
+Mon May 30 10:21:04 2016 daemon.notice netifd: wan (799): Sending discover...
+Mon May 30 10:21:04 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 10:21:04 2016 user.notice firewall: Reloading firewall due to ifup of lan (br-lan)
+Mon May 30 10:21:05 2016 kern.info kernel: [   21.970000] eth0: Link is Up - 1Gbps/Full - flow control off
+Mon May 30 10:21:05 2016 kern.info kernel: [   22.220000] br-lan: port 1(eth0.1) entered forwarding state
+Mon May 30 10:21:06 2016 daemon.info procd: - init complete -
+Mon May 30 10:21:06 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 10:21:07 2016 daemon.notice netifd: wan (799): Sending discover...
+Mon May 30 10:21:08 2016 daemon.warn odhcpd[648]: DHCPV6 REQUEST IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 10:21:09 2016 daemon.warn odhcpd[648]: DHCPV6 REQUEST IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 10:21:09 2016 daemon.info dnsmasq[907]: started, version 2.73 cachesize 150
+Mon May 30 10:21:09 2016 daemon.info dnsmasq[907]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN DHCP no-DHCPv6 no-Lua TFTP no-conntrack no-ipset no-auth no-DNSSEC loop-detect inotify
+Mon May 30 10:21:09 2016 daemon.info dnsmasq[907]: DNS service limited to local subnets
+Mon May 30 10:21:09 2016 daemon.info dnsmasq-dhcp[907]: DHCP, IP range 192.168.1.100 -- 192.168.1.249, lease time 12h
+Mon May 30 10:21:09 2016 daemon.info dnsmasq[907]: using local addresses only for domain lan
+Mon May 30 10:21:09 2016 daemon.warn dnsmasq[907]: no servers found in /tmp/resolv.conf.auto, will retry
+Mon May 30 10:21:09 2016 daemon.info dnsmasq[907]: read /etc/hosts - 1 addresses
+Mon May 30 10:21:09 2016 daemon.info dnsmasq[907]: read /tmp/hosts/dhcp - 1 addresses
+Mon May 30 10:21:09 2016 daemon.info dnsmasq[907]: read /tmp/hosts/odhcpd - 1 addresses
+Mon May 30 10:21:09 2016 daemon.info dnsmasq-dhcp[907]: read /etc/ethers - 0 addresses
+Mon May 30 10:21:10 2016 daemon.notice netifd: wan (799): Sending discover...
+Mon May 30 10:21:11 2016 daemon.warn odhcpd[648]: DHCPV6 REQUEST IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 10:21:15 2016 daemon.warn odhcpd[648]: DHCPV6 REQUEST IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 10:21:23 2016 daemon.warn odhcpd[648]: DHCPV6 REQUEST IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 10:21:47 2016 kern.notice kernel: [   64.730000] random: nonblocking pool is initialized
+Mon May 30 19:57:23 2016 daemon.warn odhcpd[648]: DHCPV6 REBIND IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 19:57:33 2016 daemon.warn odhcpd[648]: DHCPV6 REBIND IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 19:57:53 2016 daemon.warn odhcpd[648]: DHCPV6 REBIND IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 19:58:33 2016 daemon.warn odhcpd[648]: DHCPV6 REBIND IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 19:59:53 2016 daemon.warn odhcpd[648]: DHCPV6 REBIND IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:02:34 2016 daemon.warn odhcpd[648]: DHCPV6 REBIND IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:08:04 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:08:04 2016 daemon.info dnsmasq[907]: read /etc/hosts - 1 addresses
+Mon May 30 20:08:04 2016 daemon.info dnsmasq[907]: read /tmp/hosts/dhcp - 1 addresses
+Mon May 30 20:08:04 2016 daemon.info dnsmasq[907]: read /tmp/hosts/odhcpd - 0 addresses
+Mon May 30 20:08:04 2016 daemon.info dnsmasq-dhcp[907]: read /etc/ethers - 0 addresses
+Mon May 30 20:08:05 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:08:07 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:08:11 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:08:19 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:08:35 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:09:07 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:15:11 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:15:12 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:15:14 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:15:18 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:15:26 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:15:42 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:16:14 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:22:17 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:22:18 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:22:20 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:22:24 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:22:32 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:22:48 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:23:20 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:29:24 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:29:25 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:29:27 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:29:31 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:29:39 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:29:55 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:30:27 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:36:31 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:36:32 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:36:34 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:36:38 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:36:46 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:37:02 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:37:02 2016 daemon.warn odhcpd[648]: DHCPV6 REQUEST IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Mon May 30 20:37:02 2016 daemon.info dnsmasq[907]: read /etc/hosts - 1 addresses
+Mon May 30 20:37:02 2016 daemon.info dnsmasq[907]: read /tmp/hosts/dhcp - 1 addresses
+Mon May 30 20:37:02 2016 daemon.info dnsmasq[907]: read /tmp/hosts/odhcpd - 1 addresses
+Mon May 30 20:37:02 2016 daemon.info dnsmasq-dhcp[907]: read /etc/ethers - 0 addresses
+Thu Jul 21 08:17:24 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Thu Jul 21 08:17:24 2016 daemon.info dnsmasq[907]: read /etc/hosts - 1 addresses
+Thu Jul 21 08:17:24 2016 daemon.info dnsmasq[907]: read /tmp/hosts/dhcp - 1 addresses
+Thu Jul 21 08:17:24 2016 daemon.info dnsmasq[907]: read /tmp/hosts/odhcpd - 0 addresses
+Thu Jul 21 08:17:24 2016 daemon.info dnsmasq-dhcp[907]: read /etc/ethers - 0 addresses
+Thu Jul 21 08:17:25 2016 daemon.warn odhcpd[648]: DHCPV6 REQUEST IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Thu Jul 21 08:17:25 2016 daemon.info dnsmasq[907]: read /etc/hosts - 1 addresses
+Thu Jul 21 08:17:25 2016 daemon.info dnsmasq[907]: read /tmp/hosts/dhcp - 1 addresses
+Thu Jul 21 08:17:25 2016 daemon.info dnsmasq[907]: read /tmp/hosts/odhcpd - 1 addresses
+Thu Jul 21 08:17:25 2016 daemon.info dnsmasq-dhcp[907]: read /etc/ethers - 0 addresses
+Thu Jul 21 08:17:58 2016 authpriv.info dropbear[8667]: Child connection from 192.168.1.10:63937
+Thu Jul 21 08:18:05 2016 authpriv.notice dropbear[8667]: Password auth succeeded for 'root' from 192.168.1.10:63937
+Thu Jul 21 09:02:35 2016 daemon.notice netifd: radio0 (10349): command failed: Operation not supported (-122)
+Thu Jul 21 09:02:35 2016 daemon.notice netifd: radio0 (10349): Configuration file: /var/run/hostapd-phy0.conf
+Thu Jul 21 09:02:35 2016 kern.info kernel: [4488112.520000] b43-phy0: Loading firmware version 666.2 (2011-02-23 01:15:07)
+Thu Jul 21 09:02:36 2016 kern.info kernel: [4488112.760000] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+Thu Jul 21 09:02:36 2016 kern.info kernel: [4488112.770000] device wlan0 entered promiscuous mode
+Thu Jul 21 09:02:36 2016 daemon.notice netifd: radio0 (10349): Using interface wlan0 with hwaddr 60:a4:4c:27:13:b0 and ssid "OpenWrt"
+Thu Jul 21 09:02:36 2016 kern.info kernel: [4488112.830000] br-lan: port 2(wlan0) entered forwarding state
+Thu Jul 21 09:02:36 2016 kern.info kernel: [4488112.830000] br-lan: port 2(wlan0) entered forwarding state
+Thu Jul 21 09:02:36 2016 kern.info kernel: [4488112.840000] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+Thu Jul 21 09:02:36 2016 daemon.notice netifd: radio0 (10349): wlan0: interface state UNINITIALIZED->ENABLED
+Thu Jul 21 09:02:36 2016 daemon.notice netifd: radio0 (10349): wlan0: AP-ENABLED 
+Thu Jul 21 09:02:36 2016 daemon.notice netifd: Network device 'wlan0' link is up
+Thu Jul 21 09:02:38 2016 kern.info kernel: [4488114.830000] br-lan: port 2(wlan0) entered forwarding state
+Thu Jul 21 09:04:46 2016 kern.info kernel: [4488242.790000] device wlan0 left promiscuous mode
+Thu Jul 21 09:04:46 2016 kern.info kernel: [4488242.790000] br-lan: port 2(wlan0) entered disabled state
+Thu Jul 21 09:04:47 2016 daemon.notice netifd: radio0 (10558): command failed: Operation not supported (-122)
+Thu Jul 21 09:04:47 2016 daemon.notice netifd: radio0 (10558): Configuration file: /var/run/hostapd-phy0.conf
+Thu Jul 21 09:04:48 2016 kern.info kernel: [4488244.930000] b43-phy0: Loading firmware version 666.2 (2011-02-23 01:15:07)
+Thu Jul 21 09:04:48 2016 kern.info kernel: [4488245.180000] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+Thu Jul 21 09:04:48 2016 daemon.notice netifd: radio0 (10558): wlan0: interface state UNINITIALIZED->COUNTRY_UPDATE
+Thu Jul 21 09:04:48 2016 kern.info kernel: [4488245.210000] device wlan0 entered promiscuous mode
+Thu Jul 21 09:04:48 2016 daemon.notice netifd: radio0 (10558): Using interface wlan0 with hwaddr 60:a4:4c:27:13:b0 and ssid "OpenWrt"
+Thu Jul 21 09:04:49 2016 kern.info kernel: [4488246.130000] br-lan: port 2(wlan0) entered forwarding state
+Thu Jul 21 09:04:49 2016 kern.info kernel: [4488246.130000] br-lan: port 2(wlan0) entered forwarding state
+Thu Jul 21 09:04:49 2016 kern.info kernel: [4488246.140000] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+Thu Jul 21 09:04:49 2016 daemon.notice netifd: radio0 (10558): wlan0: interface state COUNTRY_UPDATE->ENABLED
+Thu Jul 21 09:04:49 2016 daemon.notice netifd: radio0 (10558): wlan0: AP-ENABLED 
+Thu Jul 21 09:04:49 2016 daemon.notice netifd: Network device 'wlan0' link is up
+Thu Jul 21 09:04:50 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Thu Jul 21 09:04:50 2016 daemon.info dnsmasq[907]: read /etc/hosts - 1 addresses
+Thu Jul 21 09:04:50 2016 daemon.info dnsmasq[907]: read /tmp/hosts/dhcp - 1 addresses
+Thu Jul 21 09:04:50 2016 daemon.info dnsmasq[907]: read /tmp/hosts/odhcpd - 0 addresses
+Thu Jul 21 09:04:50 2016 daemon.info dnsmasq-dhcp[907]: read /etc/ethers - 0 addresses
+Thu Jul 21 09:04:51 2016 daemon.warn odhcpd[648]: DHCPV6 REQUEST IA_NA from 000100011dae7c346cc217db198e on br-lan: ok fd58:86cb:ae44::946/128 
+Thu Jul 21 09:04:51 2016 daemon.info dnsmasq[907]: read /etc/hosts - 1 addresses
+Thu Jul 21 09:04:51 2016 daemon.info dnsmasq[907]: read /tmp/hosts/dhcp - 1 addresses
+Thu Jul 21 09:04:51 2016 daemon.info dnsmasq[907]: read /tmp/hosts/odhcpd - 1 addresses
+Thu Jul 21 09:04:51 2016 daemon.info dnsmasq-dhcp[907]: read /etc/ethers - 0 addresses
+Thu Jul 21 09:04:51 2016 kern.info kernel: [4488248.130000] br-lan: port 2(wlan0) entered forwarding state
+Thu Jul 21 09:06:01 2016 daemon.notice hostapd: wlan0: STA 24:77:03:91:a5:d0 IEEE 802.11: did not acknowledge authentication response
+Thu Jul 21 09:06:01 2016 daemon.info hostapd: wlan0: STA 24:77:03:91:a5:d0 IEEE 802.11: authenticated
+Thu Jul 21 09:06:02 2016 daemon.notice hostapd: wlan0: STA 24:77:03:91:a5:d0 IEEE 802.11: did not acknowledge authentication response
+Thu Jul 21 09:06:02 2016 daemon.notice hostapd: wlan0: STA 24:77:03:91:a5:d0 IEEE 802.11: did not acknowledge authentication response
+Thu Jul 21 09:06:02 2016 daemon.info hostapd: wlan0: STA 24:77:03:91:a5:d0 IEEE 802.11: authenticated
+Thu Jul 21 09:07:04 2016 daemon.info hostapd: wlan0: STA 24:77:03:91:a5:d0 IEEE 802.11: authenticated
+Thu Jul 21 09:07:04 2016 daemon.info hostapd: wlan0: STA 24:77:03:91:a5:d0 IEEE 802.11: associated (aid 1)
+Thu Jul 21 09:07:04 2016 daemon.info hostapd: wlan0: STA 24:77:03:91:a5:d0 WPA: pairwise key handshake completed (RSN)
+Thu Jul 21 09:07:05 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd58:86cb:ae44::9b3/128 
+Thu Jul 21 09:07:05 2016 daemon.warn odhcpd[648]: DHCPV6 REQUEST IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd58:86cb:ae44::9b3/128 
+Thu Jul 21 09:07:07 2016 daemon.info dnsmasq-dhcp[907]: DHCPDISCOVER(br-lan) 24:77:03:91:a5:d0 
+Thu Jul 21 09:07:07 2016 daemon.info dnsmasq-dhcp[907]: DHCPOFFER(br-lan) 192.168.1.132 24:77:03:91:a5:d0 
+Thu Jul 21 09:07:07 2016 daemon.info dnsmasq[907]: read /etc/hosts - 1 addresses
+Thu Jul 21 09:07:07 2016 daemon.info dnsmasq[907]: read /tmp/hosts/dhcp - 1 addresses
+Thu Jul 21 09:07:07 2016 daemon.info dnsmasq[907]: read /tmp/hosts/odhcpd - 2 addresses
+Thu Jul 21 09:07:07 2016 daemon.info dnsmasq-dhcp[907]: read /etc/ethers - 0 addresses
+Thu Jul 21 09:07:07 2016 daemon.info dnsmasq-dhcp[907]: DHCPREQUEST(br-lan) 192.168.1.132 24:77:03:91:a5:d0 
+Thu Jul 21 09:07:07 2016 daemon.info dnsmasq-dhcp[907]: DHCPACK(br-lan) 192.168.1.132 24:77:03:91:a5:d0 SUT3_9600x64
+Thu Jul 21 09:07:08 2016 daemon.warn odhcpd[648]: DHCPV6 SOLICIT IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd58:86cb:ae44::9b3/128 
+Thu Jul 21 09:07:08 2016 daemon.info dnsmasq[907]: read /etc/hosts - 1 addresses
+Thu Jul 21 09:07:08 2016 daemon.info dnsmasq[907]: read /tmp/hosts/dhcp - 1 addresses
+Thu Jul 21 09:07:08 2016 daemon.info dnsmasq[907]: read /tmp/hosts/odhcpd - 1 addresses
+Thu Jul 21 09:07:08 2016 daemon.info dnsmasq-dhcp[907]: read /etc/ethers - 0 addresses
+Thu Jul 21 09:07:09 2016 daemon.warn odhcpd[648]: DHCPV6 REQUEST IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd58:86cb:ae44::9b3/128 
+Thu Jul 21 09:07:09 2016 daemon.info dnsmasq[907]: read /etc/hosts - 1 addresses
+Thu Jul 21 09:07:09 2016 daemon.info dnsmasq[907]: read /tmp/hosts/dhcp - 1 addresses
+Thu Jul 21 09:07:09 2016 daemon.info dnsmasq[907]: read /tmp/hosts/odhcpd - 2 addresses
+Thu Jul 21 09:07:09 2016 daemon.info dnsmasq-dhcp[907]: read /etc/ethers - 0 addresses
+Thu Jul 21 09:07:12 2016 daemon.info dnsmasq-dhcp[907]: DHCPREQUEST(br-lan) 192.168.1.132 24:77:03:91:a5:d0 
+Thu Jul 21 09:07:12 2016 daemon.info dnsmasq-dhcp[907]: DHCPACK(br-lan) 192.168.1.132 24:77:03:91:a5:d0 SUT3_9600x64

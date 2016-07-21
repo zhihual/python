@@ -1,0 +1,104 @@
+
+root@OpenWrt:/sbin# ps
+  PID USER       VSZ STAT COMMAND
+    1 root      1404 S    /sbin/procd
+    2 root         0 SW   [kthreadd]
+    3 root         0 SW   [ksoftirqd/0]
+    4 root         0 SW   [kworker/0:0]
+    5 root         0 SW<  [kworker/0:0H]
+    7 root         0 SW<  [khelper]
+    8 root         0 SW<  [writeback]
+    9 root         0 SW   [kworker/u2:1]
+   10 root         0 SW<  [bioset]
+   12 root         0 SW<  [kblockd]
+   13 root         0 SW   [kworker/0:1]
+   79 root         0 SW   [kswapd0]
+   98 root         0 SW   [fsnotify_mark]
+  160 root         0 SW<  [deferwq]
+  223 root         0 SWN  [jffs2_gcd_mtd5]
+  280 root       888 S    /sbin/ubusd
+  281 root       768 S    /sbin/askfirst /bin/ash --login
+  435 root         0 SW<  [ipv6_addrconf]
+  485 root         0 SW<  [cfg80211]
+  580 root      1040 S    /sbin/logd -S 16
+  589 root      2284 S    /sbin/rpcd
+  624 root      1504 S    /sbin/netifd
+  648 root      1160 S    /usr/sbin/odhcpd
+  682 root      1148 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300
+  720 root      1624 S    /usr/sbin/uhttpd -f -h /www -r OpenWrt -x /cgi-bin -u /ubus -t 60 -T 30 -k 20 -A 1 -n 3 -N 100 -R -p 0.0.0.
+  726 root       984 S    /usr/sbin/vsftpd
+  788 root       796 S    odhcp6c -s /lib/netifd/dhcpv6.script -P0 -t120 eth0.2
+  799 root      1356 S    udhcpc -p /var/run/udhcpc-eth0.2.pid -s /lib/netifd/dhcp.script -f -t 0 -i eth0.2 -C
+  826 root      2728 S    /usr/sbin/smbd -F
+  827 root      2560 S    /usr/sbin/nmbd -F
+  869 root      1356 S    /usr/sbin/ntpd -n -S /usr/sbin/ntpd-hotplug -p 0.openwrt.pool.ntp.org -p 1.openwrt.pool.ntp.org -p 2.openwr
+  907 nobody     936 S    /usr/sbin/dnsmasq -C /var/etc/dnsmasq.conf -k -x /var/run/dnsmasq/dnsmasq.pid
+ 8667 root      1240 R    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p 22 -K 300
+ 8668 root      1364 S    -ash
+10456 root         0 SW   [kworker/u2:2]
+10655 root         0 SW   [irq/3-b43]
+10675 root      1624 S    /usr/sbin/hostapd -P /var/run/wifi-phy0.pid -B /var/run/hostapd-phy0.conf
+10973 root      1356 R    ps
+
+
+root@OpenWrt:/sbin# lsmod
+arc4                    1312  2
+b43                   272057  0
+cfg80211              216451  2 b43
+compat                 12691  3 b43
+crc_ccitt               1019  1 ppp_async
+crypto_blkcipher       10503  1 arc4
+gpio_button_hotplug     4496  0
+ip6_tables              9185  3 ip6table_raw
+ip6t_REJECT             1184  2
+ip6table_filter          608  1
+ip6table_mangle         1040  1
+ip6table_raw             576  1
+ip_tables               9389  4 iptable_nat
+ipt_MASQUERADE           624  1
+ipt_REJECT               912  2
+iptable_filter           672  1
+iptable_mangle           928  1
+iptable_nat              768  1
+iptable_raw              640  1
+ipv6                  257112 34 nf_conntrack_ipv6
+leds_gpio               1680  0
+mac80211              397338  1 b43
+nf_conntrack           47691 11 nf_nat_ipv4
+nf_conntrack_ftp        5280  1 nf_nat_ftp
+nf_conntrack_ipv4       4624  8
+nf_conntrack_ipv6       4944  3
+nf_conntrack_rtcache    2448  0
+nf_defrag_ipv4           806  1 nf_conntrack_ipv4
+nf_defrag_ipv6          9063  1 nf_conntrack_ipv6
+nf_log_common           2351  2 nf_log_ipv4
+nf_log_ipv4             3248  0
+nf_log_ipv6             3376  0
+nf_nat                  8939  5 nf_nat_ipv4
+nf_nat_ftp              1216  0
+nf_nat_ipv4             3713  1 iptable_nat
+nf_nat_masquerade_ipv4    1372  1 ipt_MASQUERADE
+nf_reject_ipv4          1795  1 ipt_REJECT
+nf_reject_ipv6          2055  1 ip6t_REJECT
+ppp_async               6352  0
+ppp_generic            20626  3 pppoe
+pppoe                   8128  0
+pppox                   1354  1 pppoe
+slhc                    4347  1 ppp_generic
+tun                    15087  0
+x_tables               10741 26 ipt_REJECT
+xt_CT                   2224  0
+xt_LOG                   768  0
+xt_REDIRECT             1056  0
+xt_TCPMSS               2656  2
+xt_comment               480 62
+xt_conntrack            2144 10
+xt_id                    480  0
+xt_limit                 992 20
+xt_mac                   624  0
+xt_mark                  672  0
+xt_multiport            1200  0
+xt_nat                  1072  0
+xt_state                 688  0
+xt_tcpudp               1728 10
+xt_time                 1648  0
