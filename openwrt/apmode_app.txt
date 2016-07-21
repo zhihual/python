@@ -102,3 +102,512 @@ xt_nat                  1072  0
 xt_state                 688  0
 xt_tcpudp               1728 10
 xt_time                 1648  0
+
+
+
+root@OpenWrt:/sbin# ifconfig
+br-lan    Link encap:Ethernet  HWaddr 60:A4:4C:27:13:B0
+          inet addr:192.168.1.1  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fd58:86cb:ae44::1/60 Scope:Global
+          inet6 addr: fe80::62a4:4cff:fe27:13b0/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:33295 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:260069 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:3405478 (3.2 MiB)  TX bytes:27234664 (25.9 MiB)
+
+eth0      Link encap:Ethernet  HWaddr 60:A4:4C:27:13:B0
+          inet6 addr: fe80::62a4:4cff:fe27:13b0/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:26 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:4
+
+eth0.1    Link encap:Ethernet  HWaddr 60:A4:4C:27:13:B0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:34908 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:112502 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:3699138 (3.5 MiB)  TX bytes:13094889 (12.4 MiB)
+
+eth0.2    Link encap:Ethernet  HWaddr 60:A4:4C:27:13:B0
+          inet6 addr: fe80::62a4:4cff:fe27:13b0/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1532770 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:0 (0.0 B)  TX bytes:517621748 (493.6 MiB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:6528169 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:6528169 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:444274495 (423.6 MiB)  TX bytes:444274495 (423.6 MiB)
+
+wlan0     Link encap:Ethernet  HWaddr 60:A4:4C:27:13:B0
+          inet6 addr: fe80::62a4:4cff:fe27:13b0/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:3386 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:3091 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:298150 (291.1 KiB)  TX bytes:352272 (344.0 KiB)
+
+		  
+		  root@OpenWrt:/etc/config# cat network
+
+config switch 'eth0'
+        option name 'eth0'
+        option reset '1'
+        option enable_vlan '1'
+
+config switch_vlan
+        option device 'eth0'
+        option vlan '1'
+        option ports '1 2 3 4 8t'
+
+config switch_vlan
+        option device 'eth0'
+        option vlan '2'
+        option ports '0 8t'
+
+config interface 'loopback'
+        option ifname 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+
+config globals 'globals'
+        option ula_prefix 'fd58:86cb:ae44::/48'
+
+config interface 'lan'
+        option ifname 'eth0.1'
+        option force_link '1'
+        option type 'bridge'
+        option proto 'static'
+        option ipaddr '192.168.1.1'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+
+config interface 'wan'
+        option ifname 'eth0.2'
+        option proto 'dhcp'
+
+config interface 'wan6'
+        option ifname 'eth0.2'
+        option proto 'dhcpv6'
+
+root@OpenWrt:/etc/config#
+
+
+
+
+
+ 	Package name	Version
+Remove	base-files	157.2-r49363
+Remove	busybox	1.23.2-1
+Remove	ctorrent	dnh3.3.2-6
+Remove	dnsmasq	2.73-1
+Remove	dropbear	2015.67-1
+Remove	firewall	2015-07-27
+Remove	fstools	2016-01-10-96415afece..d21
+Remove	hostapd-common	2015-03-25-1
+Remove	ip6tables	1.4.21-1
+Remove	iptables	1.4.21-1
+Remove	iw	4.3-1
+Remove	iwinfo	2015-06-01-ade8b1b299..371
+Remove	jshn	2015-11-08-10429bccd0..6cb
+Remove	jsonfilter	2014-06-19-cdc760c580..9a9
+Remove	kernel	3.18.29-1-bb2fe9072df..6bd
+Remove	kmod-b43	3.18.29+2016-01-10-1
+Remove	kmod-cfg80211	3.18.29+2016-01-10-1
+Remove	kmod-crypto-arc4	3.18.29-1
+Remove	kmod-crypto-core	3.18.29-1
+Remove	kmod-gpio-button-hotplug	3.18.29-1
+Remove	kmod-ip6tables	3.18.29-1
+Remove	kmod-ipt-conntrack	3.18.29-1
+Remove	kmod-ipt-core	3.18.29-1
+Remove	kmod-ipt-nat	3.18.29-1
+Remove	kmod-ipv6	3.18.29-1
+Remove	kmod-leds-gpio	3.18.29-1
+Remove	kmod-ledtrig-default-on	3.18.29-1
+Remove	kmod-ledtrig-netdev	3.18.29-1
+Remove	kmod-ledtrig-timer	3.18.29-1
+Remove	kmod-lib-crc-ccitt	3.18.29-1
+Remove	kmod-mac80211	3.18.29+2016-01-10-1
+Remove	kmod-nf-conntrack	3.18.29-1
+Remove	kmod-nf-conntrack6	3.18.29-1
+Remove	kmod-nf-ipt	3.18.29-1
+Remove	kmod-nf-ipt6	3.18.29-1
+Remove	kmod-nf-nat	3.18.29-1
+Remove	kmod-nf-nathelper	3.18.29-1
+Remove	kmod-ppp	3.18.29-1
+Remove	kmod-pppoe	3.18.29-1
+Remove	kmod-pppox	3.18.29-1
+Remove	kmod-slhc	3.18.29-1
+Remove	kmod-tun	3.18.29-1
+Remove	libblobmsg-json	2015-11-08-10429bccd0..6cb
+Remove	libc	0.9.33.2-1
+Remove	libcap	2.24-1
+Remove	libgcc	4.8-linaro-1
+Remove	libgmp	6.0.0-1
+Remove	libgnutls	3.4.12-1
+Remove	libip4tc	1.4.21-1
+Remove	libip6tc	1.4.21-1
+Remove	libiwinfo	2015-06-01-ade8b1b299..371
+Remove	libiwinfo-lua	2015-06-01-ade8b1b299..371
+Remove	libjson-c	0.12-1
+Remove	libjson-script	2015-11-08-10429bccd0..6cb
+Remove	liblua	5.1.5-1
+Remove	liblxc	1.1.3-1
+Remove	libnettle	3.1.1-1
+Remove	libnl-tiny	0.1-4
+Remove	libopenssl	1.0.2h-1
+Remove	libpthread	0.9.33.2-1
+Remove	libubox	2015-11-08-10429bccd0..6cb
+Remove	libubus	2015-05-25-f361bfa5fc..08e
+Remove	libubus-lua	2015-05-25-f361bfa5fc..08e
+Remove	libuci	2015-08-27.1-1
+Remove	libuci-lua	2015-08-27.1-1
+Remove	libxml2	2.9.2-3
+Remove	libxtables	1.4.21-1
+Remove	logd	2015-11-22-c086167a01..031
+Remove	lua	5.1.5-1
+Remove	luci	git-16.142.30199-1e4705d-1
+Remove	luci-app-firewall	git-16.142.30199-1e4705d-1
+Remove	luci-app-lxc	20141012
+Remove	luci-base	git-16.142.30199-1e4705d-1
+Remove	luci-lib-ip	git-16.142.30199-1e4705d-1
+Remove	luci-lib-nixio	git-16.142.30199-1e4705d-1
+Remove	luci-mod-admin-full	git-16.142.30199-1e4705d-1
+Remove	luci-proto-ipv6	git-16.142.30199-1e4705d-1
+Remove	luci-proto-ppp	git-16.142.30199-1e4705d-1
+Remove	luci-theme-bootstrap	git-16.142.30199-1e4705d-1
+Remove	luci-theme-freifunk-bno	git-16.142.30199-1e4705d-1
+Remove	luci-theme-freifunk-generic	git-16.142.30199-1e4705d-1
+Remove	luci-theme-openwrt	git-16.142.30199-1e4705d-1
+Remove	lxc	1.1.3-1
+Remove	lxc-common	1.1.3-1
+Remove	lxc-configs	1.1.3-1
+Remove	lxc-create	1.1.3-1
+Remove	lxc-hooks	1.1.3-1
+Remove	lxc-templates	1.1.3-1
+Remove	mtd	21
+Remove	netifd	2015-12-16-245527193e..6ab
+Remove	nvram	9
+Remove	odhcp6c	2015-07-29-dc186d6d2b..6d9
+Remove	odhcpd	2015-11-19-01d3f9d644..762
+Remove	opkg	9c97d5ecd795709c8584e..d-9
+Remove	otrx	1
+Remove	ppp	2.4.7-6
+Remove	ppp-mod-pppoe	2.4.7-6
+Remove	procd	2015-10-29.1-d5fddd91..c18
+Remove	resolveip	2
+Remove	rpcd	2016-04-13-73aea9b8b6..a3d
+Remove	rpcd-mod-lxc	20141012
+Remove	samba36-server	3.6.25-5
+Remove	swconfig	10
+Remove	ubox	2015-11-22-c086167a01..031
+Remove	ubus	2015-05-25-f361bfa5fc..08e
+Remove	ubusd	2015-05-25-f361bfa5fc..08e
+Remove	uci	2015-08-27.1-1
+Remove	uclibcxx	0.2.4-1
+Remove	uhttpd	2015-11-08-fe01ef3f52..6b7
+Remove	uhttpd-mod-ubus	2015-11-08-fe01ef3f52..6b7
+Remove	usign	2015-05-08-cf8dcdb8a4..131
+Remove	vpnc-scripts	20151220-1
+Remove	vsftpd	3.0.2-4.1
+Remove	wpad-mini	2015-03-25-1
+Remove	zlib	1.2.8-1
+
+
+
+
+[    0.000000] Linux version 3.18.29 (root@zliu01) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 r49363) ) #2 Mon May 30 17:43:19 CST 2016
+[    0.000000] CPU0 revision is: 00019749 (MIPS 74Kc)
+[    0.000000] bcm47xx: Using bcma bus
+[    0.000000] bcma: bus0: Found chip with id 0x5300, rev 0x01 and package 0x00
+[    0.000000] Found 128 MiB of extra memory, but highmem is unsupported yet!
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 07fff000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x00000000-0x07ffefff]
+[    0.000000]   HighMem  empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00000000-0x07ffefff]
+[    0.000000] Initmem setup node 0 [mem 0x00000000-0x07ffefff]
+[    0.000000] On node 0 totalpages: 32767
+[    0.000000] free_area_init_node: node 0, pgdat 802f4140, node_mem_map 81000000
+[    0.000000]   Normal zone: 256 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 32767 pages, LIFO batch:7
+[    0.000000] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32511
+[    0.000000] Kernel command line:  noinitrd console=ttyS0,115200
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Writing ErrCtl register=80000e60
+[    0.000000] Readback ErrCtl register=80000e60
+[    0.000000] Cache parity protection enabled
+[    0.000000] Memory: 126308K/131068K available (2489K kernel code, 113K rwdata, 496K rodata, 152K init, 283K bss, 4760K reserved, 0K highmem)
+[    0.000000] NR_IRQS:128
+[    0.000000] bcma: bus0: Core 0 found: BCM4706 ChipCommon (manuf 0x4BF, id 0x500, rev 0x1F, class 0x0)
+[    0.000000] bcma: bus0: Core 1 found: BCM4706 GBit MAC (manuf 0x4BF, id 0x52D, rev 0x00, class 0x0)
+[    0.000000] bcma: bus0: Core 2 found: BCM4706 GBit MAC (manuf 0x4BF, id 0x52D, rev 0x00, class 0x0)
+[    0.000000] bcma: bus0: Core 3 found: MIPS 74K (manuf 0x4A7, id 0x82C, rev 0x00, class 0x0)
+[    0.000000] bcma: bus0: Core 4 found: USB 2.0 Host (manuf 0x4BF, id 0x819, rev 0x04, class 0x0)
+[    0.000000] bcma: bus0: Core 5 found: PCIe (manuf 0x4BF, id 0x820, rev 0x0E, class 0x0)
+[    0.000000] bcma: bus0: Core 6 found: PCIe (manuf 0x4BF, id 0x820, rev 0x0E, class 0x0)
+[    0.000000] bcma: bus0: Core 7 found: AMEMC (DDR) (manuf 0x4BF, id 0x52E, rev 0x00, class 0x0)
+[    0.000000] bcma: bus0: Core 8 found: BCM4706 SOC RAM (manuf 0x4BF, id 0x50E, rev 0x05, class 0x0)
+[    0.000000] bcma: bus0: Core 9 found: ALTA (I2S) (manuf 0x4BF, id 0x534, rev 0x00, class 0x0)
+[    0.000000] bcma: bus0: Core 10 found: BCM4706 GBit MAC Common (manuf 0x43B, id 0x5DC, rev 0x00, class 0x0)
+[    0.000000] bcma: bus0: Found rev 6 PMU (capabilities 0x18162406)
+[    0.000000] bcma: bus0: Found parallel flash
+[    0.000000] bcma: bus0: Found NAND flash
+[    0.000000] bcma: bus0: Early bus registered
+[    0.000000] MIPS: machine is Unknown Board
+[    0.000000] bcm47xx: Setting up vectored interrupts
+[    0.070000] Calibrating delay loop... 299.82 BogoMIPS (lpj=1499136)
+[    0.070000] pid_max: default: 32768 minimum: 301
+[    0.070000] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.070000] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.070000] NET: Registered protocol family 16
+[    0.070000] Switched to clocksource MIPS
+[    0.080000] NET: Registered protocol family 2
+[    0.080000] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.080000] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.080000] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.080000] TCP: reno registered
+[    0.080000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.080000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.080000] NET: Registered protocol family 1
+[    0.080000] PCI: CLS 0 bytes, default 32
+[    0.120000] can not parse nvram name (null)pa0maxpwr(null) with value 400 got -34
+[    0.200000] bcma: bus0: Using SPROM revision 8 provided by platform.
+[    0.200000] bcma: bus0: PMU resource config unknown or not needed for device 0x5300
+[    0.200000] bcma: bus0: Workarounds unknown or not needed for device 0x5300
+[    0.200000] bcma: bus0: Initializing MIPS core...
+[    0.200000] bcma: bus0: set_irq: core 0x0820, irq 3 => 3
+[    0.200000] bcma: bus0: set_irq: core 0x052d, irq 4 => 4
+[    0.200000] bcma: bus0: set_irq: core 0x0820, irq 5 => 5
+[    0.200000] bcma: bus0: set_irq: core 0x0819, irq 6 => 6
+[    0.200000] bcma: bus0: set_irq: core 0x0500, irq 2 => 2
+[    0.200000] bcma: bus0: IRQ reconfiguration done
+[    0.200000] bcma: core 0x0500, irq : 2(S)* 3  4  5  6  D  I 
+[    0.200000] bcma: core 0x052d, irq : 2(S)  3  4* 5  6  D  I 
+[    0.200000] bcma: core 0x052d, irq : 2(S)  3  4  5  6  D* I 
+[    0.200000] bcma: core 0x082c, irq : 2(S)  3  4  5  6  D* I 
+[    0.200000] bcma: core 0x0819, irq : 2(S)  3  4  5  6* D  I 
+[    0.200000] bcma: core 0x0820, irq : 2(S)  3* 4  5  6  D  I 
+[    0.200000] bcma: core 0x0820, irq : 2(S)  3  4  5* 6  D  I 
+[    0.200000] bcma: core 0x052e, irq : 2(S)  3  4  5  6  D* I 
+[    0.200000] bcma: core 0x050e, irq : 2(S)  3  4  5  6  D* I 
+[    0.200000] bcma: core 0x0534, irq : 2(S)  3  4  5  6  D* I 
+[    0.200000] ------------[ cut here ]------------
+[    0.200000] WARNING: CPU: 0 PID: 1 at drivers/bcma/host_soc.c:140 bcma_host_soc_aread32+0x3c/0x6c()
+[    0.200000] Accessed core has no wrapper/agent
+[    0.200000] Modules linked in:
+[    0.200000] CPU: 0 PID: 1 Comm: swapper Not tainted 3.18.29 #2
+[    0.200000] Stack : 00000000 00000000 00000000 00000000 80346652 00000032 00000000 801bf908
+[    0.200000] 	  00000001 00000007 802a1730 802f4ce3 00000001 8034587c 8781dc00 00000007
+[    0.200000] 	  00000005 802a0000 802c0000 80045d50 00000003 80022b1c 0000008c 00000007
+[    0.200000] 	  802a4d4c 87821cbc 00000000 00000000 00000000 00000000 00000000 00000000
+[    0.200000] 	  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    0.200000] 	  ...
+[    0.200000] Call Trace:
+[    0.200000] [<80014190>] show_stack+0x50/0x84
+[    0.200000] [<80022c24>] warn_slowpath_common+0x84/0xb4
+[    0.200000] [<80022c80>] warn_slowpath_fmt+0x2c/0x38
+[    0.200000] [<801bf908>] bcma_host_soc_aread32+0x3c/0x6c
+[    0.200000] [<801bde40>] bcma_core_mips_irqflag+0x8c/0xa8
+[    0.200000] 
+[    0.200000] ---[ end trace 2c2785b6d7215c7a ]---
+[    0.200000] bcma: core 0x05dc, irq : 2(S)  3  4  5  6  D* I 
+[    0.200000] bcma: bus0: PCIEcore in host mode found
+[    0.390000] PCI host bridge to bus 0000:00
+[    0.390000] pci_bus 0000:00: root bus resource [mem 0x08000000-0x0bffffff]
+[    0.390000] pci_bus 0000:00: root bus resource [io  0x0100-0x047f]
+[    0.390000] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    0.390000] pci 0000:00:00.0: [14e4:5300] type 00 class 0x060000
+[    0.390000] bcma: PCI: Fixing up bridge 0000:00:00.0
+[    0.390000] bcma: PCI: Fixing up device 0000:00:00.0
+[    0.390000] pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+[    0.390000] pci 0000:00:00.0: reg 0x18: [mem 0x00000000-0x07ffffff 64bit]
+[    0.390000] pci 0000:00:00.0: supports D1 D2
+[    0.390000] pci 0000:00:00.1: [14e4:0000] type 00 class 0x060000
+[    0.390000] bcma: PCI: Fixing up bridge 0000:00:00.1
+[    0.390000] bcma: PCI: Fixing up device 0000:00:00.1
+[    0.390000] pci 0000:00:00.1: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+[    0.390000] pci 0000:00:00.1: reg 0x18: [mem 0x00000000-0x07ffffff 64bit]
+[    0.390000] pci 0000:00:00.1: supports D1 D2
+[    0.390000] pci 0000:00:01.0: [14e4:4331] type 00 class 0x028000
+[    0.390000] pci 0000:00:01.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+[    0.390000] bcma: PCI: Fixing up addresses 0000:00:01.0
+[    0.390000] pci 0000:00:01.0: BAR 0: assigned [mem 0x08000000-0x08003fff 64bit]
+[    0.390000] pci 0000:00:01.0: supports D1 D2
+[    0.390000] pci_bus 0000:00: busn_res: [bus 00-ff] end is updated to 00
+[    0.390000] bcma: bus0: PCIEcore in host mode found
+[    0.580000] PCI host bridge to bus 0000:01
+[    0.580000] pci_bus 0000:01: root bus resource [mem 0x40000000-0x43ffffff]
+[    0.580000] pci_bus 0000:01: root bus resource [io  0x0480-0x07ff]
+[    0.580000] pci_bus 0000:01: No busn resource found for root bus, will use [bus 01-ff]
+[    0.580000] pci 0000:01:00.0: [14e4:5300] type 00 class 0x060000
+[    0.580000] bcma: PCI: Fixing up bridge 0000:01:00.0
+[    0.580000] bcma: PCI: Fixing up device 0000:01:00.0
+[    0.580000] pci 0000:01:00.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+[    0.580000] pci 0000:01:00.0: reg 0x18: [mem 0x00000000-0x07ffffff 64bit]
+[    0.580000] pci 0000:01:00.0: supports D1 D2
+[    0.580000] pci 0000:01:00.1: [14e4:0000] type 00 class 0x060000
+[    0.580000] bcma: PCI: Fixing up bridge 0000:01:00.1
+[    0.580000] bcma: PCI: Fixing up device 0000:01:00.1
+[    0.580000] pci 0000:01:00.1: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+[    0.580000] pci 0000:01:00.1: reg 0x18: [mem 0x00000000-0x07ffffff 64bit]
+[    0.580000] pci 0000:01:00.1: supports D1 D2
+[    0.580000] pci 0000:01:01.0: [14e4:4331] type 00 class 0x028000
+[    0.580000] pci 0000:01:01.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+[    0.580000] bcma: PCI: Fixing up addresses 0000:01:01.0
+[    0.580000] pci 0000:01:01.0: BAR 0: assigned [mem 0x40000000-0x40003fff 64bit]
+[    0.580000] pci 0000:01:01.0: supports D1 D2
+[    0.590000] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+[    0.590000] bcma: bus0: Bus registered
+[    0.590000] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.590000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.590000] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.590000] msgmni has been set to 246
+[    0.590000] io scheduler noop registered
+[    0.590000] io scheduler deadline registered (default)
+[    0.590000] Serial: 8250/16550 driver, 2 ports, IRQ sharing enabled
+[    0.590000] console [ttyS0] disabled
+[    0.610000] serial8250.0: ttyS0 at MMIO 0xb8000300 (irq = 0, base_baud = 1562500) is a U6_16550A
+[    1.270000] console [ttyS0] enabled
+[    1.290000] serial8250.0: ttyS1 at MMIO 0xb8000400 (irq = 0, base_baud = 1562500) is a U6_16550A
+[    1.300000] physmap platform flash device: 02000001 at 1c000000
+[    1.310000] physmap-flash.0: Found 1 x16 devices at 0x0 in 16-bit bank. Manufacturer ID 0x000001 Chip ID 0x002201
+[    1.320000] Amd/Fujitsu Extended Query Table at 0x0040
+[    1.320000]   Amd/Fujitsu Extended Query version 1.3.
+[    1.330000] number of CFI chips: 1
+[    1.360000] 6 bcm47xxpart partitions found on MTD device physmap-flash.0
+[    1.370000] Creating 6 MTD partitions on "physmap-flash.0":
+[    1.380000] 0x000000000000-0x000000040000 : "boot"
+[    1.380000] 0x000000040000-0x000001fe0000 : "firmware"
+[    1.390000] 0x00000004001c-0x00000004090c : "loader"
+[    1.400000] 0x00000004090c-0x000000153400 : "linux"
+[    1.400000] 0x000000153400-0x000001fe0000 : "rootfs"
+[    1.410000] mtd: device 4 (rootfs) set to be root filesystem
+[    1.410000] 1 squashfs-split partitions found on MTD device rootfs
+[    1.420000] 0x0000005e0000-0x000001fe0000 : "rootfs_data"
+[    1.430000] 0x000001fe0000-0x000002000000 : "nvram"
+[    1.430000] bcm47xxnflash: Requested invalid id_data: 32
+[    1.440000] bcm47xxnflash: Requested invalid id_data: 64
+[    1.440000] nand: No NAND device found
+[    1.450000] bcm47xxnflash: Could not scan NAND flash: -19
+[    1.450000] bcm47xxnflash: Initialization failed: -19
+[    1.460000] bgmac bcma0:1: Found PHY addr: 30 (NOREGS)
+[    1.470000] bgmac bcma0:1: Support for Roboswitch not implemented
+[    1.480000] libphy: bgmac mii bus: probed
+[    1.630000] b53_common: found switch: BCM53125, rev 4
+[    1.640000] bgmac: Broadcom 47xx GBit MAC driver loaded
+[    1.640000] bcm47xx-wdt bcm47xx-wdt.0: BCM47xx Watchdog Timer enabled (30 seconds)
+[    1.650000] PCI: Enabling device 0000:00:01.0 (0000 -> 0002)
+[    1.660000] bcma: PCI: Fixing up device 0000:00:01.0
+[    1.660000] bcma: change PCIe max read request size from 512 to 128
+[    1.670000] bcma: bus1: Found chip with id 0x4331, rev 0x02 and package 0x08
+[    1.680000] bcma: bus1: Core 0 found: ChipCommon (manuf 0x4BF, id 0x800, rev 0x25, class 0x0)
+[    1.690000] bcma: bus1: Core 1 found: IEEE 802.11 (manuf 0x4BF, id 0x812, rev 0x1D, class 0x0)
+[    1.700000] bcma: bus1: Core 2 found: PCIe (manuf 0x4BF, id 0x820, rev 0x13, class 0x0)
+[    1.700000] bcma: bus1: Found rev 10 PMU (capabilities 0x108C260A)
+[    1.700000] bcma: bus1: SPROM offset 0x800
+[    1.830000] bcma: bus1: Invalid SPROM read from the PCIe card, trying to use fallback SPROM
+[    1.960000] bcma: bus1: Using SPROM revision 9 provided by platform.
+[    1.960000] bcma: bus1: PMU resource config unknown or not needed for device 0x4331
+[    1.970000] bcma: bus1: Bus registered
+[    1.970000] PCI: Enabling device 0000:01:01.0 (0000 -> 0002)
+[    1.980000] bcma: PCI: Fixing up device 0000:01:01.0
+[    1.980000] bcma: change PCIe max read request size from 512 to 128
+[    1.990000] bcma: bus2: Found chip with id 0x4331, rev 0x02 and package 0x08
+[    2.000000] bcma: bus2: Core 0 found: ChipCommon (manuf 0x4BF, id 0x800, rev 0x25, class 0x0)
+[    2.010000] bcma: bus2: Core 1 found: IEEE 802.11 (manuf 0x4BF, id 0x812, rev 0x1D, class 0x0)
+[    2.020000] bcma: bus2: Core 2 found: PCIe (manuf 0x4BF, id 0x820, rev 0x13, class 0x0)
+[    2.020000] bcma: bus2: Found rev 10 PMU (capabilities 0x108C260A)
+[    2.020000] bcma: bus2: SPROM offset 0x800
+[    2.150000] bcma: bus2: Invalid SPROM read from the PCIe card, trying to use fallback SPROM
+[    2.270000] bcma: bus2: Using SPROM revision 9 provided by platform.
+[    2.270000] bcma: bus2: PMU resource config unknown or not needed for device 0x4331
+[    2.280000] bcma: bus2: Bus registered
+[    2.290000] TCP: cubic registered
+[    2.290000] NET: Registered protocol family 17
+[    2.300000] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    2.310000] 8021q: 802.1Q VLAN Support v1.8
+[    2.320000] VFS: Mounted root (squashfs filesystem) readonly on device 31:4.
+[    2.330000] Freeing unused kernel memory: 152K (8030a000 - 80330000)
+[    3.250000] init: Console is alive
+[    3.260000] init: - watchdog -
+[    4.260000] init: - preinit -
+[    4.900000] random: mktemp urandom read with 7 bits of entropy available
+[    6.710000] eth0: Link is Up - 1Gbps/Full - flow control off
+[    8.160000] jffs2: notice: (222) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+[    8.170000] mount_root: switching to jffs2 overlay
+[    8.200000] procd: - early -
+[    8.210000] procd: - watchdog -
+[    9.010000] procd: - ubus -
+[   10.030000] procd: - init -
+[   11.520000] NET: Registered protocol family 10
+[   11.530000] tun: Universal TUN/TAP device driver, 1.6
+[   11.540000] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   11.550000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   11.570000] Loading modules backported from Linux version v4.4-rc5-1913-gc8fdf68
+[   11.580000] Backport generated by backports.git backports-20151218-0-g2f58d9d
+[   11.590000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   11.600000] nf_conntrack version 0.5.0 (1975 buckets, 7900 max)
+[   11.650000] xt_time: kernel timezone is -0000
+[   11.740000] PPP generic driver version 2.4.2
+[   11.740000] NET: Registered protocol family 24
+[   11.760000] b43-phy0: Broadcom 4331 WLAN found (core revision 29)
+[   11.770000] bcma: bus1: Switched to core: 0x812
+[   11.770000] b43-phy0: Found PHY: Analog 9, Type 7 (HT), Revision 1
+[   11.770000] b43-phy0: Found Radio: Manuf 0x17F, ID 0x2059, Revision 0, Version 1
+[   11.780000] b43-phy1: Broadcom 4331 WLAN found (core revision 29)
+[   11.790000] bcma: bus2: Switched to core: 0x812
+[   11.860000] b43-phy1: Found PHY: Analog 9, Type 7 (HT), Revision 1
+[   11.860000] b43-phy1: Found Radio: Manuf 0x17F, ID 0x2059, Revision 0, Version 1
+[   11.870000] b43-phy1 warning: 5 GHz band is unsupported on this PHY
+[   11.880000] b43-phy1 ERROR: b43 can't support any band on this device
+[   11.880000] b43: probe of bcma2:1 failed with error -122
+[   11.890000] Broadcom 43xx driver loaded [ Features: NL ]
+[   12.020000] ieee80211 phy0: Selected rate control algorithm 'minstrel_ht'
+[   16.970000] eth0: Link is Up - 1Gbps/Full - flow control off
+[   20.200000] device eth0.1 entered promiscuous mode
+[   20.210000] device eth0 entered promiscuous mode
+[   20.220000] br-lan: port 1(eth0.1) entered forwarding state
+[   20.220000] br-lan: port 1(eth0.1) entered forwarding state
+[   21.970000] eth0: Link is Up - 1Gbps/Full - flow control off
+[   22.220000] br-lan: port 1(eth0.1) entered forwarding state
+[   64.730000] random: nonblocking pool is initialized
+[4488112.520000] b43-phy0: Loading firmware version 666.2 (2011-02-23 01:15:07)
+[4488112.760000] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[4488112.770000] device wlan0 entered promiscuous mode
+[4488112.830000] br-lan: port 2(wlan0) entered forwarding state
+[4488112.830000] br-lan: port 2(wlan0) entered forwarding state
+[4488112.840000] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[4488114.830000] br-lan: port 2(wlan0) entered forwarding state
+[4488242.790000] device wlan0 left promiscuous mode
+[4488242.790000] br-lan: port 2(wlan0) entered disabled state
+[4488244.930000] b43-phy0: Loading firmware version 666.2 (2011-02-23 01:15:07)
+[4488245.180000] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[4488245.210000] device wlan0 entered promiscuous mode
+[4488246.130000] br-lan: port 2(wlan0) entered forwarding state
+[4488246.130000] br-lan: port 2(wlan0) entered forwarding state
+[4488246.140000] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[4488248.130000] br-lan: port 2(wlan0) entered forwarding state
+
