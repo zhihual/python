@@ -2618,3 +2618,18 @@ start to check server code.
 	   
 	 4.http://blog.csdn.net/bailyzheng/article/details/41626291 so netifd is build by other exec. 
 	   So, how hostadp running...
+
+722
+    43 4900
+	45 4900
+	47 4500
+	47 100
+	
+	1. Learn grep advance useage 'grep -E   'aaaaa|bbbbbb''
+	2. ZhengZe expression. week point, need strength...
+	3. two vresion , one is generic, another is mips74.  sync generic log and firmware flash. finally know the build and run process.
+	4. Find this URL is the wireless kernel formal website	
+	   https://wireless.wiki.kernel.org/en/users/documentation
+	   
+	5. mac80211 guide http://blog.csdn.net/u012845519/article/details/19400077
+	
