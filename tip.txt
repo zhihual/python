@@ -2620,11 +2620,7 @@ start to check server code.
 	   So, how hostadp running...
 
 722
-    43 4900
-	45 4900
-	47 4500
-	47 100
-	
+    
 	1. Learn grep advance useage 'grep -E   'aaaaa|bbbbbb''
 	2. ZhengZe expression. week point, need strength...
 	3. two vresion , one is generic, another is mips74.  sync generic log and firmware flash. finally know the build and run process.
@@ -2632,4 +2628,9 @@ start to check server code.
 	   https://wireless.wiki.kernel.org/en/users/documentation
 	   
 	5. mac80211 guide http://blog.csdn.net/u012845519/article/details/19400077
-	
+
+7/25
+    
+	1. Finished read b43leagcy driver... 
+	2. Start to read mac80211.. run very quickly on understand nl80211 and cfg80211 interact with linux kernel... done. 
+	3. Next step, slipt into small piece to study.
