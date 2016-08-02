@@ -2634,3 +2634,25 @@ start to check server code.
 	1. Finished read b43leagcy driver... 
 	2. Start to read mac80211.. run very quickly on understand nl80211 and cfg80211 interact with linux kernel... done. 
 	3. Next step, slipt into small piece to study.
+
+7/26
+    1. look at wpad first., this is the small version of wpa_supplicate. wpad is combine wpa_supplicant and hostapd into one binary..
+	2. checking from ap boot log.  found bgmac... looking at.
+	   b44, bgma, tg3 are all ethernet drivers.  all have mii and platformfor driver....
+	   
+	3. napi is high efficient packet process module. tech URL is
+       https://wiki.linuxfoundation.org/networking/napi
+	   http://blog.csdn.net/bingqingsuimeng/article/details/7858119
+	4. it looks swithc is one phy layer device...
+	    http://blog.csdn.net/mrwangwang/article/details/17394677
+		http://blog.csdn.net/jackjones_008/article/details/42004831
+		http://www.cnblogs.com/suncoolcat/p/3424161.html
+		http://www.cnblogs.com/pied/archive/2011/01/04/1925566.html
+
+8/2
+    1. back to SH. Start work.
+	2. very good ethernet introduction doc
+	    http://seitran.com/2015/12/23/0d-phy-overview/
+	3. IBM for linux network frameworkd:
+	
+	   https://www.ibm.com/developerworks/cn/linux/l-linux-networking-stack/
