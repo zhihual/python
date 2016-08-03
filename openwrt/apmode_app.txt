@@ -240,14 +240,14 @@ Mon Jul 18 10:41:55 2016 user.info kernel: [    2.990000] init: - watchdog -
 Mon Jul 18 10:41:55 2016 kern.info kernel: [    3.960000] pps_core: LinuxPPS API ver. 1 registered
 Mon Jul 18 10:41:55 2016 kern.info kernel: [    3.960000] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
 Mon Jul 18 10:41:55 2016 kern.info kernel: [    3.970000] PTP clock support registered
-Mon Jul 18 10:41:55 2016 kern.info kernel: [    3.980000] bgmac bcma0:1: Found PHY addr: 30 (NOREGS)
+Mon Jul 18 10:41:55 2016 kern.info kernel: [    3.980000] bgmac bcma0:1: Found PHY addr: 30 (NOREGS)  //DD bgmac init
 Mon Jul 18 10:41:55 2016 kern.warn kernel: [    3.990000] bgmac bcma0:1: Support for Roboswitch not implemented
 Mon Jul 18 10:41:55 2016 kern.info kernel: [    4.000000] libphy: bgmac mii bus: probed
-Mon Jul 18 10:41:55 2016 kern.info kernel: [    4.160000] b53_common: found switch: BCM53125, rev 4
-Mon Jul 18 10:41:55 2016 kern.info kernel: [    4.170000] bgmac: Broadcom 47xx GBit MAC driver loaded
+Mon Jul 18 10:41:55 2016 kern.info kernel: [    4.160000] b53_common: found switch: BCM53125, rev 4 //DD b53 init...
+Mon Jul 18 10:41:55 2016 kern.info kernel: [    4.170000] bgmac: Broadcom 47xx GBit MAC driver loaded //DD bgmac on...
 Mon Jul 18 10:41:55 2016 user.info kernel: [    5.000000] init: - preinit -
 Mon Jul 18 10:41:55 2016 kern.notice kernel: [    5.450000] random: mktemp urandom read with 8 bits of entropy available
-Mon Jul 18 10:41:55 2016 kern.info kernel: [    7.170000] eth0: Link is Up - 1Gbps/Full - flow control off
+Mon Jul 18 10:41:55 2016 kern.info kernel: [    7.170000] eth0: Link is Up - 1Gbps/Full - flow control off //DD should be phy print out....
 Mon Jul 18 10:41:55 2016 user.notice kernel: [    8.600000] mount_root: jffs2 not ready yet, using temporary tmpfs overlay
 Mon Jul 18 10:41:55 2016 user.info kernel: [    8.630000] procd: - early -
 Mon Jul 18 10:41:55 2016 user.info kernel: [    8.630000] procd: - watchdog -
@@ -262,7 +262,7 @@ Mon Jul 18 10:41:55 2016 kern.info kernel: [   12.340000] nf_conntrack version 0
 Mon Jul 18 10:41:55 2016 kern.info kernel: [   12.380000] xt_time: kernel timezone is -0000
 Mon Jul 18 10:41:55 2016 kern.info kernel: [   12.480000] PPP generic driver version 2.4.2
 Mon Jul 18 10:41:55 2016 kern.info kernel: [   12.490000] NET: Registered protocol family 24
-Mon Jul 18 10:41:55 2016 kern.info kernel: [   12.510000] b43-phy0: Broadcom 4331 WLAN found (core revision 29)
+Mon Jul 18 10:41:55 2016 kern.info kernel: [   12.510000] b43-phy0: Broadcom 4331 WLAN found (core revision 29)//DD b43 up
 Mon Jul 18 10:41:55 2016 kern.debug kernel: [   12.510000] bcma: bus1: Switched to core: 0x812
 Mon Jul 18 10:41:55 2016 kern.info kernel: [   12.510000] b43-phy0: Found PHY: Analog 9, Type 7 (HT), Revision 1
 Mon Jul 18 10:41:55 2016 kern.info kernel: [   12.520000] b43-phy0: Found Radio: Manuf 0x17F, ID 0x2059, Revision 0, Version 1
@@ -271,8 +271,8 @@ Mon Jul 18 10:41:55 2016 kern.debug kernel: [   12.530000] bcma: bus2: Switched 
 Mon Jul 18 10:41:55 2016 kern.info kernel: [   12.540000] b43-phy1: Found PHY: Analog 9, Type 7 (HT), Revision 1
 Mon Jul 18 10:41:55 2016 kern.info kernel: [   12.540000] b43-phy1: Found Radio: Manuf 0x17F, ID 0x2059, Revision 0, Version 1
 Mon Jul 18 10:41:55 2016 kern.warn kernel: [   12.550000] b43-phy1 warning: 5 GHz band is unsupported on this PHY
-Mon Jul 18 10:41:55 2016 kern.err kernel: [   12.560000] b43-phy1 ERROR: b43 can't support any band on this device
-Mon Jul 18 10:41:55 2016 kern.warn kernel: [   12.560000] b43: probe of bcma2:1 failed with error -122
+Mon Jul 18 10:41:55 2016 kern.err kernel: [   12.560000] b43-phy1 ERROR: b43 can't support any band on this device //DD two core found...
+Mon Jul 18 10:41:55 2016 kern.warn kernel: [   12.560000] b43: probe of bcma2:1 failed with error -122 
 Mon Jul 18 10:41:55 2016 kern.info kernel: [   12.570000] Broadcom 43xx driver loaded [ Features: PNL ]
 Mon Jul 18 10:41:55 2016 kern.info kernel: [   12.650000] Broadcom 43xx-legacy driver loaded [ Features: PLD ]
 Mon Jul 18 10:41:55 2016 kern.debug kernel: [   12.670000] ieee80211 phy0: Selected rate control algorithm 'minstrel_ht'

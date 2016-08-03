@@ -2656,3 +2656,19 @@ start to check server code.
 	3. IBM for linux network frameworkd:
 	
 	   https://www.ibm.com/developerworks/cn/linux/l-linux-networking-stack/
+	   
+8/3 
+    1. key founding... web http://lxr.free-electrons.com/
+	   drivers/bcma/host_soc.c, line 153
+       drivers/bcma/host_pci.c, line 143
+	   
+	2. bgmac_mii_register is the interface of hook up phy
+	3. key function is: 
+	     bgmac_mii_register 
+		   --> mdiobus_register
+		   --> phy_connect 
+		   regarding to phy.c  it create mdio bus, and phy_driver_register... 
+		   in phy_connect, give phy_dev phy_dev_driver... hook them up.
+		   and MII bus, it's saved in phy_dev when created..
+		   ethernet drveri, create it's dev and net_dev for upper os. so, at this, the IF layer is ready.
+    4. b53 is phy, built into kernel.
