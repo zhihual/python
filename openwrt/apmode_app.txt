@@ -405,7 +405,8 @@ Mon Jul 18 10:51:12 2016 daemon.info dnsmasq-dhcp[975]: read /etc/ethers - 0 add
 
 
 
-[    0.000000] Linux version 3.18.29 (root@zliu01) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 r49363) ) #1 Mon Jul 18 18:46:04 CST 2016
+
+[    0.000000] Linux version 3.18.29 (root@zliu01) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 r49363) ) #9 Fri Aug 5 17:02:32 CST 2016
 [    0.000000] CPU0 revision is: 00019749 (MIPS 74Kc)
 [    0.000000] bcm47xx: Using bcma bus
 [    0.000000] bcma: bus0: Found chip with id 0x5300, rev 0x01 and package 0x00
@@ -432,10 +433,10 @@ Mon Jul 18 10:51:12 2016 daemon.info dnsmasq-dhcp[975]: read /etc/ethers - 0 add
 [    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
 [    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
 [    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
-[    0.000000] Writing ErrCtl register=80000610
-[    0.000000] Readback ErrCtl register=80000610
+[    0.000000] Writing ErrCtl register=80000ec0
+[    0.000000] Readback ErrCtl register=80000ec0
 [    0.000000] Cache parity protection enabled
-[    0.000000] Memory: 126208K/131068K available (2570K kernel code, 117K rwdata, 508K rodata, 184K init, 263K bss, 4860K reserved)
+[    0.000000] Memory: 126208K/131068K available (2571K kernel code, 116K rwdata, 508K rodata, 184K init, 263K bss, 4860K reserved)
 [    0.000000] NR_IRQS:128
 [    0.000000] bcma: bus0: Core 0 found: BCM4706 ChipCommon (manuf 0x4BF, id 0x500, rev 0x1F, class 0x0)
 [    0.000000] bcma: bus0: Core 1 found: BCM4706 GBit MAC (manuf 0x4BF, id 0x52D, rev 0x00, class 0x0)
@@ -494,8 +495,8 @@ Mon Jul 18 10:51:12 2016 daemon.info dnsmasq-dhcp[975]: read /etc/ethers - 0 add
 [    0.210000] WARNING: CPU: 0 PID: 1 at drivers/bcma/host_soc.c:140 bcma_host_soc_aread32+0x3c/0x6c()
 [    0.210000] Accessed core has no wrapper/agent
 [    0.210000] Modules linked in:
-[    0.210000] CPU: 0 PID: 1 Comm: swapper Not tainted 3.18.29 #1
-[    0.210000] Stack : 00000000 00000000 00000000 00000000 80366872 00000032 00000000 801d0e90
+[    0.210000] CPU: 0 PID: 1 Comm: swapper Not tainted 3.18.29 #9
+[    0.210000] Stack : 00000000 00000000 00000000 00000000 80366872 00000032 00000000 801d13a8
 [    0.210000] 	  00000001 00000007 802b75ec 8030ca23 00000001 80365a98 8781dc00 00000007
 [    0.210000] 	  00000005 802c0000 802d0000 80048ce8 00000003 80024c10 0000008c 00000007
 [    0.210000] 	  802baca0 87821cbc 00000000 00000000 00000000 00000000 00000000 00000000
@@ -505,10 +506,10 @@ Mon Jul 18 10:51:12 2016 daemon.info dnsmasq-dhcp[975]: read /etc/ethers - 0 add
 [    0.210000] [<80014aec>] show_stack+0x50/0x84
 [    0.210000] [<80024d18>] warn_slowpath_common+0x84/0xb4
 [    0.210000] [<80024d74>] warn_slowpath_fmt+0x2c/0x38
-[    0.210000] [<801d0e90>] bcma_host_soc_aread32+0x3c/0x6c
-[    0.210000] [<801cf3c8>] bcma_core_mips_irqflag+0x94/0xb0
+[    0.210000] [<801d13a8>] bcma_host_soc_aread32+0x3c/0x6c
+[    0.210000] [<801cf8e0>] bcma_core_mips_irqflag+0x94/0xb0
 [    0.210000] 
-[    0.210000] ---[ end trace 76d31b12c15081e1 ]---
+[    0.210000] ---[ end trace 22ad8e93b39ec87e ]---
 [    0.210000] bcma: core 0x05dc, irq : 2(S)  3  4  5  6  D* I 
 [    0.210000] bcma: bus0: PCIEcore in host mode found
 [    0.400000] PCI host bridge to bus 0000:00
@@ -582,118 +583,718 @@ Mon Jul 18 10:51:12 2016 daemon.info dnsmasq-dhcp[975]: read /etc/ethers - 0 add
 [    1.400000] 0x000000158800-0x000001fe0000 : "rootfs"
 [    1.400000] mtd: device 4 (rootfs) set to be root filesystem
 [    1.410000] 1 squashfs-split partitions found on MTD device rootfs
-[    1.420000] 0x0000003c0000-0x000001fe0000 : "rootfs_data"
+[    1.420000] 0x0000003a0000-0x000001fe0000 : "rootfs_data"
 [    1.420000] 0x000001fe0000-0x000002000000 : "nvram"
 [    1.430000] bcm47xxnflash: Requested invalid id_data: 32
 [    1.430000] bcm47xxnflash: Requested invalid id_data: 64
 [    1.440000] nand: No NAND device found
 [    1.440000] bcm47xxnflash: Could not scan NAND flash: -19
 [    1.450000] bcm47xxnflash: Initialization failed: -19
-[    1.460000] libphy: Fixed MDIO Bus: probed
+[    1.460000] zliu b53_phy_driver_register
+[    1.470000] libphy: Fixed MDIO Bus: probed
 [    1.470000] bcm47xx-wdt bcm47xx-wdt.0: BCM47xx Watchdog Timer enabled (30 seconds)
 [    1.480000] GPIO_WDT: failed to register misc device
-[    1.480000] PCI: Enabling device 0000:00:01.0 (0000 -> 0002)
+[    1.490000] PCI: Enabling device 0000:00:01.0 (0000 -> 0002)
 [    1.490000] bcma: PCI: Fixing up device 0000:00:01.0
-[    1.490000] bcma: change PCIe max read request size from 512 to 128
+[    1.500000] bcma: change PCIe max read request size from 512 to 128
 [    1.500000] bcma: bus1: Found chip with id 0x4331, rev 0x02 and package 0x08
 [    1.510000] bcma: bus1: Core 0 found: ChipCommon (manuf 0x4BF, id 0x800, rev 0x25, class 0x0)
 [    1.520000] bcma: bus1: Core 1 found: IEEE 802.11 (manuf 0x4BF, id 0x812, rev 0x1D, class 0x0)
 [    1.530000] bcma: bus1: Core 2 found: PCIe (manuf 0x4BF, id 0x820, rev 0x13, class 0x0)
-[    1.530000] bcma: bus1: Found rev 10 PMU (capabilities 0x108C260A)
-[    1.530000] bcma: bus1: SPROM offset 0x800
+[    1.540000] bcma: bus1: Found rev 10 PMU (capabilities 0x108C260A)
+[    1.540000] bcma: bus1: SPROM offset 0x800
 [    1.660000] bcma: bus1: Invalid SPROM read from the PCIe card, trying to use fallback SPROM
 [    1.790000] bcma: bus1: Using SPROM revision 9 provided by platform.
 [    1.790000] bcma: bus1: PMU resource config unknown or not needed for device 0x4331
 [    1.800000] bcma: bus1: Bus registered
-[    1.800000] PCI: Enabling device 0000:01:01.0 (0000 -> 0002)
+[    1.810000] PCI: Enabling device 0000:01:01.0 (0000 -> 0002)
 [    1.810000] bcma: PCI: Fixing up device 0000:01:01.0
 [    1.820000] bcma: change PCIe max read request size from 512 to 128
-[    1.820000] bcma: bus2: Found chip with id 0x4331, rev 0x02 and package 0x08
+[    1.830000] bcma: bus2: Found chip with id 0x4331, rev 0x02 and package 0x08
 [    1.830000] bcma: bus2: Core 0 found: ChipCommon (manuf 0x4BF, id 0x800, rev 0x25, class 0x0)
 [    1.840000] bcma: bus2: Core 1 found: IEEE 802.11 (manuf 0x4BF, id 0x812, rev 0x1D, class 0x0)
 [    1.850000] bcma: bus2: Core 2 found: PCIe (manuf 0x4BF, id 0x820, rev 0x13, class 0x0)
 [    1.860000] bcma: bus2: Found rev 10 PMU (capabilities 0x108C260A)
 [    1.860000] bcma: bus2: SPROM offset 0x800
 [    1.980000] bcma: bus2: Invalid SPROM read from the PCIe card, trying to use fallback SPROM
-[    2.100000] bcma: bus2: Using SPROM revision 9 provided by platform.
-[    2.100000] bcma: bus2: PMU resource config unknown or not needed for device 0x4331
-[    2.110000] bcma: bus2: Bus registered
+[    2.110000] bcma: bus2: Using SPROM revision 9 provided by platform.
+[    2.110000] bcma: bus2: PMU resource config unknown or not needed for device 0x4331
+[    2.120000] bcma: bus2: Bus registered
 [    2.120000] TCP: cubic registered
-[    2.120000] NET: Registered protocol family 17
+[    2.130000] NET: Registered protocol family 17
 [    2.130000] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
 [    2.140000] 8021q: 802.1Q VLAN Support v1.8
-[    2.150000] VFS: Mounted root (squashfs filesystem) readonly on device 31:4.
+[    2.160000] VFS: Mounted root (squashfs filesystem) readonly on device 31:4.
 [    2.160000] Freeing unused kernel memory: 184K (80322000 - 80350000)
 [    2.990000] init: Console is alive
-[    2.990000] init: - watchdog -
-[    3.960000] pps_core: LinuxPPS API ver. 1 registered
-[    3.960000] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
-[    3.970000] PTP clock support registered
-[    3.980000] bgmac bcma0:1: Found PHY addr: 30 (NOREGS)
-[    3.990000] bgmac bcma0:1: Support for Roboswitch not implemented
-[    4.000000] libphy: bgmac mii bus: probed
-[    4.160000] b53_common: found switch: BCM53125, rev 4
+[    3.000000] init: - watchdog -
+[    3.930000] pps_core: LinuxPPS API ver. 1 registered
+[    3.930000] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    3.940000] PTP clock support registered
+[    3.950000] b44: zliu b44_init
+[    3.950000] b44: zliu b44 1 err=0
+[    3.960000] b44: zliu b44 1 err=0
+[    3.960000] bgmac bcma0:1: Found PHY addr: 30 (NOREGS)
+[    3.970000] bgmac bcma0:1: Support for Roboswitch not implemented
+[    3.980000] libphy: zliu call drv probe
+[    3.980000] zliu b53_phy_probe
+[    3.990000] libphy: bgmac mii bus: probed
+[    4.070000] zliu b53_phy_config_init phydev=0x87b02800
+[    4.070000] b53_common: zliu chip name BCM53125, id:0x53125
+[    4.080000] b53_common: zliu b53_switch_reset
+[    4.160000] b53_common: zliu found switch: BCM53125, rev 4
+[    4.160000] zliu register_switch
 [    4.170000] bgmac: Broadcom 47xx GBit MAC driver loaded
 [    5.000000] init: - preinit -
-[    5.450000] random: mktemp urandom read with 8 bits of entropy available
-[    7.170000] eth0: Link is Up - 1Gbps/Full - flow control off
-[    8.600000] mount_root: jffs2 not ready yet, using temporary tmpfs overlay
+[    5.170000] libphy: zliu phy_state_machine 
+[    5.370000] libphy: zliu phy_start 
+[    5.460000] random: mktemp urandom read with 8 bits of entropy available
+[    6.170000] libphy: zliu phy_state_machine 
+[    6.170000] libphy: zliu phy_start_aneg 
+[    6.170000] zliu b53_phy_config_aneg
+[    7.180000] libphy: zliu phy_state_machine 
+[    7.180000] zliu b53_phy_read_status
+[    7.180000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[    7.190000] bgmac bcma0:1: zliu bgmac call phyprint
+[    7.190000] libphy: zliu phy_print_status 
+[    7.200000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
+[    8.210000] libphy: zliu phy_state_machine 
+[    8.590000] mount_root: jffs2 not ready yet, using temporary tmpfs overlay
+[    8.620000] libphy: zliu phy_stop 
 [    8.630000] procd: - early -
 [    8.630000] procd: - watchdog -
-[    9.260000] procd: - ubus -
-[   10.280000] procd: - init -
-[   12.280000] NET: Registered protocol family 10
-[   12.290000] ip6_tables: (C) 2000-2006 Netfilter Core Team
-[   12.310000] Loading modules backported from Linux version v4.4-rc5-1913-gc8fdf68
-[   12.320000] Backport generated by backports.git backports-20151218-0-g2f58d9d
-[   12.330000] ip_tables: (C) 2000-2006 Netfilter Core Team
-[   12.340000] nf_conntrack version 0.5.0 (1974 buckets, 7896 max)
-[   12.380000] xt_time: kernel timezone is -0000
-[   12.480000] PPP generic driver version 2.4.2
-[   12.490000] NET: Registered protocol family 24
-[   12.510000] b43-phy0: Broadcom 4331 WLAN found (core revision 29)
-[   12.510000] bcma: bus1: Switched to core: 0x812
-[   12.510000] b43-phy0: Found PHY: Analog 9, Type 7 (HT), Revision 1
-[   12.520000] b43-phy0: Found Radio: Manuf 0x17F, ID 0x2059, Revision 0, Version 1
-[   12.530000] b43-phy1: Broadcom 4331 WLAN found (core revision 29)
-[   12.530000] bcma: bus2: Switched to core: 0x812
-[   12.540000] b43-phy1: Found PHY: Analog 9, Type 7 (HT), Revision 1
-[   12.540000] b43-phy1: Found Radio: Manuf 0x17F, ID 0x2059, Revision 0, Version 1
-[   12.550000] b43-phy1 warning: 5 GHz band is unsupported on this PHY
-[   12.560000] b43-phy1 ERROR: b43 can't support any band on this device
-[   12.560000] b43: probe of bcma2:1 failed with error -122
-[   12.570000] Broadcom 43xx driver loaded [ Features: PNL ]
-[   12.650000] Broadcom 43xx-legacy driver loaded [ Features: PLD ]
-[   12.670000] ieee80211 phy0: Selected rate control algorithm 'minstrel_ht'
-[   19.230000] eth0: Link is Up - 1Gbps/Full - flow control off
-[   20.320000] jffs2_scan_eraseblock(): End of filesystem marker found at 0x0
-[   20.350000] jffs2_build_filesystem(): unlocking the mtd device... done.
-[   20.350000] jffs2_build_filesystem(): erasing all blocks after the end marker... 
-[   21.620000] device eth0.1 entered promiscuous mode
-[   21.620000] device eth0 entered promiscuous mode
-[   21.650000] br-lan: port 1(eth0.1) entered forwarding state
-[   21.650000] br-lan: port 1(eth0.1) entered forwarding state
-[   23.240000] eth0: Link is Up - 1Gbps/Full - flow control off
-[   23.650000] br-lan: port 1(eth0.1) entered forwarding state
-[   70.100000] random: nonblocking pool is initialized
-[  127.100000] done.
-[  127.100000] jffs2: notice: (846) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
-[  256.960000] b43-phy0: Loading firmware version 666.2 (2011-02-23 01:15:07)
-[  257.200000] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
-[  257.210000] device wlan0 entered promiscuous mode
-[  257.280000] br-lan: port 2(wlan0) entered forwarding state
-[  257.280000] br-lan: port 2(wlan0) entered forwarding state
-[  257.290000] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
-[  259.280000] br-lan: port 2(wlan0) entered forwarding state
-[  505.480000] device wlan0 left promiscuous mode
-[  505.480000] br-lan: port 2(wlan0) entered disabled state
-[  507.230000] b43-phy0: Loading firmware version 666.2 (2011-02-23 01:15:07)
-[  507.480000] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
-[  507.500000] device wlan0 entered promiscuous mode
-[  508.030000] br-lan: port 2(wlan0) entered forwarding state
-[  508.030000] br-lan: port 2(wlan0) entered forwarding state
-[  508.040000] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
-[  510.030000] br-lan: port 2(wlan0) entered forwarding state
-
-
+[    9.210000] libphy: zliu phy_state_machine 
+[    9.210000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[    9.220000] libphy: zliu phy_ethtool_get_wol 
+[    9.280000] procd: - ubus -
+[   10.220000] libphy: zliu phy_state_machine 
+[   10.290000] procd: - init -
+[   11.220000] libphy: zliu phy_state_machine 
+[   11.650000] zliu swconfig_send_switch 
+[   11.660000] zliu swconfig_send_multipart 
+[   11.660000] zliu swconfig_send_multipart 
+[   11.670000] zliu swconfig_send_multipart 
+[   11.670000] zliu swconfig_send_multipart 
+[   11.670000] zliu swconfig_send_multipart 
+[   11.680000] zliu swconfig_send_multipart 
+[   11.680000] zliu swconfig_send_multipart 
+[   11.690000] zliu swconfig_send_multipart 
+[   11.690000] zliu swconfig_send_multipart 
+[   11.700000] zliu swconfig_send_multipart 
+[   11.700000] zliu swconfig_send_multipart 
+[   11.720000] zliu swconfig_send_switch 
+[   11.730000] zliu swconfig_send_multipart 
+[   11.740000] zliu swconfig_send_multipart 
+[   11.740000] zliu swconfig_send_multipart 
+[   11.740000] zliu swconfig_send_multipart 
+[   11.750000] zliu swconfig_send_multipart 
+[   11.750000] zliu swconfig_send_multipart 
+[   11.760000] zliu swconfig_send_multipart 
+[   11.760000] zliu swconfig_send_multipart 
+[   11.770000] zliu swconfig_send_multipart 
+[   11.770000] zliu swconfig_send_multipart 
+[   11.770000] zliu swconfig_send_multipart 
+[   12.230000] libphy: zliu phy_state_machine 
+[   12.390000] NET: Registered protocol family 10
+[   12.400000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   12.420000] Loading modules backported from Linux version v4.4-rc5-1913-gc8fdf68
+[   12.430000] Backport generated by backports.git backports-20151218-0-g2f58d9d
+[   12.440000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   12.460000] nf_conntrack version 0.5.0 (1974 buckets, 7896 max)
+[   12.500000] xt_time: kernel timezone is -0000
+[   12.590000] PPP generic driver version 2.4.2
+[   12.600000] NET: Registered protocol family 24
+[   12.620000] b43-phy0: Broadcom 4331 WLAN found (core revision 29)
+[   12.620000] bcma: bus1: Switched to core: 0x812
+[   12.620000] b43-phy0: Found PHY: Analog 9, Type 7 (HT), Revision 1
+[   12.630000] b43-phy0: Found Radio: Manuf 0x17F, ID 0x2059, Revision 0, Version 1
+[   12.640000] b43-phy1: Broadcom 4331 WLAN found (core revision 29)
+[   12.640000] bcma: bus2: Switched to core: 0x812
+[   12.650000] b43-phy1: Found PHY: Analog 9, Type 7 (HT), Revision 1
+[   12.650000] b43-phy1: Found Radio: Manuf 0x17F, ID 0x2059, Revision 0, Version 1
+[   12.660000] b43-phy1 warning: 5 GHz band is unsupported on this PHY
+[   12.670000] b43-phy1 ERROR: b43 can't support any band on this device
+[   12.670000] b43: probe of bcma2:1 failed with error -122
+[   12.680000] Broadcom 43xx driver loaded [ Features: PNL ]
+[   12.760000] Broadcom 43xx-legacy driver loaded [ Features: PLD ]
+[   12.780000] ieee80211 phy0: Selected rate control algorithm 'minstrel_ht'
+[   13.230000] libphy: zliu phy_state_machine 
+[   14.240000] libphy: zliu phy_state_machine 
+[   15.240000] libphy: zliu phy_state_machine 
+[   16.240000] libphy: zliu phy_state_machine 
+[   17.240000] libphy: zliu phy_state_machine 
+[   17.420000] libphy: zliu phy_start 
+[   17.430000] zliu swconfig_send_switch 
+[   17.430000] zliu swconfig_send_multipart 
+[   17.440000] zliu swconfig_send_multipart 
+[   17.440000] zliu swconfig_send_multipart 
+[   17.450000] zliu swconfig_send_multipart 
+[   17.450000] zliu swconfig_send_multipart 
+[   17.450000] zliu swconfig_send_multipart 
+[   17.460000] zliu swconfig_send_multipart 
+[   17.460000] zliu swconfig_send_multipart 
+[   17.470000] zliu swconfig_send_multipart 
+[   17.470000] zliu swconfig_send_multipart 
+[   17.480000] zliu swconfig_send_multipart 
+[   17.480000] zliu swconfig_set_attr 
+[   17.480000] zliu swconfig_reset_switch 
+[   17.490000] b53_common: zliu b53_switch_reset
+[   17.570000] zliu swconfig_set_attr 
+[   17.570000] zliu swconfig_set_attr 
+[   17.570000] zliu swconfig_parse_ports 
+[   17.580000] zliu swconfig_set_vlan_ports
+[   17.580000] zliu swconfig_set_attr 
+[   17.590000] zliu swconfig_parse_ports 
+[   17.590000] zliu swconfig_set_vlan_ports
+[   17.590000] zliu swconfig_set_attr 
+[   17.600000] zliu swconfig_apply_config 
+[   18.320000] libphy: zliu phy_state_machine 
+[   19.320000] libphy: zliu phy_state_machine 
+[   19.320000] zliu b53_phy_read_status
+[   19.320000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   19.330000] bgmac bcma0:1: zliu bgmac call phyprint
+[   19.330000] libphy: zliu phy_print_status 
+[   19.340000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
+[   20.350000] libphy: zliu phy_state_machine 
+[   20.480000] jffs2_scan_eraseblock(): End of filesystem marker found at 0x0
+[   20.520000] jffs2_build_filesystem(): unlocking the mtd device... done.
+[   20.520000] jffs2_build_filesystem(): erasing all blocks after the end marker... 
+[   21.350000] libphy: zliu phy_state_machine 
+[   21.350000] zliu b53_phy_read_status
+[   21.350000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   21.360000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   21.950000] libphy: zliu phy_stop 
+[   21.970000] libphy: zliu phy_start 
+[   22.000000] libphy: zliu phy_ethtool_gset 
+[   22.000000] device eth0.1 entered promiscuous mode
+[   22.010000] device eth0 entered promiscuous mode
+[   22.030000] br-lan: port 1(eth0.1) entered forwarding state
+[   22.030000] br-lan: port 1(eth0.1) entered forwarding state
+[   22.370000] libphy: zliu phy_state_machine 
+[   23.090000] libphy: zliu phy_ethtool_gset 
+[   23.370000] libphy: zliu phy_state_machine 
+[   23.370000] zliu b53_phy_read_status
+[   23.370000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   23.380000] bgmac bcma0:1: zliu bgmac call phyprint
+[   23.380000] libphy: zliu phy_print_status 
+[   23.390000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
+[   24.030000] br-lan: port 1(eth0.1) entered forwarding state
+[   24.400000] libphy: zliu phy_state_machine 
+[   25.400000] libphy: zliu phy_state_machine 
+[   25.400000] zliu b53_phy_read_status
+[   25.400000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   25.410000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   26.420000] libphy: zliu phy_state_machine 
+[   27.420000] libphy: zliu phy_state_machine 
+[   27.420000] zliu b53_phy_read_status
+[   27.420000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   27.430000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   28.440000] libphy: zliu phy_state_machine 
+[   29.440000] libphy: zliu phy_state_machine 
+[   29.440000] zliu b53_phy_read_status
+[   29.440000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   29.450000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   30.460000] libphy: zliu phy_state_machine 
+[   31.460000] libphy: zliu phy_state_machine 
+[   31.460000] zliu b53_phy_read_status
+[   31.460000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   31.470000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   32.480000] libphy: zliu phy_state_machine 
+[   33.480000] libphy: zliu phy_state_machine 
+[   33.480000] zliu b53_phy_read_status
+[   33.480000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   33.490000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   34.500000] libphy: zliu phy_state_machine 
+[   35.500000] libphy: zliu phy_state_machine 
+[   35.500000] zliu b53_phy_read_status
+[   35.500000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   35.510000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   36.520000] libphy: zliu phy_state_machine 
+[   37.520000] libphy: zliu phy_state_machine 
+[   37.520000] zliu b53_phy_read_status
+[   37.520000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   37.530000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   38.540000] libphy: zliu phy_state_machine 
+[   39.540000] libphy: zliu phy_state_machine 
+[   39.540000] zliu b53_phy_read_status
+[   39.540000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   39.550000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   40.560000] libphy: zliu phy_state_machine 
+[   41.560000] libphy: zliu phy_state_machine 
+[   41.560000] zliu b53_phy_read_status
+[   41.560000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   41.570000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   42.580000] libphy: zliu phy_state_machine 
+[   43.580000] libphy: zliu phy_state_machine 
+[   43.580000] zliu b53_phy_read_status
+[   43.580000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   43.590000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   44.600000] libphy: zliu phy_state_machine 
+[   45.600000] libphy: zliu phy_state_machine 
+[   45.600000] zliu b53_phy_read_status
+[   45.600000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   45.610000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   46.620000] libphy: zliu phy_state_machine 
+[   47.620000] libphy: zliu phy_state_machine 
+[   47.620000] zliu b53_phy_read_status
+[   47.620000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   47.630000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   48.640000] libphy: zliu phy_state_machine 
+[   49.640000] libphy: zliu phy_state_machine 
+[   49.640000] zliu b53_phy_read_status
+[   49.640000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   49.650000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   50.660000] libphy: zliu phy_state_machine 
+[   51.660000] libphy: zliu phy_state_machine 
+[   51.660000] zliu b53_phy_read_status
+[   51.660000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   51.670000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   52.680000] libphy: zliu phy_state_machine 
+[   53.680000] libphy: zliu phy_state_machine 
+[   53.680000] zliu b53_phy_read_status
+[   53.680000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   53.690000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   54.700000] libphy: zliu phy_state_machine 
+[   55.700000] libphy: zliu phy_state_machine 
+[   55.700000] zliu b53_phy_read_status
+[   55.700000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   55.710000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   56.720000] libphy: zliu phy_state_machine 
+[   57.720000] libphy: zliu phy_state_machine 
+[   57.720000] zliu b53_phy_read_status
+[   57.720000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   57.730000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   58.740000] libphy: zliu phy_state_machine 
+[   59.740000] libphy: zliu phy_state_machine 
+[   59.740000] zliu b53_phy_read_status
+[   59.740000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   59.750000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   60.760000] libphy: zliu phy_state_machine 
+[   61.760000] libphy: zliu phy_state_machine 
+[   61.760000] zliu b53_phy_read_status
+[   61.760000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   61.770000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   62.780000] libphy: zliu phy_state_machine 
+[   63.780000] libphy: zliu phy_state_machine 
+[   63.780000] zliu b53_phy_read_status
+[   63.780000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   63.790000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   64.800000] libphy: zliu phy_state_machine 
+[   65.800000] libphy: zliu phy_state_machine 
+[   65.800000] zliu b53_phy_read_status
+[   65.800000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   65.810000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   66.820000] libphy: zliu phy_state_machine 
+[   67.820000] libphy: zliu phy_state_machine 
+[   67.820000] zliu b53_phy_read_status
+[   67.820000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   67.830000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   68.840000] libphy: zliu phy_state_machine 
+[   69.840000] libphy: zliu phy_state_machine 
+[   69.840000] zliu b53_phy_read_status
+[   69.840000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   69.850000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   70.860000] libphy: zliu phy_state_machine 
+[   71.860000] libphy: zliu phy_state_machine 
+[   71.860000] zliu b53_phy_read_status
+[   71.860000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   71.870000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   71.970000] random: nonblocking pool is initialized
+[   72.880000] libphy: zliu phy_state_machine 
+[   73.880000] libphy: zliu phy_state_machine 
+[   73.880000] zliu b53_phy_read_status
+[   73.880000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   73.890000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   74.900000] libphy: zliu phy_state_machine 
+[   75.900000] libphy: zliu phy_state_machine 
+[   75.900000] zliu b53_phy_read_status
+[   75.900000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   75.910000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   76.920000] libphy: zliu phy_state_machine 
+[   77.920000] libphy: zliu phy_state_machine 
+[   77.920000] zliu b53_phy_read_status
+[   77.920000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   77.930000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   78.940000] libphy: zliu phy_state_machine 
+[   79.940000] libphy: zliu phy_state_machine 
+[   79.940000] zliu b53_phy_read_status
+[   79.940000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   79.950000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   80.960000] libphy: zliu phy_state_machine 
+[   81.960000] libphy: zliu phy_state_machine 
+[   81.960000] zliu b53_phy_read_status
+[   81.960000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   81.970000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   82.980000] libphy: zliu phy_state_machine 
+[   83.980000] libphy: zliu phy_state_machine 
+[   83.980000] zliu b53_phy_read_status
+[   83.980000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   83.990000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   85.000000] libphy: zliu phy_state_machine 
+[   86.000000] libphy: zliu phy_state_machine 
+[   86.000000] zliu b53_phy_read_status
+[   86.000000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   86.010000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   87.020000] libphy: zliu phy_state_machine 
+[   88.020000] libphy: zliu phy_state_machine 
+[   88.020000] zliu b53_phy_read_status
+[   88.020000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   88.030000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   89.040000] libphy: zliu phy_state_machine 
+[   90.040000] libphy: zliu phy_state_machine 
+[   90.040000] zliu b53_phy_read_status
+[   90.040000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   90.050000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   91.060000] libphy: zliu phy_state_machine 
+[   92.060000] libphy: zliu phy_state_machine 
+[   92.060000] zliu b53_phy_read_status
+[   92.060000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   92.070000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   93.080000] libphy: zliu phy_state_machine 
+[   94.080000] libphy: zliu phy_state_machine 
+[   94.080000] zliu b53_phy_read_status
+[   94.080000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   94.090000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   95.100000] libphy: zliu phy_state_machine 
+[   96.100000] libphy: zliu phy_state_machine 
+[   96.100000] zliu b53_phy_read_status
+[   96.100000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   96.110000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   97.120000] libphy: zliu phy_state_machine 
+[   98.120000] libphy: zliu phy_state_machine 
+[   98.120000] zliu b53_phy_read_status
+[   98.120000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   98.130000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[   99.140000] libphy: zliu phy_state_machine 
+[  100.140000] libphy: zliu phy_state_machine 
+[  100.140000] zliu b53_phy_read_status
+[  100.140000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  100.150000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  101.160000] libphy: zliu phy_state_machine 
+[  102.160000] libphy: zliu phy_state_machine 
+[  102.160000] zliu b53_phy_read_status
+[  102.160000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  102.170000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  103.180000] libphy: zliu phy_state_machine 
+[  104.180000] libphy: zliu phy_state_machine 
+[  104.180000] zliu b53_phy_read_status
+[  104.180000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  104.190000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  105.200000] libphy: zliu phy_state_machine 
+[  106.200000] libphy: zliu phy_state_machine 
+[  106.200000] zliu b53_phy_read_status
+[  106.200000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  106.210000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  107.220000] libphy: zliu phy_state_machine 
+[  108.220000] libphy: zliu phy_state_machine 
+[  108.220000] zliu b53_phy_read_status
+[  108.220000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  108.230000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  109.240000] libphy: zliu phy_state_machine 
+[  110.240000] libphy: zliu phy_state_machine 
+[  110.240000] zliu b53_phy_read_status
+[  110.240000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  110.250000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  111.260000] libphy: zliu phy_state_machine 
+[  112.260000] libphy: zliu phy_state_machine 
+[  112.260000] zliu b53_phy_read_status
+[  112.260000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  112.270000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  113.280000] libphy: zliu phy_state_machine 
+[  114.280000] libphy: zliu phy_state_machine 
+[  114.280000] zliu b53_phy_read_status
+[  114.280000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  114.290000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  115.300000] libphy: zliu phy_state_machine 
+[  116.300000] libphy: zliu phy_state_machine 
+[  116.300000] zliu b53_phy_read_status
+[  116.300000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  116.310000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  117.320000] libphy: zliu phy_state_machine 
+[  118.320000] libphy: zliu phy_state_machine 
+[  118.320000] zliu b53_phy_read_status
+[  118.320000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  118.330000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  119.340000] libphy: zliu phy_state_machine 
+[  120.340000] libphy: zliu phy_state_machine 
+[  120.340000] zliu b53_phy_read_status
+[  120.340000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  120.350000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  121.360000] libphy: zliu phy_state_machine 
+[  122.360000] libphy: zliu phy_state_machine 
+[  122.360000] zliu b53_phy_read_status
+[  122.360000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  122.370000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  123.380000] libphy: zliu phy_state_machine 
+[  124.380000] libphy: zliu phy_state_machine 
+[  124.380000] zliu b53_phy_read_status
+[  124.380000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  124.390000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  125.400000] libphy: zliu phy_state_machine 
+[  126.400000] libphy: zliu phy_state_machine 
+[  126.400000] zliu b53_phy_read_status
+[  126.400000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  126.410000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  127.420000] libphy: zliu phy_state_machine 
+[  128.420000] libphy: zliu phy_state_machine 
+[  128.420000] zliu b53_phy_read_status
+[  128.420000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  128.430000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  129.440000] libphy: zliu phy_state_machine 
+[  130.440000] libphy: zliu phy_state_machine 
+[  130.440000] zliu b53_phy_read_status
+[  130.440000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  130.450000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  131.460000] libphy: zliu phy_state_machine 
+[  132.460000] libphy: zliu phy_state_machine 
+[  132.460000] zliu b53_phy_read_status
+[  132.460000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  132.470000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  133.480000] libphy: zliu phy_state_machine 
+[  134.480000] libphy: zliu phy_state_machine 
+[  134.480000] zliu b53_phy_read_status
+[  134.480000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  134.490000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  134.710000] done.
+[  134.710000] jffs2: notice: (845) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+[  135.500000] libphy: zliu phy_state_machine 
+[  136.500000] libphy: zliu phy_state_machine 
+[  136.500000] zliu b53_phy_read_status
+[  136.500000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  136.510000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  137.520000] libphy: zliu phy_state_machine 
+[  138.520000] libphy: zliu phy_state_machine 
+[  138.520000] zliu b53_phy_read_status
+[  138.520000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  138.530000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  139.540000] libphy: zliu phy_state_machine 
+[  140.540000] libphy: zliu phy_state_machine 
+[  140.540000] zliu b53_phy_read_status
+[  140.540000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  140.550000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  141.560000] libphy: zliu phy_state_machine 
+[  142.560000] libphy: zliu phy_state_machine 
+[  142.560000] zliu b53_phy_read_status
+[  142.560000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  142.570000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  143.580000] libphy: zliu phy_state_machine 
+[  144.580000] libphy: zliu phy_state_machine 
+[  144.580000] zliu b53_phy_read_status
+[  144.580000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  144.590000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  145.600000] libphy: zliu phy_state_machine 
+[  146.600000] libphy: zliu phy_state_machine 
+[  146.600000] zliu b53_phy_read_status
+[  146.600000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  146.610000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  147.620000] libphy: zliu phy_state_machine 
+[  148.620000] libphy: zliu phy_state_machine 
+[  148.620000] zliu b53_phy_read_status
+[  148.620000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  148.630000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  149.640000] libphy: zliu phy_state_machine 
+[  150.640000] libphy: zliu phy_state_machine 
+[  150.640000] zliu b53_phy_read_status
+[  150.640000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  150.650000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  151.660000] libphy: zliu phy_state_machine 
+[  152.660000] libphy: zliu phy_state_machine 
+[  152.660000] zliu b53_phy_read_status
+[  152.660000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  152.670000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  153.680000] libphy: zliu phy_state_machine 
+[  154.680000] libphy: zliu phy_state_machine 
+[  154.680000] zliu b53_phy_read_status
+[  154.680000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  154.690000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  155.700000] libphy: zliu phy_state_machine 
+[  156.700000] libphy: zliu phy_state_machine 
+[  156.700000] zliu b53_phy_read_status
+[  156.700000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  156.710000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  157.720000] libphy: zliu phy_state_machine 
+[  158.720000] libphy: zliu phy_state_machine 
+[  158.720000] zliu b53_phy_read_status
+[  158.720000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  158.730000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  159.740000] libphy: zliu phy_state_machine 
+[  160.740000] libphy: zliu phy_state_machine 
+[  160.740000] zliu b53_phy_read_status
+[  160.740000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  160.750000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  161.760000] libphy: zliu phy_state_machine 
+[  162.760000] libphy: zliu phy_state_machine 
+[  162.760000] zliu b53_phy_read_status
+[  162.760000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  162.770000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  163.780000] libphy: zliu phy_state_machine 
+[  164.780000] libphy: zliu phy_state_machine 
+[  164.780000] zliu b53_phy_read_status
+[  164.780000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  164.790000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  165.800000] libphy: zliu phy_state_machine 
+[  166.800000] libphy: zliu phy_state_machine 
+[  166.800000] zliu b53_phy_read_status
+[  166.800000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  166.810000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  167.820000] libphy: zliu phy_state_machine 
+[  168.820000] libphy: zliu phy_state_machine 
+[  168.820000] zliu b53_phy_read_status
+[  168.820000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  168.830000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  169.840000] libphy: zliu phy_state_machine 
+[  170.840000] libphy: zliu phy_state_machine 
+[  170.840000] zliu b53_phy_read_status
+[  170.840000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  170.850000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  171.860000] libphy: zliu phy_state_machine 
+[  172.860000] libphy: zliu phy_state_machine 
+[  172.860000] zliu b53_phy_read_status
+[  172.860000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  172.870000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  173.880000] libphy: zliu phy_state_machine 
+[  174.880000] libphy: zliu phy_state_machine 
+[  174.880000] zliu b53_phy_read_status
+[  174.880000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  174.890000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  175.900000] libphy: zliu phy_state_machine 
+[  176.900000] libphy: zliu phy_state_machine 
+[  176.900000] zliu b53_phy_read_status
+[  176.900000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  176.910000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  177.920000] libphy: zliu phy_state_machine 
+[  178.920000] libphy: zliu phy_state_machine 
+[  178.920000] zliu b53_phy_read_status
+[  178.920000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  178.930000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  179.940000] libphy: zliu phy_state_machine 
+[  180.940000] libphy: zliu phy_state_machine 
+[  180.940000] zliu b53_phy_read_status
+[  180.940000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  180.950000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  181.960000] libphy: zliu phy_state_machine 
+[  182.960000] libphy: zliu phy_state_machine 
+[  182.960000] zliu b53_phy_read_status
+[  182.960000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  182.970000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  183.980000] libphy: zliu phy_state_machine 
+[  184.980000] libphy: zliu phy_state_machine 
+[  184.980000] zliu b53_phy_read_status
+[  184.980000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  184.990000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  186.000000] libphy: zliu phy_state_machine 
+[  187.000000] libphy: zliu phy_state_machine 
+[  187.000000] zliu b53_phy_read_status
+[  187.000000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  187.010000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  188.020000] libphy: zliu phy_state_machine 
+[  189.020000] libphy: zliu phy_state_machine 
+[  189.020000] zliu b53_phy_read_status
+[  189.020000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  189.030000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  190.040000] libphy: zliu phy_state_machine 
+[  191.040000] libphy: zliu phy_state_machine 
+[  191.040000] zliu b53_phy_read_status
+[  191.040000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  191.050000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  192.060000] libphy: zliu phy_state_machine 
+[  193.060000] libphy: zliu phy_state_machine 
+[  193.060000] zliu b53_phy_read_status
+[  193.060000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  193.070000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  194.080000] libphy: zliu phy_state_machine 
+[  195.080000] libphy: zliu phy_state_machine 
+[  195.080000] zliu b53_phy_read_status
+[  195.080000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  195.090000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  196.100000] libphy: zliu phy_state_machine 
+[  197.100000] libphy: zliu phy_state_machine 
+[  197.100000] zliu b53_phy_read_status
+[  197.100000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  197.110000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  198.120000] libphy: zliu phy_state_machine 
+[  199.120000] libphy: zliu phy_state_machine 
+[  199.120000] zliu b53_phy_read_status
+[  199.120000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  199.130000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  200.140000] libphy: zliu phy_state_machine 
+[  201.140000] libphy: zliu phy_state_machine 
+[  201.140000] zliu b53_phy_read_status
+[  201.140000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  201.150000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  202.160000] libphy: zliu phy_state_machine 
+[  203.160000] libphy: zliu phy_state_machine 
+[  203.160000] zliu b53_phy_read_status
+[  203.160000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  203.170000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  204.180000] libphy: zliu phy_state_machine 
+[  205.180000] libphy: zliu phy_state_machine 
+[  205.180000] zliu b53_phy_read_status
+[  205.180000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  205.190000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  206.200000] libphy: zliu phy_state_machine 
+[  207.200000] libphy: zliu phy_state_machine 
+[  207.200000] zliu b53_phy_read_status
+[  207.200000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  207.210000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  208.220000] libphy: zliu phy_state_machine 
+[  209.220000] libphy: zliu phy_state_machine 
+[  209.220000] zliu b53_phy_read_status
+[  209.220000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  209.230000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  210.240000] libphy: zliu phy_state_machine 
+[  211.240000] libphy: zliu phy_state_machine 
+[  211.240000] zliu b53_phy_read_status
+[  211.240000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  211.250000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  212.260000] libphy: zliu phy_state_machine 
+[  213.260000] libphy: zliu phy_state_machine 
+[  213.260000] zliu b53_phy_read_status
+[  213.260000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  213.270000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  214.280000] libphy: zliu phy_state_machine 
+[  215.280000] libphy: zliu phy_state_machine 
+[  215.280000] zliu b53_phy_read_status
+[  215.280000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  215.290000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  216.300000] libphy: zliu phy_state_machine 
+[  217.300000] libphy: zliu phy_state_machine 
+[  217.300000] zliu b53_phy_read_status
+[  217.300000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  217.310000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  218.320000] libphy: zliu phy_state_machine 
+[  219.320000] libphy: zliu phy_state_machine 
+[  219.320000] zliu b53_phy_read_status
+[  219.320000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  219.330000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  220.340000] libphy: zliu phy_state_machine 
+[  221.340000] libphy: zliu phy_state_machine 
+[  221.340000] zliu b53_phy_read_status
+[  221.340000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  221.350000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  222.360000] libphy: zliu phy_state_machine 
+[  223.360000] libphy: zliu phy_state_machine 
+[  223.360000] zliu b53_phy_read_status
+[  223.360000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  223.370000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  224.380000] libphy: zliu phy_state_machine 
+[  225.380000] libphy: zliu phy_state_machine 
+[  225.380000] zliu b53_phy_read_status
+[  225.380000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  225.390000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  226.400000] libphy: zliu phy_state_machine 
+[  227.400000] libphy: zliu phy_state_machine 
+[  227.400000] zliu b53_phy_read_status
+[  227.400000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  227.410000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  228.420000] libphy: zliu phy_state_machine 
+[  229.420000] libphy: zliu phy_state_machine 
+[  229.420000] zliu b53_phy_read_status
+[  229.420000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  229.430000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  230.440000] libphy: zliu phy_state_machine 
+[  231.440000] libphy: zliu phy_state_machine 
+[  231.440000] zliu b53_phy_read_status
+[  231.440000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
+[  231.450000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
 

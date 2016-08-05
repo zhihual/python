@@ -2672,3 +2672,20 @@ start to check server code.
 		   and MII bus, it's saved in phy_dev when created..
 		   ethernet drveri, create it's dev and net_dev for upper os. so, at this, the IF layer is ready.
     4. b53 is phy, built into kernel.
+
+8/4 
+   1. consider ap or x86 for linuxe development. which one is the majoririty. ap...
+   
+      CPU:bcm4706  600MHz；
+      FLASH:32MB；
+      RAM:256MB DDR2；
+      交换芯片:bcm53115；
+      2.4G基带:bcm4331  450Mbps；
+      5.2G基带:bcm4331  450Mbps。
+	  
+8/5  1. read, bgmac, is hook dev to existing phy driver. 
+              while b53 is create new phy driver.  this phy driver is attached to bgmac ethernet driver... this is comes from add debug in log
+			  
+	 2. build image.. to debug done..
+	 3. net/netlink/af_netlink.o. haha, looking into netlink communication tunnel now..
+	    netlink guide http://bbs.chinaunix.net/thread-2162796-1-1.html
