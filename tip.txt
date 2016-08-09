@@ -2689,3 +2689,28 @@ start to check server code.
 	 2. build image.. to debug done..
 	 3. net/netlink/af_netlink.o. haha, looking into netlink communication tunnel now..
 	    netlink guide http://bbs.chinaunix.net/thread-2162796-1-1.html
+
+8/9  
+    1. announced, 1st round.
+	2. proto_register(&netlink_proto, 0);
+	   nl_table = kcalloc(MAX_LINKS, sizeof(*nl_table), GFP_KERNEL);
+	   sock_register(&netlink_family_ops); 
+	   register_pernet_subsys(&netlink_net_ops);
+	   
+	   
+	   static struct proto netlink_proto = {
+	         .name	  = "NETLINK",
+	         .owner	  = THIS_MODULE,
+	         .obj_size = sizeof(struct netlink_sock),
+       };
+
+	   static const struct net_proto_family netlink_family_ops = {
+        	.family = PF_NETLINK,
+	        .create = netlink_create,
+	        .owner	= THIS_MODULE,	/* for consistency 8) */
+      };
+
+	   static struct pernet_operations __net_initdata netlink_net_ops = {
+        	.init = netlink_net_init,
+	        .exit = netlink_net_exit,
+      };
