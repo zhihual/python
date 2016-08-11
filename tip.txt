@@ -2714,3 +2714,109 @@ start to check server code.
         	.init = netlink_net_init,
 	        .exit = netlink_net_exit,
       };
+
+8/11
+      1. email machine restored. 
+	     wpa_supplicant -Dnl80211 -iwlan0 -c/data/misc/wifi/wpa_supplicant_open.conf & // wpa enabled.
+		 list *(csr_send_join_req_msg+0xf8)  // in gdb, this can print src location.
+		 
+		 wpa_cli -iwlan0 -p/data/misc/wifi/sockets
+		 hostapd_cli -p /data/misc/wifi/hostapd -i wlan0
+		
+      STA		
+		 add_network
+		 set_network 0 auth_alg OPEN
+		 set_network 0 key_mgmt NONE
+		 set_network 0 mode 0
+		 set_network 0 ssid '"xxx"'
+		 select_network 0
+		 enable_network 0
+		 reassociate
+	  
+	  WEP40
+	      add_network
+  set_network 0 auth_alg OPEN
+  set_network 0 wep_key0 1234567890
+  set_network 0 key_mgmt NONE
+  set_network 0 mode 0
+  set_network 0 ssid '"xxx"'
+  select_network 0
+  enable_network 0
+  reassociate
+      
+	  WEP128
+	  add_network
+	  set_network 0 auth_alg OPEN
+      set_network 0 wep_key0 ABCdef1234567890abcDEF3333
+	  set_network 0 key_mgmt NONE
+	  set_network 0 mode 0
+	  set_network 0 ssid '"xxx"'
+	  select_network 0
+	  enable_network 0
+	  reassociate  
+	 
+	 WPA 
+	     add_network
+    set_network 0 auth_alg OPEN
+    set_network 0 key_mgmt WPA-PSK
+    set_network 0 psk '"12345678"'
+    set_network 0 mode 0
+    set_network 0 ssid '"xxx"'
+    select_network 0
+    enable_network 0
+    reassociate
+	
+	WPA2
+	 
+	       add_network
+    set_network 0 auth_alg OPEN
+    set_network 0 key_mgmt WPA-PSK
+    set_network 0 psk '"12345678"'
+    set_network 0 proto RSN
+    set_network 0 mode 0
+    set_network 0 ssid '"xxx"'
+    select_network 0
+    enable_network 0
+    reassociate
+    status
+		 
+	WPA-PSK
+	      add_network
+    set_network 0 auth_alg OPEN
+    set_network 0 key_mgmt WPA-PSK
+    set_network 0 psk '"12345678"'
+    set_network 0 pairwise CCMP TKIP
+    set_network 0 group CCMP TKIP
+    set_network 0 mode 0
+    set_network 0 ssid '"xxx"'
+    select_network 0
+    enable_network 0
+    reassociate
+    status
+	
+	STA+AP+P2PGO interfaces creation manually
+1) insmod /data/wlan.ko
+[P2P client and STA intefaces creation]
+2) wpa_supplicant -iwlan0 -Dnl80211 -c /data/misc/wifi/wpa_supplicant.conf -i p2p0 -Dnl80211 -c /data/misc/wifi/p2p_supplicant.conf &
+3) wpa_cli -ip2p0 -p/data/misc/wifi/sockets [after type <p2p_group_add> ]
+[AP interface creation]
+4) iw dev wlan0 interface add wlan1 type __ap
+5) hostapd -ddd /data/misc/wifi/hostapd.conf &
+[Make wlan0/wlan1/p2p0 up by providing IP address]
+6) ifconfig wlan0 192.168.1.2 / ifconfig wlan1 192.168.1.3
+
+How to start dns dhcp server manually SAP
+ifconfig wlan0 192.168.42.1 up
+dnsmasq -x /data/dnsmasq.pid-wlan0 -i wlan0 -F192.168.42.2,192.168.42.200 --listen-address 192.168.42.1 -z -p 0
+ifconfig wlan1 10.0.0.1 up
+dnsmasq -x /data/dnsmasq.pid-wlan1 -i wlan1 -F10.0.0.2,10.0.0.200 --listen-address 10.0.0.1 -z -p 0
+
+ip addr flush dev wlan0 //flush ip address
+
+ping -i 0.01 192.168.1.57 // fast ping
+// multicast case.
+ip route add 224.0.0.0/24 dev wlan0 
+tcpdump -i wlan0
+ping 224.0.0.1
+    
+    3 . http://packages.ubuntu.com/ // find ubuntu package list

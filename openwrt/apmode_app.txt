@@ -766,9 +766,9 @@ Mon Jul 18 10:51:12 2016 daemon.info dnsmasq-dhcp[975]: read /etc/ethers - 0 add
 [   21.950000] libphy: zliu phy_stop 
 [   21.970000] libphy: zliu phy_start 
 [   22.000000] libphy: zliu phy_ethtool_gset 
-[   22.000000] device eth0.1 entered promiscuous mode
+[   22.000000] device eth0.1 entered promiscuous mode //DD how this print comes from
 [   22.010000] device eth0 entered promiscuous mode
-[   22.030000] br-lan: port 1(eth0.1) entered forwarding state
+[   22.030000] br-lan: port 1(eth0.1) entered forwarding state //DD how this print comes from also..
 [   22.030000] br-lan: port 1(eth0.1) entered forwarding state
 [   22.370000] libphy: zliu phy_state_machine 
 [   23.090000] libphy: zliu phy_ethtool_gset 
