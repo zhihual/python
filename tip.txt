@@ -2820,3 +2820,16 @@ tcpdump -i wlan0
 ping 224.0.0.1
     
     3 . http://packages.ubuntu.com/ // find ubuntu package list
+	
+8/12
+   1. This is the openwrt configuration guide. read carefully, and learn..
+      http://wiki.openwrt.org/doc/uci
+
+	  
+   2. something about netifd.. https://dev.openwrt.org/ticket/15388
+   
+   3. find one good blog, and explain how linux network runs.  vlan/bridge/real_physical. 
+   4. 这里以IP协议为例，发送流程的代码大多在ip_input.c文件中，接收流程的代码大多在ip_output.c文件中。
+      其它网络层协议如IPv6、X25等，流程大致相同。各种协议在发送流程的最后，都会主动调用dev_queue_xmit()函数；
+	  而设备接收到数据包后，会根据包的类型，传送给相应的协议函数，如ip_rcv()，
+   

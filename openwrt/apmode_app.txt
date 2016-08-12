@@ -232,7 +232,7 @@ Mon Jul 18 10:41:55 2016 kern.info kernel: [    2.110000] bcma: bus2: Bus regist
 Mon Jul 18 10:41:55 2016 kern.info kernel: [    2.120000] TCP: cubic registered
 Mon Jul 18 10:41:55 2016 kern.info kernel: [    2.120000] NET: Registered protocol family 17
 Mon Jul 18 10:41:55 2016 kern.info kernel: [    2.130000] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
-Mon Jul 18 10:41:55 2016 kern.info kernel: [    2.140000] 8021q: 802.1Q VLAN Support v1.8
+Mon Jul 18 10:41:55 2016 kern.info kernel: [    2.140000] 8021q: 802.1Q VLAN Support v1.8 //DD finaly know, where this comes from...
 Mon Jul 18 10:41:55 2016 kern.info kernel: [    2.150000] VFS: Mounted root (squashfs filesystem) readonly on device 31:4.
 Mon Jul 18 10:41:55 2016 kern.info kernel: [    2.160000] Freeing unused kernel memory: 184K (80322000 - 80350000)
 Mon Jul 18 10:41:55 2016 user.info kernel: [    2.990000] init: Console is alive
@@ -766,7 +766,7 @@ Mon Jul 18 10:51:12 2016 daemon.info dnsmasq-dhcp[975]: read /etc/ethers - 0 add
 [   21.950000] libphy: zliu phy_stop 
 [   21.970000] libphy: zliu phy_start 
 [   22.000000] libphy: zliu phy_ethtool_gset 
-[   22.000000] device eth0.1 entered promiscuous mode //DD how this print comes from
+[   22.000000] device eth0.1 entered promiscuous mode //DD how this print comes from  ./linux-brcm47xx_generic/linux-3.18.29/drivers/net/ethernet/neterion/s2io.c:
 [   22.010000] device eth0 entered promiscuous mode
 [   22.030000] br-lan: port 1(eth0.1) entered forwarding state //DD how this print comes from also..
 [   22.030000] br-lan: port 1(eth0.1) entered forwarding state
