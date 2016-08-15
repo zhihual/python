@@ -114,7 +114,7 @@ root@OpenWrt:/# ./etc/init.d/network reload > log.txt
 + export -n CONFIG_SECTIONS=
 + export -n CONFIG_NUM_SECTIONS=0
 + export -n CONFIG_SECTION=
-+ /sbin/uci -P /var/state -S -n export network //DD cmd
++ /sbin/uci -P /var/state -S -n export network //DD cmd   Exports the configuration in a machine readable format. It is used internally to evaluate configuration files as shell scripts.
 + DATA=package network
 
 config switch 'eth0'
@@ -616,12 +616,15 @@ config interface 'wan6'
 + [ -n  ]
 + option_cb proto dhcpv6
 + return 0
-+ unset DATA
+
++ unset DATA // DD here is unset data
 + config_cb
 + return 0
 + return 0
 
-//DD wocao, upper who is trigger it??
+//DD wocao, upper who is trigger it?? 
+//DD it looks UCI binary, it self do this..
+
 + config_foreach setup_switch_dev switch //DD here, back to script
 + local ___function=setup_switch_dev
 + [ 2 -ge 1 ]
@@ -644,7 +647,8 @@ config interface 'wan6'
 + name=eth0
 + [ -d /sys/class/net/eth0 ]
 + ifconfig eth0 up //DD up eth0
-+ swconfig dev eth0 load network
++ swconfig dev eth0 load network  //DD dog blood!!  in uci.c file. load and config, and apply..
+
 + config_get cfgtype cfg031ec7 TYPE
 + eval export -n -- cfgtype=${CONFIG_cfg031ec7_TYPE:-${4}}
 + export -n -- cfgtype=switch_vlan
