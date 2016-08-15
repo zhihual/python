@@ -1,0 +1,685 @@
+
+root@OpenWrt:/# ./etc/init.d/network reload > log.txt
++ . ./etc/init.d/network
++ START=20
++ STOP=90
++ USE_PROCD=1
++ [ -n 1 ]
++ EXTRA_COMMANDS= running trace
++ . /lib/functions/procd.sh
++ . /usr/share/libubox/jshn.sh
++ _PROCD_SERVICE=
++ _procd_wrapper procd_open_service procd_close_service procd_add_instance procd_add_raw_trigger procd_add_config_trigger procd_add_interface_trigger procd_add_reload_trigger procd_add_reload_interface_trigger procd_open_trigger procd_close_trigger procd_open_instance procd_close_instance procd_open_validate procd_close_validate procd_add_jail procd_add_jail_mount procd_add_jail_mount_rw procd_set_param procd_append_param procd_add_validation procd_set_config_changed procd_kill
++ [ -n procd_open_service ]
++ eval procd_open_service() { _procd_call _procd_open_service "$@"; }
++ shift
++ [ -n procd_close_service ]
++ eval procd_close_service() { _procd_call _procd_close_service "$@"; }
++ shift
++ [ -n procd_add_instance ]
++ eval procd_add_instance() { _procd_call _procd_add_instance "$@"; }
++ shift
++ [ -n procd_add_raw_trigger ]
++ eval procd_add_raw_trigger() { _procd_call _procd_add_raw_trigger "$@"; }
++ shift
++ [ -n procd_add_config_trigger ]
++ eval procd_add_config_trigger() { _procd_call _procd_add_config_trigger "$@"; }
++ shift
++ [ -n procd_add_interface_trigger ]
++ eval procd_add_interface_trigger() { _procd_call _procd_add_interface_trigger "$@"; }
++ shift
++ [ -n procd_add_reload_trigger ]
++ eval procd_add_reload_trigger() { _procd_call _procd_add_reload_trigger "$@"; }
++ shift
++ [ -n procd_add_reload_interface_trigger ]
++ eval procd_add_reload_interface_trigger() { _procd_call _procd_add_reload_interface_trigger "$@"; }
++ shift
++ [ -n procd_open_trigger ]
++ eval procd_open_trigger() { _procd_call _procd_open_trigger "$@"; }
++ shift
++ [ -n procd_close_trigger ]
++ eval procd_close_trigger() { _procd_call _procd_close_trigger "$@"; }
++ shift
++ [ -n procd_open_instance ]
++ eval procd_open_instance() { _procd_call _procd_open_instance "$@"; }
++ shift
++ [ -n procd_close_instance ]
++ eval procd_close_instance() { _procd_call _procd_close_instance "$@"; }
++ shift
++ [ -n procd_open_validate ]
++ eval procd_open_validate() { _procd_call _procd_open_validate "$@"; }
++ shift
++ [ -n procd_close_validate ]
++ eval procd_close_validate() { _procd_call _procd_close_validate "$@"; }
++ shift
++ [ -n procd_add_jail ]
++ eval procd_add_jail() { _procd_call _procd_add_jail "$@"; }
++ shift
++ [ -n procd_add_jail_mount ]
++ eval procd_add_jail_mount() { _procd_call _procd_add_jail_mount "$@"; }
++ shift
++ [ -n procd_add_jail_mount_rw ]
++ eval procd_add_jail_mount_rw() { _procd_call _procd_add_jail_mount_rw "$@"; }
++ shift
++ [ -n procd_set_param ]
++ eval procd_set_param() { _procd_call _procd_set_param "$@"; }
++ shift
++ [ -n procd_append_param ]
++ eval procd_append_param() { _procd_call _procd_append_param "$@"; }
++ shift
++ [ -n procd_add_validation ]
++ eval procd_add_validation() { _procd_call _procd_add_validation "$@"; }
++ shift
++ [ -n procd_set_config_changed ]
++ eval procd_set_config_changed() { _procd_call _procd_set_config_changed "$@"; }
++ shift
++ [ -n procd_kill ]
++ eval procd_kill() { _procd_call _procd_kill "$@"; }
++ shift
++ [ -n  ]
++ readlink ./etc/init.d/network
++ basescript=
++ ALL_COMMANDS=start stop reload restart boot shutdown enable disable enabled depends  running trace
++ list_contains ALL_COMMANDS reload  //DD back to rc.d/rc.common
++ local var=ALL_COMMANDS
++ local str=reload
++ local val
++ eval val=" ${ALL_COMMANDS} "
++ val= start stop reload restart boot shutdown enable disable enabled depends  running trace
++ [  start stop !=  start stop reload restart boot shutdown enable disable enabled depends  running trace  ]
++ [ reload = reload ]
++ action=eval reload "$@" || restart "$@" && :
++ eval reload "$@" || restart "$@" && :
++ reload
++ eval type reload_service
++ reload_service
++ init_switch //DD it says my assumption is good.
++ include /lib/network 
++ local file
++ ls /lib/network/config.sh /lib/network/switch.sh
++ . /lib/network/config.sh
++ . /usr/share/libubox/jshn.sh
++ . /lib/network/switch.sh
++ setup_switch
++ config_load network
++ [ -n  ]
++ uci_load network
++ local PACKAGE=network
++ local DATA
++ local RET
++ local VAR
++ _C=0
++ [ -z  ]
++ export -n CONFIG_LIST_STATE=
++ export -n CONFIG_SECTIONS=
++ export -n CONFIG_NUM_SECTIONS=0
++ export -n CONFIG_SECTION=
++ /sbin/uci -P /var/state -S -n export network //DD cmd
++ DATA=package network
+
+config switch 'eth0'
+        option name 'eth0'
+        option reset '1'
+        option enable_vlan '1'
+
+config switch_vlan 'cfg031ec7'
+        option device 'eth0'
+        option vlan '1'
+        option ports '1 2 3 4 8t'
+
+config switch_vlan 'cfg051ec7'
+        option device 'eth0'
+        option vlan '2'
+        option ports '0 8t'
+
+config interface 'loopback'
+        option ifname 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+        option up '1'
+        option device 'lo'
+
+config globals 'globals'
+        option ula_prefix 'fdc6:9a3b:1718::/48'
+
+config interface 'lan'
+        option force_link '1'
+        option type 'bridge'
+        option proto 'static'
+        option ipaddr '192.168.1.1'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+        option up '1'
+        option device 'eth0.1'
+        option ifname 'br-lan'
+
+config interface 'wan'
+        option ifname 'eth0.2'
+        option proto 'dhcp'
+
+config interface 'wan6'
+        option ifname 'eth0.2'
+        option proto 'dhcpv6'
++ RET=0
++ [ 0 != 0 -o -z package network
+
+config switch 'eth0'
+        option name 'eth0'
+        option reset '1'
+        option enable_vlan '1'
+
+config switch_vlan 'cfg031ec7'
+        option device 'eth0'
+        option vlan '1'
+        option ports '1 2 3 4 8t'
+
+config switch_vlan 'cfg051ec7'
+        option device 'eth0'
+        option vlan '2'
+        option ports '0 8t'
+
+config interface 'loopback'
+        option ifname 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+        option up '1'
+        option device 'lo'
+
+config globals 'globals'
+        option ula_prefix 'fdc6:9a3b:1718::/48'
+
+config interface 'lan'
+        option force_link '1'
+        option type 'bridge'
+        option proto 'static'
+        option ipaddr '192.168.1.1'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+        option up '1'
+        option device 'eth0.1'
+        option ifname 'br-lan'
+
+config interface 'wan'
+        option ifname 'eth0.2'
+        option proto 'dhcp'
+
+config interface 'wan6'
+        option ifname 'eth0.2'
+        option proto 'dhcpv6' ]
++ eval package network
+
+config switch 'eth0'
+        option name 'eth0'
+        option reset '1'
+        option enable_vlan '1'
+
+config switch_vlan 'cfg031ec7'
+        option device 'eth0'
+        option vlan '1'
+        option ports '1 2 3 4 8t'
+
+config switch_vlan 'cfg051ec7'
+        option device 'eth0'
+        option vlan '2'
+        option ports '0 8t'
+
+config interface 'loopback'
+        option ifname 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+        option up '1'
+        option device 'lo'
+
+config globals 'globals'
+        option ula_prefix 'fdc6:9a3b:1718::/48'
+
+config interface 'lan'
+        option force_link '1'
+        option type 'bridge'
+        option proto 'static'
+        option ipaddr '192.168.1.1'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+        option up '1'
+        option device 'eth0.1'
+        option ifname 'br-lan'
+
+config interface 'wan'
+        option ifname 'eth0.2'
+        option proto 'dhcp'
+
+config interface 'wan6'
+        option ifname 'eth0.2'
+        option proto 'dhcpv6'
++ package network
++ return 0 //DD return of uci_load
++ config switch eth0  //DD know how, but can't find where
++ local cfgtype=switch
++ local name=eth0
++ export -n CONFIG_NUM_SECTIONS=1
++ name=eth0
++ append CONFIG_SECTIONS eth0
++ local var=CONFIG_SECTIONS
++ local value=eth0
++ local sep=
++ eval export -n -- "CONFIG_SECTIONS=${CONFIG_SECTIONS:+${CONFIG_SECTIONS}${value:+$sep}}$value"
++ export -n -- CONFIG_SECTIONS=eth0
++ [ -n  ]
++ config_cb switch eth0
++ return 0
++ export -n CONFIG_SECTION=eth0
++ export -n CONFIG_eth0_TYPE=switch
++ option name eth0
++ local varname=name
++ shift
++ local value=eth0
++ export -n CONFIG_eth0_name=eth0
++ [ -n  ]
++ option_cb name eth0
++ return 0
++ option reset 1
++ local varname=reset
++ shift
++ local value=1
++ export -n CONFIG_eth0_reset=1
++ [ -n  ]
++ option_cb reset 1
++ return 0
++ option enable_vlan 1
++ local varname=enable_vlan
++ shift
++ local value=1
++ export -n CONFIG_eth0_enable_vlan=1
++ [ -n  ]
++ option_cb enable_vlan 1
++ return 0
++ config switch_vlan cfg031ec7
++ local cfgtype=switch_vlan
++ local name=cfg031ec7
++ export -n CONFIG_NUM_SECTIONS=2
++ name=cfg031ec7
++ append CONFIG_SECTIONS cfg031ec7
++ local var=CONFIG_SECTIONS
++ local value=cfg031ec7
++ local sep=
++ eval export -n -- "CONFIG_SECTIONS=${CONFIG_SECTIONS:+${CONFIG_SECTIONS}${value:+$sep}}$value"
++ export -n -- CONFIG_SECTIONS=eth0 cfg031ec7
++ [ -n  ]
++ config_cb switch_vlan cfg031ec7
++ return 0
++ export -n CONFIG_SECTION=cfg031ec7
++ export -n CONFIG_cfg031ec7_TYPE=switch_vlan
++ option device eth0
++ local varname=device
++ shift
++ local value=eth0
++ export -n CONFIG_cfg031ec7_device=eth0
++ [ -n  ]
++ option_cb device eth0
++ return 0
++ option vlan 1
++ local varname=vlan
++ shift
++ local value=1
++ export -n CONFIG_cfg031ec7_vlan=1
++ [ -n  ]
++ option_cb vlan 1
++ return 0
++ option ports 1 2 3 4 8t
++ local varname=ports
++ shift
++ local value=1 2 3 4 8t
++ export -n CONFIG_cfg031ec7_ports=1 2 3 4 8t
++ [ -n  ]
++ option_cb ports 1 2 3 4 8t
++ return 0
++ config switch_vlan cfg051ec7
++ local cfgtype=switch_vlan
++ local name=cfg051ec7
++ export -n CONFIG_NUM_SECTIONS=3
++ name=cfg051ec7
++ append CONFIG_SECTIONS cfg051ec7
++ local var=CONFIG_SECTIONS
++ local value=cfg051ec7
++ local sep=
++ eval export -n -- "CONFIG_SECTIONS=${CONFIG_SECTIONS:+${CONFIG_SECTIONS}${value:+$sep}}$value"
++ export -n -- CONFIG_SECTIONS=eth0 cfg031ec7 cfg051ec7
++ [ -n  ]
++ config_cb switch_vlan cfg051ec7
++ return 0
++ export -n CONFIG_SECTION=cfg051ec7
++ export -n CONFIG_cfg051ec7_TYPE=switch_vlan
++ option device eth0
++ local varname=device
++ shift
++ local value=eth0
++ export -n CONFIG_cfg051ec7_device=eth0
++ [ -n  ]
++ option_cb device eth0
++ return 0
++ option vlan 2
++ local varname=vlan
++ shift
++ local value=2
++ export -n CONFIG_cfg051ec7_vlan=2
++ [ -n  ]
++ option_cb vlan 2
++ return 0
++ option ports 0 8t
++ local varname=ports
++ shift
++ local value=0 8t
++ export -n CONFIG_cfg051ec7_ports=0 8t
++ [ -n  ]
++ option_cb ports 0 8t
++ return 0
++ config interface loopback
++ local cfgtype=interface
++ local name=loopback
++ export -n CONFIG_NUM_SECTIONS=4
++ name=loopback
++ append CONFIG_SECTIONS loopback
++ local var=CONFIG_SECTIONS
++ local value=loopback
++ local sep=
++ eval export -n -- "CONFIG_SECTIONS=${CONFIG_SECTIONS:+${CONFIG_SECTIONS}${value:+$sep}}$value"
++ export -n -- CONFIG_SECTIONS=eth0 cfg031ec7 cfg051ec7 loopback
++ [ -n  ]
++ config_cb interface loopback
++ return 0
++ export -n CONFIG_SECTION=loopback
++ export -n CONFIG_loopback_TYPE=interface
++ option ifname lo
++ local varname=ifname
++ shift
++ local value=lo
++ export -n CONFIG_loopback_ifname=lo
++ [ -n  ]
++ option_cb ifname lo
++ return 0
++ option proto static
++ local varname=proto
++ shift
++ local value=static
++ export -n CONFIG_loopback_proto=static
++ [ -n  ]
++ option_cb proto static
++ return 0
++ option ipaddr 127.0.0.1
++ local varname=ipaddr
++ shift
++ local value=127.0.0.1
++ export -n CONFIG_loopback_ipaddr=127.0.0.1
++ [ -n  ]
++ option_cb ipaddr 127.0.0.1
++ return 0
++ option netmask 255.0.0.0
++ local varname=netmask
++ shift
++ local value=255.0.0.0
++ export -n CONFIG_loopback_netmask=255.0.0.0
++ [ -n  ]
++ option_cb netmask 255.0.0.0
++ return 0
++ option up 1
++ local varname=up
++ shift
++ local value=1
++ export -n CONFIG_loopback_up=1
++ [ -n  ]
++ option_cb up 1
++ return 0
++ option device lo
++ local varname=device
++ shift
++ local value=lo
++ export -n CONFIG_loopback_device=lo
++ [ -n  ]
++ option_cb device lo
++ return 0
++ config globals globals
++ local cfgtype=globals
++ local name=globals
++ export -n CONFIG_NUM_SECTIONS=5
++ name=globals
++ append CONFIG_SECTIONS globals
++ local var=CONFIG_SECTIONS
++ local value=globals
++ local sep=
++ eval export -n -- "CONFIG_SECTIONS=${CONFIG_SECTIONS:+${CONFIG_SECTIONS}${value:+$sep}}$value"
++ export -n -- CONFIG_SECTIONS=eth0 cfg031ec7 cfg051ec7 loopback globals
++ [ -n  ]
++ config_cb globals globals
++ return 0
++ export -n CONFIG_SECTION=globals
++ export -n CONFIG_globals_TYPE=globals
++ option ula_prefix fdc6:9a3b:1718::/48
++ local varname=ula_prefix
++ shift
++ local value=fdc6:9a3b:1718::/48
++ export -n CONFIG_globals_ula_prefix=fdc6:9a3b:1718::/48
++ [ -n  ]
++ option_cb ula_prefix fdc6:9a3b:1718::/48
++ return 0
++ config interface lan
++ local cfgtype=interface
++ local name=lan
++ export -n CONFIG_NUM_SECTIONS=6
++ name=lan
++ append CONFIG_SECTIONS lan
++ local var=CONFIG_SECTIONS
++ local value=lan
++ local sep=
++ eval export -n -- "CONFIG_SECTIONS=${CONFIG_SECTIONS:+${CONFIG_SECTIONS}${value:+$sep}}$value"
++ export -n -- CONFIG_SECTIONS=eth0 cfg031ec7 cfg051ec7 loopback globals lan
++ [ -n  ]
++ config_cb interface lan
++ return 0
++ export -n CONFIG_SECTION=lan
++ export -n CONFIG_lan_TYPE=interface
++ option force_link 1
++ local varname=force_link
++ shift
++ local value=1
++ export -n CONFIG_lan_force_link=1
++ [ -n  ]
++ option_cb force_link 1
++ return 0
++ option type bridge
++ local varname=type
++ shift
++ local value=bridge
++ export -n CONFIG_lan_type=bridge
++ [ -n  ]
++ option_cb type bridge
++ return 0
++ option proto static
++ local varname=proto
++ shift
++ local value=static
++ export -n CONFIG_lan_proto=static
++ [ -n  ]
++ option_cb proto static
++ return 0
++ option ipaddr 192.168.1.1
++ local varname=ipaddr
++ shift
++ local value=192.168.1.1
++ export -n CONFIG_lan_ipaddr=192.168.1.1
++ [ -n  ]
++ option_cb ipaddr 192.168.1.1
++ return 0
++ option netmask 255.255.255.0
++ local varname=netmask
++ shift
++ local value=255.255.255.0
++ export -n CONFIG_lan_netmask=255.255.255.0
++ [ -n  ]
++ option_cb netmask 255.255.255.0
++ return 0
++ option ip6assign 60
++ local varname=ip6assign
++ shift
++ local value=60
++ export -n CONFIG_lan_ip6assign=60
++ [ -n  ]
++ option_cb ip6assign 60
++ return 0
++ option up 1
++ local varname=up
++ shift
++ local value=1
++ export -n CONFIG_lan_up=1
++ [ -n  ]
++ option_cb up 1
++ return 0
++ option device eth0.1
++ local varname=device
++ shift
++ local value=eth0.1
++ export -n CONFIG_lan_device=eth0.1
++ [ -n  ]
++ option_cb device eth0.1
++ return 0
++ option ifname br-lan
++ local varname=ifname
++ shift
++ local value=br-lan
++ export -n CONFIG_lan_ifname=br-lan
++ [ -n  ]
++ option_cb ifname br-lan
++ return 0
++ config interface wan
++ local cfgtype=interface
++ local name=wan
++ export -n CONFIG_NUM_SECTIONS=7
++ name=wan
++ append CONFIG_SECTIONS wan
++ local var=CONFIG_SECTIONS
++ local value=wan
++ local sep=
++ eval export -n -- "CONFIG_SECTIONS=${CONFIG_SECTIONS:+${CONFIG_SECTIONS}${value:+$sep}}$value"
++ export -n -- CONFIG_SECTIONS=eth0 cfg031ec7 cfg051ec7 loopback globals lan wan
++ [ -n  ]
++ config_cb interface wan
++ return 0
++ export -n CONFIG_SECTION=wan
++ export -n CONFIG_wan_TYPE=interface
++ option ifname eth0.2
++ local varname=ifname
++ shift
++ local value=eth0.2
++ export -n CONFIG_wan_ifname=eth0.2
++ [ -n  ]
++ option_cb ifname eth0.2
++ return 0
++ option proto dhcp
++ local varname=proto
++ shift
++ local value=dhcp
++ export -n CONFIG_wan_proto=dhcp
++ [ -n  ]
++ option_cb proto dhcp
++ return 0
++ config interface wan6
++ local cfgtype=interface
++ local name=wan6
++ export -n CONFIG_NUM_SECTIONS=8
++ name=wan6
++ append CONFIG_SECTIONS wan6
++ local var=CONFIG_SECTIONS
++ local value=wan6
++ local sep=
++ eval export -n -- "CONFIG_SECTIONS=${CONFIG_SECTIONS:+${CONFIG_SECTIONS}${value:+$sep}}$value"
++ export -n -- CONFIG_SECTIONS=eth0 cfg031ec7 cfg051ec7 loopback globals lan wan wan6
++ [ -n  ]
++ config_cb interface wan6
++ return 0
++ export -n CONFIG_SECTION=wan6
++ export -n CONFIG_wan6_TYPE=interface
++ option ifname eth0.2
++ local varname=ifname
++ shift
++ local value=eth0.2
++ export -n CONFIG_wan6_ifname=eth0.2
++ [ -n  ]
++ option_cb ifname eth0.2
++ return 0
++ option proto dhcpv6
++ local varname=proto
++ shift
++ local value=dhcpv6
++ export -n CONFIG_wan6_proto=dhcpv6
++ [ -n  ]
++ option_cb proto dhcpv6
++ return 0
++ unset DATA
++ config_cb
++ return 0
++ return 0
+
+//DD wocao, upper who is trigger it??
++ config_foreach setup_switch_dev switch //DD here, back to script
++ local ___function=setup_switch_dev
++ [ 2 -ge 1 ]
++ shift
++ local ___type=switch
++ [ 1 -ge 1 ]
++ shift
++ local section cfgtype
++ [ -z eth0 cfg031ec7 cfg051ec7 loopback globals lan wan wan6 ]
++ config_get cfgtype eth0 TYPE
++ eval export -n -- cfgtype=${CONFIG_eth0_TYPE:-${4}}
++ export -n -- cfgtype=switch
++ [ -n switch -a xswitch != xswitch ]
++ eval setup_switch_dev "$section" "$@"
++ setup_switch_dev eth0
++ local name
++ config_get name eth0 name
++ eval export -n -- name=${CONFIG_eth0_name:-${4}}
++ export -n -- name=eth0
++ name=eth0
++ [ -d /sys/class/net/eth0 ]
++ ifconfig eth0 up //DD up eth0
++ swconfig dev eth0 load network
++ config_get cfgtype cfg031ec7 TYPE
++ eval export -n -- cfgtype=${CONFIG_cfg031ec7_TYPE:-${4}}
++ export -n -- cfgtype=switch_vlan
++ [ -n switch -a xswitch_vlan != xswitch ]
++ continue
++ config_get cfgtype cfg051ec7 TYPE
++ eval export -n -- cfgtype=${CONFIG_cfg051ec7_TYPE:-${4}}
++ export -n -- cfgtype=switch_vlan
++ [ -n switch -a xswitch_vlan != xswitch ]
++ continue
++ config_get cfgtype loopback TYPE
++ eval export -n -- cfgtype=${CONFIG_loopback_TYPE:-${4}}
++ export -n -- cfgtype=interface
++ [ -n switch -a xinterface != xswitch ]
++ continue
++ config_get cfgtype globals TYPE
++ eval export -n -- cfgtype=${CONFIG_globals_TYPE:-${4}}
++ export -n -- cfgtype=globals
++ [ -n switch -a xglobals != xswitch ]
++ continue
++ config_get cfgtype lan TYPE
++ eval export -n -- cfgtype=${CONFIG_lan_TYPE:-${4}}
++ export -n -- cfgtype=interface
++ [ -n switch -a xinterface != xswitch ]
++ continue
++ config_get cfgtype wan TYPE
++ eval export -n -- cfgtype=${CONFIG_wan_TYPE:-${4}}
++ export -n -- cfgtype=interface
++ [ -n switch -a xinterface != xswitch ]
++ continue
++ config_get cfgtype wan6 TYPE
++ eval export -n -- cfgtype=${CONFIG_wan6_TYPE:-${4}}
++ export -n -- cfgtype=interface
++ [ -n switch -a xinterface != xswitch ]
++ continue
++ ubus call network reload
++ /sbin/wifi reload_legacy
++ :
