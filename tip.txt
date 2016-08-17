@@ -2852,3 +2852,9 @@ ping 224.0.0.1
 	  http://iqalantam.blog.163.com/blog/static/5393552201192711464558/
 	  
    5. netifd,swconfig,ubus.. need read... have fun to do.
+   
+8/16
+   1. http://www.cplusplus.com/reference/cstring/strcmp/  strcmp/standard c language set.
+   
+8/17
+   1. ok, get idea how vlan bridge created.  update 

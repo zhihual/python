@@ -287,7 +287,7 @@ Mon Jul 18 10:42:00 2016 kern.info kernel: [   21.620000] device eth0.1 entered 
 Mon Jul 18 10:42:00 2016 kern.info kernel: [   21.620000] device eth0 entered promiscuous mode
 Mon Jul 18 10:42:00 2016 kern.info kernel: [   21.650000] br-lan: port 1(eth0.1) entered forwarding state
 Mon Jul 18 10:42:00 2016 kern.info kernel: [   21.650000] br-lan: port 1(eth0.1) entered forwarding state
-Mon Jul 18 10:42:00 2016 daemon.notice netifd: Interface 'lan' is enabled
+Mon Jul 18 10:42:00 2016 daemon.notice netifd: Interface 'lan' is enabled //DD turn to look at netifd
 Mon Jul 18 10:42:00 2016 daemon.notice netifd: Interface 'lan' is setting up now
 Mon Jul 18 10:42:00 2016 daemon.notice netifd: Interface 'lan' is now up
 Mon Jul 18 10:42:00 2016 daemon.notice netifd: Interface 'loopback' is enabled
@@ -1298,3 +1298,508 @@ Mon Jul 18 10:51:12 2016 daemon.info dnsmasq-dhcp[975]: read /etc/ethers - 0 add
 [  231.440000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
 [  231.450000] bgmac bcma0:1: zliu bgmac_adjust_link phy_dev=0x87b02800
 
+
+switch configration status....
+
+root@OpenWrt:/bin# swconfig dev eth0 show
+Global attributes:
+        enable_vlan: 1
+        ports: 0x011f
+        reset_mib: ???
+        enable_jumbo: 0
+        allow_vid_4095: 0
+Port 0:
+        mib: TxOctets            : 0
+TxDropPkts          : 0
+TxBroadcastPkts     : 0
+TxMulticastPkts     : 0
+TxUnicastPkts       : 0
+TxCollisions        : 0
+TxSingleCollision   : 0
+TxMultipleCollision : 0
+TxDeferredTransmit  : 0
+TxLateCollision     : 0
+TxExcessiveCollision: 0
+TxPausePkts         : 0
+RxOctets            : 0
+RxUndersizePkts     : 0
+RxPausePkts         : 0
+Pkts64Octets        : 0
+Pkts65to127Octets   : 0
+Pkts128to255Octets  : 0
+Pkts256to511Octets  : 0
+Pkts512to1023Octets : 0
+Pkts1024to1522Octets: 0
+RxOversizePkts      : 0
+RxJabbers           : 0
+RxAlignmentErrors   : 0
+RxFCSErrors         : 0
+RxGoodOctets        : 0
+RxDropPkts          : 0
+RxUnicastPkts       : 0
+RxMulticastPkts     : 0
+RxBroadcastPkts     : 0
+RxSAChanges         : 0
+RxFragments         : 0
+RxJumboPkts         : 0
+RxSymbolErrors      : 0
+RxDiscarded         : 0
+
+        pvid: 2
+        link: port:0 link:down
+Port 1:
+        mib: TxOctets            : 0
+TxDropPkts          : 0
+TxBroadcastPkts     : 0
+TxMulticastPkts     : 0
+TxUnicastPkts       : 0
+TxCollisions        : 0
+TxSingleCollision   : 0
+TxMultipleCollision : 0
+TxDeferredTransmit  : 0
+TxLateCollision     : 0
+TxExcessiveCollision: 0
+TxPausePkts         : 0
+RxOctets            : 0
+RxUndersizePkts     : 0
+RxPausePkts         : 0
+Pkts64Octets        : 0
+Pkts65to127Octets   : 0
+Pkts128to255Octets  : 0
+Pkts256to511Octets  : 0
+Pkts512to1023Octets : 0
+Pkts1024to1522Octets: 0
+RxOversizePkts      : 0
+RxJabbers           : 0
+RxAlignmentErrors   : 0
+RxFCSErrors         : 0
+RxGoodOctets        : 0
+RxDropPkts          : 0
+RxUnicastPkts       : 0
+RxMulticastPkts     : 0
+RxBroadcastPkts     : 0
+RxSAChanges         : 0
+RxFragments         : 0
+RxJumboPkts         : 0
+RxSymbolErrors      : 0
+RxDiscarded         : 0
+
+        pvid: 1
+        link: port:1 link:down
+Port 2:
+        mib: TxOctets            : 0
+TxDropPkts          : 0
+TxBroadcastPkts     : 0
+TxMulticastPkts     : 0
+TxUnicastPkts       : 0
+TxCollisions        : 0
+TxSingleCollision   : 0
+TxMultipleCollision : 0
+TxDeferredTransmit  : 0
+TxLateCollision     : 0
+TxExcessiveCollision: 0
+TxPausePkts         : 0
+RxOctets            : 0
+RxUndersizePkts     : 0
+RxPausePkts         : 0
+Pkts64Octets        : 0
+Pkts65to127Octets   : 0
+Pkts128to255Octets  : 0
+Pkts256to511Octets  : 0
+Pkts512to1023Octets : 0
+Pkts1024to1522Octets: 0
+RxOversizePkts      : 0
+RxJabbers           : 0
+RxAlignmentErrors   : 0
+RxFCSErrors         : 0
+RxGoodOctets        : 0
+RxDropPkts          : 0
+RxUnicastPkts       : 0
+RxMulticastPkts     : 0
+RxBroadcastPkts     : 0
+RxSAChanges         : 0
+RxFragments         : 0
+RxJumboPkts         : 0
+RxSymbolErrors      : 0
+RxDiscarded         : 0
+
+        pvid: 1
+        link: port:2 link:down
+Port 3:
+        mib: TxOctets            : 0
+TxDropPkts          : 0
+TxBroadcastPkts     : 0
+TxMulticastPkts     : 0
+TxUnicastPkts       : 0
+TxCollisions        : 0
+TxSingleCollision   : 0
+TxMultipleCollision : 0
+TxDeferredTransmit  : 0
+TxLateCollision     : 0
+TxExcessiveCollision: 0
+TxPausePkts         : 0
+RxOctets            : 0
+RxUndersizePkts     : 0
+RxPausePkts         : 0
+Pkts64Octets        : 0
+Pkts65to127Octets   : 0
+Pkts128to255Octets  : 0
+Pkts256to511Octets  : 0
+Pkts512to1023Octets : 0
+Pkts1024to1522Octets: 0
+RxOversizePkts      : 0
+RxJabbers           : 0
+RxAlignmentErrors   : 0
+RxFCSErrors         : 0
+RxGoodOctets        : 0
+RxDropPkts          : 0
+RxUnicastPkts       : 0
+RxMulticastPkts     : 0
+RxBroadcastPkts     : 0
+RxSAChanges         : 0
+RxFragments         : 0
+RxJumboPkts         : 0
+RxSymbolErrors      : 0
+RxDiscarded         : 0
+
+        pvid: 1
+        link: port:3 link:down
+Port 4:
+        mib: TxOctets            : 798868
+TxDropPkts          : 0
+TxBroadcastPkts     : 1
+TxMulticastPkts     : 40
+TxUnicastPkts       : 3095
+TxCollisions        : 0
+TxSingleCollision   : 0
+TxMultipleCollision : 0
+TxDeferredTransmit  : 0
+TxLateCollision     : 0
+TxExcessiveCollision: 0
+TxPausePkts         : 0
+RxOctets            : 403092
+RxUndersizePkts     : 0
+RxPausePkts         : 0
+Pkts64Octets        : 2502
+Pkts65to127Octets   : 329
+Pkts128to255Octets  : 197
+Pkts256to511Octets  : 37
+Pkts512to1023Octets : 259
+Pkts1024to1522Octets: 0
+RxOversizePkts      : 0
+RxJabbers           : 0
+RxAlignmentErrors   : 0
+RxFCSErrors         : 0
+RxGoodOctets        : 403092
+RxDropPkts          : 0
+RxUnicastPkts       : 3006
+RxMulticastPkts     : 293
+RxBroadcastPkts     : 25
+RxSAChanges         : 1
+RxFragments         : 0
+RxJumboPkts         : 0
+RxSymbolErrors      : 0
+RxDiscarded         : 64
+
+        pvid: 1
+        link: port:4 link:up speed:100baseT full-duplex auto
+Port 5:
+        mib: ???
+        pvid: 0
+        link: port:5 link:down
+Port 6:
+        mib: ???
+        pvid: 0
+        link: port:6 link:down
+Port 7:
+        mib: ???
+        pvid: 0
+        link: port:7 link:down
+Port 8:
+        mib: TxOctets            : 406853
+TxDropPkts          : 0
+TxBroadcastPkts     : 25
+TxMulticastPkts     : 229
+TxUnicastPkts       : 3015
+TxCollisions        : 0
+TxSingleCollision   : 0
+TxMultipleCollision : 0
+TxDeferredTransmit  : 0
+TxLateCollision     : 0
+TxExcessiveCollision: 0
+TxPausePkts         : 0
+RxOctets            : 1016937
+RxUndersizePkts     : 0
+RxPausePkts         : 0
+Pkts64Octets        : 2067
+Pkts65to127Octets   : 323
+Pkts128to255Octets  : 367
+Pkts256to511Octets  : 600
+Pkts512to1023Octets : 29
+Pkts1024to1522Octets: 395
+RxOversizePkts      : 0
+RxJabbers           : 0
+RxAlignmentErrors   : 0
+RxFCSErrors         : 0
+RxGoodOctets        : 1016937
+RxDropPkts          : 0
+RxUnicastPkts       : 3112
+RxMulticastPkts     : 83
+RxBroadcastPkts     : 586
+RxSAChanges         : 1
+RxFragments         : 0
+RxJumboPkts         : 0
+RxSymbolErrors      : 0
+RxDiscarded         : 628
+
+        pvid: 0
+        link: port:8 link:up speed:1000baseT full-duplex
+VLAN 1:
+        ports: 1 2 3 4 8t
+VLAN 2:
+        ports: 0 8t
+root@OpenWrt:/bin# swconfig dev eth0 show
+
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.640000] zliu swconfig_send_multipart 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.640000] zliu swconfig_send_multipart 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.650000] zliu swconfig_send_multipart 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.650000] zliu swconfig_send_multipart 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.660000] zliu swconfig_send_multipart 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.660000] zliu swconfig_send_multipart 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.670000] zliu swconfig_send_multipart 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.670000] zliu swconfig_send_multipart 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.670000] zliu swconfig_send_multipart 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.680000] zliu swconfig_send_multipart 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.680000] zliu swconfig_set_attr 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.690000] zliu swconfig_reset_switch 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.690000] b53_common: zliu b53_switch_reset
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.770000] zliu swconfig_set_attr 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.770000] zliu swconfig_set_attr 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.780000] zliu swconfig_parse_ports 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.780000] zliu swconfig_set_vlan_ports
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.790000] zliu swconfig_set_attr 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.790000] zliu swconfig_parse_ports 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.790000] zliu swconfig_set_vlan_ports
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.800000] zliu swconfig_set_attr 
+Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.800000] zliu swconfig_apply_config 
+Wed Aug 17 06:27:13 2016 daemon.notice netifd: zliu log_leve=4 use_syslog=1 socket=(nil)
+Wed Aug 17 06:27:13 2016 daemon.notice netifd: zliu proto_shell_init
+Wed Aug 17 06:27:13 2016 user.emerg syslog: 'radio0' is disabled
+Wed Aug 17 06:27:13 2016 user.emerg syslog: 'radio0' is disabled
+Wed Aug 17 06:27:14 2016 kern.warn kernel: [   19.220000] bgmac bcma0:1: zliu bgmac call phyprint
+Wed Aug 17 06:27:14 2016 kern.info kernel: [   19.220000] libphy: zliu phy_print_status 
+Wed Aug 17 06:27:14 2016 kern.info kernel: [   19.230000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
+Wed Aug 17 06:27:15 2016 daemon.err mount_root: no jffs2 marker found
+Wed Aug 17 06:27:15 2016 kern.warn kernel: [   20.670000] jffs2_scan_eraseblock(): End of filesystem marker found at 0x0
+Wed Aug 17 06:27:15 2016 kern.warn kernel: [   20.710000] jffs2_build_filesystem(): unlocking the mtd device... done.
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_all++
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_devices
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_interfaces
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_parse_bridge_interface
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: Create new device 'br-lan' (Bridge)
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu call type-create
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: bridge_create Create
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu avl_find_element br-lan 1
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu vlan eth0.2 1
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:16 2016 kern.warn kernel: [   20.710000] jffs2_build_filesystem(): erasing all blocks after the end marker... 
+Wed Aug 17 06:27:16 2016 kern.info kernel: [   22.150000] libphy: zliu phy_stop 
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device Create vlan device 'eth0.2'
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu vlan eth0.2 1
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu avl_find_element eth0 1
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_routes
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_rules
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_globals
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_wireless
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_free_unused
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_reset_old
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_init_pending
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_init_pending call init
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: bridge_config_init
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu vlan eth0.1 1
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu avl_find_element eth0 1
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device Create vlan device 'eth0.1'
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: interface_set_up
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_claim
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_claim
+Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_claim
+Wed Aug 17 06:27:16 2016 kern.info kernel: [   22.190000] libphy: zliu phy_start 
+Wed Aug 17 06:27:17 2016 kern.info kernel: [   22.220000] libphy: zliu phy_ethtool_gset 
+Wed Aug 17 06:27:17 2016 kern.info kernel: [   22.220000] device eth0.1 entered promiscuous mode
+Wed Aug 17 06:27:17 2016 kern.info kernel: [   22.230000] device eth0 entered promiscuous mode
+Wed Aug 17 06:27:17 2016 kern.info kernel: [   22.250000] br-lan: port 1(eth0.1) entered forwarding state
+Wed Aug 17 06:27:17 2016 kern.info kernel: [   22.250000] br-lan: port 1(eth0.1) entered forwarding state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'lan' is enabled
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'lan' is setting up now
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_free_unused
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'lan' is now up
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_claim
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_free_unused
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_start_pending
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_set_up
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_set_up
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_claim
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'loopback' is enabled
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'loopback' is setting up now
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_free_unused
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'loopback' is now up
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_set_up
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_claim
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_claim
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'wan' is enabled
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'wan6' is enabled
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_set_up
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_claim
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: config_init_all--
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Network device 'eth0' link is up
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu handle_hotplug_event size=146
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu handle_hotplug_event size=131
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu handle_hotplug_event size=144
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu handle_hotplug_event size=131
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu handle_hotplug_event size=144
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.2 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu handle_hotplug_event size=131
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Bridge 'br-lan' link is up
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'lan' has link connectivity 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: VLAN 'eth0.1' link is up
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.2 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.2] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: VLAN 'eth0.2' link is up
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'wan' has link connectivity 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'wan' is setting up now
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'wan6' has link connectivity 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'wan6' is setting up now
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.2 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.2] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: wan (895): udhcpc (v1.23.2) started
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: wan (895): Sending discover...
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Wed Aug 17 06:27:17 2016 kern.info kernel: [   23.160000] libphy: zliu phy_ethtool_gset 
+Wed Aug 17 06:27:18 2016 kern.warn kernel: [   23.240000] bgmac bcma0:1: zliu bgmac call phyprint
+Wed Aug 17 06:27:18 2016 kern.info kernel: [   23.240000] libphy: zliu phy_print_status 
+Wed Aug 17 06:27:18 2016 kern.info kernel: [   23.240000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
+Wed Aug 17 06:27:18 2016 user.notice firewall: Reloading firewall due to ifup of lan (br-lan)
+Wed Aug 17 06:27:18 2016 daemon.warn odhcpd[773]: DHCPV6 SOLICIT IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd44:963d:4ccd::9b3/128 
+Wed Aug 17 06:27:18 2016 daemon.warn odhcpd[773]: DHCPV6 REQUEST IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd44:963d:4ccd::9b3/128 
+Wed Aug 17 06:27:19 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Wed Aug 17 06:27:19 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:19 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Wed Aug 17 06:27:19 2016 daemon.notice netifd: get_vlan_device_chain 2
+Wed Aug 17 06:27:19 2016 daemon.notice netifd: get_vlan_device_chain 3
+Wed Aug 17 06:27:19 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Wed Aug 17 06:27:19 2016 kern.info kernel: [   24.250000] br-lan: port 1(eth0.1) entered forwarding state
+Wed Aug 17 06:27:20 2016 daemon.notice netifd: wan (895): Sending discover...
+Wed Aug 17 06:27:21 2016 daemon.warn odhcpd[773]: DHCPV6 CONFIRM IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: not on-link fd44:963d:4ccd::9b3/128 
+Wed Aug 17 06:27:21 2016 daemon.warn odhcpd[773]: DHCPV6 SOLICIT IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd44:963d:4ccd::9b3/128 
+Wed Aug 17 06:27:22 2016 daemon.warn odhcpd[773]: DHCPV6 REQUEST IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd44:963d:4ccd::9b3/128 
+Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: started, version 2.73 cachesize 150
+Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN DHCP no-DHCPv6 no-Lua TFTP no-conntrack no-ipset no-auth no-DNSSEC loop-detect inotify
+Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: DNS service limited to local subnets
+Wed Aug 17 06:27:22 2016 daemon.info dnsmasq-dhcp[974]: DHCP, IP range 192.168.1.100 -- 192.168.1.249, lease time 12h
+Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: using local addresses only for domain lan
+Wed Aug 17 06:27:22 2016 daemon.warn dnsmasq[974]: no servers found in /tmp/resolv.conf.auto, will retry
+Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: read /etc/hosts - 1 addresses
+Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: read /tmp/hosts/dhcp - 1 addresses
+Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: read /tmp/hosts/odhcpd - 1 addresses
+Wed Aug 17 06:27:22 2016 daemon.info dnsmasq-dhcp[974]: read /etc/ethers - 0 addresses
+Wed Aug 17 06:27:23 2016 daemon.notice netifd: wan (895): Sending discover...
+Wed Aug 17 06:27:30 2016 daemon.notice netifd: zliu vlan radio0.network1 0
+Wed Aug 17 06:27:30 2016 daemon.notice netifd: get_vlan_device_chain 1
+Wed Aug 17 06:27:38 2016 authpriv.info dropbear[1072]: Not backgrounding
+Wed Aug 17 06:28:09 2016 kern.notice kernel: [   74.500000] random: nonblocking pool is initialized
+Wed Aug 17 06:29:12 2016 kern.warn kernel: [  137.850000] done.
+Wed Aug 17 06:29:12 2016 kern.notice kernel: [  137.850000] jffs2: notice: (845) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+Wed Aug 17 06:29:12 2016 daemon.info mount_root: performing overlay whiteout
+Wed Aug 17 06:29:13 2016 daemon.info procd: - init complete -
+Wed Aug 17 06:30:12 2016 daemon.warn odhcpd[773]: DHCPV6 SOLICIT IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fd44:963d:4ccd::332/128 
+Wed Aug 17 06:30:13 2016 daemon.warn odhcpd[773]: DHCPV6 REQUEST IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fd44:963d:4ccd::332/128 
+Wed Aug 17 06:30:13 2016 daemon.info dnsmasq[974]: read /etc/hosts - 1 addresses
+Wed Aug 17 06:30:13 2016 daemon.info dnsmasq[974]: read /tmp/hosts/dhcp - 1 addresses
+Wed Aug 17 06:30:13 2016 daemon.info dnsmasq[974]: read /tmp/hosts/odhcpd - 2 addresses
+Wed Aug 17 06:30:13 2016 daemon.info dnsmasq-dhcp[974]: read /etc/ethers - 0 addresses
+Wed Aug 17 06:30:47 2016 daemon.notice netifd: zliu vlan radio0.network1 0
+Wed Aug 17 06:30:47 2016 daemon.notice netifd: get_vlan_device_chain 1
