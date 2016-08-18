@@ -2858,3 +2858,7 @@ ping 224.0.0.1
    
 8/17
    1. ok, get idea how vlan bridge created.  update 
+   2. etf. ing 68   will in 22
+   
+8/18  
+   1. use option log_size 64 in /etc/config/system can enlarge system log file size.

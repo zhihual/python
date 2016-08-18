@@ -1560,246 +1560,1867 @@ VLAN 2:
         ports: 0 8t
 root@OpenWrt:/bin# swconfig dev eth0 show
 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.640000] zliu swconfig_send_multipart 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.640000] zliu swconfig_send_multipart 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.650000] zliu swconfig_send_multipart 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.650000] zliu swconfig_send_multipart 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.660000] zliu swconfig_send_multipart 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.660000] zliu swconfig_send_multipart 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.670000] zliu swconfig_send_multipart 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.670000] zliu swconfig_send_multipart 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.670000] zliu swconfig_send_multipart 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.680000] zliu swconfig_send_multipart 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.680000] zliu swconfig_set_attr 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.690000] zliu swconfig_reset_switch 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.690000] b53_common: zliu b53_switch_reset
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.770000] zliu swconfig_set_attr 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.770000] zliu swconfig_set_attr 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.780000] zliu swconfig_parse_ports 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.780000] zliu swconfig_set_vlan_ports
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.790000] zliu swconfig_set_attr 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.790000] zliu swconfig_parse_ports 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.790000] zliu swconfig_set_vlan_ports
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.800000] zliu swconfig_set_attr 
-Wed Aug 17 06:27:12 2016 kern.info kernel: [   17.800000] zliu swconfig_apply_config 
-Wed Aug 17 06:27:13 2016 daemon.notice netifd: zliu log_leve=4 use_syslog=1 socket=(nil)
-Wed Aug 17 06:27:13 2016 daemon.notice netifd: zliu proto_shell_init
-Wed Aug 17 06:27:13 2016 user.emerg syslog: 'radio0' is disabled
-Wed Aug 17 06:27:13 2016 user.emerg syslog: 'radio0' is disabled
-Wed Aug 17 06:27:14 2016 kern.warn kernel: [   19.220000] bgmac bcma0:1: zliu bgmac call phyprint
-Wed Aug 17 06:27:14 2016 kern.info kernel: [   19.220000] libphy: zliu phy_print_status 
-Wed Aug 17 06:27:14 2016 kern.info kernel: [   19.230000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
-Wed Aug 17 06:27:15 2016 daemon.err mount_root: no jffs2 marker found
-Wed Aug 17 06:27:15 2016 kern.warn kernel: [   20.670000] jffs2_scan_eraseblock(): End of filesystem marker found at 0x0
-Wed Aug 17 06:27:15 2016 kern.warn kernel: [   20.710000] jffs2_build_filesystem(): unlocking the mtd device... done.
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_all++
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_devices
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_interfaces
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_parse_bridge_interface
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: Create new device 'br-lan' (Bridge)
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu call type-create
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: bridge_create Create
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu avl_find_element br-lan 1
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu vlan eth0.2 1
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:16 2016 kern.warn kernel: [   20.710000] jffs2_build_filesystem(): erasing all blocks after the end marker... 
-Wed Aug 17 06:27:16 2016 kern.info kernel: [   22.150000] libphy: zliu phy_stop 
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device Create vlan device 'eth0.2'
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu vlan eth0.2 1
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu avl_find_element eth0 1
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_routes
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_rules
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_globals
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: config_init_wireless
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_free_unused
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_reset_old
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_init_pending
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_init_pending call init
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: bridge_config_init
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu vlan eth0.1 1
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: zliu avl_find_element eth0 1
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: get_vlan_device Create vlan device 'eth0.1'
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: interface_set_up
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_claim
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_claim
-Wed Aug 17 06:27:16 2016 daemon.notice netifd: device_claim
-Wed Aug 17 06:27:16 2016 kern.info kernel: [   22.190000] libphy: zliu phy_start 
-Wed Aug 17 06:27:17 2016 kern.info kernel: [   22.220000] libphy: zliu phy_ethtool_gset 
-Wed Aug 17 06:27:17 2016 kern.info kernel: [   22.220000] device eth0.1 entered promiscuous mode
-Wed Aug 17 06:27:17 2016 kern.info kernel: [   22.230000] device eth0 entered promiscuous mode
-Wed Aug 17 06:27:17 2016 kern.info kernel: [   22.250000] br-lan: port 1(eth0.1) entered forwarding state
-Wed Aug 17 06:27:17 2016 kern.info kernel: [   22.250000] br-lan: port 1(eth0.1) entered forwarding state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'lan' is enabled
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'lan' is setting up now
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_free_unused
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'lan' is now up
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_claim
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_free_unused
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_start_pending
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_set_up
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_set_up
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_claim
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'loopback' is enabled
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'loopback' is setting up now
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_free_unused
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'loopback' is now up
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_set_up
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_claim
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_claim
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'wan' is enabled
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'wan6' is enabled
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_set_up
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: device_claim
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: config_init_all--
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Network device 'eth0' link is up
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu handle_hotplug_event size=146
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu handle_hotplug_event size=131
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu handle_hotplug_event size=144
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu handle_hotplug_event size=131
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu handle_hotplug_event size=144
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.2 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu handle_hotplug_event size=131
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Bridge 'br-lan' link is up
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'lan' has link connectivity 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: VLAN 'eth0.1' link is up
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.2 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.2] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: VLAN 'eth0.2' link is up
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'wan' has link connectivity 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'wan' is setting up now
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'wan6' has link connectivity 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: interface_check_state
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: Interface 'wan6' is setting up now
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.2 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.2] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: wan (895): udhcpc (v1.23.2) started
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: wan (895): Sending discover...
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
-Wed Aug 17 06:27:17 2016 daemon.notice netifd: zliu vlan eth0.1 0
-Wed Aug 17 06:27:17 2016 kern.info kernel: [   23.160000] libphy: zliu phy_ethtool_gset 
-Wed Aug 17 06:27:18 2016 kern.warn kernel: [   23.240000] bgmac bcma0:1: zliu bgmac call phyprint
-Wed Aug 17 06:27:18 2016 kern.info kernel: [   23.240000] libphy: zliu phy_print_status 
-Wed Aug 17 06:27:18 2016 kern.info kernel: [   23.240000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
-Wed Aug 17 06:27:18 2016 user.notice firewall: Reloading firewall due to ifup of lan (br-lan)
-Wed Aug 17 06:27:18 2016 daemon.warn odhcpd[773]: DHCPV6 SOLICIT IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd44:963d:4ccd::9b3/128 
-Wed Aug 17 06:27:18 2016 daemon.warn odhcpd[773]: DHCPV6 REQUEST IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd44:963d:4ccd::9b3/128 
-Wed Aug 17 06:27:19 2016 daemon.notice netifd: zliu vlan eth0.1 0
-Wed Aug 17 06:27:19 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:19 2016 daemon.notice netifd: zliu avl_find_element eth0 0
-Wed Aug 17 06:27:19 2016 daemon.notice netifd: get_vlan_device_chain 2
-Wed Aug 17 06:27:19 2016 daemon.notice netifd: get_vlan_device_chain 3
-Wed Aug 17 06:27:19 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
-Wed Aug 17 06:27:19 2016 kern.info kernel: [   24.250000] br-lan: port 1(eth0.1) entered forwarding state
-Wed Aug 17 06:27:20 2016 daemon.notice netifd: wan (895): Sending discover...
-Wed Aug 17 06:27:21 2016 daemon.warn odhcpd[773]: DHCPV6 CONFIRM IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: not on-link fd44:963d:4ccd::9b3/128 
-Wed Aug 17 06:27:21 2016 daemon.warn odhcpd[773]: DHCPV6 SOLICIT IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd44:963d:4ccd::9b3/128 
-Wed Aug 17 06:27:22 2016 daemon.warn odhcpd[773]: DHCPV6 REQUEST IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd44:963d:4ccd::9b3/128 
-Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: started, version 2.73 cachesize 150
-Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN DHCP no-DHCPv6 no-Lua TFTP no-conntrack no-ipset no-auth no-DNSSEC loop-detect inotify
-Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: DNS service limited to local subnets
-Wed Aug 17 06:27:22 2016 daemon.info dnsmasq-dhcp[974]: DHCP, IP range 192.168.1.100 -- 192.168.1.249, lease time 12h
-Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: using local addresses only for domain lan
-Wed Aug 17 06:27:22 2016 daemon.warn dnsmasq[974]: no servers found in /tmp/resolv.conf.auto, will retry
-Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: read /etc/hosts - 1 addresses
-Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: read /tmp/hosts/dhcp - 1 addresses
-Wed Aug 17 06:27:22 2016 daemon.info dnsmasq[974]: read /tmp/hosts/odhcpd - 1 addresses
-Wed Aug 17 06:27:22 2016 daemon.info dnsmasq-dhcp[974]: read /etc/ethers - 0 addresses
-Wed Aug 17 06:27:23 2016 daemon.notice netifd: wan (895): Sending discover...
-Wed Aug 17 06:27:30 2016 daemon.notice netifd: zliu vlan radio0.network1 0
-Wed Aug 17 06:27:30 2016 daemon.notice netifd: get_vlan_device_chain 1
-Wed Aug 17 06:27:38 2016 authpriv.info dropbear[1072]: Not backgrounding
-Wed Aug 17 06:28:09 2016 kern.notice kernel: [   74.500000] random: nonblocking pool is initialized
-Wed Aug 17 06:29:12 2016 kern.warn kernel: [  137.850000] done.
-Wed Aug 17 06:29:12 2016 kern.notice kernel: [  137.850000] jffs2: notice: (845) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
-Wed Aug 17 06:29:12 2016 daemon.info mount_root: performing overlay whiteout
-Wed Aug 17 06:29:13 2016 daemon.info procd: - init complete -
-Wed Aug 17 06:30:12 2016 daemon.warn odhcpd[773]: DHCPV6 SOLICIT IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fd44:963d:4ccd::332/128 
-Wed Aug 17 06:30:13 2016 daemon.warn odhcpd[773]: DHCPV6 REQUEST IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fd44:963d:4ccd::332/128 
-Wed Aug 17 06:30:13 2016 daemon.info dnsmasq[974]: read /etc/hosts - 1 addresses
-Wed Aug 17 06:30:13 2016 daemon.info dnsmasq[974]: read /tmp/hosts/dhcp - 1 addresses
-Wed Aug 17 06:30:13 2016 daemon.info dnsmasq[974]: read /tmp/hosts/odhcpd - 2 addresses
-Wed Aug 17 06:30:13 2016 daemon.info dnsmasq-dhcp[974]: read /etc/ethers - 0 addresses
-Wed Aug 17 06:30:47 2016 daemon.notice netifd: zliu vlan radio0.network1 0
-Wed Aug 17 06:30:47 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    0.000000] Linux version 3.18.29 (root@zliu01) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 r49363) ) #19 Thu Aug 18 15:43:42 CST 2016
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] CPU0 revision is: 00019749 (MIPS 74Kc)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcm47xx: Using bcma bus
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Found chip with id 0x5300, rev 0x01 and package 0x00
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] Determined physical RAM map:
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000]  memory: 07fff000 @ 00000000 (usable)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] Initrd not found or empty - disabling initrd
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.000000] Zone ranges:
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.000000]   Normal   [mem 0x00000000-0x07ffefff]
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.000000] Movable zone start for each node
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.000000] Early memory node ranges
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.000000]   node   0: [mem 0x00000000-0x07ffefff]
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] Initmem setup node 0 [mem 0x00000000-0x07ffefff]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.000000] On node 0 totalpages: 32767
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.000000] free_area_init_node: node 0, pgdat 8030c130, node_mem_map 81000000
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.000000]   Normal zone: 256 pages used for memmap
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.000000]   Normal zone: 0 pages reserved
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.000000]   Normal zone: 32767 pages, LIFO batch:7
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.000000] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.000000] pcpu-alloc: [0] 0 
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32511
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    0.000000] Kernel command line:  noinitrd console=ttyS0,115200
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] Writing ErrCtl register=80000610
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] Readback ErrCtl register=80000610
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] Cache parity protection enabled
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.000000] Memory: 126208K/131068K available (2571K kernel code, 116K rwdata, 508K rodata, 184K init, 263K bss, 4860K reserved)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] NR_IRQS:128
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 0 found: BCM4706 ChipCommon (manuf 0x4BF, id 0x500, rev 0x1F, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 1 found: BCM4706 GBit MAC (manuf 0x4BF, id 0x52D, rev 0x00, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 2 found: BCM4706 GBit MAC (manuf 0x4BF, id 0x52D, rev 0x00, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 3 found: MIPS 74K (manuf 0x4A7, id 0x82C, rev 0x00, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 4 found: USB 2.0 Host (manuf 0x4BF, id 0x819, rev 0x04, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 5 found: PCIe (manuf 0x4BF, id 0x820, rev 0x0E, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 6 found: PCIe (manuf 0x4BF, id 0x820, rev 0x0E, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 7 found: AMEMC (DDR) (manuf 0x4BF, id 0x52E, rev 0x00, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 8 found: BCM4706 SOC RAM (manuf 0x4BF, id 0x50E, rev 0x05, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 9 found: ALTA (I2S) (manuf 0x4BF, id 0x534, rev 0x00, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 10 found: BCM4706 GBit MAC Common (manuf 0x43B, id 0x5DC, rev 0x00, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.000000] bcma: bus0: Found rev 6 PMU (capabilities 0x18162406)
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.000000] bcma: bus0: Found parallel flash
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.000000] bcma: bus0: Found NAND flash
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcma: bus0: Early bus registered
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] MIPS: machine is Unknown Board
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.000000] bcm47xx: Setting up vectored interrupts
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.070000] Calibrating delay loop... 299.82 BogoMIPS (lpj=1499136)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.070000] pid_max: default: 32768 minimum: 301
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.070000] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.070000] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.070000] NET: Registered protocol family 16
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.080000] Switched to clocksource MIPS
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.080000] NET: Registered protocol family 2
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.080000] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.080000] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.080000] TCP: Hash tables configured (established 1024 bind 1024)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.080000] TCP: reno registered
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.080000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.080000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.080000] NET: Registered protocol family 1
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.080000] PCI: CLS 0 bytes, default 32
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.130000] can not parse nvram name (null)pa0maxpwr(null) with value 400 got -34
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: bus0: Using SPROM revision 8 provided by platform.
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: bus0: PMU resource config unknown or not needed for device 0x5300
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: bus0: Workarounds unknown or not needed for device 0x5300
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: bus0: Initializing MIPS core...
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: bus0: set_irq: core 0x0820, irq 3 => 3
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: bus0: set_irq: core 0x052d, irq 4 => 4
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: bus0: set_irq: core 0x0820, irq 5 => 5
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: bus0: set_irq: core 0x0819, irq 6 => 6
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: bus0: set_irq: core 0x0500, irq 2 => 2
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: bus0: IRQ reconfiguration done
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: core 0x0500, irq : 2(S)* 3  4  5  6  D  I 
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: core 0x052d, irq : 2(S)  3  4* 5  6  D  I 
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: core 0x052d, irq : 2(S)  3  4  5  6  D* I 
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: core 0x082c, irq : 2(S)  3  4  5  6  D* I 
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: core 0x0819, irq : 2(S)  3  4  5  6* D  I 
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: core 0x0820, irq : 2(S)  3* 4  5  6  D  I 
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: core 0x0820, irq : 2(S)  3  4  5* 6  D  I 
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: core 0x052e, irq : 2(S)  3  4  5  6  D* I 
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: core 0x050e, irq : 2(S)  3  4  5  6  D* I 
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: core 0x0534, irq : 2(S)  3  4  5  6  D* I 
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] ------------[ cut here ]------------
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] WARNING: CPU: 0 PID: 1 at drivers/bcma/host_soc.c:140 bcma_host_soc_aread32+0x3c/0x6c()
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] Accessed core has no wrapper/agent
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] Modules linked in:
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] CPU: 0 PID: 1 Comm: swapper Not tainted 3.18.29 #19
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] Stack : 00000000 00000000 00000000 00000000 80366872 00000033 00000000 801d1384
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] 	  00000001 00000007 802b75ec 8030ca23 00000001 80365a98 8781dc00 00000007
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] 	  00000005 802c0000 802d0000 80048ce8 00000003 80024c10 0000008c 00000007
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] 	  802baca0 87821cbc 00000000 00000000 00000000 00000000 00000000 00000000
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] 	  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] 	  ...
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] Call Trace:
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] [<80014aec>] show_stack+0x50/0x84
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] [<80024d18>] warn_slowpath_common+0x84/0xb4
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] [<80024d74>] warn_slowpath_fmt+0x2c/0x38
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] [<801d1384>] bcma_host_soc_aread32+0x3c/0x6c
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] [<801cf8bc>] bcma_core_mips_irqflag+0x94/0xb0
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] 
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    0.210000] ---[ end trace 546586bab3f11084 ]---
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.210000] bcma: core 0x05dc, irq : 2(S)  3  4  5  6  D* I 
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.210000] bcma: bus0: PCIEcore in host mode found
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.400000] PCI host bridge to bus 0000:00
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.400000] pci_bus 0000:00: root bus resource [mem 0x08000000-0x0bffffff]
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.400000] pci_bus 0000:00: root bus resource [io  0x0100-0x047f]
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.400000] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.0: [14e4:5300] type 00 class 0x060000
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.400000] bcma: PCI: Fixing up bridge 0000:00:00.0
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.400000] bcma: PCI: Fixing up device 0000:00:00.0
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.0: reg 0x18: [mem 0x00000000-0x07ffffff 64bit]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.0: supports D1 D2
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.1: [14e4:0000] type 00 class 0x060000
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.400000] bcma: PCI: Fixing up bridge 0000:00:00.1
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.400000] bcma: PCI: Fixing up device 0000:00:00.1
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.1: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.1: reg 0x18: [mem 0x00000000-0x07ffffff 64bit]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.1: supports D1 D2
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.400000] pci 0000:00:01.0: [14e4:4331] type 00 class 0x028000
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.400000] pci 0000:00:01.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.400000] bcma: PCI: Fixing up addresses 0000:00:01.0
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.400000] pci 0000:00:01.0: BAR 0: assigned [mem 0x08000000-0x08003fff 64bit]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.400000] pci 0000:00:01.0: supports D1 D2
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.400000] pci_bus 0000:00: busn_res: [bus 00-ff] end is updated to 00
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.400000] bcma: bus0: PCIEcore in host mode found
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.590000] PCI host bridge to bus 0000:01
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.590000] pci_bus 0000:01: root bus resource [mem 0x40000000-0x43ffffff]
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.590000] pci_bus 0000:01: root bus resource [io  0x0480-0x07ff]
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.590000] pci_bus 0000:01: No busn resource found for root bus, will use [bus 01-ff]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.0: [14e4:5300] type 00 class 0x060000
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.590000] bcma: PCI: Fixing up bridge 0000:01:00.0
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.590000] bcma: PCI: Fixing up device 0000:01:00.0
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.0: reg 0x18: [mem 0x00000000-0x07ffffff 64bit]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.0: supports D1 D2
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.1: [14e4:0000] type 00 class 0x060000
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.590000] bcma: PCI: Fixing up bridge 0000:01:00.1
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.590000] bcma: PCI: Fixing up device 0000:01:00.1
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.1: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.1: reg 0x18: [mem 0x00000000-0x07ffffff 64bit]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.1: supports D1 D2
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.590000] pci 0000:01:01.0: [14e4:4331] type 00 class 0x028000
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.590000] pci 0000:01:01.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.590000] bcma: PCI: Fixing up addresses 0000:01:01.0
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.590000] pci 0000:01:01.0: BAR 0: assigned [mem 0x40000000-0x40003fff 64bit]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.590000] pci 0000:01:01.0: supports D1 D2
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    0.600000] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.600000] bcma: bus0: Bus registered
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.600000] futex hash table entries: 256 (order: -1, 3072 bytes)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.600000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.600000] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.600000] msgmni has been set to 246
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.600000] io scheduler noop registered
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.600000] io scheduler deadline registered (default)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.600000] Serial: 8250/16550 driver, 2 ports, IRQ sharing enabled
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.600000] console [ttyS0] disabled
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    0.620000] serial8250.0: ttyS0 at MMIO 0xb8000300 (irq = 0, base_baud = 1562500) is a U6_16550A
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.270000] console [ttyS0] enabled
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.290000] serial8250.0: ttyS1 at MMIO 0xb8000400 (irq = 0, base_baud = 1562500) is a U6_16550A
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.300000] physmap platform flash device: 02000001 at 1c000000
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.310000] physmap-flash.0: Found 1 x16 devices at 0x0 in 16-bit bank. Manufacturer ID 0x000001 Chip ID 0x002201
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.320000] Amd/Fujitsu Extended Query Table at 0x0040
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.320000]   Amd/Fujitsu Extended Query version 1.3.
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.330000] number of CFI chips: 1
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.360000] 6 bcm47xxpart partitions found on MTD device physmap-flash.0
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.370000] Creating 6 MTD partitions on "physmap-flash.0":
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.380000] 0x000000000000-0x000000040000 : "boot"
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.380000] 0x000000040000-0x000001fe0000 : "firmware"
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.390000] 0x00000004001c-0x00000004090c : "loader"
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.400000] 0x00000004090c-0x000000158800 : "linux"
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.400000] 0x000000158800-0x000001fe0000 : "rootfs"
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.410000] mtd: device 4 (rootfs) set to be root filesystem
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.410000] 1 squashfs-split partitions found on MTD device rootfs
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.420000] 0x0000003a0000-0x000001fe0000 : "rootfs_data"
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    1.430000] 0x000001fe0000-0x000002000000 : "nvram"
+Thu Aug 18 07:52:02 2016 kern.err kernel: [    1.430000] bcm47xxnflash: Requested invalid id_data: 32
+Thu Aug 18 07:52:02 2016 kern.err kernel: [    1.440000] bcm47xxnflash: Requested invalid id_data: 64
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    1.440000] nand: No NAND device found
+Thu Aug 18 07:52:02 2016 kern.err kernel: [    1.450000] bcm47xxnflash: Could not scan NAND flash: -19
+Thu Aug 18 07:52:02 2016 kern.err kernel: [    1.450000] bcm47xxnflash: Initialization failed: -19
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.460000] zliu b53_phy_driver_register
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.470000] libphy: Fixed MDIO Bus: probed
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.480000] bcm47xx-wdt bcm47xx-wdt.0: BCM47xx Watchdog Timer enabled (30 seconds)
+Thu Aug 18 07:52:02 2016 kern.err kernel: [    1.490000] GPIO_WDT: failed to register misc device
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    1.490000] PCI: Enabling device 0000:00:01.0 (0000 -> 0002)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.500000] bcma: PCI: Fixing up device 0000:00:01.0
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.500000] bcma: change PCIe max read request size from 512 to 128
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.510000] bcma: bus1: Found chip with id 0x4331, rev 0x02 and package 0x08
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.520000] bcma: bus1: Core 0 found: ChipCommon (manuf 0x4BF, id 0x800, rev 0x25, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.520000] bcma: bus1: Core 1 found: IEEE 802.11 (manuf 0x4BF, id 0x812, rev 0x1D, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.530000] bcma: bus1: Core 2 found: PCIe (manuf 0x4BF, id 0x820, rev 0x13, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    1.540000] bcma: bus1: Found rev 10 PMU (capabilities 0x108C260A)
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    1.540000] bcma: bus1: SPROM offset 0x800
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    1.670000] bcma: bus1: Invalid SPROM read from the PCIe card, trying to use fallback SPROM
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    1.800000] bcma: bus1: Using SPROM revision 9 provided by platform.
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    1.800000] bcma: bus1: PMU resource config unknown or not needed for device 0x4331
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.810000] bcma: bus1: Bus registered
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    1.810000] PCI: Enabling device 0000:01:01.0 (0000 -> 0002)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.820000] bcma: PCI: Fixing up device 0000:01:01.0
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.820000] bcma: change PCIe max read request size from 512 to 128
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.830000] bcma: bus2: Found chip with id 0x4331, rev 0x02 and package 0x08
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.840000] bcma: bus2: Core 0 found: ChipCommon (manuf 0x4BF, id 0x800, rev 0x25, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.850000] bcma: bus2: Core 1 found: IEEE 802.11 (manuf 0x4BF, id 0x812, rev 0x1D, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    1.860000] bcma: bus2: Core 2 found: PCIe (manuf 0x4BF, id 0x820, rev 0x13, class 0x0)
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    1.860000] bcma: bus2: Found rev 10 PMU (capabilities 0x108C260A)
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    1.860000] bcma: bus2: SPROM offset 0x800
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    1.990000] bcma: bus2: Invalid SPROM read from the PCIe card, trying to use fallback SPROM
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    2.110000] bcma: bus2: Using SPROM revision 9 provided by platform.
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [    2.110000] bcma: bus2: PMU resource config unknown or not needed for device 0x4331
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    2.120000] bcma: bus2: Bus registered
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    2.130000] TCP: cubic registered
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    2.130000] NET: Registered protocol family 17
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    2.140000] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    2.150000] 8021q: 802.1Q VLAN Support v1.8
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    2.160000] VFS: Mounted root (squashfs filesystem) readonly on device 31:4.
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    2.170000] Freeing unused kernel memory: 184K (80322000 - 80350000)
+Thu Aug 18 07:52:02 2016 user.info kernel: [    3.000000] init: Console is alive
+Thu Aug 18 07:52:02 2016 user.info kernel: [    3.000000] init: - watchdog -
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    3.930000] pps_core: LinuxPPS API ver. 1 registered
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    3.940000] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    3.950000] PTP clock support registered
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    3.950000] b44: zliu b44_init
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    3.960000] b44: zliu b44 1 err=0
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    3.960000] b44: zliu b44 1 err=0
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    3.970000] bgmac bcma0:1: Found PHY addr: 30 (NOREGS)
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    3.970000] bgmac bcma0:1: Support for Roboswitch not implemented
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    3.980000] libphy: zliu call drv probe
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    3.990000] zliu b53_phy_probe
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    3.990000] libphy: bgmac mii bus: probed
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    4.080000] zliu b53_phy_config_init phydev=0x87b02800
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    4.080000] b53_common: zliu chip name BCM53125, id:0x53125
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    4.090000] b53_common: zliu b53_switch_reset
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    4.170000] b53_common: zliu found switch: BCM53125, rev 4
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    4.170000] zliu register_switch
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    4.180000] bgmac: Broadcom 47xx GBit MAC driver loaded
+Thu Aug 18 07:52:02 2016 user.info kernel: [    5.010000] init: - preinit -
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    5.380000] libphy: zliu phy_start 
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    5.460000] random: mktemp urandom read with 8 bits of entropy available
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    6.180000] libphy: zliu phy_start_aneg 
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    6.180000] zliu b53_phy_config_aneg
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [    7.180000] bgmac bcma0:1: zliu bgmac call phyprint
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    7.180000] libphy: zliu phy_print_status 
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    7.180000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
+Thu Aug 18 07:52:02 2016 kern.notice kernel: [    8.630000] jffs2: notice: (247) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+Thu Aug 18 07:52:02 2016 user.info kernel: [    8.650000] mount_root: switching to jffs2 overlay
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    8.670000] libphy: zliu phy_stop 
+Thu Aug 18 07:52:02 2016 user.info kernel: [    8.680000] procd: - early -
+Thu Aug 18 07:52:02 2016 user.info kernel: [    8.680000] procd: - watchdog -
+Thu Aug 18 07:52:02 2016 kern.info kernel: [    9.190000] libphy: zliu phy_ethtool_get_wol 
+Thu Aug 18 07:52:02 2016 user.info kernel: [    9.320000] procd: - ubus -
+Thu Aug 18 07:52:02 2016 user.info kernel: [   10.340000] procd: - init -
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   11.760000] NET: Registered protocol family 10
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   11.770000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   11.790000] Loading modules backported from Linux version v4.4-rc5-1913-gc8fdf68
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   11.800000] Backport generated by backports.git backports-20151218-0-g2f58d9d
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   11.810000] ip_tables: (C) 2000-2006 Netfilter Core Team
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   11.820000] nf_conntrack version 0.5.0 (1974 buckets, 7896 max)
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   11.870000] xt_time: kernel timezone is -0000
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   11.960000] PPP generic driver version 2.4.2
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   11.960000] NET: Registered protocol family 24
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   11.980000] b43-phy0: Broadcom 4331 WLAN found (core revision 29)
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [   11.990000] bcma: bus1: Switched to core: 0x812
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   11.990000] b43-phy0: Found PHY: Analog 9, Type 7 (HT), Revision 1
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   11.990000] b43-phy0: Found Radio: Manuf 0x17F, ID 0x2059, Revision 0, Version 1
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   12.000000] b43-phy1: Broadcom 4331 WLAN found (core revision 29)
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [   12.010000] bcma: bus2: Switched to core: 0x812
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   12.010000] b43-phy1: Found PHY: Analog 9, Type 7 (HT), Revision 1
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   12.020000] b43-phy1: Found Radio: Manuf 0x17F, ID 0x2059, Revision 0, Version 1
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [   12.020000] b43-phy1 warning: 5 GHz band is unsupported on this PHY
+Thu Aug 18 07:52:02 2016 kern.err kernel: [   12.030000] b43-phy1 ERROR: b43 can't support any band on this device
+Thu Aug 18 07:52:02 2016 kern.warn kernel: [   12.040000] b43: probe of bcma2:1 failed with error -122
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   12.040000] Broadcom 43xx driver loaded [ Features: PNL ]
+Thu Aug 18 07:52:02 2016 kern.info kernel: [   12.120000] Broadcom 43xx-legacy driver loaded [ Features: PLD ]
+Thu Aug 18 07:52:02 2016 kern.debug kernel: [   12.220000] ieee80211 phy0: Selected rate control algorithm 'minstrel_ht'
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.480000] libphy: zliu phy_start 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.650000] zliu swconfig_send_switch 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.650000] zliu swconfig_send_multipart 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.660000] zliu swconfig_send_multipart 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.660000] zliu swconfig_send_multipart 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.670000] zliu swconfig_send_multipart 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.670000] zliu swconfig_send_multipart 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.670000] zliu swconfig_send_multipart 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.680000] zliu swconfig_send_multipart 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.680000] zliu swconfig_send_multipart 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.690000] zliu swconfig_send_multipart 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.690000] zliu swconfig_send_multipart 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.700000] zliu swconfig_send_multipart 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.700000] zliu swconfig_set_attr 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.700000] zliu swconfig_reset_switch 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.710000] b53_common: zliu b53_switch_reset
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.790000] zliu swconfig_set_attr 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.790000] zliu swconfig_set_attr 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.790000] zliu swconfig_parse_ports 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.800000] zliu swconfig_set_vlan_ports
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.800000] zliu swconfig_set_attr 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.810000] zliu swconfig_parse_ports 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.810000] zliu swconfig_set_vlan_ports
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.810000] zliu swconfig_set_attr 
+Thu Aug 18 07:52:03 2016 kern.info kernel: [   15.820000] zliu swconfig_apply_config 
+Thu Aug 18 07:52:04 2016 user.notice syslog: dev_init
+Thu Aug 18 07:52:04 2016 user.notice syslog: interface_add_user
+Thu Aug 18 07:52:04 2016 user.notice syslog: interface_init_list
+Thu Aug 18 07:52:04 2016 daemon.notice netifd: zliu log_leve=4 use_syslog=1 socket=(nil)
+Thu Aug 18 07:52:04 2016 daemon.notice netifd: netifd_ubus_init
+Thu Aug 18 07:52:04 2016 daemon.notice netifd: netifd_ubus_add_fd
+Thu Aug 18 07:52:04 2016 daemon.notice netifd: netifd_add_object
+Thu Aug 18 07:52:04 2016 daemon.notice netifd: netifd_add_object
+Thu Aug 18 07:52:04 2016 daemon.notice netifd: netifd_add_object
+Thu Aug 18 07:52:04 2016 daemon.notice netifd: netifd_add_iface_object
+Thu Aug 18 07:52:04 2016 daemon.notice netifd: netifd_add_object
+Thu Aug 18 07:52:04 2016 daemon.notice netifd: zliu proto_shell_init
+Thu Aug 18 07:52:04 2016 daemon.notice netifd: proto_shell_init
+Thu Aug 18 07:52:04 2016 user.emerg syslog: 'radio0' is disabled
+Thu Aug 18 07:52:04 2016 user.emerg syslog: 'radio0' is disabled
+Thu Aug 18 07:52:04 2016 daemon.notice netifd: proto_shell_add_handler
+Thu Aug 18 07:52:04 2016 daemon.notice netifd: proto_shell_add_handler
+Thu Aug 18 07:52:05 2016 daemon.notice netifd: proto_shell_add_handler
+Thu Aug 18 07:52:05 2016 kern.warn kernel: [   17.370000] bgmac bcma0:1: zliu bgmac call phyprint
+Thu Aug 18 07:52:05 2016 kern.info kernel: [   17.380000] libphy: zliu phy_print_status 
+Thu Aug 18 07:52:05 2016 kern.info kernel: [   17.380000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
+Thu Aug 18 07:52:05 2016 daemon.notice netifd: proto_shell_add_handler
+Thu Aug 18 07:52:05 2016 daemon.notice netifd: wireless_init
+Thu Aug 18 07:52:05 2016 authpriv.info dropbear[699]: Not backgrounding
+Thu Aug 18 07:52:07 2016 daemon.info procd: - init complete -
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: wireless_add_handler
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_init_package
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_init_all++ //DD comes main process..
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_init_package
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_reset_config
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_init_devices
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_init_interfaces
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_parse_interface //DD pasre interface, one interface
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_alloc
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __interface_add
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_update
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_proto_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_available
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_l3_dev
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_ubus_add_interface
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_parse_interface //DD another interface
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_parse_bridge_interface //DD bridge
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_create
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Create new device 'br-lan' (Bridge)
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu call type-create
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: bridge_create Create
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_init
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_init_virtual
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: bridge_reload //DD in reload path
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_init_settings 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_refresh_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __device_set_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: bridge_apply_settings //DD setting
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_alloc
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __interface_add //DD add interface
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_ubus_add_interface
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_parse_interface //DD and one again
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_alloc
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __interface_add
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_update
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: proto_shell_attach
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: proto_shell_checkup_attach
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_proto_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_claim_device
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu vlan eth0.2 1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_create_default
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_init
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_init_virtual
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_refresh_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __device_set_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device Create vlan device 'eth0.2'
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: vlan_dev_set_name
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_init
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_init_virtual
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: vlan_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_refresh_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __device_set_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 kern.info kernel: [   19.650000] libphy: zliu phy_stop 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_device_config
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_main_dev
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_available
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_l3_dev
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_ubus_add_interface
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_parse_interface
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_alloc
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __interface_add
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_update
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: proto_shell_attach
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: proto_shell_checkup_attach
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_proto_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_claim_device
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu vlan eth0.2 1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element eth0 1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_device_config
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_main_dev
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_available
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_l3_dev
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_ubus_add_interface
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_init_routes
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_init_rules
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_init_globals
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_init_wireless
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_parse_wireless_device
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: wireless_device_create
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_init
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_init_virtual
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: vlan_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_present //DD  DEV_EVENT_ADD
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_refresh_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __device_set_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: bridge_member_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: vlan_set_device_state //DD add vlan No1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_claim
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: vlan_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: vlan_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: simple_device_set_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: set_device_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 07:52:07 2016 kern.info kernel: [   19.710000] libphy: zliu phy_start 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: vlan_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: vlan_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: set_device_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: bridge_member_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: bridge_member_cb
+Thu Aug 18 07:52:07 2016 kern.info kernel: [   19.730000] libphy: zliu phy_ethtool_gset 
+Thu Aug 18 07:52:07 2016 kern.info kernel: [   19.740000] device eth0.1 entered promiscuous mode
+Thu Aug 18 07:52:07 2016 kern.info kernel: [   19.740000] device eth0 entered promiscuous mode
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_proto_event_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: bridge_check_retry
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: bridge_reset_primary
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: set_device_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 kern.info kernel: [   19.760000] br-lan: port 1(eth0.1) entered forwarding state
+Thu Aug 18 07:52:07 2016 kern.info kernel: [   19.770000] br-lan: port 1(eth0.1) entered forwarding state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Interface 'lan' is enabled
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Interface 'lan' is setting up now
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_proto_event_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_ubus_interface_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_ubus_interface_notify
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_free_unused
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Interface 'lan' is now up
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: bridge_enable_member
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: bridge_enable_interface
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_claim
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_proto_event_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: bridge_member_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: bridge_check_retry
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_free_unused
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_start_pending
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_up
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_up
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_claim
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: simple_device_set_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: set_device_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Interface 'loopback' is enabled
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Interface 'loopback' is setting up now
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_proto_event_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_ubus_interface_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_ubus_interface_notify
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_free_unused
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Interface 'loopback' is now up
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_up
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_claim
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: vlan_set_device_state //DD add valn no2
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_claim
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: set_device_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Interface 'wan' is enabled
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Interface 'wan6' is enabled
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_set_up
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_claim
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: wireless_start_pending
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: __wireless_device_set_up
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: config_init_all--
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_handle_dump
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Network device 'eth0' link is up
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: vlan_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: vlan_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu handle_hotplug_event size=146
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu handle_hotplug_event size=131
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu handle_hotplug_event size=144
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu handle_hotplug_event size=131
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu handle_hotplug_event size=144
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu vlan eth0.2 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu handle_hotplug_event size=131
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Bridge 'br-lan' link is up
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Interface 'lan' has link connectivity 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu avl_find_element lo 0
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: zliu dev[lo] link_state=1 
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: Network device 'lo' link is up
+Thu Aug 18 07:52:07 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: Interface 'loopback' has link connectivity 
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: zliu vlan eth0.2 0
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 07:52:08 2016 daemon.warn odhcpd[665]: DHCPV6 SOLICIT IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fde6:6bfe:a5e4::332/128 
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: zliu dev[eth0.2] link_state=1 
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:08 2016 daemon.warn odhcpd[665]: DHCPV6 SOLICIT IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fde6:6bfe:a5e4::9b3/128 
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_handle_iface
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_iface_notify_proto
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: proto_shell_notify
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: proto_shell_run_command
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_handle_dump
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: proto_shell_script_cb
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: proto_shell_task_finish
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_handle_iface
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_iface_notify_proto
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: proto_shell_notify
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: proto_shell_run_command
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: proto_shell_script_cb
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: proto_shell_task_finish
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: wan (834): udhcpc (v1.23.2) started
+Thu Aug 18 07:52:08 2016 user.notice firewall: Reloading firewall due to ifup of lan (br-lan)
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_handle_dump
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:08 2016 kern.info kernel: [   20.760000] libphy: zliu phy_ethtool_gset 
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_handle_iface
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_iface_notify_proto
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: proto_shell_notify
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: proto_shell_update_link
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: interface_proto_event_cb
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_handle_iface
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: netifd_iface_notify_proto
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: proto_shell_notify
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: proto_shell_update_link
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: interface_proto_event_cb
+Thu Aug 18 07:52:08 2016 daemon.notice netifd: wan (834): Sending discover...
+Thu Aug 18 07:52:09 2016 daemon.warn odhcpd[665]: DHCPV6 SOLICIT IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fde6:6bfe:a5e4::332/128 
+Thu Aug 18 07:52:09 2016 kern.warn kernel: [   21.410000] bgmac bcma0:1: zliu bgmac call phyprint
+Thu Aug 18 07:52:09 2016 kern.info kernel: [   21.410000] libphy: zliu phy_print_status 
+Thu Aug 18 07:52:09 2016 kern.info kernel: [   21.410000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 07:52:09 2016 kern.info kernel: [   21.770000] br-lan: port 1(eth0.1) entered forwarding state
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: netifd_handle_dump
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:09 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:10 2016 daemon.warn odhcpd[665]: DHCPV6 SOLICIT IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fde6:6bfe:a5e4::9b3/128 
+Thu Aug 18 07:52:10 2016 daemon.warn odhcpd[665]: DHCPV6 REQUEST IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fde6:6bfe:a5e4::9b3/128 
+Thu Aug 18 07:52:11 2016 daemon.warn odhcpd[665]: DHCPV6 SOLICIT IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fde6:6bfe:a5e4::332/128 
+Thu Aug 18 07:52:11 2016 daemon.warn odhcpd[665]: DHCPV6 REQUEST IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fde6:6bfe:a5e4::332/128 
+Thu Aug 18 07:52:11 2016 daemon.notice netifd: wan (834): Sending discover...
+Thu Aug 18 07:52:12 2016 daemon.warn odhcpd[665]: DHCPV6 CONFIRM IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: not on-link fde6:6bfe:a5e4::9b3/128 
+Thu Aug 18 07:52:12 2016 daemon.warn odhcpd[665]: DHCPV6 SOLICIT IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fde6:6bfe:a5e4::9b3/128 
+Thu Aug 18 07:52:13 2016 daemon.info dnsmasq[900]: started, version 2.73 cachesize 150
+Thu Aug 18 07:52:13 2016 daemon.info dnsmasq[900]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN DHCP no-DHCPv6 no-Lua TFTP no-conntrack no-ipset no-auth no-DNSSEC loop-detect inotify
+Thu Aug 18 07:52:13 2016 daemon.info dnsmasq[900]: DNS service limited to local subnets
+Thu Aug 18 07:52:13 2016 daemon.info dnsmasq-dhcp[900]: DHCP, IP range 192.168.1.100 -- 192.168.1.249, lease time 12h
+Thu Aug 18 07:52:13 2016 daemon.info dnsmasq[900]: using local addresses only for domain lan
+Thu Aug 18 07:52:13 2016 daemon.warn dnsmasq[900]: no servers found in /tmp/resolv.conf.auto, will retry
+Thu Aug 18 07:52:13 2016 daemon.info dnsmasq[900]: read /etc/hosts - 1 addresses
+Thu Aug 18 07:52:13 2016 daemon.info dnsmasq[900]: read /tmp/hosts/dhcp - 1 addresses
+Thu Aug 18 07:52:13 2016 daemon.info dnsmasq[900]: read /tmp/hosts/odhcpd - 1 addresses
+Thu Aug 18 07:52:13 2016 daemon.info dnsmasq-dhcp[900]: read /etc/ethers - 0 addresses
+Thu Aug 18 07:52:13 2016 daemon.notice netifd: netifd_handle_dump
+Thu Aug 18 07:52:13 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:13 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:13 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:13 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:13 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:13 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:13 2016 daemon.warn odhcpd[665]: DHCPV6 REQUEST IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fde6:6bfe:a5e4::9b3/128 
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_handle_dump
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: wan (834): Sending discover...
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:14 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:15 2016 daemon.notice netifd: netifd_handle_wdev_status
+Thu Aug 18 07:52:15 2016 daemon.notice netifd: get_wdev
+Thu Aug 18 07:52:15 2016 daemon.notice netifd: wireless_device_status
+Thu Aug 18 07:52:15 2016 daemon.notice netifd: wireless_interface_status
+Thu Aug 18 07:52:15 2016 daemon.notice netifd: netifd_dev_status
+Thu Aug 18 07:52:15 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:15 2016 daemon.notice netifd: zliu vlan radio0.network1 0
+Thu Aug 18 07:52:15 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:15 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 07:52:47 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 07:52:48 2016 daemon.notice netifd: netifd_handle_wdev_status
+Thu Aug 18 07:52:48 2016 daemon.notice netifd: get_wdev
+Thu Aug 18 07:52:48 2016 daemon.notice netifd: wireless_device_status
+Thu Aug 18 07:52:48 2016 daemon.notice netifd: wireless_interface_status
+Thu Aug 18 07:52:48 2016 daemon.notice netifd: netifd_dev_status
+Thu Aug 18 07:52:48 2016 daemon.notice netifd: device_get
+Thu Aug 18 07:52:48 2016 daemon.notice netifd: zliu vlan radio0.network1 0
+Thu Aug 18 07:52:48 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 07:52:48 2016 daemon.notice netifd: device_get
+
+
+
+
+
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    0.000000] Linux version 3.18.29 (root@zliu01) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 r49363) ) #20 Thu Aug 18 17:24:39 CST 2016
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] CPU0 revision is: 00019749 (MIPS 74Kc)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcm47xx: Using bcma bus
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Found chip with id 0x5300, rev 0x01 and package 0x00
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] Determined physical RAM map:
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000]  memory: 07fff000 @ 00000000 (usable)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] Initrd not found or empty - disabling initrd
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.000000] Zone ranges:
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.000000]   Normal   [mem 0x00000000-0x07ffefff]
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.000000] Movable zone start for each node
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.000000] Early memory node ranges
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.000000]   node   0: [mem 0x00000000-0x07ffefff]
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] Initmem setup node 0 [mem 0x00000000-0x07ffefff]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.000000] On node 0 totalpages: 32767
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.000000] free_area_init_node: node 0, pgdat 8030c130, node_mem_map 81000000
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.000000]   Normal zone: 256 pages used for memmap
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.000000]   Normal zone: 0 pages reserved
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.000000]   Normal zone: 32767 pages, LIFO batch:7
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.000000] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.000000] pcpu-alloc: [0] 0 
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32511
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    0.000000] Kernel command line:  noinitrd console=ttyS0,115200
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] Writing ErrCtl register=80000610
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] Readback ErrCtl register=80000610
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] Cache parity protection enabled
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.000000] Memory: 126208K/131068K available (2571K kernel code, 116K rwdata, 508K rodata, 184K init, 263K bss, 4860K reserved)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] NR_IRQS:128
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 0 found: BCM4706 ChipCommon (manuf 0x4BF, id 0x500, rev 0x1F, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 1 found: BCM4706 GBit MAC (manuf 0x4BF, id 0x52D, rev 0x00, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 2 found: BCM4706 GBit MAC (manuf 0x4BF, id 0x52D, rev 0x00, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 3 found: MIPS 74K (manuf 0x4A7, id 0x82C, rev 0x00, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 4 found: USB 2.0 Host (manuf 0x4BF, id 0x819, rev 0x04, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 5 found: PCIe (manuf 0x4BF, id 0x820, rev 0x0E, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 6 found: PCIe (manuf 0x4BF, id 0x820, rev 0x0E, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 7 found: AMEMC (DDR) (manuf 0x4BF, id 0x52E, rev 0x00, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 8 found: BCM4706 SOC RAM (manuf 0x4BF, id 0x50E, rev 0x05, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 9 found: ALTA (I2S) (manuf 0x4BF, id 0x534, rev 0x00, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Core 10 found: BCM4706 GBit MAC Common (manuf 0x43B, id 0x5DC, rev 0x00, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.000000] bcma: bus0: Found rev 6 PMU (capabilities 0x18162406)
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.000000] bcma: bus0: Found parallel flash
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.000000] bcma: bus0: Found NAND flash
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcma: bus0: Early bus registered
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] MIPS: machine is Unknown Board
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.000000] bcm47xx: Setting up vectored interrupts
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.070000] Calibrating delay loop... 299.82 BogoMIPS (lpj=1499136)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.070000] pid_max: default: 32768 minimum: 301
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.070000] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.070000] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.070000] NET: Registered protocol family 16
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.080000] Switched to clocksource MIPS
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.080000] NET: Registered protocol family 2
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.080000] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.080000] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.080000] TCP: Hash tables configured (established 1024 bind 1024)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.080000] TCP: reno registered
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.080000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.080000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.080000] NET: Registered protocol family 1
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.080000] PCI: CLS 0 bytes, default 32
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.130000] can not parse nvram name (null)pa0maxpwr(null) with value 400 got -34
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: bus0: Using SPROM revision 8 provided by platform.
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: bus0: PMU resource config unknown or not needed for device 0x5300
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: bus0: Workarounds unknown or not needed for device 0x5300
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: bus0: Initializing MIPS core...
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: bus0: set_irq: core 0x0820, irq 3 => 3
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: bus0: set_irq: core 0x052d, irq 4 => 4
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: bus0: set_irq: core 0x0820, irq 5 => 5
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: bus0: set_irq: core 0x0819, irq 6 => 6
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: bus0: set_irq: core 0x0500, irq 2 => 2
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: bus0: IRQ reconfiguration done
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: core 0x0500, irq : 2(S)* 3  4  5  6  D  I 
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: core 0x052d, irq : 2(S)  3  4* 5  6  D  I 
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: core 0x052d, irq : 2(S)  3  4  5  6  D* I 
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: core 0x082c, irq : 2(S)  3  4  5  6  D* I 
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: core 0x0819, irq : 2(S)  3  4  5  6* D  I 
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: core 0x0820, irq : 2(S)  3* 4  5  6  D  I 
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: core 0x0820, irq : 2(S)  3  4  5* 6  D  I 
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: core 0x052e, irq : 2(S)  3  4  5  6  D* I 
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: core 0x050e, irq : 2(S)  3  4  5  6  D* I 
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: core 0x0534, irq : 2(S)  3  4  5  6  D* I 
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] ------------[ cut here ]------------
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] WARNING: CPU: 0 PID: 1 at drivers/bcma/host_soc.c:140 bcma_host_soc_aread32+0x3c/0x6c()
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] Accessed core has no wrapper/agent
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] Modules linked in:
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] CPU: 0 PID: 1 Comm: swapper Not tainted 3.18.29 #20
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] Stack : 00000000 00000000 00000000 00000000 80366872 00000033 00000000 801d1384
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] 	  00000001 00000007 802b75ec 8030ca23 00000001 80365a98 8781dc00 00000007
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] 	  00000005 802c0000 802d0000 80048ce8 00000003 80024c10 0000008c 00000007
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] 	  802baca0 87821cbc 00000000 00000000 00000000 00000000 00000000 00000000
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] 	  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] 	  ...
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] Call Trace:
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] [<80014aec>] show_stack+0x50/0x84
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] [<80024d18>] warn_slowpath_common+0x84/0xb4
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] [<80024d74>] warn_slowpath_fmt+0x2c/0x38
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] [<801d1384>] bcma_host_soc_aread32+0x3c/0x6c
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] [<801cf8bc>] bcma_core_mips_irqflag+0x94/0xb0
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] 
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    0.210000] ---[ end trace 24dbdf5923c2001e ]---
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.210000] bcma: core 0x05dc, irq : 2(S)  3  4  5  6  D* I 
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.210000] bcma: bus0: PCIEcore in host mode found
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.400000] PCI host bridge to bus 0000:00
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.400000] pci_bus 0000:00: root bus resource [mem 0x08000000-0x0bffffff]
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.400000] pci_bus 0000:00: root bus resource [io  0x0100-0x047f]
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.400000] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.0: [14e4:5300] type 00 class 0x060000
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.400000] bcma: PCI: Fixing up bridge 0000:00:00.0
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.400000] bcma: PCI: Fixing up device 0000:00:00.0
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.0: reg 0x18: [mem 0x00000000-0x07ffffff 64bit]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.0: supports D1 D2
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.1: [14e4:0000] type 00 class 0x060000
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.400000] bcma: PCI: Fixing up bridge 0000:00:00.1
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.400000] bcma: PCI: Fixing up device 0000:00:00.1
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.1: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.1: reg 0x18: [mem 0x00000000-0x07ffffff 64bit]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.400000] pci 0000:00:00.1: supports D1 D2
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.400000] pci 0000:00:01.0: [14e4:4331] type 00 class 0x028000
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.400000] pci 0000:00:01.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.400000] bcma: PCI: Fixing up addresses 0000:00:01.0
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.400000] pci 0000:00:01.0: BAR 0: assigned [mem 0x08000000-0x08003fff 64bit]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.400000] pci 0000:00:01.0: supports D1 D2
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.400000] pci_bus 0000:00: busn_res: [bus 00-ff] end is updated to 00
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.400000] bcma: bus0: PCIEcore in host mode found
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.590000] PCI host bridge to bus 0000:01
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.590000] pci_bus 0000:01: root bus resource [mem 0x40000000-0x43ffffff]
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.590000] pci_bus 0000:01: root bus resource [io  0x0480-0x07ff]
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.590000] pci_bus 0000:01: No busn resource found for root bus, will use [bus 01-ff]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.0: [14e4:5300] type 00 class 0x060000
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.590000] bcma: PCI: Fixing up bridge 0000:01:00.0
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.590000] bcma: PCI: Fixing up device 0000:01:00.0
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.0: reg 0x18: [mem 0x00000000-0x07ffffff 64bit]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.0: supports D1 D2
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.1: [14e4:0000] type 00 class 0x060000
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.590000] bcma: PCI: Fixing up bridge 0000:01:00.1
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.590000] bcma: PCI: Fixing up device 0000:01:00.1
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.1: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.1: reg 0x18: [mem 0x00000000-0x07ffffff 64bit]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.590000] pci 0000:01:00.1: supports D1 D2
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.590000] pci 0000:01:01.0: [14e4:4331] type 00 class 0x028000
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.590000] pci 0000:01:01.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.590000] bcma: PCI: Fixing up addresses 0000:01:01.0
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.590000] pci 0000:01:01.0: BAR 0: assigned [mem 0x40000000-0x40003fff 64bit]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.590000] pci 0000:01:01.0: supports D1 D2
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    0.600000] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.600000] bcma: bus0: Bus registered
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.600000] futex hash table entries: 256 (order: -1, 3072 bytes)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.600000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.600000] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.600000] msgmni has been set to 246
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.600000] io scheduler noop registered
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.600000] io scheduler deadline registered (default)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.600000] Serial: 8250/16550 driver, 2 ports, IRQ sharing enabled
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.600000] console [ttyS0] disabled
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    0.620000] serial8250.0: ttyS0 at MMIO 0xb8000300 (irq = 0, base_baud = 1562500) is a U6_16550A
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.270000] console [ttyS0] enabled
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.290000] serial8250.0: ttyS1 at MMIO 0xb8000400 (irq = 0, base_baud = 1562500) is a U6_16550A
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.300000] physmap platform flash device: 02000001 at 1c000000
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.310000] physmap-flash.0: Found 1 x16 devices at 0x0 in 16-bit bank. Manufacturer ID 0x000001 Chip ID 0x002201
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.320000] Amd/Fujitsu Extended Query Table at 0x0040
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.320000]   Amd/Fujitsu Extended Query version 1.3.
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.330000] number of CFI chips: 1
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.360000] 6 bcm47xxpart partitions found on MTD device physmap-flash.0
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.370000] Creating 6 MTD partitions on "physmap-flash.0":
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.380000] 0x000000000000-0x000000040000 : "boot"
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.380000] 0x000000040000-0x000001fe0000 : "firmware"
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.390000] 0x00000004001c-0x00000004090c : "loader"
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.400000] 0x00000004090c-0x000000158800 : "linux"
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.400000] 0x000000158800-0x000001fe0000 : "rootfs"
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.410000] mtd: device 4 (rootfs) set to be root filesystem
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.410000] 1 squashfs-split partitions found on MTD device rootfs
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.420000] 0x0000003a0000-0x000001fe0000 : "rootfs_data"
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    1.430000] 0x000001fe0000-0x000002000000 : "nvram"
+Thu Aug 18 09:26:48 2016 kern.err kernel: [    1.430000] bcm47xxnflash: Requested invalid id_data: 32
+Thu Aug 18 09:26:48 2016 kern.err kernel: [    1.440000] bcm47xxnflash: Requested invalid id_data: 64
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    1.440000] nand: No NAND device found
+Thu Aug 18 09:26:48 2016 kern.err kernel: [    1.450000] bcm47xxnflash: Could not scan NAND flash: -19
+Thu Aug 18 09:26:48 2016 kern.err kernel: [    1.450000] bcm47xxnflash: Initialization failed: -19
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.460000] zliu b53_phy_driver_register
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.470000] libphy: Fixed MDIO Bus: probed
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.480000] bcm47xx-wdt bcm47xx-wdt.0: BCM47xx Watchdog Timer enabled (30 seconds)
+Thu Aug 18 09:26:48 2016 kern.err kernel: [    1.490000] GPIO_WDT: failed to register misc device
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    1.490000] PCI: Enabling device 0000:00:01.0 (0000 -> 0002)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.500000] bcma: PCI: Fixing up device 0000:00:01.0
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.500000] bcma: change PCIe max read request size from 512 to 128
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.510000] bcma: bus1: Found chip with id 0x4331, rev 0x02 and package 0x08
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.520000] bcma: bus1: Core 0 found: ChipCommon (manuf 0x4BF, id 0x800, rev 0x25, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.520000] bcma: bus1: Core 1 found: IEEE 802.11 (manuf 0x4BF, id 0x812, rev 0x1D, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.530000] bcma: bus1: Core 2 found: PCIe (manuf 0x4BF, id 0x820, rev 0x13, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    1.540000] bcma: bus1: Found rev 10 PMU (capabilities 0x108C260A)
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    1.540000] bcma: bus1: SPROM offset 0x800
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    1.670000] bcma: bus1: Invalid SPROM read from the PCIe card, trying to use fallback SPROM
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    1.800000] bcma: bus1: Using SPROM revision 9 provided by platform.
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    1.800000] bcma: bus1: PMU resource config unknown or not needed for device 0x4331
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.810000] bcma: bus1: Bus registered
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    1.810000] PCI: Enabling device 0000:01:01.0 (0000 -> 0002)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.820000] bcma: PCI: Fixing up device 0000:01:01.0
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.820000] bcma: change PCIe max read request size from 512 to 128
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.830000] bcma: bus2: Found chip with id 0x4331, rev 0x02 and package 0x08
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.840000] bcma: bus2: Core 0 found: ChipCommon (manuf 0x4BF, id 0x800, rev 0x25, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.850000] bcma: bus2: Core 1 found: IEEE 802.11 (manuf 0x4BF, id 0x812, rev 0x1D, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    1.860000] bcma: bus2: Core 2 found: PCIe (manuf 0x4BF, id 0x820, rev 0x13, class 0x0)
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    1.860000] bcma: bus2: Found rev 10 PMU (capabilities 0x108C260A)
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    1.860000] bcma: bus2: SPROM offset 0x800
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    1.990000] bcma: bus2: Invalid SPROM read from the PCIe card, trying to use fallback SPROM
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    2.110000] bcma: bus2: Using SPROM revision 9 provided by platform.
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [    2.110000] bcma: bus2: PMU resource config unknown or not needed for device 0x4331
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    2.120000] bcma: bus2: Bus registered
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    2.130000] TCP: cubic registered
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    2.130000] NET: Registered protocol family 17
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    2.140000] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    2.150000] 8021q: 802.1Q VLAN Support v1.8
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    2.160000] VFS: Mounted root (squashfs filesystem) readonly on device 31:4.
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    2.170000] Freeing unused kernel memory: 184K (80322000 - 80350000)
+Thu Aug 18 09:26:48 2016 user.info kernel: [    3.000000] init: Console is alive
+Thu Aug 18 09:26:48 2016 user.info kernel: [    3.000000] init: - watchdog -
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    3.930000] pps_core: LinuxPPS API ver. 1 registered
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    3.940000] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    3.950000] PTP clock support registered
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    3.950000] b44: zliu b44_init
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    3.960000] b44: zliu b44 1 err=0
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    3.960000] b44: zliu b44 1 err=0
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    3.970000] bgmac bcma0:1: Found PHY addr: 30 (NOREGS)
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    3.970000] bgmac bcma0:1: Support for Roboswitch not implemented
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    3.990000] libphy: zliu call drv probe
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    3.990000] zliu b53_phy_probe
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    3.990000] libphy: bgmac mii bus: probed
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    4.080000] zliu b53_phy_config_init phydev=0x87b02800
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    4.080000] b53_common: zliu chip name BCM53125, id:0x53125
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    4.090000] b53_common: zliu b53_switch_reset
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    4.170000] b53_common: zliu found switch: BCM53125, rev 4
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    4.170000] zliu register_switch
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    4.180000] bgmac: Broadcom 47xx GBit MAC driver loaded
+Thu Aug 18 09:26:48 2016 user.info kernel: [    5.010000] init: - preinit -
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    5.380000] libphy: zliu phy_start 
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    5.460000] random: mktemp urandom read with 8 bits of entropy available
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    6.180000] libphy: zliu phy_start_aneg 
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    6.180000] zliu b53_phy_config_aneg
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [    7.180000] bgmac bcma0:1: zliu bgmac call phyprint
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    7.180000] libphy: zliu phy_print_status 
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    7.180000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
+Thu Aug 18 09:26:48 2016 kern.notice kernel: [    8.640000] jffs2: notice: (247) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+Thu Aug 18 09:26:48 2016 user.info kernel: [    8.650000] mount_root: switching to jffs2 overlay
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    8.670000] libphy: zliu phy_stop 
+Thu Aug 18 09:26:48 2016 user.info kernel: [    8.690000] procd: - early -
+Thu Aug 18 09:26:48 2016 user.info kernel: [    8.690000] procd: - watchdog -
+Thu Aug 18 09:26:48 2016 kern.info kernel: [    9.190000] libphy: zliu phy_ethtool_get_wol 
+Thu Aug 18 09:26:48 2016 user.info kernel: [    9.330000] procd: - ubus -
+Thu Aug 18 09:26:48 2016 user.info kernel: [   10.350000] procd: - init -
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   11.770000] NET: Registered protocol family 10
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   11.780000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   11.800000] Loading modules backported from Linux version v4.4-rc5-1913-gc8fdf68
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   11.810000] Backport generated by backports.git backports-20151218-0-g2f58d9d
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   11.820000] ip_tables: (C) 2000-2006 Netfilter Core Team
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   11.830000] nf_conntrack version 0.5.0 (1974 buckets, 7896 max)
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   11.880000] xt_time: kernel timezone is -0000
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   11.970000] PPP generic driver version 2.4.2
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   11.980000] NET: Registered protocol family 24
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   11.990000] b43-phy0: Broadcom 4331 WLAN found (core revision 29)
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [   12.000000] bcma: bus1: Switched to core: 0x812
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   12.000000] b43-phy0: Found PHY: Analog 9, Type 7 (HT), Revision 1
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   12.010000] b43-phy0: Found Radio: Manuf 0x17F, ID 0x2059, Revision 0, Version 1
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   12.020000] b43-phy1: Broadcom 4331 WLAN found (core revision 29)
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [   12.020000] bcma: bus2: Switched to core: 0x812
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   12.020000] b43-phy1: Found PHY: Analog 9, Type 7 (HT), Revision 1
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   12.030000] b43-phy1: Found Radio: Manuf 0x17F, ID 0x2059, Revision 0, Version 1
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [   12.040000] b43-phy1 warning: 5 GHz band is unsupported on this PHY
+Thu Aug 18 09:26:48 2016 kern.err kernel: [   12.040000] b43-phy1 ERROR: b43 can't support any band on this device
+Thu Aug 18 09:26:48 2016 kern.warn kernel: [   12.050000] b43: probe of bcma2:1 failed with error -122
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   12.060000] Broadcom 43xx driver loaded [ Features: PNL ]
+Thu Aug 18 09:26:48 2016 kern.info kernel: [   12.140000] Broadcom 43xx-legacy driver loaded [ Features: PLD ]
+Thu Aug 18 09:26:48 2016 kern.debug kernel: [   12.230000] ieee80211 phy0: Selected rate control algorithm 'minstrel_ht'
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.510000] libphy: zliu phy_start 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.670000] zliu swconfig_send_switch 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.680000] zliu swconfig_send_multipart 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.680000] zliu swconfig_send_multipart 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.690000] zliu swconfig_send_multipart 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.690000] zliu swconfig_send_multipart 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.700000] zliu swconfig_send_multipart 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.700000] zliu swconfig_send_multipart 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.700000] zliu swconfig_send_multipart 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.710000] zliu swconfig_send_multipart 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.710000] zliu swconfig_send_multipart 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.720000] zliu swconfig_send_multipart 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.720000] zliu swconfig_send_multipart 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.730000] zliu swconfig_set_attr 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.730000] zliu swconfig_reset_switch 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.730000] b53_common: zliu b53_switch_reset
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.810000] zliu swconfig_set_attr 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.820000] zliu swconfig_set_attr 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.820000] zliu swconfig_parse_ports 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.820000] zliu swconfig_set_vlan_ports
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.830000] zliu swconfig_set_attr 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.830000] zliu swconfig_parse_ports 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.840000] zliu swconfig_set_vlan_ports
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.840000] zliu swconfig_set_attr 
+Thu Aug 18 09:26:49 2016 kern.info kernel: [   15.840000] zliu swconfig_apply_config 
+Thu Aug 18 09:26:50 2016 user.notice syslog: dev_init
+Thu Aug 18 09:26:50 2016 user.notice syslog: interface_add_user
+Thu Aug 18 09:26:50 2016 user.notice syslog: interface_init_list
+Thu Aug 18 09:26:50 2016 daemon.notice netifd: zliu log_leve=4 use_syslog=1 socket=(nil)
+Thu Aug 18 09:26:50 2016 daemon.notice netifd: netifd_ubus_init
+Thu Aug 18 09:26:50 2016 daemon.notice netifd: netifd_ubus_add_fd
+Thu Aug 18 09:26:50 2016 daemon.notice netifd: netifd_add_object
+Thu Aug 18 09:26:50 2016 daemon.notice netifd: netifd_add_object
+Thu Aug 18 09:26:50 2016 daemon.notice netifd: netifd_add_object
+Thu Aug 18 09:26:50 2016 daemon.notice netifd: netifd_add_iface_object
+Thu Aug 18 09:26:50 2016 daemon.notice netifd: netifd_add_object
+Thu Aug 18 09:26:50 2016 daemon.notice netifd: zliu proto_shell_init
+Thu Aug 18 09:26:50 2016 daemon.notice netifd: proto_shell_init
+Thu Aug 18 09:26:50 2016 user.emerg syslog: 'radio0' is disabled
+Thu Aug 18 09:26:50 2016 user.emerg syslog: 'radio0' is disabled
+Thu Aug 18 09:26:50 2016 daemon.notice netifd: proto_shell_add_handler
+Thu Aug 18 09:26:50 2016 daemon.notice netifd: proto_shell_add_handler
+Thu Aug 18 09:26:51 2016 daemon.notice netifd: proto_shell_add_handler
+Thu Aug 18 09:26:51 2016 daemon.notice netifd: proto_shell_add_handler
+Thu Aug 18 09:26:51 2016 kern.warn kernel: [   17.330000] bgmac bcma0:1: zliu bgmac call phyprint
+Thu Aug 18 09:26:51 2016 kern.info kernel: [   17.330000] libphy: zliu phy_print_status 
+Thu Aug 18 09:26:51 2016 kern.info kernel: [   17.330000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
+Thu Aug 18 09:26:51 2016 daemon.notice netifd: wireless_init
+Thu Aug 18 09:26:51 2016 authpriv.info dropbear[700]: Not backgrounding
+Thu Aug 18 09:26:53 2016 daemon.info procd: - init complete -
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: wireless_add_handler
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_init_package
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_init_all++
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_init_package
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_reset_config
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_init_devices
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_init_interfaces
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_parse_interface
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_alloc
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __interface_add
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_update
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_proto_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_claim_device
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_create_default
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init_virtual
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_refresh_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_device_config
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_main_dev
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_available
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_l3_dev
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_ubus_add_interface
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_parse_interface
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_parse_bridge_interface
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_create
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Create new device 'br-lan' (Bridge)
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu call type-create
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_create Create
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init_virtual
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_reload
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init_settings
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_refresh_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_apply_settings
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_alloc
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __interface_add
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_parse_interface
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_alloc
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __interface_add
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_update
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: proto_shell_attach
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: proto_shell_checkup_attach
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_proto_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_claim_device
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu vlan eth0.2 1
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_create_default
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init_virtual
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 kern.info kernel: [   19.650000] libphy: zliu phy_stop 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_refresh_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device Create vlan device 'eth0.2'
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_set_name
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init_virtual
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb ++ 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_refresh_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb -- 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_device_config
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_main_dev
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_available
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_l3_dev
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_ubus_add_interface
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_parse_interface
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_init_globals
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_init_wireless
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_parse_wireless_device
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: wireless_device_create
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: wdev_update
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: wdev_create
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_parse_wireless_interface
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: config_section_idx
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: wireless_interface_create
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vif_update
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: wireless_interface_init_config
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: wdev_set_config_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: wdev_handle_config_change
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __wireless_device_set_up
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_free_unused
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_reset_old
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init_pending
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init_pending call init
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_config_init
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_add_member
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu vlan eth0.1 1
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element eth0 1
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device Create vlan device 'eth0.1'
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_set_name
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_init_virtual
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_add_user
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __device_add_user
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb ++ 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_refresh_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: __device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_member_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_set_device_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_claim
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb ++ 4
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb -- 4
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb ++ 4
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb -- 4
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: simple_device_set_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: set_device_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 09:26:53 2016 kern.info kernel: [   19.710000] libphy: zliu phy_start 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb ++ 6
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb -- 6
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb ++ 6
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb -- 6
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: set_device_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_member_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_member_cb
+Thu Aug 18 09:26:53 2016 kern.info kernel: [   19.730000] libphy: zliu phy_ethtool_gset 
+Thu Aug 18 09:26:53 2016 kern.info kernel: [   19.740000] device eth0.1 entered promiscuous mode
+Thu Aug 18 09:26:53 2016 kern.info kernel: [   19.740000] device eth0 entered promiscuous mode
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_proto_event_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_check_retry
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_reset_primary
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: set_device_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 kern.info kernel: [   19.760000] br-lan: port 1(eth0.1) entered forwarding state
+Thu Aug 18 09:26:53 2016 kern.info kernel: [   19.770000] br-lan: port 1(eth0.1) entered forwarding state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Interface 'lan' is enabled
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Interface 'lan' is setting up now
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_proto_event_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_ubus_interface_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_ubus_interface_notify
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_free_unused
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Interface 'lan' is now up
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_enable_member
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_enable_interface
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_claim
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_present
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_proto_event_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_member_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: bridge_check_retry
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_free_unused
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_start_pending
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_up
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_up
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_claim
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: simple_device_set_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: set_device_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Interface 'loopback' is enabled
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Interface 'loopback' is setting up now
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_proto_event_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_ubus_interface_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_ubus_interface_notify
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_free_unused
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Interface 'loopback' is now up
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_set_up
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_claim
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_set_device_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_claim
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: set_device_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_ifindex
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Interface 'wan' is enabled
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_handle_dump
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Network device 'eth0' link is up
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb ++ 8
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb -- 8
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb ++ 8
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: vlan_dev_cb -- 8
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu handle_hotplug_event size=146
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu handle_hotplug_event size=131
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu handle_hotplug_event size=144
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu handle_hotplug_event size=131
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu handle_hotplug_event size=144
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu vlan eth0.2 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu handle_hotplug_event size=131
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Bridge 'br-lan' link is up
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_event
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Interface 'lan' has link connectivity 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Interface 'wan' has link connectivity 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Interface 'wan' is setting up now
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: proto_shell_handler
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: proto_shell_clear_host_dep
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_main_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Interface 'wan6' has link connectivity 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_check_state
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: Interface 'wan6' is setting up now
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: proto_shell_handler
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: proto_shell_clear_host_dep
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_broadcast_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: interface_l3_dev_cb
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:53 2016 daemon.notice netifd: zliu vlan eth0.2 0
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: zliu dev[eth0.2] link_state=1 
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:54 2016 daemon.warn odhcpd[663]: DHCPV6 SOLICIT IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fd64:4f0:93fa::332/128 
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_handle_iface
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_iface_notify_proto
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: proto_shell_notify
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: proto_shell_run_command
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: proto_shell_script_cb
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: proto_shell_task_finish
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: wan (830): udhcpc (v1.23.2) started
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_handle_dump
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_handle_iface
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_iface_notify_proto
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: proto_shell_notify
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: proto_shell_run_command
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: proto_shell_script_cb
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: proto_shell_task_finish
+Thu Aug 18 09:26:54 2016 user.notice firewall: Reloading firewall due to ifup of lan (br-lan)
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_handle_dump
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_handle_iface
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_iface_notify_proto
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: proto_shell_notify
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: proto_shell_update_link
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: interface_proto_event_cb
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: wan (830): Sending discover...
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_handle_iface
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_iface_notify_proto
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: proto_shell_notify
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: proto_shell_update_link
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: interface_proto_event_cb
+Thu Aug 18 09:26:54 2016 daemon.warn odhcpd[663]: DHCPV6 SOLICIT IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd64:4f0:93fa::9b3/128 
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: zliu avl_find_element br-lan 0
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: zliu dev[br-lan] link_state=1 
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: zliu dev[eth0] link_state=1 
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:26:54 2016 kern.info kernel: [   20.660000] libphy: zliu phy_ethtool_gset 
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: zliu vlan eth0.2 0
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: zliu dev[eth0.2] link_state=1 
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_handle_dump
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:54 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:55 2016 daemon.warn odhcpd[663]: DHCPV6 SOLICIT IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fd64:4f0:93fa::332/128 
+Thu Aug 18 09:26:55 2016 kern.warn kernel: [   21.350000] bgmac bcma0:1: zliu bgmac call phyprint
+Thu Aug 18 09:26:55 2016 kern.info kernel: [   21.350000] libphy: zliu phy_print_status 
+Thu Aug 18 09:26:55 2016 kern.info kernel: [   21.350000] eth0: zliu phy Link is Up - 1Gbps/Full - flow control off
+Thu Aug 18 09:26:55 2016 daemon.warn odhcpd[663]: DHCPV6 SOLICIT IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd64:4f0:93fa::9b3/128 
+Thu Aug 18 09:26:55 2016 daemon.warn odhcpd[663]: DHCPV6 REQUEST IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd64:4f0:93fa::9b3/128 
+Thu Aug 18 09:26:55 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:55 2016 daemon.notice netifd: zliu vlan eth0.1 0
+Thu Aug 18 09:26:55 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:26:55 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:26:55 2016 daemon.notice netifd: zliu avl_find_element eth0 0
+Thu Aug 18 09:26:55 2016 daemon.notice netifd: get_vlan_device_chain 2
+Thu Aug 18 09:26:55 2016 daemon.notice netifd: get_vlan_device_chain 3
+Thu Aug 18 09:26:55 2016 daemon.notice netifd: get_vlan_device
+Thu Aug 18 09:26:55 2016 daemon.notice netifd: zliu dev[eth0.1] link_state=1 
+Thu Aug 18 09:26:55 2016 daemon.notice netifd: device_set_link
+Thu Aug 18 09:26:55 2016 kern.info kernel: [   21.770000] br-lan: port 1(eth0.1) entered forwarding state
+Thu Aug 18 09:26:57 2016 daemon.warn odhcpd[663]: DHCPV6 SOLICIT IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fd64:4f0:93fa::332/128 
+Thu Aug 18 09:26:57 2016 daemon.notice netifd: wan (830): Sending discover...
+Thu Aug 18 09:26:58 2016 daemon.info dnsmasq[893]: started, version 2.73 cachesize 150
+Thu Aug 18 09:26:58 2016 daemon.info dnsmasq[893]: compile time options: IPv6 GNU-getopt no-DBus no-i18n no-IDN DHCP no-DHCPv6 no-Lua TFTP no-conntrack no-ipset no-auth no-DNSSEC loop-detect inotify
+Thu Aug 18 09:26:58 2016 daemon.info dnsmasq[893]: DNS service limited to local subnets
+Thu Aug 18 09:26:58 2016 daemon.info dnsmasq-dhcp[893]: DHCP, IP range 192.168.1.100 -- 192.168.1.249, lease time 12h
+Thu Aug 18 09:26:58 2016 daemon.info dnsmasq[893]: using local addresses only for domain lan
+Thu Aug 18 09:26:58 2016 daemon.warn dnsmasq[893]: no servers found in /tmp/resolv.conf.auto, will retry
+Thu Aug 18 09:26:58 2016 daemon.info dnsmasq[893]: read /etc/hosts - 1 addresses
+Thu Aug 18 09:26:58 2016 daemon.info dnsmasq[893]: read /tmp/hosts/dhcp - 1 addresses
+Thu Aug 18 09:26:58 2016 daemon.info dnsmasq[893]: read /tmp/hosts/odhcpd - 1 addresses
+Thu Aug 18 09:26:58 2016 daemon.info dnsmasq-dhcp[893]: read /etc/ethers - 0 addresses
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: netifd_handle_dump
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: netifd_handle_dump
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:58 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:26:59 2016 daemon.warn odhcpd[663]: DHCPV6 REQUEST IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fd64:4f0:93fa::332/128 
+Thu Aug 18 09:26:59 2016 daemon.info dnsmasq[893]: read /etc/hosts - 1 addresses
+Thu Aug 18 09:26:59 2016 daemon.info dnsmasq[893]: read /tmp/hosts/dhcp - 1 addresses
+Thu Aug 18 09:26:59 2016 daemon.info dnsmasq[893]: read /tmp/hosts/odhcpd - 2 addresses
+Thu Aug 18 09:26:59 2016 daemon.info dnsmasq-dhcp[893]: read /etc/ethers - 0 addresses
+Thu Aug 18 09:27:00 2016 daemon.warn odhcpd[663]: DHCPV6 CONFIRM IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: not on-link fd64:4f0:93fa::9b3/128 
+Thu Aug 18 09:27:00 2016 daemon.warn odhcpd[663]: DHCPV6 SOLICIT IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd64:4f0:93fa::9b3/128 
+Thu Aug 18 09:27:00 2016 daemon.info dnsmasq[893]: read /etc/hosts - 1 addresses
+Thu Aug 18 09:27:00 2016 daemon.info dnsmasq[893]: read /tmp/hosts/dhcp - 1 addresses
+Thu Aug 18 09:27:00 2016 daemon.info dnsmasq[893]: read /tmp/hosts/odhcpd - 1 addresses
+Thu Aug 18 09:27:00 2016 daemon.info dnsmasq-dhcp[893]: read /etc/ethers - 0 addresses
+Thu Aug 18 09:27:00 2016 daemon.warn odhcpd[663]: DHCPV6 REQUEST IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fd64:4f0:93fa::332/128 
+Thu Aug 18 09:27:00 2016 daemon.notice netifd: wan (830): Sending discover...
+Thu Aug 18 09:27:01 2016 daemon.warn odhcpd[663]: DHCPV6 REQUEST IA_NA from 000100011b29c2e9a0b3cc237016 on br-lan: ok fd64:4f0:93fa::9b3/128 
+Thu Aug 18 09:27:01 2016 daemon.info dnsmasq[893]: read /etc/hosts - 1 addresses
+Thu Aug 18 09:27:01 2016 daemon.info dnsmasq[893]: read /tmp/hosts/dhcp - 1 addresses
+Thu Aug 18 09:27:01 2016 daemon.info dnsmasq[893]: read /tmp/hosts/odhcpd - 2 addresses
+Thu Aug 18 09:27:01 2016 daemon.info dnsmasq-dhcp[893]: read /etc/ethers - 0 addresses
+Thu Aug 18 09:27:02 2016 daemon.warn odhcpd[663]: DHCPV6 REQUEST IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fd64:4f0:93fa::332/128 
+Thu Aug 18 09:27:06 2016 daemon.warn odhcpd[663]: DHCPV6 REQUEST IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fd64:4f0:93fa::332/128 
+Thu Aug 18 09:27:14 2016 daemon.warn odhcpd[663]: DHCPV6 REQUEST IA_NA from 000100011f3c581e6cc217db198e on br-lan: ok fd64:4f0:93fa::332/128 
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: interface_ip_dump_prefix_assignment_list
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_handle_status
+Thu Aug 18 09:27:15 2016 daemon.notice netifd: netifd_dump_status
+Thu Aug 18 09:27:16 2016 daemon.notice netifd: netifd_handle_wdev_status
+Thu Aug 18 09:27:16 2016 daemon.notice netifd: get_wdev
+Thu Aug 18 09:27:16 2016 daemon.notice netifd: wireless_device_status
+Thu Aug 18 09:27:16 2016 daemon.notice netifd: wireless_interface_status
+Thu Aug 18 09:27:16 2016 daemon.notice netifd: netifd_dev_status
+Thu Aug 18 09:27:16 2016 daemon.notice netifd: device_get
+Thu Aug 18 09:27:16 2016 daemon.notice netifd: zliu vlan radio0.network1 0
+Thu Aug 18 09:27:16 2016 daemon.notice netifd: get_vlan_device_chain 1
+Thu Aug 18 09:27:16 2016 daemon.notice netifd: device_get
