@@ -2862,3 +2862,6 @@ ping 224.0.0.1
    
 8/18  
    1. use option log_size 64 in /etc/config/system can enlarge system log file size.
+   
+8/19
+   1. looks print so much, and miss some logs.
