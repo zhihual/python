@@ -711,6 +711,8 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd:                         get_vlan_
 Fri Aug 19 03:31:33 2016 daemon.notice netifd:                         get_vlan_device Create vlan device 'eth0.1'
 Fri Aug 19 03:31:33 2016 daemon.notice netifd:                         vlan_dev_set_name
 
+//DD Guest, should call into bridge_member_update
+
 /*
 
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_init
@@ -835,6 +837,7 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_proto_event_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_l3_dev_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_member_cb
+<<<<<<< HEAD
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_check_retry //DD
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_free_unused
 //DD only menter...
@@ -843,6 +846,13 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_free_unused
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_start_pending
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up//DD 1 setup
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up //DD 2 setup
+=======
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_check_retry //DD shuold be last call
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_free_unused
+Fri Aug 19 03:31:33 2016 daemon.notice netifd:    interface_start_pending //DD here is in config_init_all context
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up //DD  start 
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up //DD  start
+>>>>>>> f6bbb23f42d7fc663e11e2eea72e8907cd11bbf4
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_claim
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_event
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
@@ -868,7 +878,11 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd: Interface 'loopback' is now up
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_l3_dev_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_check_state
+<<<<<<< HEAD
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up //DD 3 setup
+=======
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up //DD 3rd device
+>>>>>>> f6bbb23f42d7fc663e11e2eea72e8907cd11bbf4
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_claim
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_event
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
@@ -907,14 +921,18 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_check_state
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_l3_dev_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_check_state
+<<<<<<< HEAD
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up //DD 4 setup
+=======
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up //DD last device...
+>>>>>>> f6bbb23f42d7fc663e11e2eea72e8907cd11bbf4
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_claim
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_check_state
 
 //DD finished here...
 
 
-Fri Aug 19 03:31:33 2016 daemon.notice netifd: wireless_start_pending
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: wireless_start_pending //DD 
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: __wireless_device_set_up
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: config_init_all-- //DD
 
