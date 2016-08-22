@@ -556,7 +556,10 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd: config_parse_interface
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_alloc //DD allocate first interface..
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: __interface_add //DD give configuration to interface
 //DD duanceng, something miss here.. or, vlist_add cause interface_update being called...
-Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_update 
+
+
+
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_update //DD interface memory and member setted. 
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_proto_state //DD D(INTERFACE, "Create interface '%s'\n", if_new->name); do this path
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_claim_device
 Fri Aug 19 03:31:33 2016 daemon.notice netifd:    device_get
@@ -573,8 +576,12 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd:         device_broadcast_event
 Fri Aug 19 03:31:33 2016 daemon.notice netifd:       device_set_link //DD abvove is set link..
 Fri Aug 19 03:31:33 2016 daemon.notice netifd:    interface_set_device_config //DD in this level. interface_claim_device .. holly shit, retrun directly.
 Fri Aug 19 03:31:33 2016 daemon.notice netifd:    interface_set_main_dev
-Fri Aug 19 03:31:33 2016 daemon.notice netifd:          device_add_user
+
+Fri Aug 19 03:31:33 2016 daemon.notice netifd:          device_add_user //DD 
+
+
 Fri Aug 19 03:31:33 2016 daemon.notice netifd:              __device_add_user  //DD set device to dep-> device..
+                                                            //DD in hook callback..
 Fri Aug 19 03:31:33 2016 daemon.notice netifd:              interface_main_dev_cb  //DD initialzied time hook up.
 Fri Aug 19 03:31:33 2016 daemon.notice netifd:                    interface_set_available
 Fri Aug 19 03:31:33 2016 daemon.notice netifd:         interface_set_l3_dev
@@ -714,6 +721,8 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_set_present
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_set_link
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_add_user
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: __device_add_user
+
+//DD matched,  bridge_enable_member called in...
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: system_bridge_if  
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: system_bridge_if  
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_claim
@@ -768,6 +777,8 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_member_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_event
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_member_cb
+
+//DD here matched..
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: system_bridge_addif 
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: system_bridge_if  
 Fri Aug 19 03:31:33 2016 kern.info kernel: [   19.710000] libphy: zliu phy_ethtool_gset 
@@ -780,7 +791,7 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_main_dev_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_proto_event_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_l3_dev_cb
-Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_check_retry
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_check_retry //DD 
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_reset_primary
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: set_device_state
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_set_ifindex
@@ -809,7 +820,10 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_l3_dev_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_check_state
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_l3_dev_cb
+//DD is this the bridge_enable_member one...???
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_enable_member //DD enable member
+
+
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_enable_interface
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_claim
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: system_bridge_addif 
@@ -821,11 +835,14 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_proto_event_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_l3_dev_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_member_cb
-Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_check_retry
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: bridge_check_retry //DD
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_free_unused
+//DD only menter...
+
+//DD interface staring...
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_start_pending
-Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up
-Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up//DD 1 setup
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up //DD 2 setup
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_claim
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_event
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
@@ -851,7 +868,7 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd: Interface 'loopback' is now up
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_l3_dev_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_check_state
-Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up //DD 3 setup
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_claim
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_event
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
@@ -890,7 +907,7 @@ Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_check_state
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_broadcast_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_l3_dev_cb
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_check_state
-Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up
+Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_set_up //DD 4 setup
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: device_claim
 Fri Aug 19 03:31:33 2016 daemon.notice netifd: interface_check_state
 

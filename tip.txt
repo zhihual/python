@@ -2865,3 +2865,6 @@ ping 224.0.0.1
    
 8/19
    1. looks print so much, and miss some logs.
+   
+8/20 
+   1. netif log 看懂一点皮毛。 briefly know how interface and device setup...
