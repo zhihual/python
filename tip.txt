@@ -2871,3 +2871,14 @@ ping 224.0.0.1
    1. netif log 看懂一点皮毛。 briefly know how interface and device setup...
    1. netfd design doc...
       http://git.openwrt.org/?p=project/netifd.git;a=blob;f=DESIGN
+
+9/10
+
+   1. buy eth chip, and arrived. 
+   2. STM32CubeMX is gui useful to config stm32.
+   3. Prepare to accept new job/task..
+   4. Ok, know, how to enable UART debug print... really useful
+
+9/11
+   1. eth chip bring up successfully.  know deeper about eth and spi interface. 
+      learn:  chip type select must double check. otherwise, pin is not correct.
