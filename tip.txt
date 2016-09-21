@@ -2882,3 +2882,7 @@ ping 224.0.0.1
 9/11
    1. eth chip bring up successfully.  know deeper about eth and spi interface. 
       learn:  chip type select must double check. otherwise, pin is not correct.
+
+9/21
+
+   1. Start to work on plc.  2nd day on spec reading.
