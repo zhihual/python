@@ -14,7 +14,7 @@ import datetime
 
 
 
-quotelist = ['511880', '511990','511810', '511900','511800'] 
+quotelist = ['511880', '511990','511810', '511800'] 
 #,'161033','161227','160806','161706','160512'
 
 log_last_fluction=[]
@@ -67,7 +67,7 @@ def myanalysis():
 	now = datetime.datetime.now()
 	timestamp ='%d:%d:%d' % (now.hour,now.minute, now.second)
 	# Set 511880 net here!!!
-	net = 102.573 
+	net = 102.581 
 		
 	
 	for i in range(size): # 循环计算
@@ -130,7 +130,7 @@ def myanalysis():
 		if(log_last_fluction[i]<fluct_rate):
 			log_last_fluction[i] = fluct_rate
 		
-		if(cur_price>100):
+		if(cur_price>102):
 			value = (net - cur_price)*1000
 		else:
 			value = (100 -cur_price)*1000
@@ -138,7 +138,7 @@ def myanalysis():
 		value = round(value, 3)
 							
 		#print('%s %s%-6.3f Now %-8.3f Preclose %-8.3f %s'%(this.code, direction,fluct_rate, cur_price, open_price, log_last_fluction[i]))
-		print('%s %s%-6.3f Val %d Now %-7.3f a1_p %-7.3f b1_p %-7.3f '%(this.code, direction,fluct_rate, value,cur_price, a1_p, b1_p))
+		print('%s %s%-6.3f Val %-3d Now %-7.3f a1_p %-7.3f b1_p %-7.3f '%(this.code, direction,fluct_rate, value,cur_price, a1_p, b1_p))
 	
 
 
