@@ -14,7 +14,7 @@ import datetime
 
 
 
-quotelist = ['511880', '511990','511810', '511800'] 
+quotelist = ['511880', '511990','511810', '511800','131810'] 
 #,'161033','161227','160806','161706','160512'
 
 log_last_fluction=[]
@@ -132,6 +132,8 @@ def myanalysis():
 		
 		if(cur_price>102):
 			value = (net - cur_price)*1000
+		elif(cur_price<90):
+			value = cur_price
 		else:
 			value = (100 -cur_price)*1000
 			
