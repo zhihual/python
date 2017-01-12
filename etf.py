@@ -39,7 +39,7 @@ pre_gc001_cur = 0
 def myanalysis():
 	#Query Quote --start
 	print('******************************************************************')
-	df = ts.get_realtime_quotes(['510300','159915','000725','150200','511880','511990','204001','131810'])
+	df = ts.get_realtime_quotes(['510300','159915','000725','150022','150023','150200','511880','511990','511810','204001','131810'])
 	mydf = df['code']
 	df = df.drop(['name','open', 'pre_close', 'bid', 'ask', 'amount','a2_p', 'a3_v','a3_p', 'a4_v', 'a5_v', 'a5_p','date', 'code',
                'b1_v', 'b2_p', 'b2_v', 'b2_p', 'b3_v', 'b4_v', 'b4_p','b5_v', 'b5_p', 'a1_v', 'a2_v', 'a4_p', 'b1_p', 'b3_p', 'a1_p','volume'], axis=1)
@@ -49,6 +49,7 @@ def myanalysis():
 	#Query Quote --end
 	print('******************************************************************')
 
+def cashEtfAnalysis():	
 	#Investment total
 	Yinhuarili_Invest=130*10000
 	GC001_Invest = 130*10000
@@ -202,13 +203,13 @@ def delayrun():
 	canstart = 1
 	#print('change canstart', canstart)
 
-while True:
-	t = Timer(timer_interval,myanalysis)
-	time.sleep(20)
+#while True:
+#	t = Timer(timer_interval,myanalysis)
+#	time.sleep(20)
 	#print('canstart', canstart)
-	if(canstart==1):
-		t.start()
-		canstart = 0
+#	if(canstart==1):
+#		t.start()
+#		canstart = 0
 		
 	#print('main running')
-#myanalysis()
+myanalysis()

@@ -67,8 +67,15 @@ def myanalysis():
 	now = datetime.datetime.now()
 	timestamp ='%d:%d:%d' % (now.hour,now.minute, now.second)
 	# Set 511880 net here!!!
-	net = 102.581 
-		
+	#net = 102.602  12/26
+	#net = 102.605
+	#net = 102.608
+	#net = 102.614
+	#net = 100.112
+	#net = 100.118
+	#net = 100.145
+	net = 100.167
+    	
 	
 	for i in range(size): # 循环计算
 		global def_fluction_rate
@@ -130,7 +137,7 @@ def myanalysis():
 		if(log_last_fluction[i]<fluct_rate):
 			log_last_fluction[i] = fluct_rate
 		
-		if(cur_price>102):
+		if(cur_price>100.1):
 			value = (net - cur_price)*1000
 		elif(cur_price<90):
 			value = cur_price
