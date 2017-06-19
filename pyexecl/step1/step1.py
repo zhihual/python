@@ -13,6 +13,7 @@
 
 from openpyxl import load_workbook
 from openpyxl import Workbook
+import os
 
 src_wb_name = '1.xlsx'
 
@@ -29,14 +30,16 @@ print("src_row_num=:", src_row_num, "src_columns_num:", src_columns_num)
 
 
 # 定义一个如何从数据源中获取需要信息的位置
+src_stock_date = 'A'
+src_stock_id_row = 'B'
+src_stock_name_row = 'C'
+src_stock_op_row = 'D'
+src_stock_deal_num_row = 'E'
+src_stock_deal_price_row = 'F'
+src_stock_hold_num = 'H'
+src_stock_deal_broker_fee_row = 'J'
+src_stock_deal_tax_row = 'K'
 
-src_stock_id_row = 'C'
-src_stock_name_row = 'D'
-src_stock_op_row = 'E'
-src_stock_deal_num_row = 'F'
-src_stock_deal_price_row = 'G'
-src_stock_deal_broker_fee_row = 'K'
-src_stock_deal_tax_row = 'L'
 
 
 dst_wb_name= 'test.xlsx'
@@ -58,6 +61,10 @@ dst_stock_deal_num_row = 'D'
 dst_stock_deal_price_row = 'E'
 dst_stock_deal_broker_fee_row = 'F'
 dst_stock_deal_tax_row = 'G'
+dst_stock_hold_num = 'H'
+dst_stock_deal_date = 'I'
+
+
 
 #active_dst_ws[dst_stock_id_row+'1'] = '股票代码'
 #active_dst_ws[dst_stock_name_row+'1'] = '股票名称'
@@ -71,13 +78,14 @@ dst_stock_deal_tax_row = 'G'
 for src_rowidx in range (2, src_row_num):
 	sheet = active_dst_ws
 	# 1. 打开，读取一行 判断是否以及是获取过的代码。
-	temp_stock_id = active_src_ws[src_stock_id_row+str(src_rowidx)].value
+	temp_stock_id = active_src_ws[src_stock_name_row+str(src_rowidx)].value
 	#print("temp_stock_id:", temp_stock_id)
 	#2. 若不存在，创建新的sheet,添加新代码到已知sheet名字列表里.
 	if temp_stock_id in dst_stock_id_list:
-		sheet = dst_wb.get_sheet_by_name(str(temp_stock_id));
+		sheet = dst_wb.get_sheet_by_name(temp_stock_id);
 	else:
-		sheet = dst_wb.create_sheet(str(temp_stock_id));
+		#print(str(temp_stock_id))
+		sheet = dst_wb.create_sheet(temp_stock_id);
 		sheet.sheet_properties.tabColor = "1072BA"
 		
 		sheet[dst_stock_id_row+'1'] = '股票代码'
@@ -87,6 +95,8 @@ for src_rowidx in range (2, src_row_num):
 		sheet[dst_stock_deal_price_row+'1'] = '成交价格'
 		sheet[dst_stock_deal_broker_fee_row+'1'] = '券商佣金'
 		sheet[dst_stock_deal_tax_row+'1'] = '印花税'
+		sheet[dst_stock_hold_num+'1'] = '可用余额'
+		sheet[dst_stock_deal_date+'1'] = '成交日期'
 		# 4. 记录以及获取的代码，
 		dst_stock_id_list.append(temp_stock_id)
 		
@@ -102,7 +112,8 @@ for src_rowidx in range (2, src_row_num):
 	sheet[dst_stock_deal_price_row+str(sheet_row_num)].value = active_src_ws[src_stock_deal_price_row+str(src_rowidx)].value
 	sheet[dst_stock_deal_broker_fee_row+str(sheet_row_num)].value = active_src_ws[src_stock_deal_broker_fee_row+str(src_rowidx)].value
 	sheet[dst_stock_deal_tax_row+str(sheet_row_num)].value = active_src_ws[src_stock_deal_tax_row+str(src_rowidx)].value
-
+	sheet[dst_stock_hold_num+str(sheet_row_num)].value = active_src_ws[src_stock_hold_num + str(src_rowidx)].value
+	sheet[dst_stock_deal_date+str(sheet_row_num)].value = active_src_ws[src_stock_date+str(src_rowidx)].value
 	
-	
+os.remove(dst_wb_name)	
 dst_wb.save(dst_wb_name)
