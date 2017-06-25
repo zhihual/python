@@ -30,16 +30,26 @@ print("src_row_num=:", src_row_num, "src_columns_num:", src_columns_num)
 
 
 # 定义一个如何从数据源中获取需要信息的位置
+#数据源-交易时间
 src_stock_date = 'A'
+#数据源-股票号码
 src_stock_id_row = 'B'
+#数据源-股票中文名称
 src_stock_name_row = 'C'
+#数据源-操作，买和卖
 src_stock_op_row = 'D'
+#数据源-单次买卖股票数量
 src_stock_deal_num_row = 'E'
+#数据源-单次买卖股票价格
 src_stock_deal_price_row = 'F'
+#数据源-单次操作后，剩余股票数量
 src_stock_hold_num = 'H'
+#数据源-单次交易券商佣金
 src_stock_deal_broker_fee_row = 'J'
+#数据源-单次交易印花税
 src_stock_deal_tax_row = 'K'
-
+#数据源-单次交易现金变动总额
+src_stock_deal_cashinvest = 'I'
 
 
 dst_wb_name= 'test.xlsx'
@@ -59,14 +69,19 @@ dst_stock_name_row = 'B'
 dst_stock_op_row = 'C'
 dst_stock_deal_num_row = 'D'
 dst_stock_deal_price_row = 'E'
-dst_stock_deal_broker_fee_row = 'F'
-dst_stock_deal_tax_row = 'G'
-dst_stock_hold_num = 'H'
-dst_stock_deal_date = 'I'
+dst_stock_deal_cashinvest = 'F'
+dst_stock_deal_broker_fee_row = 'G'
+dst_stock_deal_tax_row = 'H'
+dst_stock_hold_num = 'I'
+dst_stock_deal_date = 'J'
 
-dst_stock_cycle_mark = 'J'
-dst_stock_intest_mark = 'K'
-dst_stock_daily_profile_mask = 'L'
+
+#定义，一次交易为，为从0买进，到最终卖出到0为一次交易
+dst_stock_cycle_mark = 'K'   
+#定义，一次交易最终结算的利润统计
+dst_stock_intest_mark = 'L'
+#定义，日内交易的利润统计
+dst_stock_daily_profile_mask = 'M'
 
 
 #active_dst_ws[dst_stock_id_row+'1'] = '股票代码'
@@ -97,6 +112,7 @@ for src_rowidx in range (2, src_row_num+1):
 			sheet[dst_stock_op_row+'1'] = '买卖'
 			sheet[dst_stock_deal_num_row+'1'] = '成交数量'
 			sheet[dst_stock_deal_price_row+'1'] = '成交价格'
+			sheet[dst_stock_deal_cashinvest+'1'] = '发生金额'
 			sheet[dst_stock_deal_broker_fee_row+'1'] = '券商佣金'
 			sheet[dst_stock_deal_tax_row+'1'] = '印花税'
 			sheet[dst_stock_hold_num+'1'] = '可用余额'
@@ -104,7 +120,8 @@ for src_rowidx in range (2, src_row_num+1):
 			sheet[dst_stock_cycle_mark+'1'] = '交易次数'
 			sheet[dst_stock_intest_mark+'1'] = '本次利润'
 			sheet[dst_stock_daily_profile_mask+'1'] = "日间利润"
-		
+			
+			
 			# 4. 记录以及获取的代码，
 			dst_stock_id_list.append(temp_stock_id)
 		else:
@@ -119,6 +136,7 @@ for src_rowidx in range (2, src_row_num+1):
 	sheet[dst_stock_op_row+str(sheet_row_num)].value = active_src_ws[src_stock_op_row+str(src_rowidx)].value
 	sheet[dst_stock_deal_num_row+str(sheet_row_num)].value = active_src_ws[src_stock_deal_num_row+str(src_rowidx)].value
 	sheet[dst_stock_deal_price_row+str(sheet_row_num)].value = active_src_ws[src_stock_deal_price_row+str(src_rowidx)].value
+	sheet[dst_stock_deal_cashinvest+str(sheet_row_num)].value = active_src_ws[src_stock_deal_cashinvest+str(src_rowidx)].value
 	sheet[dst_stock_deal_broker_fee_row+str(sheet_row_num)].value = active_src_ws[src_stock_deal_broker_fee_row+str(src_rowidx)].value
 	sheet[dst_stock_deal_tax_row+str(sheet_row_num)].value = active_src_ws[src_stock_deal_tax_row+str(src_rowidx)].value
 	sheet[dst_stock_hold_num+str(sheet_row_num)].value = active_src_ws[src_stock_hold_num + str(src_rowidx)].value
