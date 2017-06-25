@@ -63,6 +63,9 @@ active_dst_ws.sheet_properties.tabColor = "1072BA"
 # 定义一个空的list,用来存放股票代码
 dst_stock_id_list = [] 
 
+# 定义一个
+dst_cash_etf_dic = {'511811':'理财金H-赎回', '511991':'华宝添益-赎回', '511881':'银华日利-赎回' }
+
 # 先生成 dst的第一行的标题栏
 dst_stock_id_row = 'A'
 dst_stock_name_row = 'B'
@@ -96,13 +99,26 @@ dst_stock_daily_profile_mask = 'M'
 for src_rowidx in range (2, src_row_num+1):
 	sheet = active_dst_ws
 	# 1. 打开，读取一行 判断是否以及是获取过的代码。
-	temp_stock_id = active_src_ws[src_stock_name_row+str(src_rowidx)].value
+	temp_stock_id = active_src_ws[src_stock_id_row+str(src_rowidx)].value
+	temp_stock_id = str(temp_stock_id)
 	#print("temp_stock_id:", temp_stock_id)
+	
+	#此处为每页中，不包含股票中文名称的行，实际上是货币基金的赎回，处理方式为
+	#计入本页。
+	if temp_stock_id in dst_cash_etf_dic.keys():
+		#在字典中
+		print(temp_stock_id,src_rowidx,'handle',dst_cash_etf_dic[temp_stock_id] )
+		#设置股票中文名字
+		active_src_ws[src_stock_name_row+str(src_rowidx)].value = dst_cash_etf_dic[temp_stock_id]
+		#设置股票代码， 只为货币基金
+		active_src_ws[src_stock_id_row+str(src_rowidx)].value = int(temp_stock_id) - 1
+		#修改本行的股票代码
+		temp_stock_id = str(int(temp_stock_id) - 1)
 	#2. 若不存在，创建新的sheet,添加新代码到已知sheet名字列表里.
 	if temp_stock_id in dst_stock_id_list:
 		sheet = dst_wb.get_sheet_by_name(temp_stock_id)
 	else:
-		#print(str(temp_stock_id))
+		#print(temp_stock_id)
 		if temp_stock_id:
 			sheet = dst_wb.create_sheet(temp_stock_id)
 			sheet.sheet_properties.tabColor = "1072BA"
@@ -125,7 +141,24 @@ for src_rowidx in range (2, src_row_num+1):
 			# 4. 记录以及获取的代码，
 			dst_stock_id_list.append(temp_stock_id)
 		else:
-			continue
+			#此处为每页中，不包含股票中文名称的行，实际上是货币基金的赎回，处理方式为
+			#计入本页。
+			#if temp_stock_id in dst_cash_etf_dic.keys():
+				#在字典中
+			#	print(temp_stock_id,src_rowidx,'handle',dst_cash_etf_dic[temp_stock_id] )
+				#设置股票中文名字
+			#	active_src_ws[src_stock_name_row+str(src_rowidx)].value = dst_cash_etf_dic[temp_stock_id]
+				#设置股票代码， 只为货币基金
+			#	active_src_ws[src_stock_id_row+str(src_rowidx)].value = temp_stock_id - 1
+			#	src_rowidx = src_rowidx -1
+				continue
+				
+			#else:
+			#	print(temp_stock_id,'not in dict', src_rowidx )
+			
+			
+			#此为老的处理方式，直接丢弃。
+			#continue
 	
 	#插入到dst的后面
 	sheet_row_num = len(tuple(sheet.rows))
@@ -160,6 +193,8 @@ exchange_cycle_num = 0
 intest = 0.0
 daily_prifile = 0.0
 
+#此处开始，进行每页的分析
+
 for anlysis_sheet_name in dst_stock_id_list:
 	anlysis_sheet = dst_wb.get_sheet_by_name(anlysis_sheet_name)
 	anlysis_sheet_row_num = len(tuple(anlysis_sheet.rows))
@@ -193,6 +228,15 @@ for anlysis_sheet_name in dst_stock_id_list:
 			intest = intest - anlysis_sheet[dst_stock_deal_broker_fee_row+str(anlysis_sheet_row_num)].value
 			intest = intest - anlysis_sheet[dst_stock_deal_tax_row+str(anlysis_sheet_row_num)].value
 			#print(intest, anlysis_sheet_row_num, anlysis_sheet_name)
+		
+#验证分析数据是否完全
+TotalNum = 0
+for anlysis_sheet_name in dst_stock_id_list:
+	anlysis_sheet = dst_wb.get_sheet_by_name(anlysis_sheet_name)
+	TotalNum = TotalNum + len(tuple(anlysis_sheet.rows)) -1
+print(TotalNum+1)	
+
+
 		
 os.remove(dst_wb_name)	
 dst_wb.save(dst_wb_name)
