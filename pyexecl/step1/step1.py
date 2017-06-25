@@ -103,6 +103,7 @@ for src_rowidx in range (2, src_row_num+1):
 	temp_stock_id = str(temp_stock_id)
 	#print("temp_stock_id:", temp_stock_id)
 	
+	bIsShuhui = 0
 	#此处为每页中，不包含股票中文名称的行，实际上是货币基金的赎回，处理方式为
 	#计入本页。
 	if temp_stock_id in dst_cash_etf_dic.keys():
@@ -111,9 +112,10 @@ for src_rowidx in range (2, src_row_num+1):
 		#设置股票中文名字
 		active_src_ws[src_stock_name_row+str(src_rowidx)].value = dst_cash_etf_dic[temp_stock_id]
 		#设置股票代码， 只为货币基金
-		active_src_ws[src_stock_id_row+str(src_rowidx)].value = int(temp_stock_id) - 1
+		#active_src_ws[src_stock_id_row+str(src_rowidx)].value = int(temp_stock_id) - 1
 		#修改本行的股票代码
 		temp_stock_id = str(int(temp_stock_id) - 1)
+		bIsShuhui = 1
 	#2. 若不存在，创建新的sheet,添加新代码到已知sheet名字列表里.
 	if temp_stock_id in dst_stock_id_list:
 		sheet = dst_wb.get_sheet_by_name(temp_stock_id)
@@ -169,7 +171,10 @@ for src_rowidx in range (2, src_row_num+1):
 	sheet[dst_stock_op_row+str(sheet_row_num)].value = active_src_ws[src_stock_op_row+str(src_rowidx)].value
 	sheet[dst_stock_deal_num_row+str(sheet_row_num)].value = active_src_ws[src_stock_deal_num_row+str(src_rowidx)].value
 	sheet[dst_stock_deal_price_row+str(sheet_row_num)].value = active_src_ws[src_stock_deal_price_row+str(src_rowidx)].value
-	sheet[dst_stock_deal_cashinvest+str(sheet_row_num)].value = active_src_ws[src_stock_deal_cashinvest+str(src_rowidx)].value
+	if bIsShuhui == 1:
+		sheet[dst_stock_deal_cashinvest+str(sheet_row_num)].value = -active_src_ws[src_stock_deal_cashinvest+str(src_rowidx)].value
+	else:
+		sheet[dst_stock_deal_cashinvest+str(sheet_row_num)].value = active_src_ws[src_stock_deal_cashinvest+str(src_rowidx)].value
 	sheet[dst_stock_deal_broker_fee_row+str(sheet_row_num)].value = active_src_ws[src_stock_deal_broker_fee_row+str(src_rowidx)].value
 	sheet[dst_stock_deal_tax_row+str(sheet_row_num)].value = active_src_ws[src_stock_deal_tax_row+str(src_rowidx)].value
 	sheet[dst_stock_hold_num+str(sheet_row_num)].value = active_src_ws[src_stock_hold_num + str(src_rowidx)].value
@@ -205,29 +210,48 @@ for anlysis_sheet_name in dst_stock_id_list:
 	daily_prifile = 0.0
 	for anlysis_sheet_row_num in range (2, anlysis_sheet_row_num+1):
 		if anlysis_sheet[dst_stock_hold_num+str(anlysis_sheet_row_num)].value == 0:
-			if anlysis_sheet_row_num > 2:
-				intest = intest - anlysis_sheet[dst_stock_deal_num_row+str(anlysis_sheet_row_num)].value * anlysis_sheet[dst_stock_deal_price_row+str(anlysis_sheet_row_num)].value	
-				intest = intest - anlysis_sheet[dst_stock_deal_broker_fee_row+str(anlysis_sheet_row_num)].value
-				intest = intest - anlysis_sheet[dst_stock_deal_tax_row+str(anlysis_sheet_row_num)].value
+			#if anlysis_sheet_row_num > 2:
+				#intest = intest - anlysis_sheet[dst_stock_deal_num_row+str(anlysis_sheet_row_num)].value * anlysis_sheet[dst_stock_deal_price_row+str(anlysis_sheet_row_num)].value	
+				#intest = intest - anlysis_sheet[dst_stock_deal_broker_fee_row+str(anlysis_sheet_row_num)].value
+				#intest = intest - anlysis_sheet[dst_stock_deal_tax_row+str(anlysis_sheet_row_num)].value
 			#print(intest*-1,'end')
+			
 			# 记录intest, 清零invest, 增加一次cyclenum
+			#exchange_cycle_num = exchange_cycle_num + 1
+			#anlysis_sheet[dst_stock_cycle_mark+str(anlysis_sheet_row_num)] = exchange_cycle_num
+			#anlysis_sheet[dst_stock_intest_mark+str(anlysis_sheet_row_num)] = intest*-1
+			
+			#if (intest > -70.0 and (intest*-1) < 70.0):
+			#	daily_prifile = daily_prifile+(intest*-1)
+			#	anlysis_sheet[dst_stock_daily_profile_mask+str(anlysis_sheet_row_num)] = daily_prifile
+			
+			#----------------------------------------------------------------------------------
 			exchange_cycle_num = exchange_cycle_num + 1
 			anlysis_sheet[dst_stock_cycle_mark+str(anlysis_sheet_row_num)] = exchange_cycle_num
-			anlysis_sheet[dst_stock_intest_mark+str(anlysis_sheet_row_num)] = intest*-1
+			
+			if anlysis_sheet_row_num > 2:
+				intest += anlysis_sheet[dst_stock_deal_cashinvest+str(anlysis_sheet_row_num)].value
+			
+			anlysis_sheet[dst_stock_intest_mark+str(anlysis_sheet_row_num)] = intest
 			
 			if (intest > -70.0 and (intest*-1) < 70.0):
-				daily_prifile = daily_prifile+(intest*-1)
+				daily_prifile = intest
 				anlysis_sheet[dst_stock_daily_profile_mask+str(anlysis_sheet_row_num)] = daily_prifile
+			
 			
 			intest = 0.0
 		else:
-			if anlysis_sheet[dst_stock_op_row+str(anlysis_sheet_row_num)].value == "买入":
-				intest = intest + anlysis_sheet[dst_stock_deal_num_row+str(anlysis_sheet_row_num)].value * anlysis_sheet[dst_stock_deal_price_row+str(anlysis_sheet_row_num)].value
-			else:
-				intest = intest - anlysis_sheet[dst_stock_deal_num_row+str(anlysis_sheet_row_num)].value * anlysis_sheet[dst_stock_deal_price_row+str(anlysis_sheet_row_num)].value	
-			intest = intest - anlysis_sheet[dst_stock_deal_broker_fee_row+str(anlysis_sheet_row_num)].value
-			intest = intest - anlysis_sheet[dst_stock_deal_tax_row+str(anlysis_sheet_row_num)].value
+			#if anlysis_sheet[dst_stock_op_row+str(anlysis_sheet_row_num)].value == "买入":
+			#	intest = intest + anlysis_sheet[dst_stock_deal_num_row+str(anlysis_sheet_row_num)].value * anlysis_sheet[dst_stock_deal_price_row+str(anlysis_sheet_row_num)].value
+			#else:
+			#	intest = intest - anlysis_sheet[dst_stock_deal_num_row+str(anlysis_sheet_row_num)].value * anlysis_sheet[dst_stock_deal_price_row+str(anlysis_sheet_row_num)].value	
+			#intest = intest - anlysis_sheet[dst_stock_deal_broker_fee_row+str(anlysis_sheet_row_num)].value
+			#intest = intest - anlysis_sheet[dst_stock_deal_tax_row+str(anlysis_sheet_row_num)].value
 			#print(intest, anlysis_sheet_row_num, anlysis_sheet_name)
+			
+			intest += anlysis_sheet[dst_stock_deal_cashinvest+str(anlysis_sheet_row_num)].value
+			
+			
 		
 #验证分析数据是否完全
 TotalNum = 0
