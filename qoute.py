@@ -30,12 +30,13 @@ def_fluction_rate = 3.0
 
 def getcurtime():
 	mtime = datetime.datetime.now()
-	timestr ='%d:%d:%d:%d' % (mtime.day, mtime.hour, mtime.minute, mtime.second)
+	timestr ='%d/%d %d:%d:%d' % (mtime.month,mtime.day, mtime.hour, mtime.minute, mtime.second)
 	return timestr
 
 #debug information
-startime=getcurtime
+startime=getcurtime()
 
+ 
 
 def getdebuginfo():
 	logdump='Log dump:<br>'
@@ -138,4 +139,5 @@ listsize = len(quotelist)
 for j in range(listsize):
 	log_last_fluction.append(0)
 
+print(startime)
 myanalysis()
