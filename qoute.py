@@ -14,7 +14,7 @@ import datetime
 
 
 
-quotelist = ['510300','159915','150022','150023','162411','511880','511990'] 
+quotelist = ['510300','159915','600897','601633','000625','601158','511880','511990','511810'] 
 #,'161033','161227','160806','161706','160512'
 
 log_last_fluction=[]
@@ -67,7 +67,7 @@ def myanalysis():
 	# Get a datetime object
 	now = datetime.datetime.now()
 	timestamp ='%d:%d:%d' % (now.hour,now.minute, now.second)
-		
+	print('---------------------------------------------------------------------------------')
 	
 	for i in range(size): # 循环计算
 		global def_fluction_rate
@@ -130,8 +130,9 @@ def myanalysis():
 
 							
 		#print('%s %s%-6.3f Now %-8.3f Preclose %-8.3f %s'%(this.code, direction,fluct_rate, cur_price, open_price, log_last_fluction[i]))
-		print('%s %s%-6.3f Now %-7.3f Preclose %-7.3f a1_p %-7.3f b1_p %-7.3f a:b %-5.0f'%(this.code, direction,fluct_rate, cur_price, open_price, a1_p, b1_p,a1_vs_b1))	
-	
+		print('%s %s%-6.3f Now %-7.3f Preclose %-7.3f a1_p %-7.3f b1_p %-7.3f a:b %-5.0f'%(this.code, direction,fluct_rate, cur_price, open_price, a1_p, b1_p,a1_vs_b1))
+		print('---------------------------------------------------------------------------------')
+
 
 
 j=0
